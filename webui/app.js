@@ -1,13 +1,10 @@
 import {
   buildScheduleCatalogRows,
+  courseViews,
   equivalencyDatasetIds,
-} from "./catalog-schedule-mode.mjs?v=1";
+} from "./catalog-schedule-mode.mjs?v=2";
 
-const CARRERAS = [
-  { id: "icai",                    label: "ICAI Comillas", institution: "icai" },
-  { id: "icai_combinaciones",      label: "ICAI combinaciones", institution: "icai", combinations: true },
-  { id: "icai_horarios",           label: "Solo horarios", institution: "icai", scheduleOnly: true },
-];
+const CARRERAS = courseViews;
 
 const DATASET_VERSION = "icai-excel-2026-08-28-v2";
 const assetUrl = url => WebuiAssets.versionedAssetUrl(url, DATASET_VERSION);

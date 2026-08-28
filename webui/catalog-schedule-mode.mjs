@@ -1,3 +1,9 @@
+export const courseViews = [
+  { id: "icai_horarios", label: "Combinador de horarios", institution: "icai", scheduleOnly: true },
+  { id: "icai", label: "Equivalencias ITBA", institution: "icai" },
+  { id: "icai_combinaciones", label: "ITBA combinaciones", institution: "icai", combinations: true },
+];
+
 export function equivalencyDatasetIds(tabs) {
   return tabs.filter(tab => !tab.combinations && !tab.scheduleOnly).map(tab => tab.id);
 }

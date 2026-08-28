@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 
 import {
   buildScheduleCatalogRows,
+  courseViews,
   equivalencyDatasetIds,
 } from "../webui/catalog-schedule-mode.mjs";
 
@@ -117,4 +118,12 @@ test("loads equivalency CSVs only for tabs backed by equivalency datasets", () =
   ];
 
   assert.deepEqual(equivalencyDatasetIds(tabs), ["icai"]);
+});
+
+test("presents the schedule combiner first with ITBA-specific equivalency labels", () => {
+  assert.deepEqual(courseViews.map(({ id, label }) => ({ id, label })), [
+    { id: "icai_horarios", label: "Combinador de horarios" },
+    { id: "icai", label: "Equivalencias ITBA" },
+    { id: "icai_combinaciones", label: "ITBA combinaciones" },
+  ]);
 });
