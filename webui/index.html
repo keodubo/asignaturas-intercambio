@@ -15,7 +15,7 @@
   </header>
 
   <section id="filters">
-    <label>
+    <label id="confidence-filter">
       Confianza mínima: <span id="conf-value">2</span>
       <input type="range" id="conf-slider" min="2" max="5" step="1" value="2">
     </label>
@@ -29,7 +29,7 @@
     <label>
       Búsqueda: <input type="search" id="search-box" placeholder="nombre, comentario...">
     </label>
-    <label>
+    <label id="show-unmatched-filter">
       <input type="checkbox" id="show-unmatched"> Mostrar materias sin match ITBA
     </label>
     <label title="Mostrar únicamente las materias marcadas con estrella">
@@ -44,8 +44,15 @@
       visibles de <strong>Fall</strong> y <strong>All-year</strong>. Para All-year se computa
       la mitad de los ECTS en el semestre Fall.
     </div>
+    <div id="non-itba-notice" class="notice notice-schedule" style="display:none">
+      <div>
+        <strong>¿No estudiás Ingeniería Informática en ITBA?</strong>
+        <p>Podés usar el catálogo ICAI sin equivalencias: marcá las materias con ★ y compará sus horarios oficiales.</p>
+      </div>
+      <button id="open-schedule-button" type="button">Abrir combinador de horarios</button>
+    </div>
     <section id="equiv-section">
-      <h2>Equivalencias</h2>
+      <h2 id="equiv-heading">Equivalencias</h2>
       <div class="table-wrap">
         <table id="equiv-table">
           <thead>
@@ -57,10 +64,10 @@
               <th data-sort="tipo_externo">Tipo</th>
               <th data-sort="curso_externo">Curso</th>
               <th data-sort="ects_externo">ECTS</th>
-              <th data-sort="codigo_itba">ITBA cód</th>
-              <th data-sort="nombre_itba">ITBA nombre</th>
-              <th data-sort="confianza">Confianza</th>
-              <th>Comentario</th>
+              <th class="itba-only" data-sort="codigo_itba">ITBA cód</th>
+              <th class="itba-only" data-sort="nombre_itba">ITBA nombre</th>
+              <th class="itba-only" data-sort="confianza">Confianza</th>
+              <th class="itba-only">Comentario</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -131,6 +138,6 @@
   <div id="cart-backdrop" hidden></div>
 
   <script src="url-version.js?v=2"></script>
-  <script src="app.js?v=11"></script>
+  <script type="module" src="app.js?v=12"></script>
 </body>
 </html>

@@ -1,6 +1,12 @@
+import {
+  buildScheduleCatalogRows,
+  equivalencyDatasetIds,
+} from "./catalog-schedule-mode.mjs?v=1";
+
 const CARRERAS = [
   { id: "icai",                    label: "ICAI Comillas", institution: "icai" },
   { id: "icai_combinaciones",      label: "ICAI combinaciones", institution: "icai", combinations: true },
+  { id: "icai_horarios",           label: "Solo horarios", institution: "icai", scheduleOnly: true },
 ];
 
 const DATASET_VERSION = "icai-excel-2026-08-28-v2";
@@ -184,16 +190,20 @@ async function loadAll() {
   state.itbaTargets = Object.fromEntries(
     itba.map(i => [String(i.codigo), i])
   );
-  await Promise.all(CARRERAS.filter(c => !c.combinations).map(async c => {
+  await Promise.all(equivalencyDatasetIds(CARRERAS).map(async id => {
     const [eq, sin] = await Promise.all([
-      loadCsv(`data/${c.id}_equivalencias.csv`),
-      loadCsv(`data/${c.id}_sin_equivalencia.csv`),
+      loadCsv(`data/${id}_equivalencias.csv`),
+      loadCsv(`data/${id}_sin_equivalencia.csv`),
     ]);
-    state.data[c.id] = { eq, sin };
+    state.data[id] = { eq, sin };
   }));
 
   state.data.icai_combinaciones = {
     eq: await loadCsv("data/icai_combinaciones.csv"),
+    sin: [],
+  };
+  state.data.icai_horarios = {
+    eq: buildScheduleCatalogRows(icai),
     sin: [],
   };
 }
@@ -213,6 +223,9 @@ function buildCareerTabs() {
       } else if (isIcaiCombinationActive()) {
         state.sortKey = "confianza";
         state.sortDir = "desc";
+      } else if (isScheduleOnlyActive()) {
+        state.sortKey = "codigo_externo";
+        state.sortDir = "asc";
       }
       buildCareerTabs();
       buildTipoFilter();
@@ -236,11 +249,18 @@ function isIcaiCombinationActive() {
   return !!activeCarreraDef().combinations;
 }
 
+function isScheduleOnlyActive() {
+  return !!activeCarreraDef().scheduleOnly;
+}
+
 function usesIcaiFilters() {
-  return isIcaiActive() || isIcaiCombinationActive();
+  return isIcaiActive() || isIcaiCombinationActive() || isScheduleOnlyActive();
 }
 
 function tiposForActiveTab() {
+  if (isScheduleOnlyActive()) {
+    return [...new Set(state.icaiCatalogo.map(u => u.term).filter(Boolean))].sort();
+  }
   if (isIcaiCombinationActive()) {
     const eq = state.data.icai_combinaciones?.eq ?? [];
     return [...new Set(eq.map(u => `${u.term_1} / ${u.term_2}`).filter(Boolean))].sort();
@@ -252,6 +272,9 @@ function tiposForActiveTab() {
 }
 
 function cursosForActiveTab() {
+  if (isScheduleOnlyActive()) {
+    return [...new Set(state.icaiCatalogo.map(u => String(u.degree)).filter(Boolean))].sort();
+  }
   if (isIcaiCombinationActive()) {
     const eq = state.data.icai_combinaciones?.eq ?? [];
     return [...new Set(eq.map(u => `${u.studies_1} / ${u.studies_2}`).filter(Boolean))].sort();
@@ -394,6 +417,7 @@ function icaiBadges(r) {
 
 function rowsForCareer() {
   const eq = state.data[state.carrera]?.eq ?? [];
+  if (isScheduleOnlyActive()) return eq;
   if (isIcaiCombinationActive()) {
     return eq.map(r => normalizeCombinationRow({ ...r, _matched: true, carrera: "icai_combinaciones" }));
   }
@@ -602,7 +626,7 @@ function normalizeEcts(v) {
 function enrichCartFromCatalog() {
   let dirty = false;
   state.cart = state.cart.filter(c => {
-    if (c.carrera !== "icai") return true;
+    if (c.carrera !== "icai" && c.carrera !== "icai_horarios") return true;
     const exists = !!state.icaiByCode[String(c.codigo_externo)];
     if (!exists) dirty = true;
     return exists;
@@ -610,7 +634,7 @@ function enrichCartFromCatalog() {
   for (const c of state.cart) {
     const course = state.icaiByCode[String(c.codigo_externo)];
     if (!course) continue;
-    if (c.carrera === "icai") {
+    if (c.carrera === "icai" || c.carrera === "icai_horarios") {
       const semesterEcts = normalizeEcts(course.ects_semester ?? course.ects);
       if (c.ects_externo !== semesterEcts) { c.ects_externo = semesterEcts; dirty = true; }
       if (c.tipo_externo !== course.term) { c.tipo_externo = course.term; dirty = true; }
@@ -688,7 +712,8 @@ function fmtEcts(n) {
 
 function isIcaiCartItem(item) {
   const code = String(item.codigo_externo ?? "");
-  return item.carrera === "icai" || (!item.carrera && !!state.icaiByCode[code]);
+  return item.carrera === "icai" || item.carrera === "icai_horarios"
+    || (!item.carrera && !!state.icaiByCode[code]);
 }
 
 function selectedIcaiCodes() {
@@ -1031,7 +1056,7 @@ function renderEquiv(rows) {
   for (const r of rows) {
     const inCart = state.cartIndex.has(cartKey(r.codigo_externo, r.codigo_itba));
     const tr = document.createElement("tr");
-    if (!r._matched) tr.classList.add("unmatched");
+    if (!r._matched && !r._scheduleOnly) tr.classList.add("unmatched");
     if (inCart) tr.classList.add("in-cart");
     const course = state.icaiByCode[String(r.codigo_externo)] || {};
     const hasPdf = false;
@@ -1055,10 +1080,10 @@ function renderEquiv(rows) {
       <td>${escape(r.tipo_externo)}</td>
       <td>${escape(r.curso_externo)}</td>
       <td>${escape(r.ects_externo)}</td>
-      <td class="itba-code" data-itba="${escape(r.codigo_itba)}">${escape(r.codigo_itba)}</td>
-      <td>${escape(r.nombre_itba)}</td>
-      <td class="confianza">${r._matched ? confDots(r.confianza) : "—"}</td>
-      <td>${escape(r.comentario)}</td>`;
+      <td class="itba-code itba-only" data-itba="${escape(r.codigo_itba)}">${escape(r.codigo_itba)}</td>
+      <td class="itba-only">${escape(r.nombre_itba)}</td>
+      <td class="confianza itba-only">${r._matched ? confDots(r.confianza) : "—"}</td>
+      <td class="itba-only">${escape(r.comentario)}</td>`;
     tr.querySelector(".cart-toggle").addEventListener("click", e => {
       e.stopPropagation();
       toggleCartItem(r);
@@ -1302,6 +1327,10 @@ function bindCart() {
 
   document.getElementById("cart-export").addEventListener("click", exportCart);
   document.getElementById("cart-clear").addEventListener("click", clearCart);
+  document.getElementById("open-schedule-button").addEventListener("click", () => {
+    activateTab("schedule");
+    open();
+  });
 
   const fileInput = document.getElementById("cart-import-file");
   document.getElementById("cart-import").addEventListener("click", () => fileInput.click());
@@ -1319,10 +1348,16 @@ function render() {
   rows = sortRows(rows);
   renderEquiv(rows);
   const def = activeCarreraDef();
-  const hideSinEquiv = !!def.crossCarrera || !!def.combinations;
+  const scheduleOnly = isScheduleOnlyActive();
+  const hideSinEquiv = !!def.crossCarrera || !!def.combinations || scheduleOnly;
   document.getElementById("sin-equiv-section").style.display = hideSinEquiv ? "none" : "";
   document.getElementById("show-unmatched").disabled = hideSinEquiv;
   document.getElementById("icai-source-notice").style.display = usesIcaiFilters() ? "" : "none";
+  document.getElementById("non-itba-notice").style.display = scheduleOnly ? "" : "none";
+  document.getElementById("confidence-filter").style.display = scheduleOnly ? "none" : "";
+  document.getElementById("show-unmatched-filter").style.display = scheduleOnly ? "none" : "";
+  document.getElementById("equiv-heading").textContent = scheduleOnly ? "Materias ICAI para combinar" : "Equivalencias";
+  document.getElementById("equiv-table").classList.toggle("schedule-only-mode", scheduleOnly);
   if (!hideSinEquiv) renderSinEquiv();
 }
 
