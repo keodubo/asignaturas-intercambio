@@ -1,0 +1,152 @@
+[
+  {
+    "codigo_icai": "DOI-DHPCP-202",
+    "codigo_itba": "81.16",
+    "confianza": 2,
+    "comentario": "Técnicas de Comunicación Personal puede aportar comunicación interpersonal para negociar, pero el catálogo no acredita un módulo específico de negociación; candidato parcial-débil. Es grado y figura con asignación pendiente."
+  },
+  {
+    "codigo_icai": "DTC-GITT-315",
+    "codigo_itba": "81.57",
+    "confianza": 3,
+    "comentario": "Ingeniería del Software se solapa con el diseño técnico y la construcción de arquitecturas de soluciones, aunque el catálogo no demuestra cobertura explícita de CI/CD ni de arquitectura tecnológica a nivel de plataforma."
+  },
+  {
+    "codigo_icai": "DTC-MIT-515",
+    "codigo_itba": "81.57",
+    "confianza": 2,
+    "comentario": "Arquitectura de Servicios en Red aporta diseño de arquitectura técnica de servicios, pero su foco de comunicaciones no cubre por sí solo la arquitectura integral de soluciones ni CI/CD. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DEAC-IMAT-313",
+    "codigo_itba": "81.74",
+    "confianza": 2,
+    "comentario": "Visión por Ordenador I puede cubrir una base técnica de percepción visual útil para realidad aumentada, pero no evidencia ARCore, Unity, interacción ni creación de experiencias AR; candidato parcial-débil."
+  },
+  {
+    "codigo_icai": "DOI-MII-613",
+    "codigo_itba": "81.94",
+    "confianza": 2,
+    "comentario": "Emprendimiento e Innovación se relaciona con la vertiente de innovación tecnológica, pero no hay contenidos ITBA para verificar el componente inmersivo o experiencial. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MIT-515",
+    "codigo_itba": "82.08",
+    "confianza": 2,
+    "comentario": "Arquitectura de Servicios en Red se relaciona parcialmente con arquitecturas de servicios escalables, pero el catálogo no acredita IaaS/PaaS/SaaS, virtualización, contenedores, IaC ni operación cloud. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-IMAT-416",
+    "codigo_itba": "82.18",
+    "confianza": 4,
+    "comentario": "Procesamiento de Lenguaje Natural II coincide directamente con NLP, preparación y análisis de texto, modelos de lenguaje y aplicaciones; se debe confirmar el alcance de nivel II frente a los fundamentos ITBA."
+  },
+  {
+    "codigo_icai": "DTC-MBD-512",
+    "codigo_itba": "82.21",
+    "confianza": 3,
+    "comentario": "Big Data y Gobierno del Dato se solapa con evaluación, calidad, gobierno y uso organizacional de datos para una solución data-driven, aunque no cubre necesariamente todo el análisis económico y legal de factibilidad. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-511",
+    "codigo_itba": "82.21",
+    "confianza": 2,
+    "comentario": "Arquitectura Big Data aporta decisiones de arquitectura e infraestructura para soluciones basadas en datos, pero cubre sólo una parte técnica de la factibilidad de proyecto. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-517",
+    "codigo_itba": "82.21",
+    "confianza": 2,
+    "comentario": "Adquisición y Transformación se relaciona con comprobar disponibilidad y preparación de datos, pero no cubre por sí sola viabilidad legal, económica, gestión ni go-live. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DOI-MII-681",
+    "codigo_itba": "82.21",
+    "confianza": 2,
+    "comentario": "Dirección de Proyectos aporta planificación, responsables e hitos del ciclo de proyecto, pero no contiene por título el análisis de datos ni la factibilidad técnica específica. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DOI-MII-680",
+    "codigo_itba": "94.23",
+    "confianza": 3,
+    "comentario": "Creación, Organización y Dirección de Empresas se solapa con estructura, funcionamiento y dirección de organizaciones, aunque no evidencia el marco específico de jerarquías de respondibilidad gerencial de ITBA. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DOI-MII-683",
+    "codigo_itba": "94.23",
+    "confianza": 3,
+    "comentario": "Liderazgo y Gestión del Cambio se relaciona con liderazgo, relaciones organizacionales y toma de decisiones en contextos cambiantes; el solapamiento con la teoría sistémica ITBA es parcial. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DOI-DHPCP-202",
+    "codigo_itba": "94.42",
+    "confianza": 4,
+    "comentario": "Técnicas de Comunicación Personal coincide con competencias conversacionales, comunicación interpersonal y desempeño profesional; faltaría confirmar la profundidad de comunicación estratégica e intracomunicación. Es grado y figura con asignación pendiente."
+  },
+  {
+    "codigo_icai": "DOI-DHPCP-201",
+    "codigo_itba": "94.42",
+    "confianza": 3,
+    "comentario": "Ingeniería y Comunicación se solapa con presentaciones, informes y comunicación profesional, pero no demuestra el temario completo de estrategia de comunicación organizacional. Es grado y figura con asignación pendiente."
+  },
+  {
+    "codigo_icai": "DOI-DHPCP-402",
+    "codigo_itba": "94.42",
+    "confianza": 2,
+    "comentario": "Liderazgo Ignaciano aporta trabajo con personas y liderazgo, componentes secundarios de la comunicación estratégica, pero no sustituye su contenido central. Es grado y figura con asignación pendiente."
+  },
+  {
+    "codigo_icai": "IIM-DCC-201E",
+    "codigo_itba": "94.52",
+    "confianza": 4,
+    "comentario": "English for Engineers II (B2.2) es la continuación de inglés técnico y se alinea con el objetivo B2 de comprensión, interacción y producción escrita de Inglés II. Es All-year: cursarlo en Fall supone 3 ECTS semestrales, y requiere prueba/asignación de nivel."
+  },
+  {
+    "codigo_icai": "IIM-ADE-226",
+    "codigo_itba": "94.52",
+    "confianza": 4,
+    "comentario": "English for Business Studies II (B2) coincide con el nivel B2 y las competencias comunicativas de Inglés II; su orientación es de negocios en vez de ingeniería. Es All-year: 3 ECTS semestrales, y requiere prueba/asignación de nivel."
+  },
+  {
+    "codigo_icai": "DOI-MII-682",
+    "codigo_itba": "94.62",
+    "confianza": 4,
+    "comentario": "Ética y RSC se alinea directamente con ética profesional, responsabilidad social corporativa y actuación empresarial; se debe confirmar la cobertura de deontología y marco jurídico argentino. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DOI-GITI-411",
+    "codigo_itba": "94.62",
+    "confianza": 3,
+    "comentario": "Ética cubre la base filosófica y deontológica de la materia ITBA, pero el título no acredita el bloque específico de ética empresarial, responsabilidad corporativa y regulación."
+  },
+  {
+    "codigo_icai": "DER-ADE-215",
+    "codigo_itba": "94.62",
+    "confianza": 2,
+    "comentario": "Marco Jurídico de la Empresa puede cubrir el componente legal y normativo de la actividad empresarial, pero no el núcleo ético y deontológico de la materia ITBA."
+  },
+  {
+    "codigo_icai": "TEO-GITT-111",
+    "codigo_itba": "94.62",
+    "confianza": 2,
+    "comentario": "Cristianismo y Ética Social aporta reflexión ética y social, pero no evidencia ética de negocios, derecho empresarial ni responsabilidad corporativa; candidato parcial-débil."
+  },
+  {
+    "codigo_icai": "DOI-DHPCP-202",
+    "codigo_itba": "94.64",
+    "confianza": 4,
+    "comentario": "Técnicas de Comunicación Personal se alinea con el desarrollo de habilidades comunicacionales y de presentación de Prácticas Expositivas, aunque se debe confirmar técnicas escénicas y trabajo con auditorios. Es grado y figura con asignación pendiente."
+  },
+  {
+    "codigo_icai": "DOI-DHPCP-201",
+    "codigo_itba": "94.64",
+    "confianza": 3,
+    "comentario": "Ingeniería y Comunicación se solapa con comunicar contenidos técnicos y profesionales, pero no demuestra el entrenamiento expositivo integral, verbal y corporal de ITBA. Es grado y figura con asignación pendiente."
+  },
+  {
+    "codigo_icai": "IIM-DCC-301",
+    "codigo_itba": "94.64",
+    "confianza": 2,
+    "comentario": "Communication Skills (B2) puede aportar comunicación oral en inglés, pero no hay guía que confirme prácticas de oratoria, escenarios o presentaciones; candidato parcial-débil. Es All-year: 3 ECTS semestrales y requiere prueba/asignación de nivel."
+  }
+]

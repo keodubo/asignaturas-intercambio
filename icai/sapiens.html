@@ -1,0 +1,889 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>ICAI - Applicaciones Web</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Script-type" content="text/javascript" />
+		<meta http-equiv="Content-Style-type" content="text/css" />
+
+		<meta name="viewport" content="width=device-width">
+
+		<style type="text/css">
+		<!--
+		body {
+			font-family: Verdana, Helvetica, sans-serif;
+			font-size:0.9em;
+		}
+		h1 {
+			margin-top: 5px;
+			margin: 3px;
+			font-size:1em;
+			border-bottom: 1px dotted;
+		}
+		p {
+			margin-top: 0;
+			font-size: 80%;
+		}
+		br {
+			line-height: 0.5em;
+		}
+
+		.rotado
+		{
+			width: 20px;
+			white-space: nowrap;
+			
+			transform:rotate(-90deg);
+			-ms-transform:rotate(-90deg); /* Internet Explorer 9, IE8 lo ignora */
+			-moz-transform:rotate(-90deg); /* Firefox */
+			-o-transform:rotate(-90deg); /* Opera */
+			-webkit-transform:rotate(-90deg); /* Safari and Chrome */
+			-webkit-transform-origin: 0% 50%;
+
+			-o-transform:rotate(-90deg); /* Opera */
+		}
+
+		table,td {
+			border: 1px solid #606EA3;
+			font-size: 88%;
+			padding: 3px;
+			border-collapse: collapse;
+		}
+
+		a.menu_top {
+			font-family: Verdana, sans-serif; 
+			font-size: 90%;
+			text-decoration:none; 
+			background: #BBBBBB; 
+			padding: 3px 16px 3px 16px; 
+			margin: 1px; 
+			color: #505E93; 
+			font-weight: bold; 
+			white-space: nowrap;
+		}
+		a.menu_top:hover {background: #888888; }
+
+		a.menu_top_selected { 
+			font-family: Verdana, sans-serif; 
+			font-size: 90%;
+			text-decoration:none; 
+			padding: 3px 16px; 
+			margin: 1px; 
+			color: #505E93; 
+			font-weight: bold; 
+			white-space: nowrap;
+			border: 1px solid black; 
+			background: #DDDDDD;
+		}
+		-->
+		</style>
+</head>
+
+<body onload='
+	//console.log("Cabecera:  "+document.getElementById("div_cabecera").clientWidth);
+	console.log("Cabecera:  "+document.getElementById("div_cabecera").scrollWidth);
+	//console.log("Contenido: "+document.getElementById("div_contenido").clientWidth);
+	console.log("Contenido: "+document.getElementById("div_contenido").scrollWidth);
+	if (document.getElementById("div_cabecera").scrollWidth < document.getElementById("div_contenido").scrollWidth) {
+		document.getElementById("div_cabecera").style.width = document.getElementById("div_contenido").scrollWidth + "px"; 
+		console.log("changed width");
+	}
+'>
+<div id="div_cabecera" style="width: 100%;">
+<div style="height: 110px; background-color: #606EA3; //azul">
+		<a href="//www.icai.comillas.edu"><img src="/iconos/logo-icai.png" height="120px" alt="icai"></a>
+</div>
+<div style="background-color: #F6B729; //naranja">
+<span style="text-align: left; line-height: 2;">
+	<a class="menu_top" id="documents"  href="https://sp.upcomillas.es/centros/facultades/ICAI/Paginas/default.aspx" title="Horarios, exámenes, normativas, ...">Documentos</a>
+	<a class="menu_top" id="exchange"   href="/exchange">Exchange Students</a>
+	<a class="menu_top" id="sapiens"    href="/sapiens">SAPIENS</a>
+	<a class="menu_top" id="acuerdos"   href="/outgoing">Acuerdos de Intercambio</a>
+	<a class="menu_top" id="notas"      href="/notas">Notas</a>
+	<a class="menu_top" id="horarios"   href="/horarios">Horarios</a>
+	<a class="menu_top" id="estudios"   href="/plan_estudios">Plan de Estudios</a>
+	<a class="menu_top" id="asistencia" href="/asistencia">Ctrl Asistencia</a>
+	<a class="menu_top" id="qr"         href="/qr">QR</a>
+	<a class="menu_top" id="solicitud"  href="/solicitud_intercambio">Solicitud Intercambio</a>
+	<a class="menu_top" id="doctorado"  href="/doctorado">Doctorado</a>
+	<a class="menu_top" id="doctorado"  href="/Despachos">Despachos</a>
+</span> <!--  <span style="line-height: 2;">&nbsp;</span> -->
+</div>
+</div>
+
+<div id="div_contenido">
+<!--
+<script>document.getElementById('notas').className='menu_top_selected'; </script>
+</body>
+</html>
+
+--><script>document.getElementById('sapiens').className='menu_top_selected'; </script>
+
+<h2>Study Abroad Program for International ENgineering Students<br>
+<small>ICAI-SAPIENS (Fall, Spring and Summer terms)</small></h2>
+
+<h4>Description</h4>
+<ul><li>
+ICAI-SAPIENS is a program designed for engineering students interested
+in getting international experience without missing technical courses
+required for graduation with their classes. We offer a set of
+engineering courses, and a set of Spanish Culture and Language courses.
+Engineering courses are taught in English, while the students get
+immersed in the Spanish Culture through spanish language courses and
+leisure activities with classmates.
+</li></ul>
+
+<br>
+<h4>Fees</h4>
+<ul><li>
+SAPIENS is part of our student exchange program. No academic fees apply.
+The number of international students and the length of their stays count towards the student exchange balance with our partner Universities.
+</li><li>
+The absence of an active student exchange program with any University would simply add to future exchange places for our students, so no academic fees would apply either.
+<!--
+This is an Exchange Program. Therefore there are no academic fees for international students coming to Madrid. The number of incoming students and the lengths of their stays are taken into account while computing the balance in student exchange flows with our partner Universities.
+</li><li>
+If we don't have an active exchange program with a given Univeristy, we can host a number of students in exchange for student positions in future academic years.  Still there are no academic fees.
+-->
+</li></ul>
+
+<br>
+<h4>Location</h4>
+<ul><li>
+All courses are held at Universidad Pontificia Comillas. We are located
+in the center of Madrid: <br><div style="margin-left: 40px;">
+Calle Alberto Aguilera 25
+<br>
+28015 Madrid, Spain<br></div>
+</li></ul>
+
+<br>
+<h4>Calendar</h4>
+<ul><li>
+Courses are offered during the Fall Term, Spring Term and Summer Term:
+<ul><li>
+<b>Fall-SAPIENS</b>: Offered in US-compatible academic calendar. September through December (including exams).
+</li><li>
+<b>Spring-SAPIENS</b>: Offered in US-compatible academic calendar. Early-January through Late-April (including exams).
+</li><li>
+<b>Summer-SAPIENS</b>: Offered from Mid-May through Mid-July (minimum stay of 2 weeks).
+</li></ul>
+</li>
+</ul>
+
+
+<br>
+<h4>About Courses</h4>
+<ul>
+<li>Courses offered during Fall or Spring are meant to be equivalent to major
+subjects in a standard U.S. Engineering school. </li>
+<li>Students in this program can also register for any of the courses of
+ICAI School of Engineering, either in English or in Spanish, upon
+checking for schedule compatibility. (See List of <b><a href="https://apps.icai.comillas.edu/exchange/" TARGET="new">ICAI courses</a></b> for
+information on additional courses). These courses start in early-January and end by mid- to late-May (including exams).</li>
+</ul>
+<br>
+
+<h4>More resources</h4>
+<ul>
+<!--
+<li>Presentation <a href="download/sapiens2016video.mp4">Video</a></li>
+-->
+<li>Presentation <a href="https://www.youtube.com/watch?v=g7ugYHaqtjk" target="new">Video</a></li>
+<li>Download PDF SAPIENS leaflet: 
+<!--
+<a href="download/sapiens2019.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Spring/Summer 2018-19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="download/sapiens2020.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2019-20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="download/sapiens2021.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2020-21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="download/sapiens2022.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2021-22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+<a href="download/sapiens2023.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2022-23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="download/sapiens2024.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2023-24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="download/sapiens2025.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2024-25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="download/sapiens2026.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2025-26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</li>
+<li><a href="https://apps.icai.comillas.edu/exchange/" TARGET="new">List of other ICAI courses available for SAPIENS students</a></li>
+</ul>
+
+
+
+<br>
+<table width="100%" style="border: 1px solid black;">
+<tr><td style="border: none;"><center><h2>Fall/Spring SAPIENS</h2></center></td></tr>
+<tr><td style="border: 1px solid black;">
+
+<br>
+<table style="text-align: left; width: auto; " border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td colspan="2" rowspan="1" style="vertical-align: top; background-color: rgb(148, 176, 218);"><span style="font-weight: bold; font-size: 120%">Fundamental Engineering Courses</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DMA-SAP-431 Applied Linear Algebra</b><br>
+    <span class="fundamental" style="display:none;"><a href="download/DMA-SAP-431.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>Introductory course emphasizing techniques of linear algebra with applications to engineering; topics include matrix operations, determinants, linear equations, vector spaces, linear transformations, eigenvalues and eigenvectors, inner products and norms, orthogonality, equilibrium, and linear dynamical systems.
+    <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to MATH 415</small></span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="10.png" style="vertical-align: middle;"><b>DIE-SAP-212 Electricity and Magnetism</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DIE-SAP-212.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+    <br><small></small></span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DIM-SAP-353 Engineering Fluid Mechanics</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DIM-SAP-353.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+    <br><small></small></span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DOI-SAP-303 Engineering Statistics</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DOI-SAP-303.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+    <br><small></small></span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="11.png" style="vertical-align: middle;"><b>DIM-SAP-336 Engineering Thermodynamics</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DIM-SAP-336.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>Engineering Thermodynamics is concerned with energy transformation and utilization. The key of the subject is the analysis of any energy process, determining the variation of the thermophysical properties of the fluids involved and applying energy, entropy and exergy balances. Basic air-conditioning processes are also studied. Examples and study cases about heat to mechanical/electric power conversion are analysed.
+    <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to ME 300</small></span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="10.png" style="vertical-align: middle;"><b>DIM-SAP-336 Engineering Economy</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DOI-SAP-354.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>EThis course introduces the student to the basic concepts of corporate finance, and some elements of Capital Projects, developing further those aspects which are more relevant to engineering.
+The course gets deep into the fundamentals of financial management and capital budgeting, by using skills and techniques previously learnt in engineering school.
+During the course, students will learn about the time value of money, how to interpret and analyze financial statements, to forecast cash flows, to valuate investment projects, to compromise between risk and return, to make complex economic projections, to prepare budgets and to manage the net‐ working capital, among other relevant issues.
+  <!--  <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to ME 300</small> -->
+  </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="11.png" style="vertical-align: middle;"><b>DIM-SAP-346 Environmental Engineering and Sustainability</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DIM-SAP-346.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+    <br><small></small></span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br><span style="font-size:70%">(4.8 ects Theory + 1.2 ects Lab)</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="10.png" style="vertical-align: middle;"><b>DIM-SAP-167 General Chemistry</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DIM-SAP-167.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+    <br><small></small></span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">5 h/week <span style="font-size:70%">(7.5 ECTS)</span><br><span style="font-size:70%">(4.5 ects Theory + 3 ects Lab)</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="11.png" style="vertical-align: middle;"><b>DMA-SAP-230 Introduction to Differential Equations</b><br>
+		<span class="fundamental" style="display:none;"><a href="download/DMA-SAP-230.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>Techniques and applications of ordinary differential equations, including Fourier series and boundary value problems, linear systems of differential equations, and an introduction to partial differential equations. Covers a typical math 2xx course plus linear systems. Intended for engineering majors and other who require a working knowledge of differential equations.
+		<br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to MATH 286</small></span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DIM-SAP-233 Introduction to Dynamics</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DIM-SAP-233.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>Students who successfully complete this course will be able to: 
+<br>* develop strategies to analyze the dynamics of particles and rigid bodies 
+<br>* apply the laws of dynamics to analyze and interpret the dynamics of particles and rigid bodies 
+<br>* use the computer to analyze the motions of particles and rigid bodies of open-ended problems
+
+        <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to TAM 212</small></span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="10.png" style="vertical-align: middle;"><b>DIM-SAP-211 Introduction to Statics</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DIM-SAP-211.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+        <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to ECE 205 (theory) + ECE 206 (lab)</small></span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DEA-SAP-235 Introduction to Electric and Electronic Circuits</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DEA-SAP-235.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>The goals are to impart the fundamental principles of electric circuits, semiconductor devices, and electronic circuits that constitute the foundation for preparing a non-major to take follow-on courses involving electric and electronic circuits.
+        <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to ECE 205 (theory) + ECE 206 (lab)</small></span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">5 h/week <span style="font-size:70%">(7.5 ECTS)</span><br><span style="font-size:70%">(3h Theory + 2h Lab)</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DIM-SAP-337 Introduction to Materials and their Applications</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DIM-SAP-337.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+The course introduces the student to the following topics: Structure of materials, chemical composition, phase transformations, corrosion and mechanical properties of metals, the failure of materials, ceramics, polymers and related materials. Methodologies for material selection in engineering applications is also emphasized. In addition to lectures the students will attend one fifty minute demonstration/recitation session per week. These sessions are required are intended to demonstrate the concepts covered in the lectures.
+<!-- 
+<br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to CS 450</small> --> </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="10.png" style="vertical-align: middle;"><b>DMA-SAP-241 Multivariable Calculus</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DMA-SAP-241.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+The most important topics of this course are Vectors and coordinate geometry in 3-space; vector functions and curves; partial differentiation; applications to partial derivatives; multiple integration. The ideas of the vector calculus apply to numerous areas of human knowledge such as engineering, physics, pure mathematics, biology, and many others. Mathematical software will be used during the lectures.
+    <br><small></small> </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DMA-SAP-437 Numerical Analysis</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DMA-SAP-437.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+The target of this course is to provide a description about of the most important numerical methods to approximate solutions of linear systems, nonlinear equations and nonlinear systems of equations, to optimize and interpolate functions, to approximate integrals and solutions of initial value problems and boundary value problems for ODEs and PDEs. In each numerical method the algorithm, accuracy, conditioning, stability and rate of convergence will be analyzed and the implementation with the software Matlab will be carried out.
+    <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to CS 450</small> </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DIM-SAP-239 Principles of Molecular Cell Biology and Biotechnology</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DIM-SAP-239.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+This course deals with the biology of cells of higher organisms, their structure and function; and processes operating in cells, such as transcription, protein biogenesis, cell adhesion, cell proliferation, cell communication and differentiation. Experimentation with eukaryotic cells, as well as biology data analysis and introduction to scientific communication are also introduced.
+<!-- 
+<br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to CS 450</small> --> </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">45h Theory + 30h Lab <span style="font-size:70%">(7.5 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DIM-SAP-231 Thermal Physics</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DIM-SAP-231.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>First and second laws of thermodynamics including kinetic theory of gases, heat capacity, heat engines, introduction to entropy and statistical mechanics, and introduction to application of free energy and Boltzmann factor. A calculus-based approach for majors in engineering, mathematics, physics and chemistry.
+        <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to PHYS 213</small></span> 
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(3 ECTS)</span><br><span style="font-size:70%">(2 months)</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DIM-SAP-232 Quantum Physics</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DIM-SAP-232.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>Interference and diffraction, photons and matter waves, the Bohr atom, uncertainty principle, and wave mechanics. A calculus-based course for majors in engineering, mathematics, physics, and chemistry.
+        <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to PHYS 214</small></span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(3 ECTS)</span><br><span style="font-size:70%">(2 months)</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DTC-SAP-234 Introduction to Python Programming</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DTC-SAP-234.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>This course introduces students to the fundamentals of Python programming, covering essential concepts and techniques for effective coding and problem-solving. Designed for beginners, it builds a solid foundation in programming, from basic syntax and data manipulation to structured programming and debugging skills.
+        <!-- <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to PHYS 214</small>-->
+        </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DTC-SAP-374 Introduction to Algorithms and Models of Computation</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DTC-SAP-374.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>This course provides a comprehensive introduction to the core concepts of algorithms and computational theory. The curriculum covers a wide range of topics, from basic algorithm design and analysis to the study of formal languages and computational complexity.
+        <!-- <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to PHYS 214</small>-->
+        </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DTC-SAP-333 Machine Learning and Artificial Intelligence with Python</b><br>
+        <span class="fundamental" style="display:none;"><a href="download/DTC-SAP-333.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>This introductory course provides students with a hands-on foundation in artificial intelligence (AI) and machine learning (ML), offering a practical, beginner-friendly path to understanding and creating their first AI models. Students will explore essential AI and ML concepts, develop skills in Python programming for AI, and gain experience in popular AI domains such as Natural Language Processing (NLP) and Computer Vision.
+        <!-- <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to PHYS 214</small>-->
+        </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span>
+      </td>
+    </tr>
+
+
+    <tr>
+    	<td style="border-left:none;border-right:none;border-bottom:none;">
+    	<span id='mas1'>  <img src="cuadrado_mas_pdf.gif"   OnClick="
+    		getElementById('mas1').style.display='none';
+    		getElementById('menos1').style.display='block';
+        var all = document.getElementsByClassName('fundamental');
+        for (var i = 0; i < all.length; i++) {
+          all[i].style.display = 'block';
+        }
+    		"></span>
+		<span id='menos1' style="display:none;"><img src="cuadrado_menos.gif" OnClick="
+    		getElementById('menos1').style.display='none';
+    		getElementById('mas1').style.display='block';
+        var all = document.getElementsByClassName('fundamental');
+        for (var i = 0; i < all.length; i++) {
+          all[i].style.display = 'none';
+        }
+ 		;"></span>
+    	</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+
+<table style="text-align: left; width: auto" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td colspan="2" rowspan="1" style="vertical-align: top; background-color: rgb(148, 176, 218);"><span style="font-weight: bold; font-size: 120%">Spanish Culture and Language Courses</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="11.png" style="vertical-align: middle;"><b>TEO-SAP-123 Christianity and World Religions</b><br>
+        <span class="culture" style="display:none;"><a href="download/TEO-SAP-123.pdf" target="_top"><img src="pdf.gif" border="5" style="border-color:#ffffff" align="left"></a>The course helps to acquire basic knowledge about the major world religions and to critically reflect about their proposals. It will also deal with current religious issues such as dialogue between science and religion, secularization, religion and violence, etc. This is basic to have a better understanding of the plurality of humankind, to respect it and to be able to dialogue about beliefs and worldviews, as well as being able to reflect about own ideas and religious beliefs. Openness to difference and respect of it is vital in any workplace one may be.
+        </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">2 h/week <span style="font-size:70%">(3 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="11.png" style="vertical-align: middle;"><b>IIM-SAP-121 Español para alumnos de intercambio A1</b><br>
+        <span class="culture" style="display:none;"><a href="download/IIM-SAP-121.pdf" target="_top"><img src="pdf.gif" border="5" style="border-color:#ffffff" align="left"></a>Standard Spanish course for Exchange Students course, Level A1.</span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">3 h/week <span style="font-size:70%">(5 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="11.png" style="vertical-align: middle;"><b>IIM-SAP-122 Español para alumnos de intercambio A2</b><br>
+        <span class="culture" style="display:none;"><a href="download/IIM-SAP-122.pdf" target="_top"><img src="pdf.gif" border="5" style="border-color:#ffffff" align="left"></a>Standard Spanish course for Exchange Students course, Level A2.</span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">3 h/week <span style="font-size:70%">(5 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="11.png" style="vertical-align: middle;"><b>IIM-SAP-123 Español para alumnos de intercambio B1</b><br>
+        <span class="culture" style="display:none;"><a href="download/IIM-SAP-123.pdf" target="_top"><img src="pdf.gif" border="5" style="border-color:#ffffff" align="left"></a>Standard Spanish course for Exchange Students course, Level B1.</span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">3 h/week <span style="font-size:70%">(5 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="11.png" style="vertical-align: middle;"><b>IIM-SAP-124 Español para alumnos de intercambio B2</b><br>
+        <span class="culture" style="display:none;"><a href="download/IIM-SAP-124.pdf" target="_top"><img src="pdf.gif" border="5" style="border-color:#ffffff" align="left"></a>Standard Spanish course for Exchange Students course, Level B2.</span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">3 h/week <span style="font-size:70%">(5 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="11.png" style="vertical-align: middle;"><b>IIM-SAP-125 Español para alumnos de intercambio C1</b><br>
+        <span class="culture" style="display:none;"><a href="download/IIM-SAP-125.pdf" target="_top"><img src="pdf.gif" border="5" style="border-color:#ffffff" align="left"></a>Standard Spanish course for Exchange Students course, Level C1.</span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">3 h/week <span style="font-size:70%">(5 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="11.png" style="vertical-align: middle;"><b>DOI-SAP-130 Spanish Culture through Films</b><br>
+        <span class="culture" style="display:none;"><a href="download/DOI-SAP-130.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>The course has been designed to provide students with an overview of recent Spanish culture as depicted in several movies. It also aims at providing students with an understanding of culture as a site for the construction of meaning and identity.</span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img src="11.png" style="vertical-align: middle;"><b>IIM-SAP-140 Spanish Culture</b><br>
+        <span class="culture" style="display:none;">
+        <a href="download/IIM-SAP-140.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+        A language is always linked to its culture. The objective of this subject is to assist students to become familiar with the reality of the country in which they are living: its history and its present.
+        </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">2 h/week <span style="font-size:70%">(3 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+    	<td style="border-left:none;border-right:none;border-bottom:none;">
+    	<span id='mas10'>  <img src="cuadrado_mas_pdf.gif"   OnClick="
+    		getElementById('mas10').style.display='none';
+    		getElementById('menos10').style.display='block';
+        var all = document.getElementsByClassName('culture');
+        for (var i = 0; i < all.length; i++) {
+          all[i].style.display = 'block';
+        }
+    		"></span>
+		<span id='menos10' style="display:none;"><img src="cuadrado_menos.gif" OnClick="
+    		getElementById('menos10').style.display='none';
+    		getElementById('mas10').style.display='block';
+        var all = document.getElementsByClassName('culture');
+        for (var i = 0; i < all.length; i++) {
+          all[i].style.display = 'none';
+        }
+ 		;"></span>
+    	</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table style="text-align: left; width: auto;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td colspan="2" rowspan="1" style="vertical-align: top; background-color: rgb(148, 176, 218);"><span style="font-weight: bold; font-size: 120%">Elective courses on Engineering Technologies</span><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DIM-OPT-436 3D Engineering Design with Dynamic Simulation</b><br>
+        <span class="elective" style="display:none;"><a href="/icai/exchange/download/english/DIM-OPT-436.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>At the end of the season, the students will be able to apply fundamental engineering design principles and procedures, to design and optimize parts and assemblies using CAD/CAM/CAE technology, and to implement rapid prototyping and reverse engineering complete processes.</span>
+</td>
+<td style="vertical-align: top; white-space: nowrap;">2 h/week <span style="font-size:70%">(3 ECTS)</span><br>
+</td>
+</tr>
+<td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DEA-OPT-438 Aerospace Electronics</b><br>
+        <span class="elective" style="display:none;"><a href="/icai/exchange/download/english/DEA-OPT-438.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>This course provides an overview of the electronic systems and equipment found in spacecraft developments such as power, data handling, and instrumentation. The course also intends as well to provide an overview on cost impacts derived from design and development activities. A visit to SENER facilities is included, to provide an overview of the development facilities (assembly and testing) but as well to have a working day on a true environment with dedicated engineering support from experts in the area.</span>
+</td>
+<td style="vertical-align: top; white-space: nowrap;">2 h/week <span style="font-size:70%">(3 ECTS)</span>
+</td>
+</tr>
+<tr>
+<tr>
+<td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DEA-OPT-431 Automotive Electronics</b><br>
+        <span class="elective" style="display:none;"><a href="/icai/exchange/download/english/DEA-OPT-431.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>An overview of the electronic systems found in automotive designs including critical systems, navigation, sensoring, interfacing, safety systems and communication systems. The course also reviews trends in automotive electronics as well as issues (such as production techniques, cost, reliability and systems integration) that are driving the automotive industry.</span>
+</td>
+<td style="vertical-align: top; white-space: nowrap;">2 h/week <span style="font-size:70%">(3 ECTS)</span><br>
+</td>
+</tr>
+<tr><td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DIM-OPT-433 Automotive Engines</b><br>
+        <span class="elective" style="display:none;"><a href="download/DIM-OPT-433.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>Basic Engine design: components and systems. Basic thermodynamics. Otto, Diesel, Atkinson and Miller cycles. Engine performance modeling and prediction. Link between ground vehicle and engines. Aerodynamic Drag, grading resistance and rolling resistance. Exhaust Emissions (tail pipe).Hybrid and Electric vehicles.</span>
+</td>
+<td style="vertical-align: top; white-space: nowrap;">2 h/week <span style="font-size:70%">(3 ECTS)</span>
+</td>
+</tr>
+<tr>
+
+<td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DIE-OPT-437 The Challenge of Future Electricity Systems</b><br>
+        <span class="elective" style="display:none;"><a href="/icai/exchange/download/english/DIE-OPT-437.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>At the end of the course the students will be able to analyze from an integrated perspective, building from the engineering background, all new challenges of the electric power systems: integration of renewable, activation of demand side, etc.</span>
+</td>
+<td style="vertical-align: top; white-space: nowrap;">2 h/week <span style="font-size:70%">(3 ECTS)</span><br>
+</td>
+</tr>
+
+<tr>
+<td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DOI-OPT-439 Circular economy and eco-industry</b><br>
+        <span class="elective" style="display:none;"><a href="/icai/exchange/download/english/DOI-OPT-439.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>This course will introduce key concepts on circular economy and eco-industry, and provide an opportunity for hands-on learning on these topics. Classes will combine theoretical pills, case studies, tools and techniques for idea generation and business model design, and team work on a project. The team project will indeed be the cornerstone of the course: students will work on innovative solutions for the circular economy taking into account technical considerations, business model design, and supply chain design.</span>
+</td>
+<td style="vertical-align: top; white-space: nowrap;">2 h/week <span style="font-size:70%">(3 ECTS)</span><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DIE-OPT-434 Energy Economics: Primary Sources, Electric Power Systems and Market</b><br>
+        <span class="elective" style="display:none;"><a href="/icai/exchange/download/english/DIE-OPT-434.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>The course presents an interdisciplinary perspective of the energy sector, with a special focus on the electric power sector, linking the engineering, economic, legal and environmental viewpoints. <br>The course reviews the whole electricity supply value chain, from the analysis of the key primary energy sources to the description of the main electricity activities and the different regimes in which they operate, with a special focus on the review of the fundamentals needed to approach the market designs currently implemented worldwide.</span>
+</td>
+<td style="vertical-align: top; white-space: nowrap;">2 h/week <span style="font-size:70%">(3 ECTS)</span><br>
+</td>
+</tr>
+
+<tr>
+<td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DOI-OPT-445 Introduction to Entrepreneurship</b><br>
+        <span class="elective" style="display:none;"><a href="download/DOI-OPT-445.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>This course has been created as a training that allows students to learn how to develop business models with new, more agile methodologies. This is the Business Design & Lean Startup course. Classes will combine theoretical pills, case studies, tools and techniques for idea generation and business model design, and team work on a project. The team project will indeed be the cornerstone of the course.</span>
+</td>
+<td style="vertical-align: top; white-space: nowrap;">2 h/week <span style="font-size:70%">(3 ECTS)</span><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DIM-OPT-423 Metrology</b><br>
+        <span class="elective" style="display:none;"><a href="/icai/exchange/download/english/DIM-OPT-423.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>This course is an introduction to metrology. It gives an overview on uncertainty calculations and focus on dimensional and geometrical metrology focus on GPS standardization.</span>
+</td>
+<td style="vertical-align: top; white-space: nowrap;">2 h/week <span style="font-size:70%">(3 ECTS)</span><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><img src="01.png" style="vertical-align: middle;"><b>DIM-OPT-432 Nanotechnology</b><br>
+        <span class="elective" style="display:none;"><a href="/icai/exchange/download/english/DIM-OPT-432.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>The new frontiers of materials, chemical and biological research. Oriented to give the basic principles of nanotechnology and nanomaterials, without requiring quantum physics knowledge, and to swipe through the applications and the future possibilities in the field.</span>
+</td>
+<td style="vertical-align: top; white-space: nowrap;">2 h/week <span style="font-size:70%">(3 ECTS)</span>
+</td>
+</tr>
+
+
+<tr><td style="vertical-align: top;"><img src="11.png" style="vertical-align: middle;"><b>XXX-SAP-491 Research Project I (100h)</b><br>
+        <span class="elective" style="display:none;">Research projects with ICAI professors, offered each year (availability varies).</span>
+</td>
+<td style="vertical-align: top; white-space: nowrap;"><span style="font-size:70%">(4 ECTS)</span></td>
+</tr>
+<tr><td style="vertical-align: top;"><img src="11.png" style="vertical-align: middle;"><b>XXX-SAP-492 Research Project II (100h)</b><br>
+        <span class="elective" style="display:none;">Research projects with ICAI professors, offered each year (availability varies).</span>
+</td>
+<td style="vertical-align: top; white-space: nowrap;"><span style="font-size:70%">(4 ECTS)</span></td>
+</tr>
+
+
+    <tr>
+    	<td style="border-left:none;border-right:none;border-bottom:none;">
+    	<span id='mas20'>  <img src="cuadrado_mas_pdf.gif"   OnClick="
+    		getElementById('mas20').style.display='none';
+    		getElementById('menos20').style.display='block';
+        var all = document.getElementsByClassName('elective');
+        for (var i = 0; i < all.length; i++) {
+          all[i].style.display = 'block';
+        }
+    		"></span>
+		<span id='menos20' style="display:none;"><img src="cuadrado_menos.gif" OnClick="
+    		getElementById('menos20').style.display='none';
+    		getElementById('mas20').style.display='block';
+        var all = document.getElementsByClassName('elective');
+        for (var i = 0; i < all.length; i++) {
+          all[i].style.display = 'none';
+        }
+ 		;"></span>
+    	</td>
+    </tr>
+</tbody>
+</table>
+<font size="-2"><br>(*) 2 hours/week of lecture and laboratory classes during one semester correspond to 3 ECTS (European Credits).</font>
+<br>
+<br>
+	<!--
+	<h4>Download PDF Spring/Summer SAPIENS leaflet: <a href="download/sapiens2018.pdf" target="_top"><img src="pdf_en.gif" border="0" style="border-color:#ffffff" align="bottom"></a>&nbsp;&nbsp;4MB</h4>
+<br>
+-->
+
+</td></tr>
+</table> <!-- Spring SAPIENS -->
+
+
+
+
+<br>
+<br>
+<table width="100%" style="border: 1px solid black;">
+<tr><td style="border: none;"><center><h2>Courses planned to be offered in Summer SAPIENS 2026</h2></center></td></tr>
+<tr><td style="border: 1px solid black;">
+
+
+<br>
+<table style="text-align: left; width: auto" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td colspan="2" rowspan="1" style="vertical-align: top; background-color: rgb(148, 176, 218);"><span style="font-weight: bold; font-size: 120%">Summer SAPIENS</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><b>IIM-SAP-140 Spanish Culture<br>IIM-SAP-140 <i>Cultura Española</i></b><br>
+        <span id="desc30" style="display:none;">
+        <a href="download/IIM-SAP-140en1.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" ></a>
+        <a href="download/IIM-SAP-140es1.pdf" target="_top"><img src="pdf_es.gif" border="5" style="border-color:#ffffff" ></a>Session I&nbsp;&nbsp;&nbsp;
+        <a href="download/IIM-SAP-140en2.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" ></a>
+        <a href="download/IIM-SAP-140es2.pdf" target="_top"><img src="pdf_es.gif" border="5" style="border-color:#ffffff" ></a>Session II&nbsp;&nbsp;&nbsp;
+        <br><br>A language is always linked to its culture. The objective of this subject is to assist students to become familiar with the reality of the country in which they are living: its history and its present.
+        </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">7.5 h/week, 4 weeks <span style="font-size:70%">(3 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><b>IIM-SAP-141 Basic Spanish Language<br>IIM-SAP-141 <i>Lengua Española. Básico</i></b><br>
+        <span id="desc31" style="display:none;">
+        <a href="download/IIM-SAP-141en.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+        <a href="download/IIM-SAP-141es.pdf" target="_top"><img src="pdf_es.gif" border="5" style="border-color:#ffffff" align="left"></a>
+		A course designed to enable a student to acquire the competences established by the Common European Framework of Reference for Languages in English depending on a student's level in the following areas: Grammar, morphology and phonetics; Oral and written expression; Listening comprehension; Reading comprehension; Vocabulary related with the areas covered.
+        </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">7.5 h/week, 4 weeks <span style="font-size:70%">(3 ECTS)</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><b>IIM-SAP-142 Intermediate Spanish Language I<br>IIM-SAP-142 <i>Lengua Española. Intermedio I</i></b><br>
+        <span id="desc32" style="display:none;">
+        <a href="download/IIM-SAP-142en.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+        <a href="download/IIM-SAP-142es.pdf" target="_top"><img src="pdf_es.gif" border="5" style="border-color:#ffffff" align="left"></a>
+        A course designed to enable a student to acquire the competences established by the Common European Framework of Reference for Languages in Spanish at B1 level in the following areas:	Grammar, morphology and phonetics; Oral and written expression; Listening comprehension; Reading comprehension; Vocabulary related with the areas covered
+        </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">7.5 h/week, 4 weeks <span style="font-size:70%">(3 ECTS)</span><br>
+      </td>
+    </tr>
+    
+    <tr>
+      <td style="vertical-align: top;"><b>IIM-SAP-143 Intermediate Spanish Language II<br>IIM-SAP-143 <i>Lengua Española. Intermedio II</i></b><br>
+        <span id="desc32-2" style="display:none;">
+        <a href="download/IIM-SAP-143en.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+        <a href="download/IIM-SAP-143es.pdf" target="_top"><img src="pdf_es.gif" border="5" style="border-color:#ffffff" align="left"></a>
+        A course designed to enable a student to acquire the competences established by the Common European Framework of Reference for Languages in Spanish at B1 level in the following areas:	Grammar, morphology and phonetics; Oral and written expression; Listening comprehension; Reading comprehension; Vocabulary related with the areas covered
+        </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">7.5 h/week, 4 weeks <span style="font-size:70%">(3 ECTS)</span><br>
+      </td>
+    </tr>
+    
+	<tr><td style="vertical-align: top;"><b>XXX-SAP-491 Research Project I (100h)</b><br>
+			<span id="desc33" style="display:none;">Research projects with ICAI professors, offered each year (availability varies).</span>
+	</td>
+	<td style="vertical-align: top; white-space: nowrap;"><span style="font-size:70%">(4 ECTS)</span></td>
+	</tr>
+	<tr><td style="vertical-align: top;"><b>XXX-SAP-492 Research Project II (100h)</b><br>
+			<span id="desc34" style="display:none;">Research projects with ICAI professors, offered each year (availability varies).</span>
+	</td>
+	<td style="vertical-align: top; white-space: nowrap;"><span style="font-size:70%">(4 ECTS)</span></td>
+	</tr>
+
+	
+	<tr><td style="vertical-align: top;"><b>DOI-OPT-445 Introduction to Entrepreneurship</b><br>
+			<span id="desc37" style="display:none;">
+			<a href="/icai/exchange/download/english/DOI-OPT-445.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+This course has been created as a training that allows students to learn how to develop business models with new, more agile methodologies. This is the Business Design & Lean Startup course.
+Classes will combine theoretical pills, case studies, tools and techniques for idea generation and business model design, and team work on a project. The team project will indeed be the cornerstone of the course.
+<!--			<br><small>This subject was pre-approved by Stevens Institute of Technology as an equivalent to E-580 Sustainable Engineering</small> -->
+</span>
+	</td>
+	<td style="vertical-align: top; white-space: nowrap;">30 h  course. 8 weeks <span style="font-size:70%">(3 ECTS)</span><br></td>
+	</tr>
+ 	<tr><td style="vertical-align: top;"><b>DIM-SAP-246 Sustainable Engineering Principles</b><br>
+			<span id="desc38" style="display:none;">
+			<a href="download/DIM-SAP-246.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+			This course is an introduction to the sustainable development applied to environmental technology and renewable energies. It includes an overview of environmental issues such as air pollution, greenhouse gases, carbon footprint and water pollution; life cycle assessment and environmental management systems. We will study water purification (WPP) and the wastewater treatment plants (WWTP). Finally, we will learn the basic principles of renewable energies systems.
+			<br><small>This subject was pre-approved by University of Michigan as an equivalent to CEE 265 Sustainable Engineering Principles</small></span>
+	</td>
+	<td style="vertical-align: top; white-space: nowrap;">6 h/week, 8 weeks <span style="font-size:70%">(4.5 ECTS)</span><br></td>
+	</tr>
+  <tr><td style="vertical-align: top;"><b>DTC-SAP-247 Internet of Things (IoT): Basics and Practical Approach</b><br>
+      <span id="desc39" style="display:none;">
+      <a href="download/DTC-SAP-247.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+      This course is an introduction to the Internet of Things concepts and paradigm including from the current state of the art to future expansion and development lines. Hence, it is based on an end-to-end approach considering the most used architectures, components as well as business and industrial practical applications. This course uses both a theoretical and practical approach based on master classes as well as labs. Thereby, at the end of the course, the student will be able to understand the application of IoT-based systems, define and design high level approaches and architectures as well as design and develop such systems.
+      </span>
+  </td>
+  <td style="vertical-align: top; white-space: nowrap;">30 h  course. 8 weeks <span style="font-size:70%">(3 ECTS)</span><br></td>
+  </tr>
+  <tr><td style="vertical-align: top;"><b>DIM-SAP-336 Engineering Thermodynamics</b><br>
+      <span id="desc40" style="display:none;">
+      <a href="download/DIM-SAP-336.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+      Engineering Thermodynamics is concerned with energy transformation and utilization. The key of the subject is the analysis of any energy process, determining the variation of the thermophysical properties of the fluids involved and applying energy, entropy and exergy balances. Basic air-conditioning processes are also studied. Examples and study cases about heat to mechanical/electric power conversion are analysed.
+    <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to ME 300</small></span>
+  </td>
+  <td style="vertical-align: top; white-space: nowrap;">60 h  course. 8 weeks <span style="font-size:70%">(6 ECTS)</span><br></td>
+  </tr>
+  <tr><td style="vertical-align: top;"><b>DOI-SAP-354 Engineering Economy</b><br>
+      <span id="desc41" style="display:none;">
+      <a href="download/DOI-SAP-354.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>
+      This course introduces the student to the basic concepts of corporate finance, and some elements of Capital Projects, developing further those aspects which are more relevant to engineering.
+The course gets deep into the fundamentals of financial management and capital budgeting, by using skills and techniques previously learnt in engineering school.
+During the course, students will learn about the time value of money, how to interpret and analyze financial statements, to forecast cash flows, to valuate investment projects, to compromise between risk and return, to make complex economic projections, to prepare budgets and to manage the net‐ working capital, among other relevant issues.
+  <!--  <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to ME 300</small> -->
+  </span>
+  </td>
+  <td style="vertical-align: top; white-space: nowrap;">60 h  course. 8 weeks <span style="font-size:70%">(6 ECTS)</span><br></td>
+  </tr>
+  <tr><td style="vertical-align: top;"><b>TEO-SAP-123 Christianity and World Religions</b><br>
+      <span id="desc42" style="display:none;">
+      <a href="download/TEO-SAP-123.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>The course helps to acquire basic knowledge about the major world religions and to critically reflect about their proposals. It will also deal with current religious issues such as dialogue between science and religion, secularization, religion and violence, etc. This is basic to have a better understanding of the plurality of humankind, to respect it and to be able to dialogue about beliefs and worldviews, as well as being able to reflect about own ideas and religious beliefs. Openness to difference and respect of it is vital in any workplace one may be.
+      </span>
+  </td>
+  <td style="vertical-align: top; white-space: nowrap;">7.5 h/week, 4 weeks <span style="font-size:70%">(3 ECTS)</span><br></td>
+  </tr>
+
+    <tr>
+      <td style="vertical-align: top;"><b>DTC-SAP-333 Machine Learning and Artificial Intelligence with Python</b><br>
+        <span id="desc43" style="display:none;"><a href="download/DTC-SAP-333.pdf" target="_top"><img src="pdf_en.gif" border="5" style="border-color:#ffffff" align="left"></a>This introductory course provides students with a hands-on foundation in artificial intelligence (AI) and machine learning (ML), offering a practical, beginner-friendly path to understanding and creating their first AI models. Students will explore essential AI and ML concepts, develop skills in Python programming for AI, and gain experience in popular AI domains such as Natural Language Processing (NLP) and Computer Vision.
+        <!-- <br><small>This subject was pre-approved by Univ. of Illinois-UC as an equivalent to PHYS 214</small>-->
+        </span>
+      </td>
+      <td style="vertical-align: top; white-space: nowrap;">4 h/week <span style="font-size:70%">(6 ECTS)</span>
+      </td>
+    </tr>
+
+
+
+
+    <tr>
+    	<td style="border-left:none;border-right:none;border-bottom:none;">
+    	<span id='mas30'>  <img src="cuadrado_mas_pdf.gif"   OnClick="
+    		getElementById('mas30').style.display='none';
+    		getElementById('menos30').style.display='block';
+    		getElementById('desc30').style.display='block';
+    		getElementById('desc31').style.display='block';
+    		getElementById('desc32').style.display='block';
+    		getElementById('desc32-2').style.display='block';
+    		getElementById('desc33').style.display='block';    		
+    		getElementById('desc34').style.display='block';    		
+    		getElementById('desc37').style.display='block';    		
+    		getElementById('desc38').style.display='block';    		
+        getElementById('desc39').style.display='block';       
+        getElementById('desc40').style.display='block';       
+        getElementById('desc41').style.display='block';       
+        getElementById('desc42').style.display='block';       
+        getElementById('desc43').style.display='block';       
+    		"></span>
+		<span id='menos30' style="display:none;"><img src="cuadrado_menos.gif" OnClick="
+    		getElementById('menos30').style.display='none';
+    		getElementById('mas30').style.display='block';
+    		getElementById('desc30').style.display='none';
+    		getElementById('desc31').style.display='none';
+    		getElementById('desc32').style.display='none';
+    		getElementById('desc32-2').style.display='none';
+    		getElementById('desc33').style.display='none';    		
+    		getElementById('desc34').style.display='none';    		
+    		getElementById('desc37').style.display='none';    		
+    		getElementById('desc38').style.display='none';    		
+        getElementById('desc39').style.display='none';        
+        getElementById('desc40').style.display='none';        
+        getElementById('desc41').style.display='none';        
+        getElementById('desc42').style.display='none';        
+        getElementById('desc43').style.display='none';        
+ 		;"></span>
+    	</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<img src="summer-SAPIENS_calendar_2026.png" width="100%">
+
+</td></tr>
+
+    <tr>
+    <td>
+    <h4>Download PDF SAPIENS leaflet: 
+<!--
+<a href="download/sapiens2019.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Spring/Summer 2018-19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="download/sapiens2020.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2019-20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="download/sapiens2021.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2020-21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="download/sapiens2022.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2021-22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+<a href="download/sapiens2023.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2022-23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="download/sapiens2024.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2023-24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="download/sapiens2025.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2024-25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="download/sapiens2026.pdf" target="_top"><img src="pdf_en.gif"
+border="0" style="border-color:#ffffff"
+align="bottom"></a>&nbsp;&nbsp;Fall/Spring/Summer 2025-26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</h4>
+	</td>
+	</tr>
+
+</table> <!-- Summer SAPIENS -->
+
+</div> <!-- div_contenido -->
+</body>
+</html>
+

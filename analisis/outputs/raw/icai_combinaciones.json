@@ -1,0 +1,281 @@
+[
+  {
+    "codigo_icai_1": "DEA-GITT-211",
+    "codigo_icai_2": "DEA-GITT-214",
+    "codigo_itba": "22.09",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Circuitos Electrónicos aporta los fundamentos de electrónica y circuitos, mientras que Sistemas Digitales I añade lógica y sistemas digitales aplicados a informática; juntas cubren las dos bases complementarias de la materia fundacional.",
+    "complementa_por": "DEA-GITT-211 cubre circuitos y electrónica; DEA-GITT-214 aporta lógica digital y organización de sistemas digitales.",
+    "gaps_restantes": "Falta confirmar el alcance de arquitectura de computadores y de electrónica analógica en las guías docentes."
+  },
+  {
+    "codigo_icai_1": "DCIA-MUIAA-515",
+    "codigo_icai_2": "DTC-IMAT-423",
+    "codigo_itba": "48.02",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Ingeniería del Dato cubre gestión e infraestructura de datos para IA y Tecnologías para la Digitalización aporta el bloque organizacional de transformación digital; son los dos ejes explícitos de la materia ITBA.",
+    "complementa_por": "DCIA-MUIAA-515 aporta arquitectura, gestión y pipelines de datos; DTC-IMAT-423 aporta tecnologías y procesos de digitalización.",
+    "gaps_restantes": "Falta verificar el grado de integración explícita entre IA y cambio organizacional."
+  },
+  {
+    "codigo_icai_1": "DOI-MBA-612",
+    "codigo_icai_2": "DOI-MTF-513",
+    "codigo_itba": "61.50",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Financiación e Inversiones cubre decisiones de financiación e inversión corporativa, y Gestión de Carteras añade riesgo, selección de cartera y valuación de activos; juntas cubren bloques corporativos y de mercados de Finanzas de la Empresa.",
+    "complementa_por": "DOI-MBA-612 aporta financiación y decisiones empresariales; DOI-MTF-513 incorpora carteras, riesgo y análisis de inversiones.",
+    "gaps_restantes": "Falta confirmar cobertura de fusiones y adquisiciones, política de dividendos y opciones reales."
+  },
+  {
+    "codigo_icai_1": "DOI-MBA-612",
+    "codigo_icai_2": "FCEE-BA-515",
+    "codigo_itba": "61.50",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Financiación e Inversiones cubre la gestión financiera y las decisiones corporativas, mientras que Derivados Financieros completa un bloque explícito y técnico del programa ITBA.",
+    "complementa_por": "DOI-MBA-612 aporta financiación, inversión y decisiones empresariales; FCEE-BA-515 aporta instrumentos derivados y cobertura.",
+    "gaps_restantes": "Falta confirmar la profundidad en valuación de empresas, dividendos y fusiones y adquisiciones."
+  },
+  {
+    "codigo_icai_1": "DOI-MBA-612",
+    "codigo_icai_2": "FCEE-BA23-414",
+    "codigo_itba": "61.50",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Financiación e Inversiones aporta gestión financiera corporativa y Matemáticas Financieras agrega las herramientas de flujos y valuación necesarias para obligaciones, acciones y proyectos.",
+    "complementa_por": "DOI-MBA-612 cubre decisiones de financiación e inversión; FCEE-BA23-414 aporta cálculo financiero y valuación de flujos y activos.",
+    "gaps_restantes": "Falta confirmar derivados, selección de cartera y fusiones y adquisiciones."
+  },
+  {
+    "codigo_icai_1": "DTC-IMAT-215",
+    "codigo_icai_2": "DTC-MBD-515",
+    "codigo_itba": "72.42",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Fundamentos de Sistemas Operativos aporta procesos, concurrencia y sincronización; Tecnologías de Procesamiento Big Data añade almacenamiento y procesamiento distribuido a escala. Juntas cubren dos bloques distintos y centrales de sistemas distribuidos.",
+    "complementa_por": "DTC-IMAT-215 aporta threads, procesos y sincronización; DTC-MBD-515 aporta procesamiento distribuido, almacenamiento y patrones tipo MapReduce.",
+    "gaps_restantes": "Falta confirmar RPC, middleware, consistencia, tolerancia a fallas y programación distribuida en Java."
+  },
+  {
+    "codigo_icai_1": "DCIA-MUIAA-511",
+    "codigo_icai_2": "DIM-MII-516",
+    "codigo_itba": "72.46",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Agentes y Métodos de IA aporta la capa de agentes autónomos y métodos de decisión, mientras que Robótica Industrial aporta el diseño e implementación del sistema robótico; la combinación es complementaria para una materia de robótica basada en comportamiento.",
+    "complementa_por": "DCIA-MUIAA-511 aporta agentes y métodos de IA; DIM-MII-516 aporta sensores, actuadores y realización robótica.",
+    "gaps_restantes": "Falta confirmar arquitecturas reactivas o deliberativas de comportamiento y su implementación integrada."
+  },
+  {
+    "codigo_icai_1": "DEAC-IMAT-313",
+    "codigo_icai_2": "DMA-IMAT-311",
+    "codigo_itba": "72.53",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Visión por Ordenador I aporta procesamiento y representación visual, y Geometría Computacional añade el bloque geométrico necesario para reconstrucción y razonamiento tridimensional.",
+    "complementa_por": "DEAC-IMAT-313 cubre fundamentos de visión; DMA-IMAT-311 aporta geometría y algoritmos espaciales para el componente 3D.",
+    "gaps_restantes": "Falta confirmar reconstrucción 3D, calibración de cámaras y estimación de profundidad."
+  },
+  {
+    "codigo_icai_1": "DEAC-MII-513",
+    "codigo_icai_2": "DEAC-MUIINT-112",
+    "codigo_itba": "72.57",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Sistemas Electrónicos cubre integración de hardware y Internet of Things añade dispositivos conectados, comunicaciones y aplicación de sistemas embebidos; cada una cubre una capa distinta del sistema.",
+    "complementa_por": "DEAC-MII-513 aporta hardware y electrónica de integración; DEAC-MUIINT-112 aporta conectividad y uso de dispositivos embebidos en IoT.",
+    "gaps_restantes": "Falta confirmar programación de firmware y restricciones de tiempo real."
+  },
+  {
+    "codigo_icai_1": "DCIA-IMAT-211",
+    "codigo_icai_2": "DCIA-MIA-501",
+    "codigo_itba": "72.59",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Fundamentos de Inteligencia Artificial proporciona el marco general de técnicas de IA y Modelos Generativos Profundos añade un bloque avanzado de redes profundas; la segunda materia aporta profundidad nueva, no repetición.",
+    "complementa_por": "DCIA-IMAT-211 aporta fundamentos y métodos generales de IA; DCIA-MIA-501 aporta modelos generativos y deep learning avanzado.",
+    "gaps_restantes": "Falta confirmar los contenidos específicos exigidos por Sistemas de IA II."
+  },
+  {
+    "codigo_icai_1": "DCIA-IMAT-211",
+    "codigo_icai_2": "DEAC-IMAT-411",
+    "codigo_itba": "72.59",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Fundamentos de Inteligencia Artificial establece métodos generales y Aprendizaje por Refuerzo incorpora una técnica avanzada de decisión secuencial; juntas cubren base y profundización en bloques distintos.",
+    "complementa_por": "DCIA-IMAT-211 aporta fundamentos de IA; DEAC-IMAT-411 aporta aprendizaje por refuerzo y control adaptativo.",
+    "gaps_restantes": "Falta confirmar el temario concreto de Sistemas de IA II y la cobertura de otras técnicas avanzadas."
+  },
+  {
+    "codigo_icai_1": "DCIA-IMAT-211",
+    "codigo_icai_2": "DTC-IMAT-416",
+    "codigo_itba": "72.59",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Fundamentos de Inteligencia Artificial cubre el marco general y Procesamiento de Lenguaje Natural II añade una especialidad avanzada de IA con técnicas y datos de lenguaje.",
+    "complementa_por": "DCIA-IMAT-211 aporta bases de IA; DTC-IMAT-416 aporta procesamiento de lenguaje natural avanzado.",
+    "gaps_restantes": "Falta confirmar el temario concreto de Sistemas de IA II y la cobertura de aprendizaje profundo general."
+  },
+  {
+    "codigo_icai_1": "DCIA-IMAT-211",
+    "codigo_icai_2": "DTC-IMAT-417",
+    "codigo_itba": "72.59",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Fundamentos de Inteligencia Artificial aporta base metodológica y Visión por Ordenador II añade una aplicación avanzada y específica de IA; las coberturas son complementarias.",
+    "complementa_por": "DCIA-IMAT-211 aporta métodos generales; DTC-IMAT-417 aporta visión artificial avanzada.",
+    "gaps_restantes": "Falta confirmar el temario concreto de Sistemas de IA II y la cobertura de otras áreas avanzadas."
+  },
+  {
+    "codigo_icai_1": "DCIA-IMAT-211",
+    "codigo_icai_2": "DTC-MIINT-512",
+    "codigo_itba": "72.59",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Fundamentos de Inteligencia Artificial cubre técnicas generales y Deep Learning agrega el bloque de redes profundas; la combinación une fundamento amplio y profundización moderna.",
+    "complementa_por": "DCIA-IMAT-211 aporta fundamentos de IA; DTC-MIINT-512 aporta deep learning.",
+    "gaps_restantes": "Falta confirmar el temario concreto de Sistemas de IA II y la amplitud de métodos no neuronales avanzados."
+  },
+  {
+    "codigo_icai_1": "DEAC-MII-513",
+    "codigo_icai_2": "DEAC-MUIINT-112",
+    "codigo_itba": "72.66",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Sistemas Electrónicos cubre integración de hardware e Internet of Things añade conectividad y aplicaciones con dispositivos embebidos; las materias cubren capas complementarias del sistema.",
+    "complementa_por": "DEAC-MII-513 aporta hardware y electrónica; DEAC-MUIINT-112 aporta conectividad y uso de dispositivos IoT.",
+    "gaps_restantes": "Falta confirmar programación embebida, firmware y tiempo real."
+  },
+  {
+    "codigo_icai_1": "DCIA-MUIAA-515",
+    "codigo_icai_2": "DTC-MIT-515",
+    "codigo_itba": "72.71",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Ingeniería del Dato aporta integración de datos y pipelines, mientras que Arquitectura de Servicios en Red aporta integración entre servicios y arquitectura cliente-servidor; cubren facetas distintas de integración de sistemas de información.",
+    "complementa_por": "DCIA-MUIAA-515 aporta integración y gestión de datos; DTC-MIT-515 aporta servicios, interfaces y arquitectura de red.",
+    "gaps_restantes": "Falta confirmar middleware, patrones de integración empresarial y gobierno transversal de APIs."
+  },
+  {
+    "codigo_icai_1": "DEA-GITI-431",
+    "codigo_icai_2": "DEAC-MII-631",
+    "codigo_itba": "72.90",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Microprocesadores aporta la plataforma de cómputo y control de bajo nivel; Comunicaciones Industriales añade la conectividad de dispositivos. Juntas cubren las capas de dispositivo y comunicación de IoT.",
+    "complementa_por": "DEA-GITI-431 aporta microprocesadores y hardware programable; DEAC-MII-631 aporta comunicaciones industriales y conectividad de sistemas.",
+    "gaps_restantes": "Falta confirmar programación de microcontroladores, sensores, MQTT e IPv6."
+  },
+  {
+    "codigo_icai_1": "DEA-GITT-214",
+    "codigo_icai_2": "DEAC-MUIINT-112",
+    "codigo_itba": "72.94",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Sistemas Digitales I aporta fundamentos de hardware digital y Internet of Things añade el uso de dispositivos conectados; combinan base electrónica con una aplicación embebida concreta.",
+    "complementa_por": "DEA-GITT-214 aporta lógica y sistemas digitales; DEAC-MUIINT-112 aporta dispositivos conectados y contexto IoT.",
+    "gaps_restantes": "Falta confirmar programación de microcontroladores y herramientas de desarrollo embebido."
+  },
+  {
+    "codigo_icai_1": "DCIA-MUIAA-516",
+    "codigo_icai_2": "DTC-GITT-315",
+    "codigo_itba": "73.22",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Operación de Modelos aporta automatización, despliegue y operación continua, e Ingeniería del Software aporta procesos y prácticas de desarrollo; la combinación cubre la unión desarrollo-operaciones propia de DevOps.",
+    "complementa_por": "DCIA-MUIAA-516 aporta despliegue y operación automatizada; DTC-GITT-315 aporta ciclo de desarrollo y prácticas de ingeniería.",
+    "gaps_restantes": "Falta confirmar Git, infraestructura como código, contenedores, CI/CD general y DevSecOps."
+  },
+  {
+    "codigo_icai_1": "DCIA-IMAT-212",
+    "codigo_icai_2": "DOI-MBD-516",
+    "codigo_itba": "73.23",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Adquisición y Visualización de Datos cubre obtención, manipulación y presentación de datos, mientras que Análisis Estadístico con Lenguajes de Programación aporta programación analítica y métodos estadísticos para ML.",
+    "complementa_por": "DCIA-IMAT-212 aporta adquisición, preparación y visualización; DOI-MBD-516 aporta lenguajes de programación y análisis estadístico aplicado a datos.",
+    "gaps_restantes": "Falta confirmar el paradigma concreto de programación orientada a datos y el alcance de ingeniería de pipelines."
+  },
+  {
+    "codigo_icai_1": "DTC-GITT-315",
+    "codigo_icai_2": "FCEE-BA23-311",
+    "codigo_itba": "73.30",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Ingeniería del Software cubre el ciclo y las prácticas de desarrollo, y Diseño y Generación de Valor para el Cliente incorpora la perspectiva de producto, usuario y valor; juntas conectan código y producto.",
+    "complementa_por": "DTC-GITT-315 aporta desarrollo profesional de software; FCEE-BA23-311 aporta entendimiento de cliente y propuesta de valor.",
+    "gaps_restantes": "Falta confirmar métricas de producto, experimentación y lanzamiento."
+  },
+  {
+    "codigo_icai_1": "DEAC-MUIINT-112",
+    "codigo_icai_2": "DTC-MIT-515",
+    "codigo_itba": "73.50",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Internet of Things aporta dispositivos conectados y la dimensión edge, mientras que Arquitectura de Servicios en Red aporta infraestructura y servicios de red; juntas cubren extremos complementarios de una infraestructura cloud-edge.",
+    "complementa_por": "DEAC-MUIINT-112 aporta edge y dispositivos; DTC-MIT-515 aporta arquitectura de servicios e infraestructura de red.",
+    "gaps_restantes": "Falta confirmar contenidos de data center, virtualización, nube pública e infraestructura de cómputo."
+  },
+  {
+    "codigo_icai_1": "DEAC-IMAT-312",
+    "codigo_icai_2": "DEAC-MII-632",
+    "codigo_itba": "73.60",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Sistemas de Control aporta fundamentos para gobernar sistemas físicos y Automatización Avanzada añade su aplicación e integración industrial; son bloques complementarios de robótica empresarial.",
+    "complementa_por": "DEAC-IMAT-312 aporta control de sistemas; DEAC-MII-632 aporta automatización avanzada en un contexto industrial.",
+    "gaps_restantes": "Falta confirmar plataformas robóticas concretas, procesos empresariales y despliegue de soluciones robóticas."
+  },
+  {
+    "codigo_icai_1": "DIM-MII-516",
+    "codigo_icai_2": "DTC-MIINT-512",
+    "codigo_itba": "73.61",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Robótica Industrial cubre el sistema físico robótico y Deep Learning aporta el bloque neuronal; juntas reúnen las dos dimensiones que definen la neurorobótica.",
+    "complementa_por": "DIM-MII-516 aporta diseño e implementación robótica; DTC-MIINT-512 aporta redes neuronales y aprendizaje profundo.",
+    "gaps_restantes": "Falta confirmar control neuronal integrado, percepción robótica y aprendizaje en línea."
+  },
+  {
+    "codigo_icai_1": "DCIA-MUIAA-512",
+    "codigo_icai_2": "FCEE-BA23-413",
+    "codigo_itba": "73.67",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Aprendizaje Automático aporta los métodos generales de IA y Machine Learning II: Predicción agrega el bloque predictivo específicamente vinculado a análisis temporal; la segunda materia aporta una cobertura no redundante.",
+    "complementa_por": "DCIA-MUIAA-512 aporta técnicas generales de ML; FCEE-BA23-413 aporta predicción y forecasting.",
+    "gaps_restantes": "Falta confirmar modelos temporales, validación temporal y tratamiento de estacionalidad."
+  },
+  {
+    "codigo_icai_1": "DCIA-MUIAA-512",
+    "codigo_icai_2": "DTC-MBD-515",
+    "codigo_itba": "73.84",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Aprendizaje Automático cubre modelado y análisis de datos, mientras que Tecnologías de Procesamiento Big Data aporta procesamiento y manejo de grandes volúmenes; juntas cubren los bloques analítico y de plataforma de ciencia de datos aplicada.",
+    "complementa_por": "DCIA-MUIAA-512 aporta modelado con ML; DTC-MBD-515 aporta procesamiento distribuido y datos a escala.",
+    "gaps_restantes": "Falta confirmar captura, limpieza, visualización, comunicación de resultados y generación de productos de datos."
+  },
+  {
+    "codigo_icai_1": "DTC-GITT-315",
+    "codigo_icai_2": "FCEE-BA23-311",
+    "codigo_itba": "81.14",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Ingeniería del Software aporta el ciclo de desarrollo y la interacción con ingeniería, y Diseño y Generación de Valor para el Cliente aporta usuarios, propuesta de valor y diseño; juntas cubren los dos frentes esenciales de Product Management.",
+    "complementa_por": "DTC-GITT-315 aporta proceso de desarrollo; FCEE-BA23-311 aporta cliente, valor y diseño de soluciones.",
+    "gaps_restantes": "Falta confirmar roadmap, métricas de producto, lanzamiento y marcos ágiles específicos de PM."
+  },
+  {
+    "codigo_icai_1": "DTC-GITT-315",
+    "codigo_icai_2": "DTC-MIT-515",
+    "codigo_itba": "81.57",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Ingeniería del Software aporta diseño y construcción de soluciones, mientras que Arquitectura de Servicios en Red añade la arquitectura técnica de servicios y comunicaciones; cubren niveles complementarios de arquitectura digital.",
+    "complementa_por": "DTC-GITT-315 aporta diseño de software y soluciones; DTC-MIT-515 aporta arquitectura de servicios y redes.",
+    "gaps_restantes": "Falta confirmar CI/CD, arquitectura tecnológica de plataforma y mecanismos de adopción."
+  },
+  {
+    "codigo_icai_1": "DOI-MII-681",
+    "codigo_icai_2": "DTC-MBD-512",
+    "codigo_itba": "82.21",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Dirección de Proyectos aporta planificación, responsables, riesgos e hitos, y Big Data y Gobierno del Dato añade calidad, gobierno y uso organizacional de los datos; juntas cubren gestión y evaluación del componente data-driven.",
+    "complementa_por": "DOI-MII-681 aporta viabilidad y gestión de proyecto; DTC-MBD-512 aporta calidad, gobierno y contexto de los datos.",
+    "gaps_restantes": "Falta confirmar análisis económico y legal detallado, infraestructura de go-live y elaboración de propuesta técnica."
+  },
+  {
+    "codigo_icai_1": "DOI-MII-680",
+    "codigo_icai_2": "DOI-MII-683",
+    "codigo_itba": "94.23",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Business Administration cubre creación, estructura y dirección de organizaciones, mientras que Liderazgo y Gestión del Cambio añade liderazgo, relaciones y toma de decisiones en cambio; son bloques diferenciados del programa ITBA.",
+    "complementa_por": "DOI-MII-680 aporta organización y dirección empresarial; DOI-MII-683 aporta liderazgo, relaciones organizacionales y cambio.",
+    "gaps_restantes": "Falta confirmar el marco teórico específico de jerarquías de respondibilidad gerencial."
+  },
+  {
+    "codigo_icai_1": "DER-ADE-215",
+    "codigo_icai_2": "DOI-GITI-411",
+    "codigo_itba": "94.62",
+    "confianza_combinada": 4,
+    "comentario_combinacion": "Ética aporta la base filosófica, moral y deontológica, y Marco Jurídico de la Empresa incorpora normas, responsabilidad e instituciones empresariales; juntas cubren dimensiones éticas y legales distintas de Ética en los Negocios.",
+    "complementa_por": "DOI-GITI-411 aporta ética y deontología; DER-ADE-215 aporta marco jurídico y normativo empresarial.",
+    "gaps_restantes": "Falta confirmar responsabilidad social corporativa, ética política y los marcos normativos de calidad y sostenibilidad."
+  }
+]

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equivalencias ITBA ↔ ICAI-Comillas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Equivalencias ITBA ↔ ICAI-Comillas</h1>
+    <nav id="career-tabs"></nav>
+  </header>
+
+  <section id="filters">
+    <label>
+      Confianza mínima: <span id="conf-value">2</span>
+      <input type="range" id="conf-slider" min="2" max="5" step="1" value="2">
+    </label>
+    <fieldset id="tipo-filter"><legend>Tipo</legend></fieldset>
+    <fieldset id="curso-filter"><legend>Curso</legend></fieldset>
+    <fieldset id="studies-filter" class="icai-filter"><legend>Nivel</legend></fieldset>
+    <fieldset id="availability-filter" class="icai-filter"><legend>Disponibilidad</legend></fieldset>
+    <fieldset id="timing-risk-filter" class="icai-filter"><legend>Riesgo</legend></fieldset>
+    <fieldset id="permission-filter" class="icai-filter"><legend>Permiso</legend></fieldset>
+    <fieldset id="bucket-filter" class="icai-filter"><legend>Ranking</legend></fieldset>
+    <label>
+      Búsqueda: <input type="search" id="search-box" placeholder="nombre, comentario...">
+    </label>
+    <label>
+      <input type="checkbox" id="show-unmatched"> Mostrar materias sin match ITBA
+    </label>
+    <label title="Mostrar únicamente las materias marcadas con estrella">
+      <input type="checkbox" id="only-cart"> ★ Solo seleccionadas
+    </label>
+  </section>
+
+  <main>
+    <div id="icai-source-notice" class="notice" style="display:none">
+      <strong>ICAI 2026–2027:</strong> disponibilidad basada exclusivamente en
+      <code>Course Offering 26-27 Student Version 1.1</code>. Solo aparecen materias
+      visibles de <strong>Fall</strong> y <strong>All-year</strong>. Para All-year se computa
+      la mitad de los ECTS en el semestre Fall.
+    </div>
+    <section id="equiv-section">
+      <h2>Equivalencias</h2>
+      <div class="table-wrap">
+        <table id="equiv-table">
+          <thead>
+            <tr>
+              <th class="cart-col">★</th>
+              <th data-sort="codigo_externo">Ext cód</th>
+              <th data-sort="nombre_externo">Materia externa</th>
+              <th class="guia-col">Guía</th>
+              <th data-sort="tipo_externo">Tipo</th>
+              <th data-sort="curso_externo">Curso</th>
+              <th data-sort="ects_externo">ECTS</th>
+              <th data-sort="codigo_itba">ITBA cód</th>
+              <th data-sort="nombre_itba">ITBA nombre</th>
+              <th data-sort="confianza">Confianza</th>
+              <th>Comentario</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="sin-equiv-section">
+      <h2>ITBA sin equivalencia en esta carrera</h2>
+      <details>
+        <summary><span id="sin-equiv-count">0</span> materias ITBA sin candidata</summary>
+        <div class="table-wrap">
+          <table id="sin-equiv-table">
+            <thead><tr><th>ITBA cód</th><th>Nombre</th><th>Contenidos mínimos</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <button id="cart-fab" type="button" aria-label="Abrir carrito">
+    <span class="cart-icon">🎓</span>
+    <span class="cart-counts">
+      <span id="cart-count-items">0</span> · <span id="cart-count-ects">0</span> ECTS
+    </span>
+  </button>
+
+  <aside id="cart-panel" aria-hidden="true" inert>
+    <header class="cart-header">
+      <h2>Mi carrito de equivalencias</h2>
+      <button id="cart-close" type="button" aria-label="Cerrar">✕</button>
+    </header>
+    <nav class="cart-tabs" role="tablist" aria-label="Contenido del carrito">
+      <button id="cart-tab-materials" type="button" role="tab" aria-selected="true" aria-controls="cart-materials-panel">Materias</button>
+      <button id="cart-tab-schedule" type="button" role="tab" aria-selected="false" aria-controls="cart-schedule-panel" tabindex="-1">Horarios</button>
+    </nav>
+    <div id="cart-materials-panel" class="cart-tab-panel" role="tabpanel" aria-labelledby="cart-tab-materials">
+      <div class="cart-summary">
+        <span><strong id="cart-summary-items">0</strong> items</span>
+        <span><strong id="cart-summary-external">0</strong> externas únicas</span>
+        <span><strong id="cart-summary-ects">0</strong> ECTS</span>
+      </div>
+      <div class="cart-actions">
+        <button id="cart-export" type="button">Exportar CSV</button>
+        <button id="cart-import" type="button">Importar CSV</button>
+        <input id="cart-import-file" type="file" accept=".csv" hidden>
+        <button id="cart-clear" type="button" class="danger">Vaciar</button>
+      </div>
+      <div id="cart-empty" class="cart-empty">El carrito está vacío. Marcá la estrella en cualquier fila para agregar.</div>
+      <ul id="cart-list"></ul>
+    </div>
+
+    <div id="cart-schedule-panel" class="cart-tab-panel schedule-panel" role="tabpanel" aria-labelledby="cart-tab-schedule" hidden>
+      <div class="schedule-heading">
+        <div>
+          <span class="schedule-kicker">ICAI · FALL 2026–2027</span>
+          <h3>Combinador semanal</h3>
+        </div>
+        <p>Usa únicamente las materias ICAI marcadas con estrella. La semana cambia la vista, no la validación del semestre.</p>
+      </div>
+      <div id="schedule-content" aria-live="polite">
+        <div class="schedule-state schedule-state-loading">Cargando horarios oficiales…</div>
+      </div>
+    </div>
+  </aside>
+
+  <div id="cart-backdrop" hidden></div>
+
+  <script src="url-version.js?v=2"></script>
+  <script src="app.js?v=11"></script>
+</body>
+</html>

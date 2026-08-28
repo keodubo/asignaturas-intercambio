@@ -1,0 +1,692 @@
+[
+  {
+    "codigo": "10.07",
+    "nombre": "Creatividad",
+    "contenidos_minimos": "Que se entiende por creatividad. Características de una personalidad creativa. Elementos de la creatividad: persona, propósito, ambiente, proceso y técnicas. Modelo de aprendizaje y de memoria. CV de la persona creativa. Tipos de pensamiento. Modelo de comportamiento de la persona. Ejercicio de modelos de comportamiento. Test de creatividad. Límites de la creatividad relacionados al entorno.",
+    "objetivos_aprendizaje": "Desarrollar actitudes y herramientas que le permitan aplicar procesos formales para la resolución creativa de problemas."
+  },
+  {
+    "codigo": "10.09",
+    "nombre": "Formación para Emprendedores",
+    "contenidos_minimos": "Contexto y Cultura del Emprendedor. El Emprendedor, su desarrollo Personal y Empresarial. El Proceso Emprendedor Profesional. El Equipo Emprendedor y el Management Requerido. Búsqueda de Ideas y Oportunidades. Validación de Ideas y Oportunidades. Modelización del Emprendimiento. Estrategias para el Acceso a Recursos Claves para Emprender.",
+    "objetivos_aprendizaje": "En esta materia expone a los alumnos a:\n• Fortalecer las capacidades de trabajo en equipos multidisciplinarios.\n• Introducir a las nuevas formas de innovar, a través de la compresión de problemas relevantes de la sociedad.\n• Poner en práctica nuevas herramientas de análisis de mercado a través de desafiarnos a salir del área de confort para validar la viabilidad del emprendimiento. \n• Desarrollar un modelo de negocios validado.\t\t\n• Poner en práctica una experiencia real vinculada a la presentación (pitch) de su emprendimiento frente a docentes, emprendedores y actores del ecosistema Emprendedor."
+  },
+  {
+    "codigo": "11.36",
+    "nombre": "Innovación y Competitividad",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "12.83",
+    "nombre": "Seguridad Ocupacional y Ambiental",
+    "contenidos_minimos": "Introducción. Servicios de Medicina, Higiene y Seguridad. Edificios. Condiciones de Higiene. Condiciones de Seguridad. Accidentes. Actividades sobre Seguridad e Higiene en el Trabajo. Introducción al estudio del medio ambiente. Legislación ambiental. Sistemas de Gestión medioambiental. Etapas de implementación de la ISO 14001. Análisis de casos.",
+    "objetivos_aprendizaje": "Los objetivos de la asignatura son que el estudiante logre:\n• comprender los conceptos de higiene, seguridad y medio ambiente (HSMA) con una mirada práctica que le permita situarse rápidamente en estos temas en las organizaciones en las que se desempeñe.\n• interiorizarse con los sistemas de gestión de salud y seguridad en el trabajo y medio ambiente.\n• desarrollar una mirada práctica y crítica, integrando los conceptos de la materia con cada especialidad para formarse como un profesional comprometido con estos temas.\n• describir e interpretar la problemática de las distintas áreas pudiendo priorizar alternativas que alimentaran el proceso de toma de decisión para la gestión de las actividades precitadas."
+  },
+  {
+    "codigo": "16.04",
+    "nombre": "Neurociencias y Desarrollo Productivo",
+    "contenidos_minimos": "Introducción a la neurociencia cognitiva. Neuroanatomía funcional. Aprendizaje, recompensa y motivación. Procesos mnésicos. Sueño. Sueño y memoria. Atención. Ceguera atencional. Toma de decisiones. Resolución de problemas, pensamiento creativo y sueño. Emoción. Estrés como modulador de procesos cognitivos. Burned out. Sueño y rendimiento laboral. Recompensa y motivación. Mindfulness y cambios neurofisiológicos.",
+    "objetivos_aprendizaje": "Se espera que lxs estudiantes:\n* al finalizar la materia puedan armar rutinas de estudio y trabajo basadas en la neurociencia del sueño y la memoria que les permitan maximizar su rendimiento laboral y académico.\n* adquieran las herramientas necesarias para maximizar su rendimiento tanto académico como laboral, introduciendo estrategias basadas en las neurociencias como ser: reactivación de memorias específicas a través de la presentación de olores asociados durante el sueño, siestas cortas para favorecer la limpieza de las conexiones entre las neuronas y así mejorar el aprendizaje, aumento de la creatividad a través del sueño lúcido, alinear el cronotipo al momento de tomar elecciones importantes.\n* desarrollen pensamiento crítico y creativo que les permita diseñar, a nivel teórico, diferentes dispositivos destinados a mejorar la cognición y el rendimiento."
+  },
+  {
+    "codigo": "16.50",
+    "nombre": "Introducción a la Bioinformática",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "16.57",
+    "nombre": "Robótica Bioinspirada",
+    "contenidos_minimos": "Que es un robot? Sensores y actuadores. Robots para el estudio de sistemas biológicos. Interacción humano-robot. Cognición embebida.",
+    "objetivos_aprendizaje": "Se espera que lxs estudiantes: \n    • Incorporen herramientas básicas para el diseño e implementación de sistemas robóticos.\n    • Generen una visión interdisciplinaria comprendiendo cómo pueden integrarse miradas que provienen de diferentes áreas del conocimiento para el abordaje de problemas.  \n    • Desarrollen pensamiento crítico y creativo.\n    • Adquieran las herramientas necesarias para aplicar, en su vida académica y profesional, los conocimientos adquiridos."
+  },
+  {
+    "codigo": "16.82",
+    "nombre": "Neurociencia Computacional",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "22.09",
+    "nombre": "Fundamentos Electrónicos de la Informática",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "22.48",
+    "nombre": "Procesamiento de Imágenes",
+    "contenidos_minimos": "1 Fundamentos\n2 Transformación de imágenes\n3 Mejoramiento de imágenes\n4 Restauración de imágenes\n5 Procesamiento del Color\n6 Periférico para la Conversión Analógica Digital\n7 Análisis de imágenes y visión por computadora \n8 Reconstrucción de la imagen a partir de sus proyecciones\n9  Compresión de imágenes",
+    "objetivos_aprendizaje": "Introducir al estudiante en la representación y adquisición de imágenes digitales.\nFomentar la interpretación de imágenes en el dominio de la frecuencia.\nPoner en practica la aplicación de algoritmos para extraer informacion de las imágenes (ej imagenes medicas). \nIntroducir al estudiante en las diferentes áreas de aplicación del procesamiento de imágenes."
+  },
+  {
+    "codigo": "23.15",
+    "nombre": "Realidad Virtual",
+    "contenidos_minimos": "Principios de realidad virtual. Graphics pipeline. Modelado 3D y motores de videojuegos. Lenguajes artísticos combinados.\nRendering 3D. Diseño de interacción de realidad virtual.",
+    "objetivos_aprendizaje": "- Que los estudiantes desarrollen la capacidad de diseñar y desarrollar mundos de realidad virtual, tanto desde el punto de vista tecnológico y artístico.\n- Que los estudiantes desarrollen la capacidad de comunicar ideas en forma efectiva a través de medios audiovisuales."
+  },
+  {
+    "codigo": "25.04",
+    "nombre": "Computación Cuántica",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "48.02",
+    "nombre": "AI: Data Management Course & Digital Transformation",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "61.08",
+    "nombre": "Derecho Digital",
+    "contenidos_minimos": "Derecho y Tecnología. Responsabilidad jurídica de los distintos actores dentro de la Sociedad de la Información. Blockchain y sus implicancias. Data Privacy Propiedad intelectual. Ciberdelitos.",
+    "objetivos_aprendizaje": "Dotar a la comunidad educativa de ITBA de la formación jurídica de frente al uso de las herramientas tecnológicas (TICS). Brindar los conocimientos imprescindibles para entender las implicancias jurídicas y el marco regulatorio de los emprendimientos tecnológicos.\nAlgunos de los ejes principales de esta materia:\n•\tDotar al futuro profesional de una mirada jurídico-ética de su accionar dentro del mundo de la tecnología.\n•\tAnalizar el marco legal de las nuevas tecnología, ventajas, riesgos y cómo operar cada una de ellas. \n•\tReflexionar acerca del futuro jurídico tecnológico."
+  },
+  {
+    "codigo": "61.11",
+    "nombre": "Derecho Laboral y Seguridad Social en la Empresa",
+    "contenidos_minimos": "Contratacion laboral, Condiciones particulares del empleado Extinción de la relación laboral Seguridad social",
+    "objetivos_aprendizaje": "Que el alumno se interiorice de la problemática existente en la empresa con relación al ámbito del derecho laboral y las implicancias básicas de las contingencias de la seguridad social. Que el alumno sepa analizar y distinguir las situaciones y sepa dar los primeros pasos para enfrentarlas, ante la inminencia de contingencias abarcadas en los saberes vistos. Ello como paso previo y necesario a obtener el asesoramiento profesional adecuado para solucionar dichas contingencias, en cada caso."
+  },
+  {
+    "codigo": "61.13",
+    "nombre": "Práctica Contractual",
+    "contenidos_minimos": "Régimen General contractual\nCláusulas típicas de contratos de servicio y aplicación a emprendimientos\nModalidades de de conclusión contractual y aplicación a emprendimientos\nadecuación de emprendimientos a contratos\nCaos prácticos.",
+    "objetivos_aprendizaje": "Dotar a la comunidad educativa de ITBA de la formación jurídica contractual a través de la creación de un emprendimiento ficticio o real (si el alumno lo propusiese) de forma que pueda generar a lo largo del curso un contrato útil que regule la actividad principal de dicho emprendimiento (contrato de servicios o de productos). Brindar los conocimientos imprescindibles para entender las implicancias jurídicas y el marco regulatorio de los emprendimientos que se elijan en clase.\n\nAlgunos de los ejes principales de esta materia:\n•\tDotar al futuro profesional de una mirada jurídica contractual de su accionar dentro del mundo de los negocios.\n•\tAnalizar el marco legal de los distintos emprendimientos, ventajas, riesgos y cómo operar jurídicamente cada uno de ellos. \n•\tReflexionar acerca de las implicancias jurídicas de cada negocio, servicio o producto que se introduzca en el mercado."
+  },
+  {
+    "codigo": "61.50",
+    "nombre": "Finanzas de la Empresa",
+    "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+    "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+  },
+  {
+    "codigo": "71.48",
+    "nombre": "Introducción a la realidad aumentada",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.02",
+    "nombre": "Organización Básica de la Computadora",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.18",
+    "nombre": "Programación Funcional",
+    "contenidos_minimos": "Modelo de cómputo del Paradigma Funcional. Sistemas de tipos. Currificación. Reducción como mecanismo de ejecución.\nTipos algebraicos. Propiedades de programas y mecanismos de demostración de las mismas. Inducción/recursión\nestructural y primitiva. Tipos de datos recursivos. Ejemplos de aplicación. Esquemas de funciones. Mónadas como\nmecanismo de interacción con el medio. Lambda Cálculo como modelo de cómputo funcional.",
+    "objetivos_aprendizaje": "● Mejorar la comprensión de la computación y en particular de la programación a través de conocer características de un paradigma diferente a los tradicionales.\n● Confeccionar programas sencillos utilizando nociones fundamentales del paradigma funcional.\n● Demostrar propiedades sencillas de programas funcionales utilizando inducción estructural."
+  },
+  {
+    "codigo": "72.20",
+    "nombre": "Redes de Información",
+    "contenidos_minimos": "Modelo de referencia OSI: sus niveles. Tipos y topologías. Tecnologías LAN/WAN. Protocolos y servicios. Estudio avanzado del protocolo TCP/IP. Control de flujo y congestión. Análisis del tráfico. Algoritmos de ruteo. Clases y calidad del servicio. Interconexión de redes. Redes ATM. IP sobre ATM. Seguridad: Firewall, protocolo IPSec. Redes privadas virtuales (VPN). Redes inalámbricas y móviles. Redes GSM. Protocolo SMS. Facilidades de nivel de presentación. Taller de aplicación sobre una red de computadoras, configurando software y hardware",
+    "objetivos_aprendizaje": "• Fortalecer los conocimientos de Redes y Protocolos de Comunicación.\n\t• Poner en práctica herramientas utilizadas en la industria.\n\t• Analizar opciones y alternativas de soluciones de Redes de Información.\n\t• Programar dispositivos de redes."
+  },
+  {
+    "codigo": "72.22",
+    "nombre": "Sistemas Tolerantes a Fallas",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.23",
+    "nombre": "Diseño y Construcción de Compiladores",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.25",
+    "nombre": "Simulación de Sistemas",
+    "contenidos_minimos": "Teoría General de Sistemas. Modelos discretos y continuos. Modelos determinísticos y probabilísticos. Determinación de datos de entrada al modelo. Análisis de resultados. Taller de aplicaciones con herramientas de simulación.",
+    "objetivos_aprendizaje": "Incorporar y diferenciar los siguientes conceptos relacionados: Sistema -> Modelo Matematico -> Modelo Computacional -> Simulación.\n\nUtilizar herramientas de procesamiento estadístico como datos de entrada y estudio de resultados de simulaciones.\n\nDiseñar experimentos de simulación e interpretar los resultados obtenidos.\n\nRealizar presentaciones orales e informes técnicos de calidad profesional."
+  },
+  {
+    "codigo": "72.27",
+    "nombre": "Sistemas de Inteligencia Artificial",
+    "contenidos_minimos": "Enfoque simbólico de la Inteligencia Artificial.  Resolución de problemas. Problemas específicos de IA. Sistemas basados en reglas. Búsqueda heurística. Sistemas Expertos. Características del Paradigma Lógico. Enfoque no simbólico de la Inteligencia Artificial. Redes neuronales. Aprendizaje supervisado y no supervisado. Algoritmos Genéticos",
+    "objetivos_aprendizaje": "• Familiarizarse con los conceptos de inteligencia artificial.\n\t• Analizar e implementar algoritmos de búsqueda, evolutivos y de redes neuronales supervisadas y no supervisadas.\n\t• Comparar técnicas simbólicas y numéricas para el tratamiento de problemas basados en datos.\n\t• Analizar Redes Profundas como CNN, GANs y Transformers.\n\n\nQue adquieran conocimientos y sepan implementar técnicas de redes neuronales y de optimización para resolver problemas reales.\nQue comprendan la contextualidad de esta tecnología.\nQue manejen conceptos de redes neuronales profundas para el desarrollo profesional."
+  },
+  {
+    "codigo": "72.28",
+    "nombre": "Topología de Internet: Análisis y Modelado",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.29",
+    "nombre": "Tipos para Lenguajes de Programación",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.41",
+    "nombre": "Base de Datos II",
+    "contenidos_minimos": "Diseño, administración y gestión de bases de datos. Análisis de las características de distintos tipos de índices. Diseño físico y puesta a punto (tuning). Evaluación y optimización de consultas. Procesamiento de transacciones y control de la concurrencia. Recupero frente a errores. Sistemas de Información Geográficos (GIS). Índices y consultas espaciales. Taller de Aplicación",
+    "objetivos_aprendizaje": "- Aprender a tomar buenas decisiones a la hora de elegir una base de datos para resolver un problema concreto.\n- Profundizar en los conocimientos adquiridos en Base de Datos I sobre bases de datos SQL.\n- Conocer las nuevas tendencias en base de datos, en especial las bases NoSQL y su utilización en el procesamiento de grandes volúmenes de datos (Big Data)."
+  },
+  {
+    "codigo": "72.42",
+    "nombre": "Programación de Objetos Distribuidos",
+    "contenidos_minimos": "Sistemas distribuidos: objetivos y tipos. Arquitecturas. Middleware. Threads. Virtualización. Clientes y Servidores. Migración de código. Invocación remota. Mensajes. Calidad de servicio. Diseminación de datos. Búsqueda. Sincronización. Consistencia. Replicación. Tolerancia a fallas. Recuperación. Seguridad.",
+    "objetivos_aprendizaje": "• Conocer nuevas funcionalidades y revisar funcionalidades conocidas de Java que puedan ser útiles en la materia como programación funcional, streaming y lambdas.\n\t• Codificar sistemas concurrentes utilizando Java y las diferentes opciones para correr Threads en paralelo.\n\t• Predecir e identificar problemas de concurrencia  y fundamentar la elección de protección contra los mismos, por ejemplo sincronización, clases concurrentes o clases inmutables.\n\t• Reconocer los componentes de un sistema RPC cliente servidor. \n\t• Implementar sistemas en RPC con serialización de parámetros y callbacks asincrónicos.\n\t• Explicar las diferentes características de storage distribuidos como particionamiento, consistencia, redundancia, etc.\n\t• Conocer las diferentes características de las bases de datos distribuidas de tipo \"NoSQL\".\n\t• Detallar diferentes estrategias y herramientas para el procesamiento distribuido.\n\t• Implementar aplicaciones de procesamiento de información distribuidas en Map Reduce.\n\t• Utilizar la herramienta de storage y procesamiento distribuido.\n\t• Analizar el comportamiento de aplicaciones distribuidas al modificar la composición del cluster"
+  },
+  {
+    "codigo": "72.43",
+    "nombre": "Gestión de Proyectos Informáticos",
+    "contenidos_minimos": "Visión estratégica de la organización. Modelo de negocio. Modelos de calidad en el proceso de desarrollo del software. Modelos de calidad en el producto software. Administración de proyectos de software: estimación, planificación y seguimiento. Gerenciamiento de riesgos. Gestión de la configuración del software. Auditorías y peritajes",
+    "objetivos_aprendizaje": "- Conocer diferentes estrategias de Gestión de Proyectos\n- Analizar los diferentes modelos de negocios digitales\n- Identificar y evaluar los Riesgos de Proyectos Informáticos\n- Aplicar modelos, metodologías, técnicas y herramientas para la Administración de Proyectos\n- Definir y aplicar políticas de Gestión de Configuración y Gestión de Calidad"
+  },
+  {
+    "codigo": "72.44",
+    "nombre": "Criptografía y Seguridad",
+    "contenidos_minimos": "Criptografía Clásica y Moderna. Métodos simétrico y asimétrico. Algoritmos: encriptación y hashing. Protocolos: vpns, pgp, https. Aplicaciones: dinero electrónico, voto electrónico. Seguridad en bases de datos, sistemas operativos y redes. Auditoría y peritaje en seguridad",
+    "objetivos_aprendizaje": "• Comprender las herramientas criptográficas básicas y entender su ámbito de aplicación en problemas de Confidencialidad e Integridad\n    • Utilizar eficazmente algoritmos y protocolos criptográficos existentes para garantizar requerimientos de seguridad\n    • Comprender, y poder especificar los requerimientos de seguridad de un sistema.\n    • Participar en un proceso de análisis de vulnerabilidades o test de penetración. Comprender los resultados de un informe de dicho tipo.\n    • Detectar y corregir problemas típicos de aplicaciones con respecto a seguridad"
+  },
+  {
+    "codigo": "72.45",
+    "nombre": "Proyecto Final (Anual)",
+    "contenidos_minimos": "Objetivos del proyecto final como proyecto profesional integrador de los contenidos y competencias adquiridos durante la carrera. Definición de metodología a utilizar. Fases y documentación. Oportunidades e impacto del proyecto",
+    "objetivos_aprendizaje": "-Utilizar los conceptos adquiridos a lo largo de la carrera para realizar un proyecto que integre todas las competencias y conocimientos adquiridos a lo largo del cursado de las materias del plan. El proyecto podrá consistir en el desarrollo de un sistema informático (incluyendo todas las etapas acordes a la metodología aplicada) o en un plan de investigación en el área del software (cuyo resultado final sea la presentación de una publicación científica acompañada de una implementación).\n-Aplicar estándares de calidad para todas las etapas del proyecto, incluyendo la formulación de la documentación correspondiente a cada una de ellas,\n-Resolver en tiempo y forma dificultades de situaciones reales, típicas de un equipo de desarrollo de software."
+  },
+  {
+    "codigo": "72.46",
+    "nombre": "Robótica Basada en Comportamiento",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.49",
+    "nombre": "Sistemas Tolerantes a Fallas",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.50",
+    "nombre": "Introducción al Desarrollo de Videojuegos",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.51",
+    "nombre": "Tecnologías para Web 2.",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.52",
+    "nombre": "Análisis y Tratamiento de Imágenes",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.53",
+    "nombre": "Visión Computacional 3D",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.54",
+    "nombre": "OLAP y Explotación de Datos",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.55",
+    "nombre": "Ontologías en la Web",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.56",
+    "nombre": "Automatización e Integración de Sistemas de Información",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.57",
+    "nombre": "Sistemas Embebidos",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.58",
+    "nombre": "Computación Gráfica",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.59",
+    "nombre": "Sistemas de Inteligencia Artificial II",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.60",
+    "nombre": "Programación Funcional",
+    "contenidos_minimos": "Características del Paradigma Funcional. Transparencia referencial. Mecanismo para construir tipos de datos recursivos y polimórficos. Estructuras de datos infinitas para  funciones de orden superior. Cálculo lambda. Reducciones alpha, beta, tea, delta. Punto Fijo. Formas de evaluación. Introducción a la semántica computacional. Tipos de semántica: denotacional, axiomática, operacional. Método formal para especificación y verificación de programas. Taller de aplicación con un lenguaje funcional tipo Lisp, Hope, Haskel.",
+    "objetivos_aprendizaje": "• Mejorar la comprensión de la computación y en particular de la programación a través de conocer características de un paradigma diferente a los tradicionales.\n• Confeccionar programas sencillos utilizando nociones fundamentales del paradigma funcional. \n• Demostrar propiedades sencillas de programas funcionales utilizando inducción estructural."
+  },
+  {
+    "codigo": "72.61",
+    "nombre": "Taller de Diseño de Videojuegos",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.64",
+    "nombre": "Cloud Computing",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.65",
+    "nombre": "Desarrollo de Videojuegos 2D en iPhone OS",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.66",
+    "nombre": "Sistemas Embebidos",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.67",
+    "nombre": "Robótica Cinemática Computacional",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.68",
+    "nombre": "Arte y Ciencia Interactivos",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.69",
+    "nombre": "Seguridad de Software basada en Flujo de Información",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.70",
+    "nombre": "Modelos e Imágenes Fractales",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.71",
+    "nombre": "Integración de Sistemas de Información",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.72",
+    "nombre": "Análisis y Verificación de Modelos y Códigos",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.73",
+    "nombre": "Aprendizaje por Refuerzo en Robótica",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.74",
+    "nombre": "Visualización de Información",
+    "contenidos_minimos": "Introducción a la Visualización de Información. Antecedentes históricos. Tipo de datos. Etapas en la visualización de datos. Posibles interacciones para convertir a un gráfico estático en una visualización. Técnicas para la exploración de datos. Limpieza de datos (data cleansing, data wrangling). Mapeo de datos en elementos visuales. Uso del color. Percepción gráfica. Excelencia & ChartJunk. Análisis de casos de Visualizaciones",
+    "objetivos_aprendizaje": "- El estudiante será capaz de representar conjuntos de datos de manera visual, utilizando herramientas existentes o desarrollando soluciones ad-hoc mediante diseño y programación.\n- El estudiante reconocerá y aplicará buenas prácticas del campo de la visualización de datos, así como identificará referentes históricos y contemporáneos que sirvan como inspiración y guía.\n- El estudiante comprenderá el estado del arte en tecnologías y metodologías vigentes para la visualización de datos, pudiendo seleccionar enfoques adecuados según cada caso.\n- El estudiante será capaz de diseñar, implementar y evaluar visualizaciones interactivas e infografías estáticas, adoptando un enfoque crítico y reflexivo en sus decisiones de diseño."
+  },
+  {
+    "codigo": "72.75",
+    "nombre": "Aprendizaje Automático (Machine Learning)",
+    "contenidos_minimos": "Diseño de sistemas de aprendizaje. Aprendizaje supervisado y no supervisado.  Clasificación. Aprendizaje bayesiano. Clasificación paramétrica. Procedimientos de selección del modelo. Análisis de componentes principales. Métodos de clustering. Máquinas de vectores de soporte. Aprendizaje de árboles de decisiones. Aprendizaje basado en instancias.",
+    "objetivos_aprendizaje": "• Entender los conceptos fundamentales del aprendizaje automático.\n\t• Diseñar sistemas de aprendizaje automático para resolver problemas que involucren predicción, análisis, clasificación, y aprendizaje de estructuras."
+  },
+  {
+    "codigo": "72.77",
+    "nombre": "Técnicas Automáticas para Testing de Software",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.78",
+    "nombre": "OLAP Espacial",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.79",
+    "nombre": "Sistemas Multiagente I",
+    "contenidos_minimos": "Fundamentos teóricos y prácticos relacionados con modelos LLMs y sus limitaciones\nMétodos de evaluación de estos modelos. Técnicas de observabilidad, trazabilidad y métricas. \nEstrategias de context engineering. \nComponentes estructurales de agentes individuales. Patrones de diseño, uso de herramientas, memoria, guardrails y protocolos de contexto. Diseño, coordinación y memoria colectiva en sistemas multiagente. Modelos de cooperación secuencial, jerárquica o paralela. Flujos de trabajo y coordinación entre agentes.\nPrincipios de ingeniería de software aplicados a estos sistemas. Arquitectura, escalabilidad, seguridad, privacidad, integración continua, desplegado productivo, observabilidad de desempeño y costos, y evaluación continua de calidad.",
+    "objetivos_aprendizaje": "1.- Comprender los principios teóricos de los modelos de lenguaje grande (LLMs), incluyendo sus limitaciones, alucinaciones y generación de falsas creencias, para evaluar sus aplicaciones con criterio.\n2.- Analizar y emplear frameworks modernos para agentes basados en LLMs (por ejemplo LangChain, AutoGen, CrewAI), identificando sus componentes, ventajas y restricciones.\n3.- Diseñar y construir agentes individuales autónomos que integren rol definido, objetivos claros, herramientas especializadas, memoria individual y mecanismos de seguridad.\n4.- Aplicar patrones de diseño como ReAct, Reflection, uso de herramientas externas y planificación para mejorar la capacidad funcional y la robustez de los agentes.\n5.- Diseñar sistemas multiagente cooperativos donde varios agentes puedan coordinarse, compartir memoria colectiva, distribuir flujos de trabajo y colaborar hacia metas comunes.\n6.- Evaluar tanto agentes individuales como sistemas multiagente completos mediante métricas objetivas, feedback humano y automático, pruebas de integración y escenarios realistas.\n7.- Implementar principios de ingeniería de software en estos sistemas: modularidad, interoperabilidad, escalabilidad, seguridad, privacidad, mantenimiento continuo, monitoreo de costos y desempeño.\n8.- Desarrollar una comprensión crítica de las implicaciones éticas, sociales y legales de los sistemas basados en agentes, para asegurar que sean responsables, justos y respetuosos de los derechos de los usuarios."
+  },
+  {
+    "codigo": "72.80",
+    "nombre": "Big Data",
+    "contenidos_minimos": "Sistemas de archivos distribuidos: estructura y funcionamiento. Clústeres de almacenamiento distribuido. Consulta y modelado de bases de datos NoSQL. Implementación de algoritmos de procesamiento distribuido y paralelo. Modelo de programación MapReduce. Streaming y análisis de datos en tiempo real.",
+    "objetivos_aprendizaje": "Al finalizar el curso los alumnos deberán:\n•\tComprender las arquitecturas y tecnologías utilizadas para almacenar, procesar y analizar grandes volúmenes de datos.\n•\tConocer el funcionamiento de los sistemas de archivos distribuidos como Hadoop Distributed File System (HDFS); entender su estructura y funcionamiento.\n•\tSaber configurar y administrar clústeres de almacenamiento distribuido para el manejo eficiente de grandes conjuntos de datos.\n•\tDominar la sintaxis de consulta y el modelado de datos en bases de datos NoSQL.\n•\tSaber seleccionar la base de datos NoSQL adecuada según los requisitos de la aplicación.\n•\tUtilizar frameworks y herramientas como Apache Hadoop y Apache Spark para implementar algoritmos de procesamiento distribuido y paralelo.\n•\tDominar el modelo de programación MapReduce y saber cómo diseñar y desarrollar programas MapReduce utilizando lenguajes como Java o Python.\n•\tUtilizar herramientas y plataformas como Apache Kafka y Apache Spark Streaming para procesar y analizar datos en tiempo real.\n•\tAplicar los conocimientos adquiridos en casos de uso reales de analítica de Big Data utilizando bibliotecas de Hadoop y Spark.\n•\tImplementar técnicas de cifrado, enmascaramiento y anonimización de datos para garantizar la privacidad y confidencialidad de la información sensible en entornos de Big Data."
+  },
+  {
+    "codigo": "72.81",
+    "nombre": "Simulación y Animación de Sistemas Multipartículas",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.82",
+    "nombre": "Tópicos de NOSQL",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.83",
+    "nombre": "Técnicas Avanzadas de HCI con Uso de Rastreadores de Ojos y Manos",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.84",
+    "nombre": "Base de Datos Espaciales y Sistemas de Información Geográfica",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.85",
+    "nombre": "Análisis de Datos en la Web Semántica",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.86",
+    "nombre": "Técnicas Avanzadas en Videojuegos",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.87",
+    "nombre": "Diseño Sonoro para Animación y Videojuegos",
+    "contenidos_minimos": "Parámetros básicos de la imagen y del sonido. Sistema visual, fonal y auditivo. Audiovisión. Diseño audiovisual. Proceso de producción audiovisual. Banda sonora.",
+    "objetivos_aprendizaje": "- Reconocer las funciones y tareas vinculadas al diseño sonoro en las producciones audiovisuales, focalizando el aprendizaje en los géneros de animación y videojuegos.\n- Comprender el rol de un diseñador sonoro en un equipo de trabajo vinculado al desarrollo de videojuegos o animaciones.\n- Agudizar el sentido estético aplicado a este tipo de producciones desde el aprendizaje de recursos y herramientas dadas por los lenguajes sonoro, visual y audiovisual.\n- Experimentar la realización de diseños sonoros para diversas producciones a través de plataformas de trabajo que se emplean en el ámbito profesional."
+  },
+  {
+    "codigo": "72.88",
+    "nombre": "Introducción a la Neurociencia Computacional",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.89",
+    "nombre": "Moneda Digital Descentralizada",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.90",
+    "nombre": "Internet de las Cosas (IoT)",
+    "contenidos_minimos": "Conceptos de microcontroladores.  Introducción a la programación de microcontroladores.  Sensores – señales digitales y analógicas.  Control del medio ambiente.  Integración de microcontroladores con aplicaciones informáticas.  IPv6, MQTT.  Aplicación a la transformación digital de las organizaciones.",
+    "objetivos_aprendizaje": "Al completar el curso, los estudiantes serán capaces de:\n* Explicar los conceptos fundamentales vinculados al Internet de las Cosas (IoT), el Internet Industrial de las Cosas (IIoT) y la Industria 4.0, comprendiendo su evolución y sus aplicaciones.\n* Identificar y justificar escenarios reales donde la aplicación de soluciones IoT aporte valor, eficiencia o nuevas capacidades.\n* Desarrollar aplicaciones IoT funcionales utilizando kits de desarrollo, microcontroladores y sensores específicos.\n* Diseñar e implementar soluciones IoT de punta a punta, considerando eficiencia, escalabilidad y viabilidad técnica."
+  },
+  {
+    "codigo": "72.92",
+    "nombre": "El Paradigma NoSQL - Bases de Datos de Grafos",
+    "contenidos_minimos": "Conceptos de Big Data. Modelo de Datos de grafos. Su comparación con modelo relacional. Lenguajes de Consulta sobre grafos: patrones y navegación. Modelos de implementación local vs global: Property Graph vs Linked Data. Frameworks para procesamiento de grafos. Taller de aplicación con motores de bases de datos de grafo de código abierto.",
+    "objetivos_aprendizaje": "- Analizar las diferencias y similitudes entre sistemas de bases de datos relacionales y sistemas de bases de grafos, especialmente desde el punto de vista de grandes volúmenes de datos. - \n- Destacar y comparar las características de los modelos de implementación local y global para grafos (Property Graph vs Linked Data).\n- Programar consultas sobre base de datos de grafos, tanto del tipo property graph como del tipo edge-labeled (RDF).\n- Analizar los frameworks que se utilizan para el procesamiento distribuido de grafos, usado en el caso de grandes volúmenes de datos."
+  },
+  {
+    "codigo": "72.94",
+    "nombre": "Introducción a los Sistemas Embebidos",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.95",
+    "nombre": "Proyecto de Innovación Científico-Tecnológico",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.96",
+    "nombre": "Proyecto de Aplicaciones Móviles",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "72.97",
+    "nombre": "Introducción a la Programación de Videojuegos",
+    "contenidos_minimos": "Introducción al diseño de videojuegos. Programación de videojuegos: Motores, Patrones de diseño específicos (strategy, facade, managers, command, observer). Entorno de desarrollo: programación de juegos 3D, sistema de componentes, assets, sonidos, objetos 3D.",
+    "objetivos_aprendizaje": "Que el alumno:\n1. Conozca las características de la industria de videojuegos.\n2. Ponga en práctica el proceso de desarrollo de un videojuego.\n3. Trabaje en equipo.\n3. Aprenda a desarrollar un videojuego sencillo de manera integral."
+  },
+  {
+    "codigo": "72.98",
+    "nombre": "Práctica Laboral",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.21",
+    "nombre": "Desarrollo de Aplicaciones Móviles Multiplataforma",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.22",
+    "nombre": "Fundamentos de DevOps",
+    "contenidos_minimos": "Orígenes de DevOps. Relación con otras metodologías como Agile y Lean. Motivación. - Control de versiones y gestión de cambios. - Integración Continua. Concepto y herramientas. - Deployment Continuo: Concepto y herramientas. - Seguridad en DevOps",
+    "objetivos_aprendizaje": "- Comprender los fundamentos, principios y cultura DevOps, así como su impacto en los procesos de desarrollo y operaciones de software.  \n- Poner en práctica herramientas y metodologías como Git, CI/CD, Docker, Kubernetes e infraestructura como código para automatizar y optimizar el ciclo de vida del software.  \n- Fortalecer la capacidad de trabajo colaborativo entre equipos de desarrollo y operaciones, incorporando prácticas de integración y entrega continua.  \n- Analizar escenarios reales para identificar oportunidades de mejora y aplicar soluciones DevOps, incluyendo criterios de seguridad (DevSecOps) y observabilidad.  \n- Fomentar el aprendizaje autónomo y la adopción de una mentalidad de mejora y adaptación continua para liderar transformaciones digitales en organizaciones modernas."
+  },
+  {
+    "codigo": "73.23",
+    "nombre": "Programación Orientada a Datos",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.30",
+    "nombre": "Desarrollo profesional de software: del código al producto",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.40",
+    "nombre": "ARQUITECTURA DE MICROSERVICIOS",
+    "contenidos_minimos": "Conceptos, beneficios y desventajas de las arquitecturas de microservicios comparadas con las arquitecturas monolíticas. Criterios y herramientas para el diseño de una arquitectura de microservicios. Concepto de contenedor. Creación y uso de contenedores y servicios de apoyo para arquitectura de microservicios. Refactoring de aplicaciones monolíticas.",
+    "objetivos_aprendizaje": "1. Consolidar conocimientos sólidos en Linux y en los principios fundamentales de contenedores, proporcionando una base adecuada para comprender y trabajar con arquitecturas de microservicios.\n2. Lograr un dominio en el uso de herramientas clave para microservicios, tales como Docker, Docker Compose y Kubernetes, permitiendo la aplicación práctica de estos conocimientos en ejercicios y proyectos.\n3. Contar con la capacidad de comprender y aplicar patrones de diseño pertinentes a la arquitectura de microservicios, y de seleccionar aquellos más adecuados según la problemática a resolver.\n4. Demostrar un entendimiento profundo de las interfaces de comunicación síncrona y asíncrona en microservicios, pudiendo evaluar y escoger opciones de implementación en función de ventajas, desventajas y casos de uso.\n5. Adquirir la habilidad para implementar, administrar y monitorear infraestructuras de microservicios en situaciones reales, haciendo especial énfasis en la gestión de servicios, la automatización mediante pipelines y la utilización de recursos serverless."
+  },
+  {
+    "codigo": "73.50",
+    "nombre": "Infraestructura de Cómputo: Data Center, Cloud y Edge",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.60",
+    "nombre": "Introducción a la Robótica Empresarial",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.61",
+    "nombre": "Neurorobótica",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.62",
+    "nombre": "Introducción a la Programación Paralela",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.63",
+    "nombre": "Redes Equivariantes",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.64",
+    "nombre": "Temas Avanzados en Deep Learning",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.65",
+    "nombre": "Procesamiento del Lenguaje Natural",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.66",
+    "nombre": "Procesamiento de Imágenes Satelitales",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.67",
+    "nombre": "Análisis de series de tiempo con Inteligencia Artificial",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.80",
+    "nombre": "SEGURIDAD OFENSIVA",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.81",
+    "nombre": "Ciberseguridad Ofensiva y Defensiva",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "73.82",
+    "nombre": "Bases de Datos Espaciales y de Movilidad",
+    "contenidos_minimos": "Bases de Datos Espaciales. Modelos vectorial y continuo. Extensiones espaciales de bases de datos relacionales. Análisis de datos geográficos: conceptos y herramientas. Análisis del movimiento: modelos abstracto y concreto. La base de datos MobilityDB. Lenguajes de Consulta de Objetos Móviles. Concepto de trayectoria. Patrones de trayectorias. Clustering y similitud de trayectorias. Aplicaciones a transporte marítimo, aéreo y urbano.",
+    "objetivos_aprendizaje": "Al terminar el curso los participantes podrán \n•\tComprender los fundamentos del modelado de datos espaciales y de movilidad.\n•\tAdquirir, crear y preprocesar datos espaciales, y utilizarlos en consultas sobre bases de datos espaciales y de movilidad.  \n•\tUtilizar habilidades técnicas para aplicar estos sistemas a soluciones a problemas reales"
+  },
+  {
+    "codigo": "73.84",
+    "nombre": "Ciencia de Datos Aplicada",
+    "contenidos_minimos": "Modelos de proceso para la ciencia de datos. Planificación de un proyecto de data science. Captura y almacenamiento de información. Integración, preparación y limpieza de datos. Machine learning. Modelado y análisis de datos. Diseño e implementación de visualizaciones para grandes volúmenes de datos. Generación de productos basados en datos. Comunicación y presentación de resultados de proyectos basados en datos.",
+    "objetivos_aprendizaje": "- Comprender el ciclo de vida de un proyecto de Ciencia de Datos, incluyendo metodologías, roles y\nplanificación estratégica.\n- Aplicar técnicas de captura, limpieza y preparación de datos desde diversas fuentes, como APIs, web\nscraping y bases de datos.\n- Entrenar modelos de aprendizaje automático para el análisis y extracción de patrones en datos\nestructurados y no estructurados.\n- Comunicar soluciones basadas en datos, utilizando visualización efectiva, MLOps y estrategias de integración con sistemas productivos."
+  },
+  {
+    "codigo": "73.89",
+    "nombre": "Introducción a Blockchain y Criptomonedas",
+    "contenidos_minimos": "Conceptos de Blockchain. Mecanismos de consenso. Seguridad y escalabilidad de Blockchain. Utilización en billeteras digitales y transacciones. Gobernanza descentralizada, privacidad y regulaciones. Programación en Solidity. Creación de contratos inteligentes. Ecosistema de Blockchain.",
+    "objetivos_aprendizaje": "Que los estudiantes se introduzcan en los fundamentos teóricos y técnicos del ecosistema blockchain, incluyendo Bitcoin, Ethereum y sus principales mecanismos de consenso.\n\nAnalizar las problemáticas de escalabilidad en blockchain y las soluciones propuestas, como las capas 2 (L2s).\n\nComprender el funcionamiento y propósito de tecnologías como NFTs, bridges, AMMs, lending, y demás componentes del ecosistema DeFi.\n\nPoner en práctica conocimientos adquiridos mediante la programación de contratos inteligentes en Solidity.\n\nAdquirir una mirada crítica sobre la seguridad, usabilidad y aplicación real de las tecnologías descentralizadas."
+  },
+  {
+    "codigo": "73.98",
+    "nombre": "Desarrollo Integral de Videojuegos",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "81.13",
+    "nombre": "Futuros Posibles",
+    "contenidos_minimos": "?Detección de señales de futuro.\n? Construcción de escenarios futuros, para trabajar en la visión estratégica de las organizaciones.\n? Técnica de backcasting storytelling para generar narrativas poderosas sobre el futuro deseado/preferido, que generen impacto.\n? Técnicas de exploración, ideación y prototipado de artefactos del futuro que permitan experimentar esos futuros en el presente.\n? Desarrollo de skillfutures tales como: pensamiento crítico y disruptivo, comunicación creativa, pensamiento anticipatorio e inteligencia colectiva \n? Liderazgo",
+    "objetivos_aprendizaje": "El objetivo principal de la materia de Futuros Posibles es aprender a pensar como un futurista y aplicar esta nueva forma de pensar para generar procesos de cambios, transformación y disrupción; apoyándose y valiéndose de herramientas y técnicas propias de la disciplina, tales como: \n\n\t• Detección de señales de futuro.\n\t• Construcción de escenarios futuros, para explorar alternativas de futuro.\n\t• Técnica de Backcasting Storytelling para generar narrativas poderosas y transformadoras sobre el futuro deseado/preferido, que generen impacto. \n\t• Técnicas de exploración y prototipado de artefactos del futuro que permitan experimentar esos futuros en el presente.\n\nAdemás, trabajaremos en el fortalecimiento de algunas competencias clave como: pensamiento crítico, comunicación creativa, pensamiento anticipatorio y trabajo colaborativo.\n\nLos objetivos específicos de la materia son: \n\t• Comprender los principales desafíos del futuro para liderar la transformación desde el presente.\n\t• Obtener herramientas para pensar en clave de futuro.\n\t• Brindar herramientas creativas para desarrollar pensamiento crítico y disruptivo.\n\t• Explorar y co-diseñar imaginarios de futuros posibles.\n\t• Prototipar objetos del futuro.\n\t• Incorporar el Pensamiento de Futuro como estrategia de transformación.\n\t• Co-crear y colaborar como forma de crear conocimiento nuevo."
+  },
+  {
+    "codigo": "81.14",
+    "nombre": "Product Management",
+    "contenidos_minimos": "Introducción al Product Management. Rol del PM y Metodologías: Según diferentes marcos (SAFe, Scrum, Less, otros) Strategically Understanding a Company - Estratégica. Oportunidades y Validación de Hipótesis. Ejecución, Roadmap y Métricas. Trabajando con Diseño - UX, UI, Encuestas, Feedback. Trabajando con Ingeniería - Introducción. Lanzamiento de Producto. Design Thinking. Ciclo de Product-Development Life Cycle. Agile & Scrum- Product Books: Jobs to Be Done.",
+    "objetivos_aprendizaje": "Esperamos que a través de los contenidos y las prácticas a lo largo del cuatrimestre los alumnos sean capaces de:\n1. Entender al cliente, y personas usuarias.  \n2. Conceptualizar un problema, desafío y dimensionar una oportunidad.\n3. Diseñar soluciones prácticas. \n4. Ejecutar y medir soluciones."
+  },
+  {
+    "codigo": "81.16",
+    "nombre": "Negociación",
+    "contenidos_minimos": "Ejercicios de técnicas de negociación.",
+    "objetivos_aprendizaje": "Los objetivos de la materia, serán que el participante aprenda a negociar mejor, a partir de una actividad en la que evalúe sus fortalezas y debilidades en este campo, en una gama variada de tipos de conflicto: negociaciones internas a la empresa, externas con clientes y proveedores, en grupo, cooperativas, competitivas, etc. Otro objetivo es que cada alumno se lleve un plan de mejora como negociador, para aplicar en su ámbito personal y en su próximo ámbito laboral."
+  },
+  {
+    "codigo": "81.57",
+    "nombre": "Arquitectura de soluciones digitales",
+    "contenidos_minimos": "Diseño conceptual de arquitecturas. Diseño técnico de Arquitecturas. Diseño de Arquitectura Tecnológica. Adopción y Proceso de Entrega Continua (CI/CD).",
+    "objetivos_aprendizaje": "Se espera que los alumnos sean capaces de:\nEntender las problemáticas de negocio y cómo la tecnología permite escalarlos\nEntender los conceptos de Arquitectura de Soluciones Digitales, desde lo conceptual como lo técnico\nConocer y distinguir las herramientas que permitan entender las diferentes Arquitecturas \nEntender las diferentes estrategias de adopción de mecanismos de entrega continua en organizaciones tradicionales como startups."
+  },
+  {
+    "codigo": "81.74",
+    "nombre": "Introducción a la realidad aumentada",
+    "contenidos_minimos": "Fundamentos de la realidad aumentada (AR) y cómo crear una experiencia AR usando ARCore. Cómo identificar diferentes tipos de experiencias AR.  Herramientas y plataformas utilizadas en el panorama AR. Casos de uso populares para AR. Cómo crear un flujo de uso de AR.  Cómo funcionan las experiencias AR. Herramientas como Google Poly y Unity para crear experiencias AR\n\nCurso autodirigido https://www.coursera.org/learn/ar",
+    "objetivos_aprendizaje": "Conocer y aplicar las bases de la Realidad Aumentada y como impacta los modelos de negocio."
+  },
+  {
+    "codigo": "81.94",
+    "nombre": "Experiencia Inmersiva de Innovación Tecnológica",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "82.08",
+    "nombre": "Cloud Computing",
+    "contenidos_minimos": "Introducción: conceptos de infraestructura de TI, modelos de negocio para la entrega de aplicaciones informáticas (inversión vs. Consumo). Anatomía de la Cloud: modelos de entrega IaaS, PaaS, SaaS. IaaS: virtualización, containers, almacenamiento en la nube. PaaS: conceptos, funcionalidad ofrecida en este nivel. SaaS: conceptos y aplicaciones, modelos económicos para la entrega de aplicaciones como servicio. Estándares de arquitectura cloud (Openstack, CloudFoundry). Análisis de la oferta de servicios cloud en el mercado.",
+    "objetivos_aprendizaje": "Se espera que los alumnos logren en esta materia la adquisición de herramientas teórico prácticas para la definición, creación y administración de arquitecturas tecnológicas de referencia, escalables y basados en arquitecturas probadas, de forma de que los alumnos puedan ser referentes tecnológicos en los entornos en los cuales se desempeñen. Se espera que los alumnos desarrollen un espíritu crítico sobre decisiones arquitectónicas de productos digitales actuales de manera de entender a fondo las distintas propuestas de los proveedores de Cloud Computing.\n\nSe espera que al finalizar este curso, los estudiantes puedan:\n? Analizar cómo la adopción de la nube transforma la manera en que funcionan los sistemas de TI\n? Identificar los beneficios de la informática en la nube\n? Analizar cómo diseñar sistemas seguros, fiables, de alto desempeño y rentables\n? Identificar los principios que deben tenerse en cuenta al migrar a la nube o al diseñar nuevas aplicaciones para esta\n? Identificar los patrones de diseño y las opciones de arquitectura que se aplican en una variedad de casos de uso\n? Definir la alta disponibilidad, la tolerancia a errores y la escalabilidad\n? Analizar cómo evitar los puntos únicos de error (SPF)\n? Analizar por qué el balanceo de carga es un componente clave de la arquitectura para las aplicaciones cloud-native\n? Identificar los beneficios de la infraestructura cómo código (IaC) y crear recursos de aprovisionamiento mediante diversas herramientas\n? Identificar de qué manera el Marco de Buena Arquitectura mejora las arquitecturas basadas en la nube\n? Identificar cómo proteger los datos en cada capa de la aplicación\n? Evaluar cuáles son las métricas de rendimiento más importantes para sus aplicaciones\n? Analizar las prácticas recomendadas para eliminar costos innecesarios o recursos subóptimos"
+  },
+  {
+    "codigo": "82.18",
+    "nombre": "Procesamiento del Lenguaje Natural",
+    "contenidos_minimos": "Introducción al NLP, Técnicas de procesamiento y preparación de textos, modelos de lenguaje, clasificación de textos, tecnologías para el procesamiento de lenguaje natural, aplicaciones típicas.",
+    "objetivos_aprendizaje": "Se espera que en esta materia los alumnos logren: \n- Tomar conciencia de los distintos tipos de datos de texto disponibles y su posible aprovechamiento \n- Adquirir herramientas para analizar, procesar y extraer información pertinente de estos textos. \n- Desarrollar la capacidad de formular preguntas relevantes que se puedan abordar con técnicas de PLN \n- Aprender una base de conocimiento para profundizar, con un espíritu crítico, en temas avanzados y en nuevas herramientas por su cuenta"
+  },
+  {
+    "codigo": "82.21",
+    "nombre": "Factibilidad de Proyectos Data Driven",
+    "contenidos_minimos": "La materia aborda el ciclo completo de un proyecto basado en datos aplicado a un caso real de negocio. Se incluyen los conceptos fundamentales para comprender, diseñar y evaluar soluciones basadas en datos.",
+    "objetivos_aprendizaje": "Comprender y analizar un problema de negocio real, identificando sus componentes clave, su contexto organizacional y las necesidades específicas. \nEvaluar la disponibilidad, calidad y relevancia de los datos, aplicando criterios técnicos para determinar su utilidad en la resolución de un problema. \nDesarrollar el análisis de factibilidad técnica, legal y económica, considerando restricciones, recursos y riesgos propios de un contexto organizacional. \nDiseñar una propuesta de solución basada en datos, seleccionando enfoques metodológicos, modelos o herramientas adecuadas según los objetivos y limitaciones. \nDefinir los requerimientos de infraestructura tecnológica necesarios para la implementación (go-live), incorporando criterios de escalabilidad, seguridad y eficiencia operativa. \nGestionar un proyecto de datos en todas sus fases, distribución de responsabilidades y estrategias para lograr cumplimiento de hitos. \nComunicar de manera clara, profesional y persuasiva, presentando el proyecto mediante documentación técnica, informe ejecutivo orientado a la toma de decisiones. \nAplicar pensamiento crítico y criterio profesional, justificando decisiones técnicas y estratégicas en un contexto de proyecto de datos."
+  },
+  {
+    "codigo": "94.23",
+    "nombre": "Formación General III",
+    "contenidos_minimos": "Primera parte: Introducción y alcances de la teoría. Su carácter científico y sistémico.\nSegunda parte: Acerca de la capacidad humana o la naturaleza humana en el trabajo. La composición del sistema.\nTercera parte: Estructura organizativa de las Jerarquías de Respondibilidad Gerencial. Estructura y entorno del sistema.\nCuarta parte: Prácticas de liderazgo gerencial. Subsistemas o mecanismos vinculados con las relaciones entre personas.\nQuinta parte: Puesta en práctica y conclusiones",
+    "objetivos_aprendizaje": "•\tcomprender las relaciones funcionales que permiten la ejecución de la misión y visión de la organización\n•\tdesarrollar una actitud crítica de esta dinámica en relación al entorno actual, el cual se presenta con variables múltiples, inciertas y ambiguas a la vez que representan un desafío de alta complejidad para la toma de decisiones."
+  },
+  {
+    "codigo": "94.26",
+    "nombre": "Comunicación Organizacional",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  },
+  {
+    "codigo": "94.42",
+    "nombre": "Comunicación Estratégica",
+    "contenidos_minimos": "Preparación del Plan de Carrera: Marketing personal. Armado del CV. Entrevistas de selección. Entrevistas grupales (assessment). Fuentes de Búsqueda. \nCompetencias conversacionales: clave de la productividad del trabajo sustentado en el poder de la palabra. Sistema de herramientas: su funcionalidad. Confianza, sistema, comportamiento.\nPresentaciones orales y escritas eficaces: conceptos básicos de oratoria, soporte visual, comunicaciones escritas y  construcción de informes.\nEquipos de trabajo. Dominio    personal. Modelos      mentales. Aprendizaje      en equipo. Resolución de conflictos. Campos de Entrenamiento. \nEl Nuevo Enfoque de la Comunicación Organizacional: La Intracomunicación. Estrategias de Intracomunicación: apalancamiento,    acompañamiento,  acercamiento, facilitamiento y anclamiento. Guía del mix estratégico.",
+    "objetivos_aprendizaje": "Se espera que los alumnos sean capaces de:\n1. Comprender la importancia de gestionar la comunicación organizacional para mejorar la influencia recíproca Organización-Entorno\n\n2. Adquirir herramientas para integrarse efectivamente en equipos de trabajo con la finalidad de analizar  problemáticas que atraviesan los contextos multiculturales.\n\n3. Desarrollar habilidades y competencias conversacionales, generando mejores conversaciones en los ámbitos de desarrollo profesional y laboral.\n\n4. Analizar e integrar recursos y herramientas de Comunicación Estratégica para la optimización de resultados en las Organizaciones.\n\n5. Elaborar propuestas mejoradas y convertirse en “productores” de contenidos que aporten a las diferentes temáticas tratadas en la materia."
+  },
+  {
+    "codigo": "94.52",
+    "nombre": "Inglés II",
+    "contenidos_minimos": "THEMES:\nVacations, opinions and reactions.\nLikes and dislikes, preferences.\nHabits, strengths and weaknesses.\nComplaints.\nLandmarks.\nGood and bad news.\nNeeds.\nBooks.\nAppointments and meetings.\nDecisions.\nExceptions.\nTelephone messages.\nPlans and past experiences.\nInterruptions.\nImaginary situations.\nProducts.\nFavors and requests.\nShopping.\nFrightening stories.\nApologies.\nConversation openers.\nReasons, excuses and permission.\nArrangements, obligation and prohibitions.\nInjuries.\nRequests and instructions.\nProblems and advice. \nConcern, moods and feelings.\nWarnings and advice.\nGreetings, socializing.\nFantasies. \nInformation and objections.\nFood.\nIdentifications.\nRegrets and judgements.\nPossibilities, conclusions and reactions.\nExcuses.\n\nACTIVITIES:\nLISTEN TO:\nopinions\nintonation\nhabits\ncomplaints\nplans\ndecisions\npeople talking\nstories, excuses, favors, advice.\nMessages, wishes, locations.\nDescriptions, regrets and phone messages.\n\nREAD:\nhistorical texts\ninterviews\nbook jackets\narticles\nshort stories\n\nWRITE:\narticles\nletters\nmovie or book review\nletter of complaint\nresponse to a memo\ndirections.",
+    "objetivos_aprendizaje": "Que el estudiante pueda \n• comprender las ideas principales de un texto complejo sobre temas tanto concretos como abstractos, incluidas las discusiones técnicas de su campo de especialización;\n• interactuar con un grado de fluidez y espontaneidad que permitan una interacción regular con hablantes nativos sin inconvenientes para ninguna de las partes;\n• producir textos claros y detallados sobre una amplia gama de temas y expresar un punto de vista sobre un tema de actualidad brindando las ventajas y las desventajas de varias opciones."
+  },
+  {
+    "codigo": "94.62",
+    "nombre": "Ética en los Negocios",
+    "contenidos_minimos": "Unidad I. Introducción General al Problema de la Etica y la Deontología\nLa moral y la ética. La ética y la filosofía social. Principales corrientes y posturas éticas: Aristóteles y la teleología, Kant y el formalismo, Max Scheler y la teoría material de los Valores, Friedrich Nietzsche y el súper hombre, el relativismo moral. Deontología Profesional. \n\nUnidad II. Economía Política y Sociedad. Empresa y Comunidad.\nI) Derminación social de las actividades e ideas económicas. Cosmovisión religiosa, ética y actividades económicas. Max Weber y Robert K. Merton. El problema de la ideología, la clase y la representación de la actividad económica: Mannheim\nTextos de: \nWeber, Max, La ética protestante y el espíritu del capitalismo, Madrid, Ed. Revista de Derecho Privado, 1995\nMannheim, Karl, Ideología y utopía, Madrid, Aguilar, 1958\nII) Temas de ética social: Marxismo, Capitalismo y modelos político económicos contemporáneos.\nTextos de:\nKarl Marx, Salario, Precio y Ganancia / El Capital / Trabajo asalariado y capital / Contribución a la crítica de la economía política, ed. varias\nSmith, Adam, An Inquiry into the nature and causes of the wealth of nations, Londres, Dutton, 1936\nRicardo, David, Principles of Political Economy and Taxation, Londres, Puttnam, 1821\nGramsci, Antonio, Cuadernos de la cárcel, ed. Varias\nMalthus, Robert, Primer Ensayo sobre la Población, Barcelona, Altaza, 1997\n\nUnidad III. Aspectos legales y normativos de la actividad Empresarial\n\nI) Ciencias del Ser y del Deber Ser. Distinción. Características.\nII) Derecho como ciencia del Deber Ser. Concepto. La Norma Jurídica. Las Fuentes del\nderecho. \nIII) Instituciones jurídicas: Persona. Persona física y jurídica. Responsabilidad.\nDistintas órbitas de responsabilidad legal. Responsabilidad Civil: Contractual y\nextracontractual. Responsabilidad penal.\nIV) Otras responsabilidades: A) Responsabilidad Disciplinaria: Ejercicio profesional.\nFundamento. Alcances. Normas éticas que rigen el ejercicio de las profesiones. Secreto\nprofesional. B) Responsabilidad Social Empresaria: La corporación como agente moral.\nConcepto. Límites. Explicitación en Códigos de Conducta.\n\nUnidad IV. Calidad, responsabilidad empresaria y Normas.\n“Balance Social de la empresa” y “Responsabilidad Social Corporativa”\nEl problema de la voluntariedad. Ley, norma y dimensión ética. Reduccionismos contemporáneos. Expectativas comunitarias de la gestión empresaria. Calidad, certificación y responsabilidad empresaria. Factores políticos: El Libro Verde de la Unión Europea. Factores comerciales: la norma SA 8000\nTextos:\nCEE, Libro Verde de la Unión Europea\nISA, Norma SA 8000:2001 Responsabilidad Social\nNorma GRH 27001:2005 Gestión de los Recursos Humanos\nFamilia de normas ISO 9000, ISO 14000, OHSAS 18000 (selección)\n\nUnidad V. Actividad Empresaria, política y Sociedad en la Argentina",
+    "objetivos_aprendizaje": "-Que el alumno pueda reconocer la moralidad o inmoralidad de un acto a partir de diferentes miradas éticas. \n-Que el alumno logre comprender y poner en práctica los lineamientos éticos de la empresa en la que se desarrolle profesionalmente, en las desiciones diarias que se le presenten."
+  },
+  {
+    "codigo": "94.64",
+    "nombre": "Prácticas Expositivas",
+    "contenidos_minimos": "El emisor. Autoconocimiento. El FODA de la historia personal. Las anécdotas y los puntos de inflexión. El rol de la emoción en la cognición individual y social. La influencia de la formación académica en los modelos mentales y los estereotipos. La importancia de la impronta personal. La proyección y la visualización de metas a futuro. La carga de las expectativas y el proceso de aprendizaje. El mensaje. La elección del tema. Estructura del contenido. Diseño de la estrategia. Técnicas de presentación. Los cuatro momentos imprescindibles. La cuestión técnica central. El lenguaje verbal y corporal. Las reacciones instantáneas. Construcción y control de escenarios. La puesta en escena. Las lagunas, los pozos y las montañas. Diagramación y preparación. La erudición del experto y el margen de error. El receptor. Diferentes tipos de auditorios. La cuestión profesional y la cuestión generacional. El encuentro individual. Elevator pitch. Virtual classroom & real time feedback. La entrevista al paso. La entrevista en profundidad. La conferencia, la clase y la presentación del plan de negocios. La Política, la empresa y la ONG. Ingeniería y sociedad. Auditorio entusiasta, indiferente, hostil. El diálogo y el debate. Metacognición El rol del error. Saldo de imprevistos. Los puntos de perspectiva. La autogestión y el cambio de estrategias. La visualización a futuro. El cambio conceptual lógico y corporal.",
+    "objetivos_aprendizaje": "El diseño de la metodología (ad-hoc para esta materia) es que al finalizar el curso, cada alumno identifique su estilo  personal expositivo y detecte una mejora en sus habilidades comunicacionales, identificando las prácticas que le permitirán continuar mejorando su perfil en las áreas y en los tiempos que cada cual decida."
+  },
+  {
+    "codigo": "94.65",
+    "nombre": "Practica Profesional supervisada",
+    "contenidos_minimos": "Aplicación e integración de conocimientos y competencias adquiridas a lo largo de la formación del estudiante. Desarrollo de nuevos aprendizajes desde el enfoque de la práctica en un entorno profesional.",
+    "objetivos_aprendizaje": "Que los estudiantes puedan aplicar e integrar los conocimientos y habilidades adquiridas a lo largo de su formación, a la vez que desarrollen nuevos aprendizajes desde el enfoque de la práctica en un entorno profesional. A su vez, que puedan elaborar un informe donde comuniquen de forma efectiva la experiencia realizada, los aprendizajes adquiridos y un análisis crítico de la organización, estructura y procesos del ámbito de su práctica y actividades allí realizadas."
+  },
+  {
+    "codigo": "94.92",
+    "nombre": "Escritura Académica",
+    "contenidos_minimos": null,
+    "objetivos_aprendizaje": null
+  }
+]

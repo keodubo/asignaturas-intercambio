@@ -1,0 +1,128 @@
+Materias agregadas manualmente
+Materia	Créditos	Créditos requeridos	Correlativas
+72.41 - Base de Datos II	6		
+72.42 - Programación de Objetos Distribuidos	3		
+
+Año 4 - Cuatrimestre 2
+Materia	Créditos	Créditos requeridos	Correlativas
+72.25 - Simulación de Sistemas	6	140	93.75  72.34  93.07  
+72.27 - Sistemas de Inteligencia Artificial	6	120	93.75  93.24  72.34  
+72.43 - Gestión de Proyectos Informáticos	3	0	
+72.44 - Criptografía y Seguridad	6	0	72.07  
+Electivas	27	27	
+Año 5 - Cuatrimestre 1
+Materia	Créditos	Créditos requeridos	Correlativas
+12.83 - Seguridad Ocupacional y Ambiental	3	140	
+72.20 - Redes de Información	6	171	72.07  
+72.45 - Proyecto Final	12	160	
+Año 5 - Cuatrimestre 2
+Materia	Créditos	Créditos requeridos	Correlativas
+72.98 - Práctica Laboral	0	144	
+94.23 - Formación General III	3	168	
+94.52 - Inglés II	0	0	
+Electivas - Requisito: Juntar 27 créditos
+Contenido:
+Materia	Créditos	Créditos requeridos	Correlativas
+10.07 - Creatividad	3	96	
+10.09 - Formación para Emprendedores	3	0	
+11.36 - Innovación y Competitividad	3	192	
+16.04 - Neurociencias y Desarrollo Productivo	3	0	
+16.50 - Introducción a la Bioinformática	3	0	72.37  
+16.57 - Robótica Bioinspirada	3	0	72.08  
+16.82 - Neurociencia Computacional	3	0	93.28  72.34  93.24  
+22.09 - Fundamentos Electrónicos de la Informática	6	0	
+22.48 - Procesamiento de Imágenes	3	0	93.75  
+23.15 - Realidad Virtual	3	0	93.58  72.34  
+25.04 - Computación Cuántica	6	144	
+48.02 - AI: Data Management Course & Digital Transformation	1	0	
+61.08 - Derecho Digital	1	0	61.32  
+61.11 - Derecho Laboral y Seguridad Social en la Empresa	1	0	61.32  
+61.13 - Práctica Contractual	1	0	61.32  
+61.50 - Finanzas de la Empresa	3	0	61.23  
+71.48 - Introducción a la realidad aumentada	1	51	
+72.02 - Organización Básica de la Computadora	6	0	
+72.18 - Programación Funcional	4	0	
+72.22 - Sistemas Tolerantes a Fallas	6	0	
+72.23 - Diseño y Construcción de Compiladores	1	0	
+72.28 - Topología de Internet: Análisis y Modelado	3	0	
+72.29 - Tipos para Lenguajes de Programación	3	0	72.34  
+72.46 - Robótica Basada en Comportamiento	6	0	72.27  
+72.49 - Sistemas Tolerantes a Fallas	3	0	72.42  
+72.50 - Introducción al Desarrollo de Videojuegos	6	0	72.34  
+72.51 - Tecnologías para Web 2.0 y Redes Sociales	3	0	72.42  
+72.52 - Análisis y Tratamiento de Imágenes	3	0	93.75  72.34  
+72.53 - Visión Computacional 3D	3	0	72.34  
+72.54 - OLAP y Explotación de Datos	3	0	93.24  72.41  
+72.55 - Ontologías en la Web	3	0	72.32  72.37  
+72.56 - Automatización e Integración de Sistemas de Información	6	0	
+72.57 - Sistemas Embebidos	3	0	
+72.58 - Computación Gráfica	3	0	72.34  
+72.59 - Sistemas de Inteligencia Artificial II	3	0	72.27  
+72.60 - Programación Funcional	3	0	72.34  
+72.61 - Taller de Diseño de Videojuegos	1	0	72.34  
+72.64 - Cloud Computing	3	0	72.32  
+72.65 - Desarrollo de Videojuegos 2D en iPhone OS	3	0	72.34  
+72.66 - Sistemas Embebidos	6	0	
+72.67 - Robótica Cinemática Computacional	3	0	
+72.68 - Arte y Ciencia Interactivos	3	0	
+72.69 - Seguridad de Software basada en Flujo de Información	6	0	
+72.70 - Modelos e Imágenes Fractales	1	0	
+72.71 - Integración de Sistemas de Información	3	0	72.07  72.37  72.35  
+72.72 - Análisis y Verificación de Modelos y Códigos	3	0	
+72.73 - Aprendizaje por Refuerzo en Robótica	3	0	
+72.74 - Visualización de Información	3	0	72.31  
+72.75 - Aprendizaje Automático (Machine Learning)	3	0	93.75  72.34  93.24  
+72.77 - Técnicas Automáticas para Testing de Software	3	0	
+72.78 - OLAP Espacial	3	0	
+72.79 - Sistemas Multiagente I	3	0	72.27  
+72.80 - Big Data	3	0	72.41  
+72.81 - Simulación y Animación de Sistemas Multipartículas	3	0	
+72.82 - Tópicos de NOSQL	3	0	72.41  
+72.83 - Técnicas Avanzadas de HCI con Uso de Rastreadores de Ojos y Manos	3	0	
+72.84 - Base de Datos Espaciales y Sistemas de Información Geográfica	3	0	72.37  
+72.85 - Análisis de Datos en la Web Semántica	3	0	72.32  72.37  
+72.86 - Técnicas Avanzadas en Videojuegos	3	0	72.97  
+72.87 - Diseño Sonoro para Animación y Videojuegos	3	0	72.34  
+72.88 - Introducción a la Neurociencia Computacional	3	0	93.75  93.24  72.34  
+72.89 - Moneda Digital Descentralizada	3	0	72.44  
+72.90 - Internet de las Cosas (IoT)	3	0	93.07  93.43  
+72.92 - El Paradigma NoSQL - Bases de Datos de Grafos	3	0	72.41  
+72.94 - Introducción a los Sistemas Embebidos	3	0	72.08  
+72.95 - Proyecto de Innovación Científico-Tecnológico	12	0	
+72.96 - Proyecto de Aplicaciones Móviles	3	0	72.38  
+72.97 - Introducción a la Programación de Videojuegos	3	0	72.34  
+73.21 - Desarrollo de Aplicaciones Móviles Multiplataforma	3	0	72.38  
+73.22 - Fundamentos de DevOps	3	0	72.35  
+73.23 - Programación Orientada a Datos	1	0	72.34  
+73.30 - Desarrollo profesional de software: del código al producto	3	0	72.38  
+73.40 - ARQUITECTURA DE MICROSERVICIOS	3	0	72.07  72.35  
+73.50 - Infraestructura de Cómputo: Data Center, Cloud y Edge	3	0	72.20  72.41  
+73.60 - Introducción a la Robótica Empresarial	1	0	
+73.61 - Neurorobótica	1	0	
+73.62 - Introducción a la Programación Paralela	1	0	72.33  72.11  
+73.63 - Redes Equivariantes	1	0	72.27  
+73.64 - Temas Avanzados en Deep Learning	2	0	72.27  
+73.65 - Procesamiento del Lenguaje Natural	3	0	93.07  
+73.66 - Procesamiento de Imágenes Satelitales	1	0	
+73.67 - Análisis de series de tiempo con Inteligencia Artificial	1	0	72.27  
+73.80 - SEGURIDAD OFENSIVA	1	0	72.44  
+73.81 - Ciberseguridad Ofensiva y Defensiva	3	0	72.44  
+73.82 - Bases de Datos Espaciales y de Movilidad	3	0	72.37  
+73.84 - Ciencia de Datos Aplicada	3	0	72.27  
+73.89 - Introducción a Blockchain y Criptomonedas	3	0	72.44  
+73.98 - Desarrollo Integral de Videojuegos	3	0	72.97  
+81.13 - Futuros Posibles	1	0	
+81.14 - Product Management	3	0	
+81.16 - Negociación	1	0	
+81.57 - Arquitectura de soluciones digitales	3	0	72.07  72.37  72.35  
+81.74 - Introducción a la realidad aumentada	1	51	
+81.94 - Experiencia Inmersiva de Innovación Tecnológica	1	0	
+82.08 - Cloud Computing	3	0	72.32  
+82.18 - Procesamiento del Lenguaje Natural	3	0	93.07  
+82.21 - Factibilidad de Proyectos Data Driven	3	0	61.23  
+94.26 - Comunicación Organizacional	3	0	
+94.42 - Comunicación Estratégica	3	0	
+94.62 - Ética en los Negocios	3	0	
+94.64 - Prácticas Expositivas	3	120	
+94.65 - Practica Profesional supervisada	0	144	
+94.92 - Escritura Académica

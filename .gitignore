@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.pytest_cache/
+.codex-tmp/
+.playwright-cli/
+.superpowers/
+.venv/
+.vercel/
+dist/
+mi_carrito.csv

@@ -1,0 +1,356 @@
+[
+  {
+    "codigo_icai": "DOI-MBD-516",
+    "codigo_itba": "73.23",
+    "confianza": 3,
+    "comentario": "El análisis estadístico con lenguajes de programación para ML se alinea con la programación orientada a datos, aunque es una materia introductoria y de Master con permiso requerido."
+  },
+  {
+    "codigo_icai": "DCIA-IMAT-212",
+    "codigo_itba": "73.23",
+    "confianza": 3,
+    "comentario": "Adquisición y Visualización de Datos comparte el trabajo de obtención y manipulación de datos; candidato parcial de grado."
+  },
+  {
+    "codigo_icai": "DTC-MBD-517",
+    "codigo_itba": "73.23",
+    "confianza": 3,
+    "comentario": "Data Acquisition and Transformation cubre etapas de los pipelines de datos, parcialmente alineadas con programación orientada a datos. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-GITT-315",
+    "codigo_itba": "73.30",
+    "confianza": 3,
+    "comentario": "Ingeniería del Software cubre prácticas y procesos de desarrollo profesional; buen parcial para llevar código a producto."
+  },
+  {
+    "codigo_icai": "DOI-MII-681",
+    "codigo_itba": "73.30",
+    "confianza": 3,
+    "comentario": "Dirección de Proyectos aporta planificación y ejecución de productos/proyectos, pero no cubre específicamente product management de software. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "FCEE-BA23-311",
+    "codigo_itba": "73.30",
+    "confianza": 2,
+    "comentario": "Diseño y Generación de Valor para el Cliente conecta con la dimensión de producto y usuarios, pero no con el ciclo completo de desarrollo de software."
+  },
+  {
+    "codigo_icai": "DTC-MIT-515",
+    "codigo_itba": "73.40",
+    "confianza": 2,
+    "comentario": "Arquitectura de Servicios en Red se relaciona con el diseño de servicios distribuidos, aunque no confirma contenidos de microservicios, contenedores o Kubernetes. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MIA-516",
+    "codigo_itba": "73.40",
+    "confianza": 2,
+    "comentario": "Artificial Intelligence Operations puede solapar con operación y despliegue de servicios, pero está orientada a IA y no garantiza la arquitectura de microservicios completa. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-516",
+    "codigo_itba": "73.40",
+    "confianza": 2,
+    "comentario": "MLOps comparte automatización y operación de servicios/modelos, parcial débil para microservicios sin evidencia específica de contenedores ni comunicación distribuida. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MIT-515",
+    "codigo_itba": "73.50",
+    "confianza": 3,
+    "comentario": "Arquitectura de Servicios en Red cubre infraestructura de servicios de red; parcial fuerte para infraestructura de cómputo, aunque no acredita data center, cloud y edge completos. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DEAC-MUIINT-112",
+    "codigo_itba": "73.50",
+    "confianza": 2,
+    "comentario": "Internet of Things aporta la dimensión de dispositivos conectados y edge, pero no cubre de forma integral data center ni cloud. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MIA-516",
+    "codigo_itba": "73.50",
+    "confianza": 2,
+    "comentario": "Artificial Intelligence Operations se relaciona con operación de infraestructura para modelos, pero no especifica cloud, data center o edge. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-516",
+    "codigo_itba": "73.50",
+    "confianza": 2,
+    "comentario": "MLOps puede incluir infraestructura de despliegue y operación, pero el alcance de cloud, data center y edge no está confirmado. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DIM-MII-516",
+    "codigo_itba": "73.60",
+    "confianza": 4,
+    "comentario": "Robótica Industrial es un candidato fuerte para Introducción a la Robótica Empresarial por su foco directo en robótica aplicada a industria. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DEAC-MII-632",
+    "codigo_itba": "73.60",
+    "confianza": 3,
+    "comentario": "Automatización Avanzada comparte la automatización industrial relevante para robótica empresarial, aunque no es específicamente robótica. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DEAC-IMAT-312",
+    "codigo_itba": "73.60",
+    "confianza": 2,
+    "comentario": "Sistemas de Control aporta una base técnica para robótica, pero no aborda por sí sola la integración empresarial ni la robótica aplicada."
+  },
+  {
+    "codigo_icai": "DEAC-IMAT-411",
+    "codigo_itba": "73.61",
+    "confianza": 3,
+    "comentario": "Aprendizaje por Refuerzo es una técnica relevante para neurorobótica y control adaptativo, aunque no cubre robótica ni neurociencia de forma completa."
+  },
+  {
+    "codigo_icai": "DIM-MII-516",
+    "codigo_itba": "73.61",
+    "confianza": 2,
+    "comentario": "Robótica Industrial cubre el dominio robótico, pero no evidencia componentes neuronales o de aprendizaje propios de neurorobótica. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MIINT-512",
+    "codigo_itba": "73.61",
+    "confianza": 3,
+    "comentario": "Deep Learning cubre la parte neuronal de neurorobótica, pero no el sistema robótico o su control integrado. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MIINT-512",
+    "codigo_itba": "73.63",
+    "confianza": 3,
+    "comentario": "Deep Learning aporta la base de redes neuronales, pero no confirma arquitecturas equivariantes específicas. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MIA-501",
+    "codigo_itba": "73.63",
+    "confianza": 3,
+    "comentario": "Modelos Generativos Profundos se solapa con redes profundas avanzadas, aunque no especifica redes equivariantes. Es All-year, Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MIINT-512",
+    "codigo_itba": "73.64",
+    "confianza": 4,
+    "comentario": "Deep Learning es un candidato fuerte para Temas Avanzados en Deep Learning, aunque el temario detallado no está disponible. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MIA-501",
+    "codigo_itba": "73.64",
+    "confianza": 3,
+    "comentario": "Modelos Generativos Profundos cubre una especialidad avanzada de deep learning, pero no la amplitud de temas avanzados general. Es All-year, Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-512",
+    "codigo_itba": "73.64",
+    "confianza": 3,
+    "comentario": "Aprendizaje Automático es una base relevante, pero no acredita profundidad específica en técnicas avanzadas de deep learning. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-IMAT-416",
+    "codigo_itba": "73.65",
+    "confianza": 5,
+    "comentario": "Procesamiento de Lenguaje Natural II coincide directamente con Procesamiento del Lenguaje Natural y es el candidato más fuerte del catálogo."
+  },
+  {
+    "codigo_icai": "DTC-SAP-333",
+    "codigo_itba": "73.65",
+    "confianza": 2,
+    "comentario": "Machine Learning and Artificial Intelligence with Python menciona NLP, pero es una introducción amplia y no una materia dedicada a procesamiento de lenguaje natural."
+  },
+  {
+    "codigo_icai": "DTC-IMAT-417",
+    "codigo_itba": "73.66",
+    "confianza": 4,
+    "comentario": "Visión por Ordenador II es un candidato fuerte para procesamiento de imágenes satelitales por las técnicas de visión, aunque no incluye teledetección ni datos satelitales explícitamente."
+  },
+  {
+    "codigo_icai": "DEAC-IMAT-313",
+    "codigo_itba": "73.66",
+    "confianza": 3,
+    "comentario": "Visión por Ordenador I comparte el procesamiento de imágenes, pero no el dominio satelital ni técnicas avanzadas específicas."
+  },
+  {
+    "codigo_icai": "DTC-SAP-333",
+    "codigo_itba": "73.66",
+    "confianza": 2,
+    "comentario": "La introducción a ML/IA con Python incluye visión por ordenador, pero el alcance es general e introductorio frente al procesamiento satelital."
+  },
+  {
+    "codigo_icai": "DOI-IMAT-311",
+    "codigo_itba": "73.67",
+    "confianza": 4,
+    "comentario": "Análisis y Predicción de Series Temporales coincide directamente con la parte de series temporales; no se confirma el uso de IA en el título."
+  },
+  {
+    "codigo_icai": "FCEE-BA23-413",
+    "codigo_itba": "73.67",
+    "confianza": 3,
+    "comentario": "Machine Learning II: Predicción se alinea con el componente predictivo de series temporales, aunque no confirma el tratamiento temporal específico."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-512",
+    "codigo_itba": "73.67",
+    "confianza": 3,
+    "comentario": "Aprendizaje Automático aporta métodos de IA aplicables a series temporales, pero no especifica análisis temporal. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MCS-516",
+    "codigo_itba": "73.80",
+    "confianza": 5,
+    "comentario": "Test de Intrusión y Gestión de Vulnerabilidades coincide directamente con seguridad ofensiva. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DEAC-MCS-511",
+    "codigo_itba": "73.80",
+    "confianza": 2,
+    "comentario": "Ciberseguridad en Industria e Infraestructuras Críticas aporta contexto defensivo de ciberseguridad, pero no práctica ofensiva explícita. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MIT-512",
+    "codigo_itba": "73.80",
+    "confianza": 2,
+    "comentario": "Seguridad en Sistemas de Comunicación cubre seguridad aplicada a comunicaciones, pero no pruebas ofensivas ni explotación de vulnerabilidades. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MCS-516",
+    "codigo_itba": "73.81",
+    "confianza": 4,
+    "comentario": "Test de Intrusión y Gestión de Vulnerabilidades cubre el componente ofensivo de la materia ITBA; el componente defensivo no está confirmado. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MCS-512",
+    "codigo_itba": "73.81",
+    "confianza": 3,
+    "comentario": "Criptografía, Firma Electrónica y Blockchain aporta fundamentos defensivos de seguridad, pero no seguridad ofensiva. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DEAC-MCS-511",
+    "codigo_itba": "73.81",
+    "confianza": 3,
+    "comentario": "Ciberseguridad en Industria e Infraestructuras Críticas cubre la vertiente defensiva y aplicada, pero no seguridad ofensiva explícita. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MIT-512",
+    "codigo_itba": "73.81",
+    "confianza": 3,
+    "comentario": "Seguridad en Sistemas de Comunicación es un parcial fuerte para la dimensión defensiva de ciberseguridad, no para técnicas ofensivas completas. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MCS-513",
+    "codigo_itba": "73.81",
+    "confianza": 2,
+    "comentario": "Gobierno, Riesgo y Cumplimiento aporta la gestión defensiva de la seguridad, pero no cubre habilidades técnicas ofensivas/defensivas integrales. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MUIINT-111",
+    "codigo_itba": "73.82",
+    "confianza": 2,
+    "comentario": "Database Design aporta fundamentos de diseño de bases de datos, pero no extensiones espaciales, MobilityDB ni análisis de trayectorias. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-515",
+    "codigo_itba": "73.82",
+    "confianza": 2,
+    "comentario": "Ingeniería del Dato se relaciona con el manejo de datos, pero no confirma bases espaciales o de movilidad. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-IMAT-212",
+    "codigo_itba": "73.84",
+    "confianza": 4,
+    "comentario": "Adquisición y Visualización de Datos coincide con captura, análisis exploratorio y visualización de datos; candidato fuerte de grado."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-515",
+    "codigo_itba": "73.84",
+    "confianza": 4,
+    "comentario": "Ingeniería del Dato cubre la preparación e integración de datos propias de ciencia de datos aplicada. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-517",
+    "codigo_itba": "73.84",
+    "confianza": 4,
+    "comentario": "Data Acquisition and Transformation coincide con captura, integración, preparación y transformación de datos. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DOI-MBD-516",
+    "codigo_itba": "73.84",
+    "confianza": 4,
+    "comentario": "Análisis estadístico con programación para ML combina análisis de datos y machine learning, con alcance introductorio. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-511",
+    "codigo_itba": "73.84",
+    "confianza": 3,
+    "comentario": "Arquitectura Big Data comparte almacenamiento y arquitectura para datos a escala, pero no el ciclo completo de ciencia de datos aplicada. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-515",
+    "codigo_itba": "73.84",
+    "confianza": 3,
+    "comentario": "Tecnologías de Procesamiento Big Data se relaciona con procesamiento de grandes volúmenes, parcial para ciencia de datos aplicada. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-512",
+    "codigo_itba": "73.84",
+    "confianza": 3,
+    "comentario": "Aprendizaje Automático cubre el modelado predictivo de ciencia de datos, pero no captura, visualización ni producto de datos completos. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-516",
+    "codigo_itba": "73.84",
+    "confianza": 2,
+    "comentario": "MLOps se relaciona con la integración productiva de modelos, pero no cubre el ciclo completo de ciencia de datos aplicada. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MTF-513",
+    "codigo_itba": "73.89",
+    "confianza": 5,
+    "comentario": "Finanzas Descentralizadas y Blockchain coincide directamente con blockchain, criptomonedas y el ecosistema DeFi. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MCS-512",
+    "codigo_itba": "73.89",
+    "confianza": 4,
+    "comentario": "Criptografía, Firma Electrónica y Blockchain cubre blockchain y fundamentos de seguridad, aunque no se confirma Solidity, contratos inteligentes o DeFi. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DOI-MTF-511",
+    "codigo_itba": "73.89",
+    "confianza": 2,
+    "comentario": "Fundamentos de Tecnologías Financieras, Pagos y Banca Digital aporta contexto financiero digital, pero no garantiza contenidos de blockchain. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DOI-DHPCP-301",
+    "codigo_itba": "81.13",
+    "confianza": 2,
+    "comentario": "Pensamiento Crítico comparte una competencia central de Futuros Posibles, pero no metodologías de prospectiva, escenarios o backcasting."
+  },
+  {
+    "codigo_icai": "IBS-MBA-518",
+    "codigo_itba": "81.13",
+    "confianza": 2,
+    "comentario": "Planificación Estratégica se relaciona con construcción de visión y transformación organizacional, pero no con la disciplina de futuros. Es Master y requiere permiso para alumnos de último año."
+  },
+  {
+    "codigo_icai": "FCEE-BA23-311",
+    "codigo_itba": "81.14",
+    "confianza": 3,
+    "comentario": "Diseño y Generación de Valor para el Cliente coincide con entendimiento de usuarios y diseño de propuestas de valor; parcial para Product Management."
+  },
+  {
+    "codigo_icai": "DTC-GITT-315",
+    "codigo_itba": "81.14",
+    "confianza": 3,
+    "comentario": "Ingeniería del Software aporta el ciclo de desarrollo y la interacción con ingeniería, pero no todo el alcance de producto, UX y métricas."
+  },
+  {
+    "codigo_icai": "DOI-MII-681",
+    "codigo_itba": "81.14",
+    "confianza": 3,
+    "comentario": "Dirección de Proyectos coincide con planificación y ejecución, pero Product Management añade investigación de usuario, estrategia y métricas propias. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DOI-MII-613",
+    "codigo_itba": "81.14",
+    "confianza": 2,
+    "comentario": "Emprendimiento e Innovación comparte oportunidades y validación de soluciones, pero no cubre explícitamente la gestión de producto de software. Es Master y requiere permiso."
+  }
+]

@@ -1,0 +1,278 @@
+[
+  {
+    "codigo_icai": "DTC-GITT-313",
+    "codigo_itba": "72.20",
+    "confianza": 5,
+    "comentario": "Tecnología de Redes cubre directamente el núcleo de redes y protocolos de la materia ITBA; falta confirmar el detalle de seguridad, movilidad y ATM."
+  },
+  {
+    "codigo_icai": "DTC-GITT-411",
+    "codigo_itba": "72.20",
+    "confianza": 4,
+    "comentario": "Conmutación y transmisión solapa con tecnologías LAN/WAN, interconexión y transporte de datos, aunque no evidencia por sí sola toda la capa TCP/IP y de seguridad solicitada por ITBA."
+  },
+  {
+    "codigo_icai": "DTC-MIT-515",
+    "codigo_itba": "72.20",
+    "confianza": 4,
+    "comentario": "Arquitectura de servicios en red es una buena candidata para protocolos, servicios y arquitectura de red; es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DEAC-MIT-513",
+    "codigo_itba": "72.20",
+    "confianza": 3,
+    "comentario": "Sistemas de Comunicación I cubre una parte fuerte de comunicaciones y redes, pero el alcance de TCP/IP, ruteo y seguridad debe verificarse. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DOI-IMAT-314",
+    "codigo_itba": "72.25",
+    "confianza": 4,
+    "comentario": "Optimización y Simulación es el candidato directo para modelado y simulación de sistemas; falta confirmar el peso de simulación discreta, probabilística y análisis estadístico de resultados."
+  },
+  {
+    "codigo_icai": "DEA-GITI-313",
+    "codigo_itba": "72.25",
+    "confianza": 2,
+    "comentario": "Sistemas Dinámicos aporta modelado de sistemas continuos, pero no evidencia la metodología integral de simulación discreta/probabilística de ITBA."
+  },
+  {
+    "codigo_icai": "DIM-MII-612",
+    "codigo_itba": "72.25",
+    "confianza": 2,
+    "comentario": "Simulación Multifísica comparte el uso de modelos y herramientas de simulación, aunque es una aplicación de ingeniería física más acotada. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-IMAT-211",
+    "codigo_itba": "72.27",
+    "confianza": 5,
+    "comentario": "Fundamentos de Inteligencia Artificial es la equivalencia más directa para los enfoques y técnicas centrales de IA; confirmar la cobertura de sistemas expertos, lógica y algoritmos genéticos."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-511",
+    "codigo_itba": "72.27",
+    "confianza": 4,
+    "comentario": "Agentes y Métodos de IA solapa fuertemente con resolución de problemas, métodos de IA y enfoque simbólico, aunque es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-512",
+    "codigo_itba": "72.27",
+    "confianza": 4,
+    "comentario": "Aprendizaje Automático cubre redes neuronales y aprendizaje supervisado/no supervisado, pero no el bloque simbólico completo. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-SAP-333",
+    "codigo_itba": "72.27",
+    "confianza": 4,
+    "comentario": "Machine Learning and Artificial Intelligence with Python cubre fundamentos prácticos de IA, ML, NLP y visión por ordenador; queda más introductoria y sin evidencia del enfoque lógico/simbólico."
+  },
+  {
+    "codigo_icai": "DCIA-MIA-501",
+    "codigo_itba": "72.27",
+    "confianza": 3,
+    "comentario": "Modelos Generativos Profundos aporta el subbloque de redes profundas, GANs y modelos generativos, pero no la amplitud de Sistemas de IA. Es Master anual y requiere permiso."
+  },
+  {
+    "codigo_icai": "DOI-OPT-614",
+    "codigo_itba": "72.27",
+    "confianza": 3,
+    "comentario": "Machine Learning for Engineers cubre el componente no simbólico de aprendizaje y optimización, con gap en búsqueda heurística, lógica y sistemas expertos. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-GITT-313",
+    "codigo_itba": "72.28",
+    "confianza": 3,
+    "comentario": "Tecnología de Redes es una base pertinente para analizar topologías y funcionamiento de Internet, aunque no confirma específicamente modelado topológico."
+  },
+  {
+    "codigo_icai": "DTC-GITT-411",
+    "codigo_itba": "72.28",
+    "confianza": 3,
+    "comentario": "Conmutación y transmisión aporta redes e interconexión para el análisis de topologías, pero no evidencia herramientas de modelado de Internet."
+  },
+  {
+    "codigo_icai": "DTC-MIT-515",
+    "codigo_itba": "72.28",
+    "confianza": 3,
+    "comentario": "Arquitectura de servicios en red puede cubrir arquitectura y organización de redes, con gap en análisis y modelado de topología. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-IMAT-315",
+    "codigo_itba": "72.29",
+    "confianza": 2,
+    "comentario": "Paradigmas y Técnicas de Programación puede tratar abstracciones y sistemas de tipos entre paradigmas, pero no hay evidencia de profundidad en teoría de tipos."
+  },
+  {
+    "codigo_icai": "DCIA-MUIINT-111",
+    "codigo_itba": "72.41",
+    "confianza": 3,
+    "comentario": "Database Design cubre diseño de bases de datos, pero debe verificarse la profundidad en índices, tuning, concurrencia, recuperación y GIS. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-515",
+    "codigo_itba": "72.41",
+    "confianza": 3,
+    "comentario": "Ingeniería del Dato aporta gestión y arquitectura de datos a escala, aunque no asegura los contenidos avanzados de administración SQL y transacciones. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-511",
+    "codigo_itba": "72.41",
+    "confianza": 2,
+    "comentario": "Arquitectura Big Data cubre parte de las tendencias de datos masivos y NoSQL, pero no el núcleo completo de Base de Datos II. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-515",
+    "codigo_itba": "72.42",
+    "confianza": 3,
+    "comentario": "Tecnologías de Procesamiento Big Data es candidata para procesamiento distribuido y almacenamiento a escala, con gaps en RPC, objetos distribuidos y concurrencia Java. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-511",
+    "codigo_itba": "72.42",
+    "confianza": 3,
+    "comentario": "Arquitectura Big Data solapa con arquitecturas, datos y almacenamiento distribuido, pero no con todo el middleware y la programación de objetos distribuidos. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MIT-515",
+    "codigo_itba": "72.42",
+    "confianza": 3,
+    "comentario": "Arquitectura de Servicios en Red cubre arquitectura cliente-servidor y servicios distribuidos, con gap en tolerancia a fallas, consistencia y procesamiento MapReduce. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-IMAT-215",
+    "codigo_itba": "72.42",
+    "confianza": 2,
+    "comentario": "Fundamentos de Sistemas Operativos aporta concurrencia, procesos y sincronización, pero no el núcleo de sistemas distribuidos."
+  },
+  {
+    "codigo_icai": "DOI-MII-681",
+    "codigo_itba": "72.43",
+    "confianza": 4,
+    "comentario": "Dirección de Proyectos cubre la administración, planificación y seguimiento de proyectos; debe verificarse la cobertura de calidad, configuración y auditorías de software. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DOI-MIT-613",
+    "codigo_itba": "72.43",
+    "confianza": 4,
+    "comentario": "Dirección de Proyectos es una buena equivalencia para gestión, planificación y riesgos, con la misma salvedad sobre calidad y configuración de software. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MCS-512",
+    "codigo_itba": "72.44",
+    "confianza": 5,
+    "comentario": "Criptografía, Firma Electrónica y Blockchain cubre directamente criptografía clásica/moderna, firma y aplicaciones de seguridad. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MCS-516",
+    "codigo_itba": "72.44",
+    "confianza": 4,
+    "comentario": "Test de Intrusión y Gestión de Vulnerabilidades cubre análisis de vulnerabilidades y pentesting, una parte relevante de la seguridad aplicada ITBA. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-GITT-413",
+    "codigo_itba": "72.44",
+    "confianza": 3,
+    "comentario": "Seguridad y Normativa aporta seguridad de redes y aspectos regulatorios, pero no demuestra cubrir la profundidad criptográfica requerida."
+  },
+  {
+    "codigo_icai": "DEAC-MCS-511",
+    "codigo_itba": "72.44",
+    "confianza": 3,
+    "comentario": "Ciberseguridad en Industria e Infraestructuras Críticas aporta seguridad aplicada, aunque no es una equivalencia completa de criptografía y protocolos. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MIT-512",
+    "codigo_itba": "72.44",
+    "confianza": 3,
+    "comentario": "Seguridad en Sistemas de Comunicación cubre el componente de seguridad en redes y protocolos, con gap en criptografía general y seguridad de bases de datos/sistemas operativos. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DIM-MII-516",
+    "codigo_itba": "72.46",
+    "confianza": 3,
+    "comentario": "Robótica Industrial es el único candidato directo por dominio robótico, pero se debe verificar que incluya arquitecturas de comportamiento y no solo automatización industrial. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-511",
+    "codigo_itba": "72.46",
+    "confianza": 2,
+    "comentario": "Agentes y Métodos de IA puede aportar agentes autónomos aplicables a robótica basada en comportamiento, pero no reemplaza una asignatura específica de robótica. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DEAC-IMAT-313",
+    "codigo_itba": "72.52",
+    "confianza": 4,
+    "comentario": "Visión por Ordenador I es candidata directa para análisis y tratamiento de imágenes; falta confirmar el alcance de procesamiento clásico frente a visión basada en aprendizaje."
+  },
+  {
+    "codigo_icai": "DTC-IMAT-417",
+    "codigo_itba": "72.52",
+    "confianza": 4,
+    "comentario": "Visión por Ordenador II es una candidata directa y de nivel avanzado para análisis de imágenes; se debe validar el temario concreto."
+  },
+  {
+    "codigo_icai": "DTC-SAP-333",
+    "codigo_itba": "72.52",
+    "confianza": 3,
+    "comentario": "Machine Learning and Artificial Intelligence with Python incluye visión por ordenador, pero dentro de una introducción amplia a IA y ML."
+  },
+  {
+    "codigo_icai": "DEAC-IMAT-313",
+    "codigo_itba": "72.53",
+    "confianza": 3,
+    "comentario": "Visión por Ordenador I puede ofrecer los fundamentos necesarios para visión 3D, pero el título no confirma reconstrucción o geometría 3D."
+  },
+  {
+    "codigo_icai": "DTC-IMAT-417",
+    "codigo_itba": "72.53",
+    "confianza": 3,
+    "comentario": "Visión por Ordenador II es una candidata de visión avanzada, aunque debe comprobarse la cobertura específica de técnicas 3D."
+  },
+  {
+    "codigo_icai": "DMA-IMAT-311",
+    "codigo_itba": "72.53",
+    "confianza": 2,
+    "comentario": "Geometría Computacional aporta una base parcial para los aspectos geométricos de visión 3D, pero no cubre por sí sola visión computacional."
+  },
+  {
+    "codigo_icai": "DTC-BA-516",
+    "codigo_itba": "72.54",
+    "confianza": 3,
+    "comentario": "Desarrollo de Aplicaciones para la Visualización de Datos cubre explotación y presentación de datos, pero no confirma OLAP, cubos ni almacenamiento analítico."
+  },
+  {
+    "codigo_icai": "DTC-BA23-314",
+    "codigo_itba": "72.54",
+    "confianza": 3,
+    "comentario": "Visualización de Datos solapa con la explotación analítica de datos, aunque no alcanza por sí sola los contenidos de OLAP."
+  },
+  {
+    "codigo_icai": "DCIA-IMAT-212",
+    "codigo_itba": "72.54",
+    "confianza": 3,
+    "comentario": "Adquisición y Visualización de Datos cubre pipeline de datos y visualización, con gap en modelado multidimensional y consultas OLAP."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-515",
+    "codigo_itba": "72.54",
+    "confianza": 3,
+    "comentario": "Ingeniería del Dato aporta preparación y explotación de datos a escala, pero no acredita específicamente OLAP. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-511",
+    "codigo_itba": "72.54",
+    "confianza": 3,
+    "comentario": "Arquitectura Big Data es candidata para almacenamiento y explotación de datos masivos, con falta de evidencia de cubos OLAP. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-512",
+    "codigo_itba": "72.54",
+    "confianza": 3,
+    "comentario": "Big Data y Gobierno del Dato aporta gestión y organización del dato para analítica, aunque no es una asignatura OLAP explícita. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-515",
+    "codigo_itba": "72.54",
+    "confianza": 3,
+    "comentario": "Tecnologías de Procesamiento Big Data cubre procesamiento para explotación de datos a escala, con gap en diseño de esquemas multidimensionales y OLAP. Es Master y requiere permiso."
+  }
+]

@@ -1,0 +1,4256 @@
+# ICAI combinaciones sub-4 - Analisis de complementariedad
+
+Sos un experto en planes de estudio de Ingenieria Informatica.
+Tu tarea es revisar pares de materias ICAI que individualmente tienen confianza 2 o 3 contra la misma materia ITBA, y decidir si combinadas pueden valer como una equivalencia fuerte.
+
+## Criterio obligatorio
+
+No alcanza con que ambas materias apunten a la misma ITBA. Debes chequear que se complementa una con la otra:
+
+- La materia 2 debe aportar topicos que la materia 1 no cubre, o viceversa.
+- El par debe cubrir bloques distintos del temario ITBA.
+- Si ambas cubren lo mismo, No emitir.
+- Si una de las dos no agrega cobertura nueva, No emitir.
+- Si juntas no llegan a confianza_combinada 4 o 5, No emitir.
+
+## Rubrica
+
+- 5 = el par cubre casi todo el temario ITBA, con gaps menores o nulos.
+- 4 = el par cubre la mayoria sustantiva del temario ITBA, aunque queden gaps manualmente revisables.
+- 3 o menos = No emitir.
+
+## Candidatos
+
+```json
+[
+  {
+    "pair_key": "12.83|DIM-GITI-421|DIM-OPT-611",
+    "codigo_itba": "12.83",
+    "nombre_itba": "Seguridad Ocupacional y Ambiental",
+    "materia_1": {
+      "codigo_icai": "DIM-GITI-421",
+      "nombre_icai": "Ingeniería Medioambiental / Environmental Engineering",
+      "confianza": 2,
+      "comentario": "Ingenieria Medioambiental solapa con gestion e impacto ambiental, pero no cubre claramente higiene, seguridad ocupacional ni la normativa laboral de ITBA."
+    },
+    "materia_2": {
+      "codigo_icai": "DIM-OPT-611",
+      "nombre_icai": "Optativa Complementaria. Sustainable Development / Sustainable Development",
+      "confianza": 2,
+      "comentario": "Sustainable Development aporta la dimension ambiental y de gestion responsable, pero no equivale a seguridad ocupacional ni a sistemas ISO 14001 completos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "12.83",
+      "nombre": "Seguridad Ocupacional y Ambiental",
+      "contenidos_minimos": "Introducción. Servicios de Medicina, Higiene y Seguridad. Edificios. Condiciones de Higiene. Condiciones de Seguridad. Accidentes. Actividades sobre Seguridad e Higiene en el Trabajo. Introducción al estudio del medio ambiente. Legislación ambiental. Sistemas de Gestión medioambiental. Etapas de implementación de la ISO 14001. Análisis de casos.",
+      "objetivos_aprendizaje": "Los objetivos de la asignatura son que el estudiante logre:\n• comprender los conceptos de higiene, seguridad y medio ambiente (HSMA) con una mirada práctica que le permita situarse rápidamente en estos temas en las organizaciones en las que se desempeñe.\n• interiorizarse con los sistemas de gestión de salud y seguridad en el trabajo y medio ambiente.\n• desarrollar una mirada práctica y crítica, integrando los conceptos de la materia con cada especialidad para formarse como un profesional comprometido con estos temas.\n• describir e interpretar la problemática de las distintas áreas pudiendo priorizar alternativas que alimentaran el proceso de toma de decisión para la gestión de las actividades precitadas."
+    }
+  },
+  {
+    "pair_key": "12.83|DIM-GITI-421|DIM-SAP-346",
+    "codigo_itba": "12.83",
+    "nombre_itba": "Seguridad Ocupacional y Ambiental",
+    "materia_1": {
+      "codigo_icai": "DIM-GITI-421",
+      "nombre_icai": "Ingeniería Medioambiental / Environmental Engineering",
+      "confianza": 2,
+      "comentario": "Ingenieria Medioambiental solapa con gestion e impacto ambiental, pero no cubre claramente higiene, seguridad ocupacional ni la normativa laboral de ITBA."
+    },
+    "materia_2": {
+      "codigo_icai": "DIM-SAP-346",
+      "nombre_icai": "Environmental Engineering & Sustainability",
+      "confianza": 2,
+      "comentario": "Environmental Engineering & Sustainability cubre la componente ambiental y de sostenibilidad; la parte de seguridad e higiene ocupacional queda fuera, por lo que es un match parcial debil."
+    },
+    "itba": {
+      "codigo": "12.83",
+      "nombre": "Seguridad Ocupacional y Ambiental",
+      "contenidos_minimos": "Introducción. Servicios de Medicina, Higiene y Seguridad. Edificios. Condiciones de Higiene. Condiciones de Seguridad. Accidentes. Actividades sobre Seguridad e Higiene en el Trabajo. Introducción al estudio del medio ambiente. Legislación ambiental. Sistemas de Gestión medioambiental. Etapas de implementación de la ISO 14001. Análisis de casos.",
+      "objetivos_aprendizaje": "Los objetivos de la asignatura son que el estudiante logre:\n• comprender los conceptos de higiene, seguridad y medio ambiente (HSMA) con una mirada práctica que le permita situarse rápidamente en estos temas en las organizaciones en las que se desempeñe.\n• interiorizarse con los sistemas de gestión de salud y seguridad en el trabajo y medio ambiente.\n• desarrollar una mirada práctica y crítica, integrando los conceptos de la materia con cada especialidad para formarse como un profesional comprometido con estos temas.\n• describir e interpretar la problemática de las distintas áreas pudiendo priorizar alternativas que alimentaran el proceso de toma de decisión para la gestión de las actividades precitadas."
+    }
+  },
+  {
+    "pair_key": "12.83|DIM-OPT-611|DIM-SAP-346",
+    "codigo_itba": "12.83",
+    "nombre_itba": "Seguridad Ocupacional y Ambiental",
+    "materia_1": {
+      "codigo_icai": "DIM-OPT-611",
+      "nombre_icai": "Optativa Complementaria. Sustainable Development / Sustainable Development",
+      "confianza": 2,
+      "comentario": "Sustainable Development aporta la dimension ambiental y de gestion responsable, pero no equivale a seguridad ocupacional ni a sistemas ISO 14001 completos. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DIM-SAP-346",
+      "nombre_icai": "Environmental Engineering & Sustainability",
+      "confianza": 2,
+      "comentario": "Environmental Engineering & Sustainability cubre la componente ambiental y de sostenibilidad; la parte de seguridad e higiene ocupacional queda fuera, por lo que es un match parcial debil."
+    },
+    "itba": {
+      "codigo": "12.83",
+      "nombre": "Seguridad Ocupacional y Ambiental",
+      "contenidos_minimos": "Introducción. Servicios de Medicina, Higiene y Seguridad. Edificios. Condiciones de Higiene. Condiciones de Seguridad. Accidentes. Actividades sobre Seguridad e Higiene en el Trabajo. Introducción al estudio del medio ambiente. Legislación ambiental. Sistemas de Gestión medioambiental. Etapas de implementación de la ISO 14001. Análisis de casos.",
+      "objetivos_aprendizaje": "Los objetivos de la asignatura son que el estudiante logre:\n• comprender los conceptos de higiene, seguridad y medio ambiente (HSMA) con una mirada práctica que le permita situarse rápidamente en estos temas en las organizaciones en las que se desempeñe.\n• interiorizarse con los sistemas de gestión de salud y seguridad en el trabajo y medio ambiente.\n• desarrollar una mirada práctica y crítica, integrando los conceptos de la materia con cada especialidad para formarse como un profesional comprometido con estos temas.\n• describir e interpretar la problemática de las distintas áreas pudiendo priorizar alternativas que alimentaran el proceso de toma de decisión para la gestión de las actividades precitadas."
+    }
+  },
+  {
+    "pair_key": "16.57|DEAC-MII-632|DIM-MII-516",
+    "codigo_itba": "16.57",
+    "nombre_itba": "Robótica Bioinspirada",
+    "materia_1": {
+      "codigo_icai": "DEAC-MII-632",
+      "nombre_icai": "Automatización Avanzada / Advanced Automation",
+      "confianza": 2,
+      "comentario": "Automatizacion Avanzada comparte control y automatizacion de sistemas fisicos con robotica, aunque falta el enfoque bioinspirado y de cognicion embebida. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DIM-MII-516",
+      "nombre_icai": "Robotica Industrial / Industrial Robotics",
+      "confianza": 2,
+      "comentario": "Robotica Industrial comparte diseno e implementacion de sistemas roboticos, pero no cubre explicitamente bioinspiracion, sistemas biologicos ni interaccion humano-robot. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "16.57",
+      "nombre": "Robótica Bioinspirada",
+      "contenidos_minimos": "Que es un robot? Sensores y actuadores. Robots para el estudio de sistemas biológicos. Interacción humano-robot. Cognición embebida.",
+      "objetivos_aprendizaje": "Se espera que lxs estudiantes: \n    • Incorporen herramientas básicas para el diseño e implementación de sistemas robóticos.\n    • Generen una visión interdisciplinaria comprendiendo cómo pueden integrarse miradas que provienen de diferentes áreas del conocimiento para el abordaje de problemas.  \n    • Desarrollen pensamiento crítico y creativo.\n    • Adquieran las herramientas necesarias para aplicar, en su vida académica y profesional, los conocimientos adquiridos."
+    }
+  },
+  {
+    "pair_key": "22.09|DEA-GITI-431|DEA-GITT-211",
+    "codigo_itba": "22.09",
+    "nombre_itba": "Fundamentos Electrónicos de la Informática",
+    "materia_1": {
+      "codigo_icai": "DEA-GITI-431",
+      "nombre_icai": "Microprocesadores / Microprocessors",
+      "confianza": 3,
+      "comentario": "Microprocesadores solapa con la aplicacion informatica de la electronica digital y el hardware, pero parece mas especifica y avanzada que una materia fundacional."
+    },
+    "materia_2": {
+      "codigo_icai": "DEA-GITT-211",
+      "nombre_icai": "Circuitos Electrónicos / Electronic Circuits",
+      "confianza": 3,
+      "comentario": "Circuitos Electronicos cubre fundamentos de electronica y circuitos, alineados con Fundamentos Electronicos de la Informatica; falta confirmar el alcance de logica y arquitectura digital."
+    },
+    "itba": {
+      "codigo": "22.09",
+      "nombre": "Fundamentos Electrónicos de la Informática",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "22.09|DEA-GITI-431|DEA-GITT-214",
+    "codigo_itba": "22.09",
+    "nombre_itba": "Fundamentos Electrónicos de la Informática",
+    "materia_1": {
+      "codigo_icai": "DEA-GITI-431",
+      "nombre_icai": "Microprocesadores / Microprocessors",
+      "confianza": 3,
+      "comentario": "Microprocesadores solapa con la aplicacion informatica de la electronica digital y el hardware, pero parece mas especifica y avanzada que una materia fundacional."
+    },
+    "materia_2": {
+      "codigo_icai": "DEA-GITT-214",
+      "nombre_icai": "Sistemas Digitales I / Digital Systems I",
+      "confianza": 3,
+      "comentario": "Sistemas Digitales I cubre logica y sistemas digitales, una parte central de los fundamentos electronicos aplicados a informatica; no cubre necesariamente toda la electronica analogica."
+    },
+    "itba": {
+      "codigo": "22.09",
+      "nombre": "Fundamentos Electrónicos de la Informática",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "22.09|DEA-GITT-211|DEA-GITT-214",
+    "codigo_itba": "22.09",
+    "nombre_itba": "Fundamentos Electrónicos de la Informática",
+    "materia_1": {
+      "codigo_icai": "DEA-GITT-211",
+      "nombre_icai": "Circuitos Electrónicos / Electronic Circuits",
+      "confianza": 3,
+      "comentario": "Circuitos Electronicos cubre fundamentos de electronica y circuitos, alineados con Fundamentos Electronicos de la Informatica; falta confirmar el alcance de logica y arquitectura digital."
+    },
+    "materia_2": {
+      "codigo_icai": "DEA-GITT-214",
+      "nombre_icai": "Sistemas Digitales I / Digital Systems I",
+      "confianza": 3,
+      "comentario": "Sistemas Digitales I cubre logica y sistemas digitales, una parte central de los fundamentos electronicos aplicados a informatica; no cubre necesariamente toda la electronica analogica."
+    },
+    "itba": {
+      "codigo": "22.09",
+      "nombre": "Fundamentos Electrónicos de la Informática",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "48.02|DCIA-MUIAA-515|DTC-IMAT-423",
+    "codigo_itba": "48.02",
+    "nombre_itba": "AI: Data Management Course & Digital Transformation",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 3,
+      "comentario": "Ingenieria del Dato se alinea con la gestion e infraestructura de datos para sistemas de IA, aunque no cubre necesariamente la transformacion digital organizacional. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-IMAT-423",
+      "nombre_icai": "Tecnologías para la Digitalización / Technologies for Digital Transformation",
+      "confianza": 3,
+      "comentario": "Tecnologias para la Digitalizacion coincide con la componente de transformacion digital del curso ITBA, aunque no evidencia por si sola una cobertura profunda de data management ni de IA."
+    },
+    "itba": {
+      "codigo": "48.02",
+      "nombre": "AI: Data Management Course & Digital Transformation",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "48.02|DCIA-MUIAA-515|DTC-MBD-517",
+    "codigo_itba": "48.02",
+    "nombre_itba": "AI: Data Management Course & Digital Transformation",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 3,
+      "comentario": "Ingenieria del Dato se alinea con la gestion e infraestructura de datos para sistemas de IA, aunque no cubre necesariamente la transformacion digital organizacional. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-517",
+      "nombre_icai": "Adquisición y Transformación / Data Acquisition and Transformation",
+      "confianza": 3,
+      "comentario": "Adquisicion y Transformacion cubre procesos de adquisicion, integracion y transformacion de datos, con solapamiento fuerte en data management. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "48.02",
+      "nombre": "AI: Data Management Course & Digital Transformation",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "48.02|DTC-IMAT-423|DTC-MBD-517",
+    "codigo_itba": "48.02",
+    "nombre_itba": "AI: Data Management Course & Digital Transformation",
+    "materia_1": {
+      "codigo_icai": "DTC-IMAT-423",
+      "nombre_icai": "Tecnologías para la Digitalización / Technologies for Digital Transformation",
+      "confianza": 3,
+      "comentario": "Tecnologias para la Digitalizacion coincide con la componente de transformacion digital del curso ITBA, aunque no evidencia por si sola una cobertura profunda de data management ni de IA."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-517",
+      "nombre_icai": "Adquisición y Transformación / Data Acquisition and Transformation",
+      "confianza": 3,
+      "comentario": "Adquisicion y Transformacion cubre procesos de adquisicion, integracion y transformacion de datos, con solapamiento fuerte en data management. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "48.02",
+      "nombre": "AI: Data Management Course & Digital Transformation",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "61.08|DER-ADE-215|DER-BA23-313",
+    "codigo_itba": "61.08",
+    "nombre_itba": "Derecho Digital",
+    "materia_1": {
+      "codigo_icai": "DER-ADE-215",
+      "nombre_icai": "Marco Jurídico de la Empresa / Business Legal Framework",
+      "confianza": 2,
+      "comentario": "Business Legal Framework aporta marco juridico empresarial aplicable a actividades tecnologicas, pero no garantiza cobertura especifica de privacidad, blockchain o ciberdelitos."
+    },
+    "materia_2": {
+      "codigo_icai": "DER-BA23-313",
+      "nombre_icai": "Regulación de Mercados Digitales / Regulation and Digital Markets",
+      "confianza": 3,
+      "comentario": "Regulacion de Mercados Digitales cubre el marco regulatorio de entornos digitales, con solapamiento relevante en Derecho Digital; falta confirmar privacidad, propiedad intelectual y ciberdelitos."
+    },
+    "itba": {
+      "codigo": "61.08",
+      "nombre": "Derecho Digital",
+      "contenidos_minimos": "Derecho y Tecnología. Responsabilidad jurídica de los distintos actores dentro de la Sociedad de la Información. Blockchain y sus implicancias. Data Privacy Propiedad intelectual. Ciberdelitos.",
+      "objetivos_aprendizaje": "Dotar a la comunidad educativa de ITBA de la formación jurídica de frente al uso de las herramientas tecnológicas (TICS). Brindar los conocimientos imprescindibles para entender las implicancias jurídicas y el marco regulatorio de los emprendimientos tecnológicos.\nAlgunos de los ejes principales de esta materia:\n•\tDotar al futuro profesional de una mirada jurídico-ética de su accionar dentro del mundo de la tecnología.\n•\tAnalizar el marco legal de las nuevas tecnología, ventajas, riesgos y cómo operar cada una de ellas. \n•\tReflexionar acerca del futuro jurídico tecnológico."
+    }
+  },
+  {
+    "pair_key": "61.08|DER-ADE-215|DTC-GITT-413",
+    "codigo_itba": "61.08",
+    "nombre_itba": "Derecho Digital",
+    "materia_1": {
+      "codigo_icai": "DER-ADE-215",
+      "nombre_icai": "Marco Jurídico de la Empresa / Business Legal Framework",
+      "confianza": 2,
+      "comentario": "Business Legal Framework aporta marco juridico empresarial aplicable a actividades tecnologicas, pero no garantiza cobertura especifica de privacidad, blockchain o ciberdelitos."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-GITT-413",
+      "nombre_icai": "Seguridad y Normativa / Security and Telecommunications Legislation",
+      "confianza": 3,
+      "comentario": "Seguridad y Normativa combina seguridad con normativa de telecomunicaciones, parcialmente alineada con derecho y tecnologia; su foco parece mas sectorial que Derecho Digital general."
+    },
+    "itba": {
+      "codigo": "61.08",
+      "nombre": "Derecho Digital",
+      "contenidos_minimos": "Derecho y Tecnología. Responsabilidad jurídica de los distintos actores dentro de la Sociedad de la Información. Blockchain y sus implicancias. Data Privacy Propiedad intelectual. Ciberdelitos.",
+      "objetivos_aprendizaje": "Dotar a la comunidad educativa de ITBA de la formación jurídica de frente al uso de las herramientas tecnológicas (TICS). Brindar los conocimientos imprescindibles para entender las implicancias jurídicas y el marco regulatorio de los emprendimientos tecnológicos.\nAlgunos de los ejes principales de esta materia:\n•\tDotar al futuro profesional de una mirada jurídico-ética de su accionar dentro del mundo de la tecnología.\n•\tAnalizar el marco legal de las nuevas tecnología, ventajas, riesgos y cómo operar cada una de ellas. \n•\tReflexionar acerca del futuro jurídico tecnológico."
+    }
+  },
+  {
+    "pair_key": "61.08|DER-ADE-215|DTC-MCS-512",
+    "codigo_itba": "61.08",
+    "nombre_itba": "Derecho Digital",
+    "materia_1": {
+      "codigo_icai": "DER-ADE-215",
+      "nombre_icai": "Marco Jurídico de la Empresa / Business Legal Framework",
+      "confianza": 2,
+      "comentario": "Business Legal Framework aporta marco juridico empresarial aplicable a actividades tecnologicas, pero no garantiza cobertura especifica de privacidad, blockchain o ciberdelitos."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MCS-512",
+      "nombre_icai": "Criptografía, Firma Electrónica y Blockchain / Cryptography, Digital Signature and Blockchain",
+      "confianza": 2,
+      "comentario": "Criptografia, Firma Electronica y Blockchain cubre una tecnologia mencionada en Derecho Digital, pero no el marco juridico amplio de privacidad, propiedad intelectual y delitos informaticos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "61.08",
+      "nombre": "Derecho Digital",
+      "contenidos_minimos": "Derecho y Tecnología. Responsabilidad jurídica de los distintos actores dentro de la Sociedad de la Información. Blockchain y sus implicancias. Data Privacy Propiedad intelectual. Ciberdelitos.",
+      "objetivos_aprendizaje": "Dotar a la comunidad educativa de ITBA de la formación jurídica de frente al uso de las herramientas tecnológicas (TICS). Brindar los conocimientos imprescindibles para entender las implicancias jurídicas y el marco regulatorio de los emprendimientos tecnológicos.\nAlgunos de los ejes principales de esta materia:\n•\tDotar al futuro profesional de una mirada jurídico-ética de su accionar dentro del mundo de la tecnología.\n•\tAnalizar el marco legal de las nuevas tecnología, ventajas, riesgos y cómo operar cada una de ellas. \n•\tReflexionar acerca del futuro jurídico tecnológico."
+    }
+  },
+  {
+    "pair_key": "61.08|DER-ADE-215|DTC-MCS-513",
+    "codigo_itba": "61.08",
+    "nombre_itba": "Derecho Digital",
+    "materia_1": {
+      "codigo_icai": "DER-ADE-215",
+      "nombre_icai": "Marco Jurídico de la Empresa / Business Legal Framework",
+      "confianza": 2,
+      "comentario": "Business Legal Framework aporta marco juridico empresarial aplicable a actividades tecnologicas, pero no garantiza cobertura especifica de privacidad, blockchain o ciberdelitos."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MCS-513",
+      "nombre_icai": "Gobierno, Riesgo y Cumplimiento de la Seguridad / Governance, Risk and Compliance",
+      "confianza": 2,
+      "comentario": "Gobierno, Riesgo y Cumplimiento de la Seguridad solapa con cumplimiento y regulacion tecnologica, pero su foco es gestion de ciberseguridad y no derecho digital integral. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "61.08",
+      "nombre": "Derecho Digital",
+      "contenidos_minimos": "Derecho y Tecnología. Responsabilidad jurídica de los distintos actores dentro de la Sociedad de la Información. Blockchain y sus implicancias. Data Privacy Propiedad intelectual. Ciberdelitos.",
+      "objetivos_aprendizaje": "Dotar a la comunidad educativa de ITBA de la formación jurídica de frente al uso de las herramientas tecnológicas (TICS). Brindar los conocimientos imprescindibles para entender las implicancias jurídicas y el marco regulatorio de los emprendimientos tecnológicos.\nAlgunos de los ejes principales de esta materia:\n•\tDotar al futuro profesional de una mirada jurídico-ética de su accionar dentro del mundo de la tecnología.\n•\tAnalizar el marco legal de las nuevas tecnología, ventajas, riesgos y cómo operar cada una de ellas. \n•\tReflexionar acerca del futuro jurídico tecnológico."
+    }
+  },
+  {
+    "pair_key": "61.08|DER-BA23-313|DTC-GITT-413",
+    "codigo_itba": "61.08",
+    "nombre_itba": "Derecho Digital",
+    "materia_1": {
+      "codigo_icai": "DER-BA23-313",
+      "nombre_icai": "Regulación de Mercados Digitales / Regulation and Digital Markets",
+      "confianza": 3,
+      "comentario": "Regulacion de Mercados Digitales cubre el marco regulatorio de entornos digitales, con solapamiento relevante en Derecho Digital; falta confirmar privacidad, propiedad intelectual y ciberdelitos."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-GITT-413",
+      "nombre_icai": "Seguridad y Normativa / Security and Telecommunications Legislation",
+      "confianza": 3,
+      "comentario": "Seguridad y Normativa combina seguridad con normativa de telecomunicaciones, parcialmente alineada con derecho y tecnologia; su foco parece mas sectorial que Derecho Digital general."
+    },
+    "itba": {
+      "codigo": "61.08",
+      "nombre": "Derecho Digital",
+      "contenidos_minimos": "Derecho y Tecnología. Responsabilidad jurídica de los distintos actores dentro de la Sociedad de la Información. Blockchain y sus implicancias. Data Privacy Propiedad intelectual. Ciberdelitos.",
+      "objetivos_aprendizaje": "Dotar a la comunidad educativa de ITBA de la formación jurídica de frente al uso de las herramientas tecnológicas (TICS). Brindar los conocimientos imprescindibles para entender las implicancias jurídicas y el marco regulatorio de los emprendimientos tecnológicos.\nAlgunos de los ejes principales de esta materia:\n•\tDotar al futuro profesional de una mirada jurídico-ética de su accionar dentro del mundo de la tecnología.\n•\tAnalizar el marco legal de las nuevas tecnología, ventajas, riesgos y cómo operar cada una de ellas. \n•\tReflexionar acerca del futuro jurídico tecnológico."
+    }
+  },
+  {
+    "pair_key": "61.08|DER-BA23-313|DTC-MCS-512",
+    "codigo_itba": "61.08",
+    "nombre_itba": "Derecho Digital",
+    "materia_1": {
+      "codigo_icai": "DER-BA23-313",
+      "nombre_icai": "Regulación de Mercados Digitales / Regulation and Digital Markets",
+      "confianza": 3,
+      "comentario": "Regulacion de Mercados Digitales cubre el marco regulatorio de entornos digitales, con solapamiento relevante en Derecho Digital; falta confirmar privacidad, propiedad intelectual y ciberdelitos."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MCS-512",
+      "nombre_icai": "Criptografía, Firma Electrónica y Blockchain / Cryptography, Digital Signature and Blockchain",
+      "confianza": 2,
+      "comentario": "Criptografia, Firma Electronica y Blockchain cubre una tecnologia mencionada en Derecho Digital, pero no el marco juridico amplio de privacidad, propiedad intelectual y delitos informaticos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "61.08",
+      "nombre": "Derecho Digital",
+      "contenidos_minimos": "Derecho y Tecnología. Responsabilidad jurídica de los distintos actores dentro de la Sociedad de la Información. Blockchain y sus implicancias. Data Privacy Propiedad intelectual. Ciberdelitos.",
+      "objetivos_aprendizaje": "Dotar a la comunidad educativa de ITBA de la formación jurídica de frente al uso de las herramientas tecnológicas (TICS). Brindar los conocimientos imprescindibles para entender las implicancias jurídicas y el marco regulatorio de los emprendimientos tecnológicos.\nAlgunos de los ejes principales de esta materia:\n•\tDotar al futuro profesional de una mirada jurídico-ética de su accionar dentro del mundo de la tecnología.\n•\tAnalizar el marco legal de las nuevas tecnología, ventajas, riesgos y cómo operar cada una de ellas. \n•\tReflexionar acerca del futuro jurídico tecnológico."
+    }
+  },
+  {
+    "pair_key": "61.08|DER-BA23-313|DTC-MCS-513",
+    "codigo_itba": "61.08",
+    "nombre_itba": "Derecho Digital",
+    "materia_1": {
+      "codigo_icai": "DER-BA23-313",
+      "nombre_icai": "Regulación de Mercados Digitales / Regulation and Digital Markets",
+      "confianza": 3,
+      "comentario": "Regulacion de Mercados Digitales cubre el marco regulatorio de entornos digitales, con solapamiento relevante en Derecho Digital; falta confirmar privacidad, propiedad intelectual y ciberdelitos."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MCS-513",
+      "nombre_icai": "Gobierno, Riesgo y Cumplimiento de la Seguridad / Governance, Risk and Compliance",
+      "confianza": 2,
+      "comentario": "Gobierno, Riesgo y Cumplimiento de la Seguridad solapa con cumplimiento y regulacion tecnologica, pero su foco es gestion de ciberseguridad y no derecho digital integral. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "61.08",
+      "nombre": "Derecho Digital",
+      "contenidos_minimos": "Derecho y Tecnología. Responsabilidad jurídica de los distintos actores dentro de la Sociedad de la Información. Blockchain y sus implicancias. Data Privacy Propiedad intelectual. Ciberdelitos.",
+      "objetivos_aprendizaje": "Dotar a la comunidad educativa de ITBA de la formación jurídica de frente al uso de las herramientas tecnológicas (TICS). Brindar los conocimientos imprescindibles para entender las implicancias jurídicas y el marco regulatorio de los emprendimientos tecnológicos.\nAlgunos de los ejes principales de esta materia:\n•\tDotar al futuro profesional de una mirada jurídico-ética de su accionar dentro del mundo de la tecnología.\n•\tAnalizar el marco legal de las nuevas tecnología, ventajas, riesgos y cómo operar cada una de ellas. \n•\tReflexionar acerca del futuro jurídico tecnológico."
+    }
+  },
+  {
+    "pair_key": "61.08|DTC-GITT-413|DTC-MCS-512",
+    "codigo_itba": "61.08",
+    "nombre_itba": "Derecho Digital",
+    "materia_1": {
+      "codigo_icai": "DTC-GITT-413",
+      "nombre_icai": "Seguridad y Normativa / Security and Telecommunications Legislation",
+      "confianza": 3,
+      "comentario": "Seguridad y Normativa combina seguridad con normativa de telecomunicaciones, parcialmente alineada con derecho y tecnologia; su foco parece mas sectorial que Derecho Digital general."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MCS-512",
+      "nombre_icai": "Criptografía, Firma Electrónica y Blockchain / Cryptography, Digital Signature and Blockchain",
+      "confianza": 2,
+      "comentario": "Criptografia, Firma Electronica y Blockchain cubre una tecnologia mencionada en Derecho Digital, pero no el marco juridico amplio de privacidad, propiedad intelectual y delitos informaticos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "61.08",
+      "nombre": "Derecho Digital",
+      "contenidos_minimos": "Derecho y Tecnología. Responsabilidad jurídica de los distintos actores dentro de la Sociedad de la Información. Blockchain y sus implicancias. Data Privacy Propiedad intelectual. Ciberdelitos.",
+      "objetivos_aprendizaje": "Dotar a la comunidad educativa de ITBA de la formación jurídica de frente al uso de las herramientas tecnológicas (TICS). Brindar los conocimientos imprescindibles para entender las implicancias jurídicas y el marco regulatorio de los emprendimientos tecnológicos.\nAlgunos de los ejes principales de esta materia:\n•\tDotar al futuro profesional de una mirada jurídico-ética de su accionar dentro del mundo de la tecnología.\n•\tAnalizar el marco legal de las nuevas tecnología, ventajas, riesgos y cómo operar cada una de ellas. \n•\tReflexionar acerca del futuro jurídico tecnológico."
+    }
+  },
+  {
+    "pair_key": "61.08|DTC-GITT-413|DTC-MCS-513",
+    "codigo_itba": "61.08",
+    "nombre_itba": "Derecho Digital",
+    "materia_1": {
+      "codigo_icai": "DTC-GITT-413",
+      "nombre_icai": "Seguridad y Normativa / Security and Telecommunications Legislation",
+      "confianza": 3,
+      "comentario": "Seguridad y Normativa combina seguridad con normativa de telecomunicaciones, parcialmente alineada con derecho y tecnologia; su foco parece mas sectorial que Derecho Digital general."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MCS-513",
+      "nombre_icai": "Gobierno, Riesgo y Cumplimiento de la Seguridad / Governance, Risk and Compliance",
+      "confianza": 2,
+      "comentario": "Gobierno, Riesgo y Cumplimiento de la Seguridad solapa con cumplimiento y regulacion tecnologica, pero su foco es gestion de ciberseguridad y no derecho digital integral. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "61.08",
+      "nombre": "Derecho Digital",
+      "contenidos_minimos": "Derecho y Tecnología. Responsabilidad jurídica de los distintos actores dentro de la Sociedad de la Información. Blockchain y sus implicancias. Data Privacy Propiedad intelectual. Ciberdelitos.",
+      "objetivos_aprendizaje": "Dotar a la comunidad educativa de ITBA de la formación jurídica de frente al uso de las herramientas tecnológicas (TICS). Brindar los conocimientos imprescindibles para entender las implicancias jurídicas y el marco regulatorio de los emprendimientos tecnológicos.\nAlgunos de los ejes principales de esta materia:\n•\tDotar al futuro profesional de una mirada jurídico-ética de su accionar dentro del mundo de la tecnología.\n•\tAnalizar el marco legal de las nuevas tecnología, ventajas, riesgos y cómo operar cada una de ellas. \n•\tReflexionar acerca del futuro jurídico tecnológico."
+    }
+  },
+  {
+    "pair_key": "61.08|DTC-MCS-512|DTC-MCS-513",
+    "codigo_itba": "61.08",
+    "nombre_itba": "Derecho Digital",
+    "materia_1": {
+      "codigo_icai": "DTC-MCS-512",
+      "nombre_icai": "Criptografía, Firma Electrónica y Blockchain / Cryptography, Digital Signature and Blockchain",
+      "confianza": 2,
+      "comentario": "Criptografia, Firma Electronica y Blockchain cubre una tecnologia mencionada en Derecho Digital, pero no el marco juridico amplio de privacidad, propiedad intelectual y delitos informaticos. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MCS-513",
+      "nombre_icai": "Gobierno, Riesgo y Cumplimiento de la Seguridad / Governance, Risk and Compliance",
+      "confianza": 2,
+      "comentario": "Gobierno, Riesgo y Cumplimiento de la Seguridad solapa con cumplimiento y regulacion tecnologica, pero su foco es gestion de ciberseguridad y no derecho digital integral. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "61.08",
+      "nombre": "Derecho Digital",
+      "contenidos_minimos": "Derecho y Tecnología. Responsabilidad jurídica de los distintos actores dentro de la Sociedad de la Información. Blockchain y sus implicancias. Data Privacy Propiedad intelectual. Ciberdelitos.",
+      "objetivos_aprendizaje": "Dotar a la comunidad educativa de ITBA de la formación jurídica de frente al uso de las herramientas tecnológicas (TICS). Brindar los conocimientos imprescindibles para entender las implicancias jurídicas y el marco regulatorio de los emprendimientos tecnológicos.\nAlgunos de los ejes principales de esta materia:\n•\tDotar al futuro profesional de una mirada jurídico-ética de su accionar dentro del mundo de la tecnología.\n•\tAnalizar el marco legal de las nuevas tecnología, ventajas, riesgos y cómo operar cada una de ellas. \n•\tReflexionar acerca del futuro jurídico tecnológico."
+    }
+  },
+  {
+    "pair_key": "61.50|DOI-MBA-612|DOI-MII-580",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "DOI-MBA-612",
+      "nombre_icai": "Financiación e Inversiones en Industria y Tecnología / Finance and Investment in Industry and Technology",
+      "confianza": 3,
+      "comentario": "Financiacion e Inversiones en Industria y Tecnologia solapa con financiacion, inversiones y decisiones financieras de empresa; el alcance de derivados y valuacion completa debe confirmarse. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DOI-MII-580",
+      "nombre_icai": "Análisis de Costes y Finanzas / Financial and Cost Analysis",
+      "confianza": 3,
+      "comentario": "Analisis de Costes y Finanzas comparte analisis financiero y toma de decisiones empresariales, pero no necesariamente derivados, cartera y valuacion integral. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|DOI-MBA-612|DOI-MTF-513",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "DOI-MBA-612",
+      "nombre_icai": "Financiación e Inversiones en Industria y Tecnología / Finance and Investment in Industry and Technology",
+      "confianza": 3,
+      "comentario": "Financiacion e Inversiones en Industria y Tecnologia solapa con financiacion, inversiones y decisiones financieras de empresa; el alcance de derivados y valuacion completa debe confirmarse. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DOI-MTF-513",
+      "nombre_icai": "Gestión de Carteras e Inversión Basada en Datos / Portfolio Management and Data-Driven Investing",
+      "confianza": 3,
+      "comentario": "Gestion de Carteras e Inversion Basada en Datos se alinea con seleccion de cartera, riesgo y valuacion de activos, aunque no reemplaza las finanzas corporativas integrales. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|DOI-MBA-612|FCEE-BA-512",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "DOI-MBA-612",
+      "nombre_icai": "Financiación e Inversiones en Industria y Tecnología / Finance and Investment in Industry and Technology",
+      "confianza": 3,
+      "comentario": "Financiacion e Inversiones en Industria y Tecnologia solapa con financiacion, inversiones y decisiones financieras de empresa; el alcance de derivados y valuacion completa debe confirmarse. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA-512",
+      "nombre_icai": "Mercados Financieros Internacionales / International Financial Markets",
+      "confianza": 2,
+      "comentario": "Mercados Financieros Internacionales cubre la componente de mercados de capital y analisis de activos, pero es solo una parte de Finanzas de la Empresa."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|DOI-MBA-612|FCEE-BA-515",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "DOI-MBA-612",
+      "nombre_icai": "Financiación e Inversiones en Industria y Tecnología / Finance and Investment in Industry and Technology",
+      "confianza": 3,
+      "comentario": "Financiacion e Inversiones en Industria y Tecnologia solapa con financiacion, inversiones y decisiones financieras de empresa; el alcance de derivados y valuacion completa debe confirmarse. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA-515",
+      "nombre_icai": "Derivados Financieros / Financial Derivatives",
+      "confianza": 2,
+      "comentario": "Derivados Financieros coincide con una unidad importante del programa ITBA, pero no cubre por si sola gestion financiera, estructura de capital ni valuacion de empresas."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|DOI-MBA-612|FCEE-BA23-414",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "DOI-MBA-612",
+      "nombre_icai": "Financiación e Inversiones en Industria y Tecnología / Finance and Investment in Industry and Technology",
+      "confianza": 3,
+      "comentario": "Financiacion e Inversiones en Industria y Tecnologia solapa con financiacion, inversiones y decisiones financieras de empresa; el alcance de derivados y valuacion completa debe confirmarse. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA23-414",
+      "nombre_icai": "Matermáticas Financieras / Financial Mathematics",
+      "confianza": 2,
+      "comentario": "Matematicas Financieras aporta las herramientas para valorar flujos y activos, pero es una cobertura parcial de Finanzas de la Empresa."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|DOI-MII-580|DOI-MTF-513",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-580",
+      "nombre_icai": "Análisis de Costes y Finanzas / Financial and Cost Analysis",
+      "confianza": 3,
+      "comentario": "Analisis de Costes y Finanzas comparte analisis financiero y toma de decisiones empresariales, pero no necesariamente derivados, cartera y valuacion integral. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DOI-MTF-513",
+      "nombre_icai": "Gestión de Carteras e Inversión Basada en Datos / Portfolio Management and Data-Driven Investing",
+      "confianza": 3,
+      "comentario": "Gestion de Carteras e Inversion Basada en Datos se alinea con seleccion de cartera, riesgo y valuacion de activos, aunque no reemplaza las finanzas corporativas integrales. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|DOI-MII-580|FCEE-BA-512",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-580",
+      "nombre_icai": "Análisis de Costes y Finanzas / Financial and Cost Analysis",
+      "confianza": 3,
+      "comentario": "Analisis de Costes y Finanzas comparte analisis financiero y toma de decisiones empresariales, pero no necesariamente derivados, cartera y valuacion integral. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA-512",
+      "nombre_icai": "Mercados Financieros Internacionales / International Financial Markets",
+      "confianza": 2,
+      "comentario": "Mercados Financieros Internacionales cubre la componente de mercados de capital y analisis de activos, pero es solo una parte de Finanzas de la Empresa."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|DOI-MII-580|FCEE-BA-515",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-580",
+      "nombre_icai": "Análisis de Costes y Finanzas / Financial and Cost Analysis",
+      "confianza": 3,
+      "comentario": "Analisis de Costes y Finanzas comparte analisis financiero y toma de decisiones empresariales, pero no necesariamente derivados, cartera y valuacion integral. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA-515",
+      "nombre_icai": "Derivados Financieros / Financial Derivatives",
+      "confianza": 2,
+      "comentario": "Derivados Financieros coincide con una unidad importante del programa ITBA, pero no cubre por si sola gestion financiera, estructura de capital ni valuacion de empresas."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|DOI-MII-580|FCEE-BA23-414",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-580",
+      "nombre_icai": "Análisis de Costes y Finanzas / Financial and Cost Analysis",
+      "confianza": 3,
+      "comentario": "Analisis de Costes y Finanzas comparte analisis financiero y toma de decisiones empresariales, pero no necesariamente derivados, cartera y valuacion integral. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA23-414",
+      "nombre_icai": "Matermáticas Financieras / Financial Mathematics",
+      "confianza": 2,
+      "comentario": "Matematicas Financieras aporta las herramientas para valorar flujos y activos, pero es una cobertura parcial de Finanzas de la Empresa."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|DOI-MTF-513|FCEE-BA-512",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "DOI-MTF-513",
+      "nombre_icai": "Gestión de Carteras e Inversión Basada en Datos / Portfolio Management and Data-Driven Investing",
+      "confianza": 3,
+      "comentario": "Gestion de Carteras e Inversion Basada en Datos se alinea con seleccion de cartera, riesgo y valuacion de activos, aunque no reemplaza las finanzas corporativas integrales. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA-512",
+      "nombre_icai": "Mercados Financieros Internacionales / International Financial Markets",
+      "confianza": 2,
+      "comentario": "Mercados Financieros Internacionales cubre la componente de mercados de capital y analisis de activos, pero es solo una parte de Finanzas de la Empresa."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|DOI-MTF-513|FCEE-BA-515",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "DOI-MTF-513",
+      "nombre_icai": "Gestión de Carteras e Inversión Basada en Datos / Portfolio Management and Data-Driven Investing",
+      "confianza": 3,
+      "comentario": "Gestion de Carteras e Inversion Basada en Datos se alinea con seleccion de cartera, riesgo y valuacion de activos, aunque no reemplaza las finanzas corporativas integrales. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA-515",
+      "nombre_icai": "Derivados Financieros / Financial Derivatives",
+      "confianza": 2,
+      "comentario": "Derivados Financieros coincide con una unidad importante del programa ITBA, pero no cubre por si sola gestion financiera, estructura de capital ni valuacion de empresas."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|DOI-MTF-513|FCEE-BA23-414",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "DOI-MTF-513",
+      "nombre_icai": "Gestión de Carteras e Inversión Basada en Datos / Portfolio Management and Data-Driven Investing",
+      "confianza": 3,
+      "comentario": "Gestion de Carteras e Inversion Basada en Datos se alinea con seleccion de cartera, riesgo y valuacion de activos, aunque no reemplaza las finanzas corporativas integrales. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA23-414",
+      "nombre_icai": "Matermáticas Financieras / Financial Mathematics",
+      "confianza": 2,
+      "comentario": "Matematicas Financieras aporta las herramientas para valorar flujos y activos, pero es una cobertura parcial de Finanzas de la Empresa."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|FCEE-BA-512|FCEE-BA-515",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "FCEE-BA-512",
+      "nombre_icai": "Mercados Financieros Internacionales / International Financial Markets",
+      "confianza": 2,
+      "comentario": "Mercados Financieros Internacionales cubre la componente de mercados de capital y analisis de activos, pero es solo una parte de Finanzas de la Empresa."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA-515",
+      "nombre_icai": "Derivados Financieros / Financial Derivatives",
+      "confianza": 2,
+      "comentario": "Derivados Financieros coincide con una unidad importante del programa ITBA, pero no cubre por si sola gestion financiera, estructura de capital ni valuacion de empresas."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|FCEE-BA-512|FCEE-BA23-414",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "FCEE-BA-512",
+      "nombre_icai": "Mercados Financieros Internacionales / International Financial Markets",
+      "confianza": 2,
+      "comentario": "Mercados Financieros Internacionales cubre la componente de mercados de capital y analisis de activos, pero es solo una parte de Finanzas de la Empresa."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA23-414",
+      "nombre_icai": "Matermáticas Financieras / Financial Mathematics",
+      "confianza": 2,
+      "comentario": "Matematicas Financieras aporta las herramientas para valorar flujos y activos, pero es una cobertura parcial de Finanzas de la Empresa."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "61.50|FCEE-BA-515|FCEE-BA23-414",
+    "codigo_itba": "61.50",
+    "nombre_itba": "Finanzas de la Empresa",
+    "materia_1": {
+      "codigo_icai": "FCEE-BA-515",
+      "nombre_icai": "Derivados Financieros / Financial Derivatives",
+      "confianza": 2,
+      "comentario": "Derivados Financieros coincide con una unidad importante del programa ITBA, pero no cubre por si sola gestion financiera, estructura de capital ni valuacion de empresas."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA23-414",
+      "nombre_icai": "Matermáticas Financieras / Financial Mathematics",
+      "confianza": 2,
+      "comentario": "Matematicas Financieras aporta las herramientas para valorar flujos y activos, pero es una cobertura parcial de Finanzas de la Empresa."
+    },
+    "itba": {
+      "codigo": "61.50",
+      "nombre": "Finanzas de la Empresa",
+      "contenidos_minimos": "-Objetivos de la gestión financiera de la empresa-Análisis financiero-Planeamiento financiero-Control financiero-Gestión del activo fijo y circulante-Mercados financieros y de capital-Valuación de obligaciones y acciones-Política de dividendos y estructura de capital-Derivados-Costo de capital-Fusión y adquisiciones de empresas",
+      "objetivos_aprendizaje": "Introducirse en el mundo de las finanzas, sus protagonistas y las decisiones financieras. \nDesarrollar habilidades técnicas de análisis e interpretación de estados contables. \nAdquirir metodología para valuar contratos y valores que implican una serie de flujos de efectivo. \nEntender por qué cambian los precios y rendimientos de los activos. \nApreciar cómo el riesgo influye en la toma de decisiones. \nEntender el proceso de selección de cartera. \nIncorporar el modelo CAPM para deducir la tasa correcta. \nExplicar mecanismos de mercado para instrumentar la cobertura y obtener protección. \nAplicar y valuar instrumentos derivados.  \nIncorporar técnicas de proyección de estados contables. \nEntender cómo una empresa puede producir valor mediante las decisiones concernientes a la estructura de capital. \nReconocer opciones reales en los proyectos y adquirir un método para valuarlas.  \nIntroducirse en la valuación de empresas"
+    }
+  },
+  {
+    "pair_key": "72.02|DEA-GITT-214|DTC-GITI-112",
+    "codigo_itba": "72.02",
+    "nombre_itba": "Organización Básica de la Computadora",
+    "materia_1": {
+      "codigo_icai": "DEA-GITT-214",
+      "nombre_icai": "Sistemas Digitales I / Digital Systems I",
+      "confianza": 3,
+      "comentario": "Sistemas Digitales I cubre logica y sistemas digitales, parte clave de Organizacion Basica de la Computadora, aunque puede faltar arquitectura de procesador."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-GITI-112",
+      "nombre_icai": "Fundamentos de informática / Fundamentals of Computer Science",
+      "confianza": 2,
+      "comentario": "Fundamentos de Informatica puede aportar bases de computacion, pero por su denominacion no confirma una cobertura suficiente de organizacion de computadora; es candidato debil."
+    },
+    "itba": {
+      "codigo": "72.02",
+      "nombre": "Organización Básica de la Computadora",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.25|DEA-GITI-313|DIM-MII-612",
+    "codigo_itba": "72.25",
+    "nombre_itba": "Simulación de Sistemas",
+    "materia_1": {
+      "codigo_icai": "DEA-GITI-313",
+      "nombre_icai": "Sistemas Dinámicos / Dynamic Systems",
+      "confianza": 2,
+      "comentario": "Sistemas Dinámicos aporta modelado de sistemas continuos, pero no evidencia la metodología integral de simulación discreta/probabilística de ITBA."
+    },
+    "materia_2": {
+      "codigo_icai": "DIM-MII-612",
+      "nombre_icai": "Simulación Multifísica / Multiphysics Simulation",
+      "confianza": 2,
+      "comentario": "Simulación Multifísica comparte el uso de modelos y herramientas de simulación, aunque es una aplicación de ingeniería física más acotada. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.25",
+      "nombre": "Simulación de Sistemas",
+      "contenidos_minimos": "Teoría General de Sistemas. Modelos discretos y continuos. Modelos determinísticos y probabilísticos. Determinación de datos de entrada al modelo. Análisis de resultados. Taller de aplicaciones con herramientas de simulación.",
+      "objetivos_aprendizaje": "Incorporar y diferenciar los siguientes conceptos relacionados: Sistema -> Modelo Matematico -> Modelo Computacional -> Simulación.\n\nUtilizar herramientas de procesamiento estadístico como datos de entrada y estudio de resultados de simulaciones.\n\nDiseñar experimentos de simulación e interpretar los resultados obtenidos.\n\nRealizar presentaciones orales e informes técnicos de calidad profesional."
+    }
+  },
+  {
+    "pair_key": "72.27|DCIA-MIA-501|DOI-OPT-614",
+    "codigo_itba": "72.27",
+    "nombre_itba": "Sistemas de Inteligencia Artificial",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-501",
+      "nombre_icai": "Modelos Generativos Profundos / Deep Generative Models",
+      "confianza": 3,
+      "comentario": "Modelos Generativos Profundos aporta el subbloque de redes profundas, GANs y modelos generativos, pero no la amplitud de Sistemas de IA. Es Master anual y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DOI-OPT-614",
+      "nombre_icai": "Optativa Complementaria. Machine Learning for Engineers / Machine Learning for Engineers",
+      "confianza": 3,
+      "comentario": "Machine Learning for Engineers cubre el componente no simbólico de aprendizaje y optimización, con gap en búsqueda heurística, lógica y sistemas expertos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.27",
+      "nombre": "Sistemas de Inteligencia Artificial",
+      "contenidos_minimos": "Enfoque simbólico de la Inteligencia Artificial.  Resolución de problemas. Problemas específicos de IA. Sistemas basados en reglas. Búsqueda heurística. Sistemas Expertos. Características del Paradigma Lógico. Enfoque no simbólico de la Inteligencia Artificial. Redes neuronales. Aprendizaje supervisado y no supervisado. Algoritmos Genéticos",
+      "objetivos_aprendizaje": "• Familiarizarse con los conceptos de inteligencia artificial.\n\t• Analizar e implementar algoritmos de búsqueda, evolutivos y de redes neuronales supervisadas y no supervisadas.\n\t• Comparar técnicas simbólicas y numéricas para el tratamiento de problemas basados en datos.\n\t• Analizar Redes Profundas como CNN, GANs y Transformers.\n\n\nQue adquieran conocimientos y sepan implementar técnicas de redes neuronales y de optimización para resolver problemas reales.\nQue comprendan la contextualidad de esta tecnología.\nQue manejen conceptos de redes neuronales profundas para el desarrollo profesional."
+    }
+  },
+  {
+    "pair_key": "72.28|DTC-GITT-313|DTC-GITT-411",
+    "codigo_itba": "72.28",
+    "nombre_itba": "Topología de Internet: Análisis y Modelado",
+    "materia_1": {
+      "codigo_icai": "DTC-GITT-313",
+      "nombre_icai": "Tecnología de Redes / Computer Network Technologies",
+      "confianza": 3,
+      "comentario": "Tecnología de Redes es una base pertinente para analizar topologías y funcionamiento de Internet, aunque no confirma específicamente modelado topológico."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-GITT-411",
+      "nombre_icai": "Conmutación y Transmisión / Switching and Data Transmission",
+      "confianza": 3,
+      "comentario": "Conmutación y transmisión aporta redes e interconexión para el análisis de topologías, pero no evidencia herramientas de modelado de Internet."
+    },
+    "itba": {
+      "codigo": "72.28",
+      "nombre": "Topología de Internet: Análisis y Modelado",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.28|DTC-GITT-313|DTC-MIT-515",
+    "codigo_itba": "72.28",
+    "nombre_itba": "Topología de Internet: Análisis y Modelado",
+    "materia_1": {
+      "codigo_icai": "DTC-GITT-313",
+      "nombre_icai": "Tecnología de Redes / Computer Network Technologies",
+      "confianza": 3,
+      "comentario": "Tecnología de Redes es una base pertinente para analizar topologías y funcionamiento de Internet, aunque no confirma específicamente modelado topológico."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 3,
+      "comentario": "Arquitectura de servicios en red puede cubrir arquitectura y organización de redes, con gap en análisis y modelado de topología. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.28",
+      "nombre": "Topología de Internet: Análisis y Modelado",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.28|DTC-GITT-411|DTC-MIT-515",
+    "codigo_itba": "72.28",
+    "nombre_itba": "Topología de Internet: Análisis y Modelado",
+    "materia_1": {
+      "codigo_icai": "DTC-GITT-411",
+      "nombre_icai": "Conmutación y Transmisión / Switching and Data Transmission",
+      "confianza": 3,
+      "comentario": "Conmutación y transmisión aporta redes e interconexión para el análisis de topologías, pero no evidencia herramientas de modelado de Internet."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 3,
+      "comentario": "Arquitectura de servicios en red puede cubrir arquitectura y organización de redes, con gap en análisis y modelado de topología. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.28",
+      "nombre": "Topología de Internet: Análisis y Modelado",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.41|DCIA-MUIAA-515|DCIA-MUIINT-111",
+    "codigo_itba": "72.41",
+    "nombre_itba": "Base de Datos II",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Dato aporta gestión y arquitectura de datos a escala, aunque no asegura los contenidos avanzados de administración SQL y transacciones. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DCIA-MUIINT-111",
+      "nombre_icai": "Database Design",
+      "confianza": 3,
+      "comentario": "Database Design cubre diseño de bases de datos, pero debe verificarse la profundidad en índices, tuning, concurrencia, recuperación y GIS. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.41",
+      "nombre": "Base de Datos II",
+      "contenidos_minimos": "Diseño, administración y gestión de bases de datos. Análisis de las características de distintos tipos de índices. Diseño físico y puesta a punto (tuning). Evaluación y optimización de consultas. Procesamiento de transacciones y control de la concurrencia. Recupero frente a errores. Sistemas de Información Geográficos (GIS). Índices y consultas espaciales. Taller de Aplicación",
+      "objetivos_aprendizaje": "- Aprender a tomar buenas decisiones a la hora de elegir una base de datos para resolver un problema concreto.\n- Profundizar en los conocimientos adquiridos en Base de Datos I sobre bases de datos SQL.\n- Conocer las nuevas tendencias en base de datos, en especial las bases NoSQL y su utilización en el procesamiento de grandes volúmenes de datos (Big Data)."
+    }
+  },
+  {
+    "pair_key": "72.41|DCIA-MUIAA-515|DTC-MBD-511",
+    "codigo_itba": "72.41",
+    "nombre_itba": "Base de Datos II",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Dato aporta gestión y arquitectura de datos a escala, aunque no asegura los contenidos avanzados de administración SQL y transacciones. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 2,
+      "comentario": "Arquitectura Big Data cubre parte de las tendencias de datos masivos y NoSQL, pero no el núcleo completo de Base de Datos II. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.41",
+      "nombre": "Base de Datos II",
+      "contenidos_minimos": "Diseño, administración y gestión de bases de datos. Análisis de las características de distintos tipos de índices. Diseño físico y puesta a punto (tuning). Evaluación y optimización de consultas. Procesamiento de transacciones y control de la concurrencia. Recupero frente a errores. Sistemas de Información Geográficos (GIS). Índices y consultas espaciales. Taller de Aplicación",
+      "objetivos_aprendizaje": "- Aprender a tomar buenas decisiones a la hora de elegir una base de datos para resolver un problema concreto.\n- Profundizar en los conocimientos adquiridos en Base de Datos I sobre bases de datos SQL.\n- Conocer las nuevas tendencias en base de datos, en especial las bases NoSQL y su utilización en el procesamiento de grandes volúmenes de datos (Big Data)."
+    }
+  },
+  {
+    "pair_key": "72.41|DCIA-MUIINT-111|DTC-MBD-511",
+    "codigo_itba": "72.41",
+    "nombre_itba": "Base de Datos II",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIINT-111",
+      "nombre_icai": "Database Design",
+      "confianza": 3,
+      "comentario": "Database Design cubre diseño de bases de datos, pero debe verificarse la profundidad en índices, tuning, concurrencia, recuperación y GIS. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 2,
+      "comentario": "Arquitectura Big Data cubre parte de las tendencias de datos masivos y NoSQL, pero no el núcleo completo de Base de Datos II. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.41",
+      "nombre": "Base de Datos II",
+      "contenidos_minimos": "Diseño, administración y gestión de bases de datos. Análisis de las características de distintos tipos de índices. Diseño físico y puesta a punto (tuning). Evaluación y optimización de consultas. Procesamiento de transacciones y control de la concurrencia. Recupero frente a errores. Sistemas de Información Geográficos (GIS). Índices y consultas espaciales. Taller de Aplicación",
+      "objetivos_aprendizaje": "- Aprender a tomar buenas decisiones a la hora de elegir una base de datos para resolver un problema concreto.\n- Profundizar en los conocimientos adquiridos en Base de Datos I sobre bases de datos SQL.\n- Conocer las nuevas tendencias en base de datos, en especial las bases NoSQL y su utilización en el procesamiento de grandes volúmenes de datos (Big Data)."
+    }
+  },
+  {
+    "pair_key": "72.42|DTC-IMAT-215|DTC-MBD-511",
+    "codigo_itba": "72.42",
+    "nombre_itba": "Programación de Objetos Distribuidos",
+    "materia_1": {
+      "codigo_icai": "DTC-IMAT-215",
+      "nombre_icai": "Fundamentos de los Sistemas Operativos / Operating Systems Fundamentals",
+      "confianza": 2,
+      "comentario": "Fundamentos de Sistemas Operativos aporta concurrencia, procesos y sincronización, pero no el núcleo de sistemas distribuidos."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 3,
+      "comentario": "Arquitectura Big Data solapa con arquitecturas, datos y almacenamiento distribuido, pero no con todo el middleware y la programación de objetos distribuidos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.42",
+      "nombre": "Programación de Objetos Distribuidos",
+      "contenidos_minimos": "Sistemas distribuidos: objetivos y tipos. Arquitecturas. Middleware. Threads. Virtualización. Clientes y Servidores. Migración de código. Invocación remota. Mensajes. Calidad de servicio. Diseminación de datos. Búsqueda. Sincronización. Consistencia. Replicación. Tolerancia a fallas. Recuperación. Seguridad.",
+      "objetivos_aprendizaje": "• Conocer nuevas funcionalidades y revisar funcionalidades conocidas de Java que puedan ser útiles en la materia como programación funcional, streaming y lambdas.\n\t• Codificar sistemas concurrentes utilizando Java y las diferentes opciones para correr Threads en paralelo.\n\t• Predecir e identificar problemas de concurrencia  y fundamentar la elección de protección contra los mismos, por ejemplo sincronización, clases concurrentes o clases inmutables.\n\t• Reconocer los componentes de un sistema RPC cliente servidor. \n\t• Implementar sistemas en RPC con serialización de parámetros y callbacks asincrónicos.\n\t• Explicar las diferentes características de storage distribuidos como particionamiento, consistencia, redundancia, etc.\n\t• Conocer las diferentes características de las bases de datos distribuidas de tipo \"NoSQL\".\n\t• Detallar diferentes estrategias y herramientas para el procesamiento distribuido.\n\t• Implementar aplicaciones de procesamiento de información distribuidas en Map Reduce.\n\t• Utilizar la herramienta de storage y procesamiento distribuido.\n\t• Analizar el comportamiento de aplicaciones distribuidas al modificar la composición del cluster"
+    }
+  },
+  {
+    "pair_key": "72.42|DTC-IMAT-215|DTC-MBD-515",
+    "codigo_itba": "72.42",
+    "nombre_itba": "Programación de Objetos Distribuidos",
+    "materia_1": {
+      "codigo_icai": "DTC-IMAT-215",
+      "nombre_icai": "Fundamentos de los Sistemas Operativos / Operating Systems Fundamentals",
+      "confianza": 2,
+      "comentario": "Fundamentos de Sistemas Operativos aporta concurrencia, procesos y sincronización, pero no el núcleo de sistemas distribuidos."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-515",
+      "nombre_icai": "Tecnologías de Procesamiento Big Data / Big Data Processing Technologies",
+      "confianza": 3,
+      "comentario": "Tecnologías de Procesamiento Big Data es candidata para procesamiento distribuido y almacenamiento a escala, con gaps en RPC, objetos distribuidos y concurrencia Java. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.42",
+      "nombre": "Programación de Objetos Distribuidos",
+      "contenidos_minimos": "Sistemas distribuidos: objetivos y tipos. Arquitecturas. Middleware. Threads. Virtualización. Clientes y Servidores. Migración de código. Invocación remota. Mensajes. Calidad de servicio. Diseminación de datos. Búsqueda. Sincronización. Consistencia. Replicación. Tolerancia a fallas. Recuperación. Seguridad.",
+      "objetivos_aprendizaje": "• Conocer nuevas funcionalidades y revisar funcionalidades conocidas de Java que puedan ser útiles en la materia como programación funcional, streaming y lambdas.\n\t• Codificar sistemas concurrentes utilizando Java y las diferentes opciones para correr Threads en paralelo.\n\t• Predecir e identificar problemas de concurrencia  y fundamentar la elección de protección contra los mismos, por ejemplo sincronización, clases concurrentes o clases inmutables.\n\t• Reconocer los componentes de un sistema RPC cliente servidor. \n\t• Implementar sistemas en RPC con serialización de parámetros y callbacks asincrónicos.\n\t• Explicar las diferentes características de storage distribuidos como particionamiento, consistencia, redundancia, etc.\n\t• Conocer las diferentes características de las bases de datos distribuidas de tipo \"NoSQL\".\n\t• Detallar diferentes estrategias y herramientas para el procesamiento distribuido.\n\t• Implementar aplicaciones de procesamiento de información distribuidas en Map Reduce.\n\t• Utilizar la herramienta de storage y procesamiento distribuido.\n\t• Analizar el comportamiento de aplicaciones distribuidas al modificar la composición del cluster"
+    }
+  },
+  {
+    "pair_key": "72.42|DTC-IMAT-215|DTC-MIT-515",
+    "codigo_itba": "72.42",
+    "nombre_itba": "Programación de Objetos Distribuidos",
+    "materia_1": {
+      "codigo_icai": "DTC-IMAT-215",
+      "nombre_icai": "Fundamentos de los Sistemas Operativos / Operating Systems Fundamentals",
+      "confianza": 2,
+      "comentario": "Fundamentos de Sistemas Operativos aporta concurrencia, procesos y sincronización, pero no el núcleo de sistemas distribuidos."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 3,
+      "comentario": "Arquitectura de Servicios en Red cubre arquitectura cliente-servidor y servicios distribuidos, con gap en tolerancia a fallas, consistencia y procesamiento MapReduce. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.42",
+      "nombre": "Programación de Objetos Distribuidos",
+      "contenidos_minimos": "Sistemas distribuidos: objetivos y tipos. Arquitecturas. Middleware. Threads. Virtualización. Clientes y Servidores. Migración de código. Invocación remota. Mensajes. Calidad de servicio. Diseminación de datos. Búsqueda. Sincronización. Consistencia. Replicación. Tolerancia a fallas. Recuperación. Seguridad.",
+      "objetivos_aprendizaje": "• Conocer nuevas funcionalidades y revisar funcionalidades conocidas de Java que puedan ser útiles en la materia como programación funcional, streaming y lambdas.\n\t• Codificar sistemas concurrentes utilizando Java y las diferentes opciones para correr Threads en paralelo.\n\t• Predecir e identificar problemas de concurrencia  y fundamentar la elección de protección contra los mismos, por ejemplo sincronización, clases concurrentes o clases inmutables.\n\t• Reconocer los componentes de un sistema RPC cliente servidor. \n\t• Implementar sistemas en RPC con serialización de parámetros y callbacks asincrónicos.\n\t• Explicar las diferentes características de storage distribuidos como particionamiento, consistencia, redundancia, etc.\n\t• Conocer las diferentes características de las bases de datos distribuidas de tipo \"NoSQL\".\n\t• Detallar diferentes estrategias y herramientas para el procesamiento distribuido.\n\t• Implementar aplicaciones de procesamiento de información distribuidas en Map Reduce.\n\t• Utilizar la herramienta de storage y procesamiento distribuido.\n\t• Analizar el comportamiento de aplicaciones distribuidas al modificar la composición del cluster"
+    }
+  },
+  {
+    "pair_key": "72.42|DTC-MBD-511|DTC-MBD-515",
+    "codigo_itba": "72.42",
+    "nombre_itba": "Programación de Objetos Distribuidos",
+    "materia_1": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 3,
+      "comentario": "Arquitectura Big Data solapa con arquitecturas, datos y almacenamiento distribuido, pero no con todo el middleware y la programación de objetos distribuidos. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-515",
+      "nombre_icai": "Tecnologías de Procesamiento Big Data / Big Data Processing Technologies",
+      "confianza": 3,
+      "comentario": "Tecnologías de Procesamiento Big Data es candidata para procesamiento distribuido y almacenamiento a escala, con gaps en RPC, objetos distribuidos y concurrencia Java. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.42",
+      "nombre": "Programación de Objetos Distribuidos",
+      "contenidos_minimos": "Sistemas distribuidos: objetivos y tipos. Arquitecturas. Middleware. Threads. Virtualización. Clientes y Servidores. Migración de código. Invocación remota. Mensajes. Calidad de servicio. Diseminación de datos. Búsqueda. Sincronización. Consistencia. Replicación. Tolerancia a fallas. Recuperación. Seguridad.",
+      "objetivos_aprendizaje": "• Conocer nuevas funcionalidades y revisar funcionalidades conocidas de Java que puedan ser útiles en la materia como programación funcional, streaming y lambdas.\n\t• Codificar sistemas concurrentes utilizando Java y las diferentes opciones para correr Threads en paralelo.\n\t• Predecir e identificar problemas de concurrencia  y fundamentar la elección de protección contra los mismos, por ejemplo sincronización, clases concurrentes o clases inmutables.\n\t• Reconocer los componentes de un sistema RPC cliente servidor. \n\t• Implementar sistemas en RPC con serialización de parámetros y callbacks asincrónicos.\n\t• Explicar las diferentes características de storage distribuidos como particionamiento, consistencia, redundancia, etc.\n\t• Conocer las diferentes características de las bases de datos distribuidas de tipo \"NoSQL\".\n\t• Detallar diferentes estrategias y herramientas para el procesamiento distribuido.\n\t• Implementar aplicaciones de procesamiento de información distribuidas en Map Reduce.\n\t• Utilizar la herramienta de storage y procesamiento distribuido.\n\t• Analizar el comportamiento de aplicaciones distribuidas al modificar la composición del cluster"
+    }
+  },
+  {
+    "pair_key": "72.42|DTC-MBD-511|DTC-MIT-515",
+    "codigo_itba": "72.42",
+    "nombre_itba": "Programación de Objetos Distribuidos",
+    "materia_1": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 3,
+      "comentario": "Arquitectura Big Data solapa con arquitecturas, datos y almacenamiento distribuido, pero no con todo el middleware y la programación de objetos distribuidos. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 3,
+      "comentario": "Arquitectura de Servicios en Red cubre arquitectura cliente-servidor y servicios distribuidos, con gap en tolerancia a fallas, consistencia y procesamiento MapReduce. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.42",
+      "nombre": "Programación de Objetos Distribuidos",
+      "contenidos_minimos": "Sistemas distribuidos: objetivos y tipos. Arquitecturas. Middleware. Threads. Virtualización. Clientes y Servidores. Migración de código. Invocación remota. Mensajes. Calidad de servicio. Diseminación de datos. Búsqueda. Sincronización. Consistencia. Replicación. Tolerancia a fallas. Recuperación. Seguridad.",
+      "objetivos_aprendizaje": "• Conocer nuevas funcionalidades y revisar funcionalidades conocidas de Java que puedan ser útiles en la materia como programación funcional, streaming y lambdas.\n\t• Codificar sistemas concurrentes utilizando Java y las diferentes opciones para correr Threads en paralelo.\n\t• Predecir e identificar problemas de concurrencia  y fundamentar la elección de protección contra los mismos, por ejemplo sincronización, clases concurrentes o clases inmutables.\n\t• Reconocer los componentes de un sistema RPC cliente servidor. \n\t• Implementar sistemas en RPC con serialización de parámetros y callbacks asincrónicos.\n\t• Explicar las diferentes características de storage distribuidos como particionamiento, consistencia, redundancia, etc.\n\t• Conocer las diferentes características de las bases de datos distribuidas de tipo \"NoSQL\".\n\t• Detallar diferentes estrategias y herramientas para el procesamiento distribuido.\n\t• Implementar aplicaciones de procesamiento de información distribuidas en Map Reduce.\n\t• Utilizar la herramienta de storage y procesamiento distribuido.\n\t• Analizar el comportamiento de aplicaciones distribuidas al modificar la composición del cluster"
+    }
+  },
+  {
+    "pair_key": "72.42|DTC-MBD-515|DTC-MIT-515",
+    "codigo_itba": "72.42",
+    "nombre_itba": "Programación de Objetos Distribuidos",
+    "materia_1": {
+      "codigo_icai": "DTC-MBD-515",
+      "nombre_icai": "Tecnologías de Procesamiento Big Data / Big Data Processing Technologies",
+      "confianza": 3,
+      "comentario": "Tecnologías de Procesamiento Big Data es candidata para procesamiento distribuido y almacenamiento a escala, con gaps en RPC, objetos distribuidos y concurrencia Java. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 3,
+      "comentario": "Arquitectura de Servicios en Red cubre arquitectura cliente-servidor y servicios distribuidos, con gap en tolerancia a fallas, consistencia y procesamiento MapReduce. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.42",
+      "nombre": "Programación de Objetos Distribuidos",
+      "contenidos_minimos": "Sistemas distribuidos: objetivos y tipos. Arquitecturas. Middleware. Threads. Virtualización. Clientes y Servidores. Migración de código. Invocación remota. Mensajes. Calidad de servicio. Diseminación de datos. Búsqueda. Sincronización. Consistencia. Replicación. Tolerancia a fallas. Recuperación. Seguridad.",
+      "objetivos_aprendizaje": "• Conocer nuevas funcionalidades y revisar funcionalidades conocidas de Java que puedan ser útiles en la materia como programación funcional, streaming y lambdas.\n\t• Codificar sistemas concurrentes utilizando Java y las diferentes opciones para correr Threads en paralelo.\n\t• Predecir e identificar problemas de concurrencia  y fundamentar la elección de protección contra los mismos, por ejemplo sincronización, clases concurrentes o clases inmutables.\n\t• Reconocer los componentes de un sistema RPC cliente servidor. \n\t• Implementar sistemas en RPC con serialización de parámetros y callbacks asincrónicos.\n\t• Explicar las diferentes características de storage distribuidos como particionamiento, consistencia, redundancia, etc.\n\t• Conocer las diferentes características de las bases de datos distribuidas de tipo \"NoSQL\".\n\t• Detallar diferentes estrategias y herramientas para el procesamiento distribuido.\n\t• Implementar aplicaciones de procesamiento de información distribuidas en Map Reduce.\n\t• Utilizar la herramienta de storage y procesamiento distribuido.\n\t• Analizar el comportamiento de aplicaciones distribuidas al modificar la composición del cluster"
+    }
+  },
+  {
+    "pair_key": "72.44|DEAC-MCS-511|DTC-GITT-413",
+    "codigo_itba": "72.44",
+    "nombre_itba": "Criptografía y Seguridad",
+    "materia_1": {
+      "codigo_icai": "DEAC-MCS-511",
+      "nombre_icai": "Ciberseguridad en la Industria e Infraestructuras Críticas / Industrial Cybersecurity and Critical Infrastructure",
+      "confianza": 3,
+      "comentario": "Ciberseguridad en Industria e Infraestructuras Críticas aporta seguridad aplicada, aunque no es una equivalencia completa de criptografía y protocolos. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-GITT-413",
+      "nombre_icai": "Seguridad y Normativa / Security and Telecommunications Legislation",
+      "confianza": 3,
+      "comentario": "Seguridad y Normativa aporta seguridad de redes y aspectos regulatorios, pero no demuestra cubrir la profundidad criptográfica requerida."
+    },
+    "itba": {
+      "codigo": "72.44",
+      "nombre": "Criptografía y Seguridad",
+      "contenidos_minimos": "Criptografía Clásica y Moderna. Métodos simétrico y asimétrico. Algoritmos: encriptación y hashing. Protocolos: vpns, pgp, https. Aplicaciones: dinero electrónico, voto electrónico. Seguridad en bases de datos, sistemas operativos y redes. Auditoría y peritaje en seguridad",
+      "objetivos_aprendizaje": "• Comprender las herramientas criptográficas básicas y entender su ámbito de aplicación en problemas de Confidencialidad e Integridad\n    • Utilizar eficazmente algoritmos y protocolos criptográficos existentes para garantizar requerimientos de seguridad\n    • Comprender, y poder especificar los requerimientos de seguridad de un sistema.\n    • Participar en un proceso de análisis de vulnerabilidades o test de penetración. Comprender los resultados de un informe de dicho tipo.\n    • Detectar y corregir problemas típicos de aplicaciones con respecto a seguridad"
+    }
+  },
+  {
+    "pair_key": "72.44|DEAC-MCS-511|DTC-MIT-512",
+    "codigo_itba": "72.44",
+    "nombre_itba": "Criptografía y Seguridad",
+    "materia_1": {
+      "codigo_icai": "DEAC-MCS-511",
+      "nombre_icai": "Ciberseguridad en la Industria e Infraestructuras Críticas / Industrial Cybersecurity and Critical Infrastructure",
+      "confianza": 3,
+      "comentario": "Ciberseguridad en Industria e Infraestructuras Críticas aporta seguridad aplicada, aunque no es una equivalencia completa de criptografía y protocolos. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-512",
+      "nombre_icai": "Seguridad en Sistemas de Comunicación / Security in Communications Systems",
+      "confianza": 3,
+      "comentario": "Seguridad en Sistemas de Comunicación cubre el componente de seguridad en redes y protocolos, con gap en criptografía general y seguridad de bases de datos/sistemas operativos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.44",
+      "nombre": "Criptografía y Seguridad",
+      "contenidos_minimos": "Criptografía Clásica y Moderna. Métodos simétrico y asimétrico. Algoritmos: encriptación y hashing. Protocolos: vpns, pgp, https. Aplicaciones: dinero electrónico, voto electrónico. Seguridad en bases de datos, sistemas operativos y redes. Auditoría y peritaje en seguridad",
+      "objetivos_aprendizaje": "• Comprender las herramientas criptográficas básicas y entender su ámbito de aplicación en problemas de Confidencialidad e Integridad\n    • Utilizar eficazmente algoritmos y protocolos criptográficos existentes para garantizar requerimientos de seguridad\n    • Comprender, y poder especificar los requerimientos de seguridad de un sistema.\n    • Participar en un proceso de análisis de vulnerabilidades o test de penetración. Comprender los resultados de un informe de dicho tipo.\n    • Detectar y corregir problemas típicos de aplicaciones con respecto a seguridad"
+    }
+  },
+  {
+    "pair_key": "72.44|DTC-GITT-413|DTC-MIT-512",
+    "codigo_itba": "72.44",
+    "nombre_itba": "Criptografía y Seguridad",
+    "materia_1": {
+      "codigo_icai": "DTC-GITT-413",
+      "nombre_icai": "Seguridad y Normativa / Security and Telecommunications Legislation",
+      "confianza": 3,
+      "comentario": "Seguridad y Normativa aporta seguridad de redes y aspectos regulatorios, pero no demuestra cubrir la profundidad criptográfica requerida."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-512",
+      "nombre_icai": "Seguridad en Sistemas de Comunicación / Security in Communications Systems",
+      "confianza": 3,
+      "comentario": "Seguridad en Sistemas de Comunicación cubre el componente de seguridad en redes y protocolos, con gap en criptografía general y seguridad de bases de datos/sistemas operativos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.44",
+      "nombre": "Criptografía y Seguridad",
+      "contenidos_minimos": "Criptografía Clásica y Moderna. Métodos simétrico y asimétrico. Algoritmos: encriptación y hashing. Protocolos: vpns, pgp, https. Aplicaciones: dinero electrónico, voto electrónico. Seguridad en bases de datos, sistemas operativos y redes. Auditoría y peritaje en seguridad",
+      "objetivos_aprendizaje": "• Comprender las herramientas criptográficas básicas y entender su ámbito de aplicación en problemas de Confidencialidad e Integridad\n    • Utilizar eficazmente algoritmos y protocolos criptográficos existentes para garantizar requerimientos de seguridad\n    • Comprender, y poder especificar los requerimientos de seguridad de un sistema.\n    • Participar en un proceso de análisis de vulnerabilidades o test de penetración. Comprender los resultados de un informe de dicho tipo.\n    • Detectar y corregir problemas típicos de aplicaciones con respecto a seguridad"
+    }
+  },
+  {
+    "pair_key": "72.46|DCIA-MUIAA-511|DIM-MII-516",
+    "codigo_itba": "72.46",
+    "nombre_itba": "Robótica Basada en Comportamiento",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-511",
+      "nombre_icai": "Agentes y Métodos de Inteligencia Artificial / Artificial Intelligence Agents and Methods",
+      "confianza": 2,
+      "comentario": "Agentes y Métodos de IA puede aportar agentes autónomos aplicables a robótica basada en comportamiento, pero no reemplaza una asignatura específica de robótica. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DIM-MII-516",
+      "nombre_icai": "Robotica Industrial / Industrial Robotics",
+      "confianza": 3,
+      "comentario": "Robótica Industrial es el único candidato directo por dominio robótico, pero se debe verificar que incluya arquitecturas de comportamiento y no solo automatización industrial. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.46",
+      "nombre": "Robótica Basada en Comportamiento",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.53|DEAC-IMAT-313|DMA-IMAT-311",
+    "codigo_itba": "72.53",
+    "nombre_itba": "Visión Computacional 3D",
+    "materia_1": {
+      "codigo_icai": "DEAC-IMAT-313",
+      "nombre_icai": "Visión por Ordenador I / Computer Vision I",
+      "confianza": 3,
+      "comentario": "Visión por Ordenador I puede ofrecer los fundamentos necesarios para visión 3D, pero el título no confirma reconstrucción o geometría 3D."
+    },
+    "materia_2": {
+      "codigo_icai": "DMA-IMAT-311",
+      "nombre_icai": "Geometría Computacional / Computational Geometry",
+      "confianza": 2,
+      "comentario": "Geometría Computacional aporta una base parcial para los aspectos geométricos de visión 3D, pero no cubre por sí sola visión computacional."
+    },
+    "itba": {
+      "codigo": "72.53",
+      "nombre": "Visión Computacional 3D",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.53|DEAC-IMAT-313|DTC-IMAT-417",
+    "codigo_itba": "72.53",
+    "nombre_itba": "Visión Computacional 3D",
+    "materia_1": {
+      "codigo_icai": "DEAC-IMAT-313",
+      "nombre_icai": "Visión por Ordenador I / Computer Vision I",
+      "confianza": 3,
+      "comentario": "Visión por Ordenador I puede ofrecer los fundamentos necesarios para visión 3D, pero el título no confirma reconstrucción o geometría 3D."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-IMAT-417",
+      "nombre_icai": "Visión por Ordenador II / Computer Vision II",
+      "confianza": 3,
+      "comentario": "Visión por Ordenador II es una candidata de visión avanzada, aunque debe comprobarse la cobertura específica de técnicas 3D."
+    },
+    "itba": {
+      "codigo": "72.53",
+      "nombre": "Visión Computacional 3D",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.53|DMA-IMAT-311|DTC-IMAT-417",
+    "codigo_itba": "72.53",
+    "nombre_itba": "Visión Computacional 3D",
+    "materia_1": {
+      "codigo_icai": "DMA-IMAT-311",
+      "nombre_icai": "Geometría Computacional / Computational Geometry",
+      "confianza": 2,
+      "comentario": "Geometría Computacional aporta una base parcial para los aspectos geométricos de visión 3D, pero no cubre por sí sola visión computacional."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-IMAT-417",
+      "nombre_icai": "Visión por Ordenador II / Computer Vision II",
+      "confianza": 3,
+      "comentario": "Visión por Ordenador II es una candidata de visión avanzada, aunque debe comprobarse la cobertura específica de técnicas 3D."
+    },
+    "itba": {
+      "codigo": "72.53",
+      "nombre": "Visión Computacional 3D",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DCIA-IMAT-212|DCIA-MUIAA-515",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-212",
+      "nombre_icai": "Adquisición y Visualización de Datos / Data Acquisition and Visualization",
+      "confianza": 3,
+      "comentario": "Adquisición y Visualización de Datos cubre pipeline de datos y visualización, con gap en modelado multidimensional y consultas OLAP."
+    },
+    "materia_2": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Dato aporta preparación y explotación de datos a escala, pero no acredita específicamente OLAP. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DCIA-IMAT-212|DTC-BA-516",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-212",
+      "nombre_icai": "Adquisición y Visualización de Datos / Data Acquisition and Visualization",
+      "confianza": 3,
+      "comentario": "Adquisición y Visualización de Datos cubre pipeline de datos y visualización, con gap en modelado multidimensional y consultas OLAP."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-BA-516",
+      "nombre_icai": "Desarrollo de Aplicaciones para la Visualización de Datos / Application Development for Data Visualization",
+      "confianza": 3,
+      "comentario": "Desarrollo de Aplicaciones para la Visualización de Datos cubre explotación y presentación de datos, pero no confirma OLAP, cubos ni almacenamiento analítico."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DCIA-IMAT-212|DTC-BA23-314",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-212",
+      "nombre_icai": "Adquisición y Visualización de Datos / Data Acquisition and Visualization",
+      "confianza": 3,
+      "comentario": "Adquisición y Visualización de Datos cubre pipeline de datos y visualización, con gap en modelado multidimensional y consultas OLAP."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-BA23-314",
+      "nombre_icai": "Visualización de Datos / Data Visualization",
+      "confianza": 3,
+      "comentario": "Visualización de Datos solapa con la explotación analítica de datos, aunque no alcanza por sí sola los contenidos de OLAP."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DCIA-IMAT-212|DTC-MBD-511",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-212",
+      "nombre_icai": "Adquisición y Visualización de Datos / Data Acquisition and Visualization",
+      "confianza": 3,
+      "comentario": "Adquisición y Visualización de Datos cubre pipeline de datos y visualización, con gap en modelado multidimensional y consultas OLAP."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 3,
+      "comentario": "Arquitectura Big Data es candidata para almacenamiento y explotación de datos masivos, con falta de evidencia de cubos OLAP. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DCIA-IMAT-212|DTC-MBD-512",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-212",
+      "nombre_icai": "Adquisición y Visualización de Datos / Data Acquisition and Visualization",
+      "confianza": 3,
+      "comentario": "Adquisición y Visualización de Datos cubre pipeline de datos y visualización, con gap en modelado multidimensional y consultas OLAP."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-512",
+      "nombre_icai": "Big Data y Gobierno del Dato / Big Data and Data Governance",
+      "confianza": 3,
+      "comentario": "Big Data y Gobierno del Dato aporta gestión y organización del dato para analítica, aunque no es una asignatura OLAP explícita. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DCIA-IMAT-212|DTC-MBD-515",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-212",
+      "nombre_icai": "Adquisición y Visualización de Datos / Data Acquisition and Visualization",
+      "confianza": 3,
+      "comentario": "Adquisición y Visualización de Datos cubre pipeline de datos y visualización, con gap en modelado multidimensional y consultas OLAP."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-515",
+      "nombre_icai": "Tecnologías de Procesamiento Big Data / Big Data Processing Technologies",
+      "confianza": 3,
+      "comentario": "Tecnologías de Procesamiento Big Data cubre procesamiento para explotación de datos a escala, con gap en diseño de esquemas multidimensionales y OLAP. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DCIA-MUIAA-515|DTC-BA-516",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Dato aporta preparación y explotación de datos a escala, pero no acredita específicamente OLAP. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-BA-516",
+      "nombre_icai": "Desarrollo de Aplicaciones para la Visualización de Datos / Application Development for Data Visualization",
+      "confianza": 3,
+      "comentario": "Desarrollo de Aplicaciones para la Visualización de Datos cubre explotación y presentación de datos, pero no confirma OLAP, cubos ni almacenamiento analítico."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DCIA-MUIAA-515|DTC-BA23-314",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Dato aporta preparación y explotación de datos a escala, pero no acredita específicamente OLAP. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-BA23-314",
+      "nombre_icai": "Visualización de Datos / Data Visualization",
+      "confianza": 3,
+      "comentario": "Visualización de Datos solapa con la explotación analítica de datos, aunque no alcanza por sí sola los contenidos de OLAP."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DCIA-MUIAA-515|DTC-MBD-511",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Dato aporta preparación y explotación de datos a escala, pero no acredita específicamente OLAP. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 3,
+      "comentario": "Arquitectura Big Data es candidata para almacenamiento y explotación de datos masivos, con falta de evidencia de cubos OLAP. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DCIA-MUIAA-515|DTC-MBD-512",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Dato aporta preparación y explotación de datos a escala, pero no acredita específicamente OLAP. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-512",
+      "nombre_icai": "Big Data y Gobierno del Dato / Big Data and Data Governance",
+      "confianza": 3,
+      "comentario": "Big Data y Gobierno del Dato aporta gestión y organización del dato para analítica, aunque no es una asignatura OLAP explícita. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DCIA-MUIAA-515|DTC-MBD-515",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Dato aporta preparación y explotación de datos a escala, pero no acredita específicamente OLAP. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-515",
+      "nombre_icai": "Tecnologías de Procesamiento Big Data / Big Data Processing Technologies",
+      "confianza": 3,
+      "comentario": "Tecnologías de Procesamiento Big Data cubre procesamiento para explotación de datos a escala, con gap en diseño de esquemas multidimensionales y OLAP. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DTC-BA-516|DTC-BA23-314",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DTC-BA-516",
+      "nombre_icai": "Desarrollo de Aplicaciones para la Visualización de Datos / Application Development for Data Visualization",
+      "confianza": 3,
+      "comentario": "Desarrollo de Aplicaciones para la Visualización de Datos cubre explotación y presentación de datos, pero no confirma OLAP, cubos ni almacenamiento analítico."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-BA23-314",
+      "nombre_icai": "Visualización de Datos / Data Visualization",
+      "confianza": 3,
+      "comentario": "Visualización de Datos solapa con la explotación analítica de datos, aunque no alcanza por sí sola los contenidos de OLAP."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DTC-BA-516|DTC-MBD-511",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DTC-BA-516",
+      "nombre_icai": "Desarrollo de Aplicaciones para la Visualización de Datos / Application Development for Data Visualization",
+      "confianza": 3,
+      "comentario": "Desarrollo de Aplicaciones para la Visualización de Datos cubre explotación y presentación de datos, pero no confirma OLAP, cubos ni almacenamiento analítico."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 3,
+      "comentario": "Arquitectura Big Data es candidata para almacenamiento y explotación de datos masivos, con falta de evidencia de cubos OLAP. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DTC-BA-516|DTC-MBD-512",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DTC-BA-516",
+      "nombre_icai": "Desarrollo de Aplicaciones para la Visualización de Datos / Application Development for Data Visualization",
+      "confianza": 3,
+      "comentario": "Desarrollo de Aplicaciones para la Visualización de Datos cubre explotación y presentación de datos, pero no confirma OLAP, cubos ni almacenamiento analítico."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-512",
+      "nombre_icai": "Big Data y Gobierno del Dato / Big Data and Data Governance",
+      "confianza": 3,
+      "comentario": "Big Data y Gobierno del Dato aporta gestión y organización del dato para analítica, aunque no es una asignatura OLAP explícita. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DTC-BA-516|DTC-MBD-515",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DTC-BA-516",
+      "nombre_icai": "Desarrollo de Aplicaciones para la Visualización de Datos / Application Development for Data Visualization",
+      "confianza": 3,
+      "comentario": "Desarrollo de Aplicaciones para la Visualización de Datos cubre explotación y presentación de datos, pero no confirma OLAP, cubos ni almacenamiento analítico."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-515",
+      "nombre_icai": "Tecnologías de Procesamiento Big Data / Big Data Processing Technologies",
+      "confianza": 3,
+      "comentario": "Tecnologías de Procesamiento Big Data cubre procesamiento para explotación de datos a escala, con gap en diseño de esquemas multidimensionales y OLAP. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DTC-BA23-314|DTC-MBD-511",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DTC-BA23-314",
+      "nombre_icai": "Visualización de Datos / Data Visualization",
+      "confianza": 3,
+      "comentario": "Visualización de Datos solapa con la explotación analítica de datos, aunque no alcanza por sí sola los contenidos de OLAP."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 3,
+      "comentario": "Arquitectura Big Data es candidata para almacenamiento y explotación de datos masivos, con falta de evidencia de cubos OLAP. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DTC-BA23-314|DTC-MBD-512",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DTC-BA23-314",
+      "nombre_icai": "Visualización de Datos / Data Visualization",
+      "confianza": 3,
+      "comentario": "Visualización de Datos solapa con la explotación analítica de datos, aunque no alcanza por sí sola los contenidos de OLAP."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-512",
+      "nombre_icai": "Big Data y Gobierno del Dato / Big Data and Data Governance",
+      "confianza": 3,
+      "comentario": "Big Data y Gobierno del Dato aporta gestión y organización del dato para analítica, aunque no es una asignatura OLAP explícita. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DTC-BA23-314|DTC-MBD-515",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DTC-BA23-314",
+      "nombre_icai": "Visualización de Datos / Data Visualization",
+      "confianza": 3,
+      "comentario": "Visualización de Datos solapa con la explotación analítica de datos, aunque no alcanza por sí sola los contenidos de OLAP."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-515",
+      "nombre_icai": "Tecnologías de Procesamiento Big Data / Big Data Processing Technologies",
+      "confianza": 3,
+      "comentario": "Tecnologías de Procesamiento Big Data cubre procesamiento para explotación de datos a escala, con gap en diseño de esquemas multidimensionales y OLAP. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DTC-MBD-511|DTC-MBD-512",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 3,
+      "comentario": "Arquitectura Big Data es candidata para almacenamiento y explotación de datos masivos, con falta de evidencia de cubos OLAP. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-512",
+      "nombre_icai": "Big Data y Gobierno del Dato / Big Data and Data Governance",
+      "confianza": 3,
+      "comentario": "Big Data y Gobierno del Dato aporta gestión y organización del dato para analítica, aunque no es una asignatura OLAP explícita. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DTC-MBD-511|DTC-MBD-515",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 3,
+      "comentario": "Arquitectura Big Data es candidata para almacenamiento y explotación de datos masivos, con falta de evidencia de cubos OLAP. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-515",
+      "nombre_icai": "Tecnologías de Procesamiento Big Data / Big Data Processing Technologies",
+      "confianza": 3,
+      "comentario": "Tecnologías de Procesamiento Big Data cubre procesamiento para explotación de datos a escala, con gap en diseño de esquemas multidimensionales y OLAP. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.54|DTC-MBD-512|DTC-MBD-515",
+    "codigo_itba": "72.54",
+    "nombre_itba": "OLAP y Explotación de Datos",
+    "materia_1": {
+      "codigo_icai": "DTC-MBD-512",
+      "nombre_icai": "Big Data y Gobierno del Dato / Big Data and Data Governance",
+      "confianza": 3,
+      "comentario": "Big Data y Gobierno del Dato aporta gestión y organización del dato para analítica, aunque no es una asignatura OLAP explícita. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-515",
+      "nombre_icai": "Tecnologías de Procesamiento Big Data / Big Data Processing Technologies",
+      "confianza": 3,
+      "comentario": "Tecnologías de Procesamiento Big Data cubre procesamiento para explotación de datos a escala, con gap en diseño de esquemas multidimensionales y OLAP. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.54",
+      "nombre": "OLAP y Explotación de Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.56|DEAC-MII-632|DTC-IMAT-423",
+    "codigo_itba": "72.56",
+    "nombre_itba": "Automatización e Integración de Sistemas de Información",
+    "materia_1": {
+      "codigo_icai": "DEAC-MII-632",
+      "nombre_icai": "Automatización Avanzada / Advanced Automation",
+      "confianza": 2,
+      "comentario": "Automatización Avanzada coincide en automatización, pero su foco industrial no confirma integración de sistemas de información. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-IMAT-423",
+      "nombre_icai": "Tecnologías para la Digitalización / Technologies for Digital Transformation",
+      "confianza": 2,
+      "comentario": "Tecnologías para la Digitalización se relaciona parcialmente con integración de procesos y sistemas; el alcance no se detalla."
+    },
+    "itba": {
+      "codigo": "72.56",
+      "nombre": "Automatización e Integración de Sistemas de Información",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.56|DEAC-MII-632|DTC-MIT-515",
+    "codigo_itba": "72.56",
+    "nombre_itba": "Automatización e Integración de Sistemas de Información",
+    "materia_1": {
+      "codigo_icai": "DEAC-MII-632",
+      "nombre_icai": "Automatización Avanzada / Advanced Automation",
+      "confianza": 2,
+      "comentario": "Automatización Avanzada coincide en automatización, pero su foco industrial no confirma integración de sistemas de información. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 2,
+      "comentario": "Arquitectura de Servicios en Red aporta integración de servicios, sin cubrir explícitamente la automatización. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.56",
+      "nombre": "Automatización e Integración de Sistemas de Información",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.56|DTC-IMAT-423|DTC-MIT-515",
+    "codigo_itba": "72.56",
+    "nombre_itba": "Automatización e Integración de Sistemas de Información",
+    "materia_1": {
+      "codigo_icai": "DTC-IMAT-423",
+      "nombre_icai": "Tecnologías para la Digitalización / Technologies for Digital Transformation",
+      "confianza": 2,
+      "comentario": "Tecnologías para la Digitalización se relaciona parcialmente con integración de procesos y sistemas; el alcance no se detalla."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 2,
+      "comentario": "Arquitectura de Servicios en Red aporta integración de servicios, sin cubrir explícitamente la automatización. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.56",
+      "nombre": "Automatización e Integración de Sistemas de Información",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.57|DEA-GITT-214|DEAC-MII-513",
+    "codigo_itba": "72.57",
+    "nombre_itba": "Sistemas Embebidos",
+    "materia_1": {
+      "codigo_icai": "DEA-GITT-214",
+      "nombre_icai": "Sistemas Digitales I / Digital Systems I",
+      "confianza": 2,
+      "comentario": "Sistemas Digitales I cubre fundamentos digitales, una base parcial frente a sistemas embebidos."
+    },
+    "materia_2": {
+      "codigo_icai": "DEAC-MII-513",
+      "nombre_icai": "Sistemas Electrónicos / Electronic Systems",
+      "confianza": 3,
+      "comentario": "Sistemas Electrónicos aporta integración hardware para sistemas embebidos, sin explicitar programación embebida. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.57",
+      "nombre": "Sistemas Embebidos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.57|DEA-GITT-214|DEAC-MUIINT-112",
+    "codigo_itba": "72.57",
+    "nombre_itba": "Sistemas Embebidos",
+    "materia_1": {
+      "codigo_icai": "DEA-GITT-214",
+      "nombre_icai": "Sistemas Digitales I / Digital Systems I",
+      "confianza": 2,
+      "comentario": "Sistemas Digitales I cubre fundamentos digitales, una base parcial frente a sistemas embebidos."
+    },
+    "materia_2": {
+      "codigo_icai": "DEAC-MUIINT-112",
+      "nombre_icai": "Internet of Things",
+      "confianza": 3,
+      "comentario": "Internet of Things comparte dispositivos conectados y sistemas embebidos, con orientación adicional a IoT. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.57",
+      "nombre": "Sistemas Embebidos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.57|DEAC-MII-513|DEAC-MUIINT-112",
+    "codigo_itba": "72.57",
+    "nombre_itba": "Sistemas Embebidos",
+    "materia_1": {
+      "codigo_icai": "DEAC-MII-513",
+      "nombre_icai": "Sistemas Electrónicos / Electronic Systems",
+      "confianza": 3,
+      "comentario": "Sistemas Electrónicos aporta integración hardware para sistemas embebidos, sin explicitar programación embebida. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DEAC-MUIINT-112",
+      "nombre_icai": "Internet of Things",
+      "confianza": 3,
+      "comentario": "Internet of Things comparte dispositivos conectados y sistemas embebidos, con orientación adicional a IoT. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.57",
+      "nombre": "Sistemas Embebidos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DCIA-IMAT-211|DCIA-MIA-501",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-211",
+      "nombre_icai": "Fundamentos de Inteligencia Artificial / Artificial Intelligence Fundamentals",
+      "confianza": 3,
+      "comentario": "Fundamentos de Inteligencia Artificial cubre el área central, pero parece introductorio frente a IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DCIA-MIA-501",
+      "nombre_icai": "Modelos Generativos Profundos / Deep Generative Models",
+      "confianza": 3,
+      "comentario": "Modelos Generativos Profundos aporta IA avanzada especializada. Es All-year, 4.5 ECTS en Fall, Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DCIA-IMAT-211|DEAC-IMAT-411",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-211",
+      "nombre_icai": "Fundamentos de Inteligencia Artificial / Artificial Intelligence Fundamentals",
+      "confianza": 3,
+      "comentario": "Fundamentos de Inteligencia Artificial cubre el área central, pero parece introductorio frente a IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DEAC-IMAT-411",
+      "nombre_icai": "Aprendizaje por Refuerzo / Reinforcement Learning",
+      "confianza": 3,
+      "comentario": "Aprendizaje por Refuerzo es una técnica avanzada de IA, pero solo una especialidad de IA II."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DCIA-IMAT-211|DTC-IMAT-416",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-211",
+      "nombre_icai": "Fundamentos de Inteligencia Artificial / Artificial Intelligence Fundamentals",
+      "confianza": 3,
+      "comentario": "Fundamentos de Inteligencia Artificial cubre el área central, pero parece introductorio frente a IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-IMAT-416",
+      "nombre_icai": "Procesamiento de Lenguaje Natural II / Natural Language Processing II",
+      "confianza": 3,
+      "comentario": "Procesamiento de Lenguaje Natural II aporta una especialidad avanzada de IA, parcial frente a IA II."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DCIA-IMAT-211|DTC-IMAT-417",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-211",
+      "nombre_icai": "Fundamentos de Inteligencia Artificial / Artificial Intelligence Fundamentals",
+      "confianza": 3,
+      "comentario": "Fundamentos de Inteligencia Artificial cubre el área central, pero parece introductorio frente a IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-IMAT-417",
+      "nombre_icai": "Visión por Ordenador II / Computer Vision II",
+      "confianza": 3,
+      "comentario": "Visión por Ordenador II es una especialidad avanzada de IA, pero no equivale sola a IA II."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DCIA-IMAT-211|DTC-MIINT-512",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-211",
+      "nombre_icai": "Fundamentos de Inteligencia Artificial / Artificial Intelligence Fundamentals",
+      "confianza": 3,
+      "comentario": "Fundamentos de Inteligencia Artificial cubre el área central, pero parece introductorio frente a IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIINT-512",
+      "nombre_icai": "Deep Learning",
+      "confianza": 3,
+      "comentario": "Deep Learning es una especialización relevante de IA, parcial para el alcance general de IA II. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DCIA-IMAT-211|DTC-SAP-333",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-211",
+      "nombre_icai": "Fundamentos de Inteligencia Artificial / Artificial Intelligence Fundamentals",
+      "confianza": 3,
+      "comentario": "Fundamentos de Inteligencia Artificial cubre el área central, pero parece introductorio frente a IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-SAP-333",
+      "nombre_icai": "Machine Learning and Artificial Intelligence with Python",
+      "confianza": 3,
+      "comentario": "Machine Learning and Artificial Intelligence with Python coincide en IA y aprendizaje automático, pero su profundidad no se detalla."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DCIA-MIA-501|DEAC-IMAT-411",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-501",
+      "nombre_icai": "Modelos Generativos Profundos / Deep Generative Models",
+      "confianza": 3,
+      "comentario": "Modelos Generativos Profundos aporta IA avanzada especializada. Es All-year, 4.5 ECTS en Fall, Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DEAC-IMAT-411",
+      "nombre_icai": "Aprendizaje por Refuerzo / Reinforcement Learning",
+      "confianza": 3,
+      "comentario": "Aprendizaje por Refuerzo es una técnica avanzada de IA, pero solo una especialidad de IA II."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DCIA-MIA-501|DTC-IMAT-416",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-501",
+      "nombre_icai": "Modelos Generativos Profundos / Deep Generative Models",
+      "confianza": 3,
+      "comentario": "Modelos Generativos Profundos aporta IA avanzada especializada. Es All-year, 4.5 ECTS en Fall, Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-IMAT-416",
+      "nombre_icai": "Procesamiento de Lenguaje Natural II / Natural Language Processing II",
+      "confianza": 3,
+      "comentario": "Procesamiento de Lenguaje Natural II aporta una especialidad avanzada de IA, parcial frente a IA II."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DCIA-MIA-501|DTC-IMAT-417",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-501",
+      "nombre_icai": "Modelos Generativos Profundos / Deep Generative Models",
+      "confianza": 3,
+      "comentario": "Modelos Generativos Profundos aporta IA avanzada especializada. Es All-year, 4.5 ECTS en Fall, Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-IMAT-417",
+      "nombre_icai": "Visión por Ordenador II / Computer Vision II",
+      "confianza": 3,
+      "comentario": "Visión por Ordenador II es una especialidad avanzada de IA, pero no equivale sola a IA II."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DCIA-MIA-501|DTC-MIINT-512",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-501",
+      "nombre_icai": "Modelos Generativos Profundos / Deep Generative Models",
+      "confianza": 3,
+      "comentario": "Modelos Generativos Profundos aporta IA avanzada especializada. Es All-year, 4.5 ECTS en Fall, Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIINT-512",
+      "nombre_icai": "Deep Learning",
+      "confianza": 3,
+      "comentario": "Deep Learning es una especialización relevante de IA, parcial para el alcance general de IA II. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DCIA-MIA-501|DTC-SAP-333",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-501",
+      "nombre_icai": "Modelos Generativos Profundos / Deep Generative Models",
+      "confianza": 3,
+      "comentario": "Modelos Generativos Profundos aporta IA avanzada especializada. Es All-year, 4.5 ECTS en Fall, Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-SAP-333",
+      "nombre_icai": "Machine Learning and Artificial Intelligence with Python",
+      "confianza": 3,
+      "comentario": "Machine Learning and Artificial Intelligence with Python coincide en IA y aprendizaje automático, pero su profundidad no se detalla."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DEAC-IMAT-411|DTC-IMAT-416",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DEAC-IMAT-411",
+      "nombre_icai": "Aprendizaje por Refuerzo / Reinforcement Learning",
+      "confianza": 3,
+      "comentario": "Aprendizaje por Refuerzo es una técnica avanzada de IA, pero solo una especialidad de IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-IMAT-416",
+      "nombre_icai": "Procesamiento de Lenguaje Natural II / Natural Language Processing II",
+      "confianza": 3,
+      "comentario": "Procesamiento de Lenguaje Natural II aporta una especialidad avanzada de IA, parcial frente a IA II."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DEAC-IMAT-411|DTC-IMAT-417",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DEAC-IMAT-411",
+      "nombre_icai": "Aprendizaje por Refuerzo / Reinforcement Learning",
+      "confianza": 3,
+      "comentario": "Aprendizaje por Refuerzo es una técnica avanzada de IA, pero solo una especialidad de IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-IMAT-417",
+      "nombre_icai": "Visión por Ordenador II / Computer Vision II",
+      "confianza": 3,
+      "comentario": "Visión por Ordenador II es una especialidad avanzada de IA, pero no equivale sola a IA II."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DEAC-IMAT-411|DTC-MIINT-512",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DEAC-IMAT-411",
+      "nombre_icai": "Aprendizaje por Refuerzo / Reinforcement Learning",
+      "confianza": 3,
+      "comentario": "Aprendizaje por Refuerzo es una técnica avanzada de IA, pero solo una especialidad de IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIINT-512",
+      "nombre_icai": "Deep Learning",
+      "confianza": 3,
+      "comentario": "Deep Learning es una especialización relevante de IA, parcial para el alcance general de IA II. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DEAC-IMAT-411|DTC-SAP-333",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DEAC-IMAT-411",
+      "nombre_icai": "Aprendizaje por Refuerzo / Reinforcement Learning",
+      "confianza": 3,
+      "comentario": "Aprendizaje por Refuerzo es una técnica avanzada de IA, pero solo una especialidad de IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-SAP-333",
+      "nombre_icai": "Machine Learning and Artificial Intelligence with Python",
+      "confianza": 3,
+      "comentario": "Machine Learning and Artificial Intelligence with Python coincide en IA y aprendizaje automático, pero su profundidad no se detalla."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DTC-IMAT-416|DTC-IMAT-417",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DTC-IMAT-416",
+      "nombre_icai": "Procesamiento de Lenguaje Natural II / Natural Language Processing II",
+      "confianza": 3,
+      "comentario": "Procesamiento de Lenguaje Natural II aporta una especialidad avanzada de IA, parcial frente a IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-IMAT-417",
+      "nombre_icai": "Visión por Ordenador II / Computer Vision II",
+      "confianza": 3,
+      "comentario": "Visión por Ordenador II es una especialidad avanzada de IA, pero no equivale sola a IA II."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DTC-IMAT-416|DTC-MIINT-512",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DTC-IMAT-416",
+      "nombre_icai": "Procesamiento de Lenguaje Natural II / Natural Language Processing II",
+      "confianza": 3,
+      "comentario": "Procesamiento de Lenguaje Natural II aporta una especialidad avanzada de IA, parcial frente a IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIINT-512",
+      "nombre_icai": "Deep Learning",
+      "confianza": 3,
+      "comentario": "Deep Learning es una especialización relevante de IA, parcial para el alcance general de IA II. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DTC-IMAT-416|DTC-SAP-333",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DTC-IMAT-416",
+      "nombre_icai": "Procesamiento de Lenguaje Natural II / Natural Language Processing II",
+      "confianza": 3,
+      "comentario": "Procesamiento de Lenguaje Natural II aporta una especialidad avanzada de IA, parcial frente a IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-SAP-333",
+      "nombre_icai": "Machine Learning and Artificial Intelligence with Python",
+      "confianza": 3,
+      "comentario": "Machine Learning and Artificial Intelligence with Python coincide en IA y aprendizaje automático, pero su profundidad no se detalla."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DTC-IMAT-417|DTC-MIINT-512",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DTC-IMAT-417",
+      "nombre_icai": "Visión por Ordenador II / Computer Vision II",
+      "confianza": 3,
+      "comentario": "Visión por Ordenador II es una especialidad avanzada de IA, pero no equivale sola a IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIINT-512",
+      "nombre_icai": "Deep Learning",
+      "confianza": 3,
+      "comentario": "Deep Learning es una especialización relevante de IA, parcial para el alcance general de IA II. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DTC-IMAT-417|DTC-SAP-333",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DTC-IMAT-417",
+      "nombre_icai": "Visión por Ordenador II / Computer Vision II",
+      "confianza": 3,
+      "comentario": "Visión por Ordenador II es una especialidad avanzada de IA, pero no equivale sola a IA II."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-SAP-333",
+      "nombre_icai": "Machine Learning and Artificial Intelligence with Python",
+      "confianza": 3,
+      "comentario": "Machine Learning and Artificial Intelligence with Python coincide en IA y aprendizaje automático, pero su profundidad no se detalla."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.59|DTC-MIINT-512|DTC-SAP-333",
+    "codigo_itba": "72.59",
+    "nombre_itba": "Sistemas de Inteligencia Artificial II",
+    "materia_1": {
+      "codigo_icai": "DTC-MIINT-512",
+      "nombre_icai": "Deep Learning",
+      "confianza": 3,
+      "comentario": "Deep Learning es una especialización relevante de IA, parcial para el alcance general de IA II. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-SAP-333",
+      "nombre_icai": "Machine Learning and Artificial Intelligence with Python",
+      "confianza": 3,
+      "comentario": "Machine Learning and Artificial Intelligence with Python coincide en IA y aprendizaje automático, pero su profundidad no se detalla."
+    },
+    "itba": {
+      "codigo": "72.59",
+      "nombre": "Sistemas de Inteligencia Artificial II",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.64|DTC-MBD-511|DTC-MIT-515",
+    "codigo_itba": "72.64",
+    "nombre_itba": "Cloud Computing",
+    "materia_1": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 2,
+      "comentario": "Arquitectura Big Data comparte infraestructura escalable, pero no confirma contenido específico de cloud. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 3,
+      "comentario": "Arquitectura de Servicios en Red cubre arquitectura de servicios distribuida y de red, parcial para Cloud Computing. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.64",
+      "nombre": "Cloud Computing",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.66|DEA-GITT-214|DEAC-MII-513",
+    "codigo_itba": "72.66",
+    "nombre_itba": "Sistemas Embebidos",
+    "materia_1": {
+      "codigo_icai": "DEA-GITT-214",
+      "nombre_icai": "Sistemas Digitales I / Digital Systems I",
+      "confianza": 2,
+      "comentario": "Sistemas Digitales I cubre fundamentos digitales, una base parcial frente a sistemas embebidos."
+    },
+    "materia_2": {
+      "codigo_icai": "DEAC-MII-513",
+      "nombre_icai": "Sistemas Electrónicos / Electronic Systems",
+      "confianza": 3,
+      "comentario": "Sistemas Electrónicos aporta integración hardware para sistemas embebidos, sin explicitar programación embebida. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.66",
+      "nombre": "Sistemas Embebidos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.66|DEA-GITT-214|DEAC-MUIINT-112",
+    "codigo_itba": "72.66",
+    "nombre_itba": "Sistemas Embebidos",
+    "materia_1": {
+      "codigo_icai": "DEA-GITT-214",
+      "nombre_icai": "Sistemas Digitales I / Digital Systems I",
+      "confianza": 2,
+      "comentario": "Sistemas Digitales I cubre fundamentos digitales, una base parcial frente a sistemas embebidos."
+    },
+    "materia_2": {
+      "codigo_icai": "DEAC-MUIINT-112",
+      "nombre_icai": "Internet of Things",
+      "confianza": 3,
+      "comentario": "Internet of Things comparte dispositivos conectados y sistemas embebidos, con orientación adicional a IoT. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.66",
+      "nombre": "Sistemas Embebidos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.66|DEAC-MII-513|DEAC-MUIINT-112",
+    "codigo_itba": "72.66",
+    "nombre_itba": "Sistemas Embebidos",
+    "materia_1": {
+      "codigo_icai": "DEAC-MII-513",
+      "nombre_icai": "Sistemas Electrónicos / Electronic Systems",
+      "confianza": 3,
+      "comentario": "Sistemas Electrónicos aporta integración hardware para sistemas embebidos, sin explicitar programación embebida. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DEAC-MUIINT-112",
+      "nombre_icai": "Internet of Things",
+      "confianza": 3,
+      "comentario": "Internet of Things comparte dispositivos conectados y sistemas embebidos, con orientación adicional a IoT. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.66",
+      "nombre": "Sistemas Embebidos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.69|DTC-MCS-512|DTC-MCS-516",
+    "codigo_itba": "72.69",
+    "nombre_itba": "Seguridad de Software basada en Flujo de Información",
+    "materia_1": {
+      "codigo_icai": "DTC-MCS-512",
+      "nombre_icai": "Criptografía, Firma Electrónica y Blockchain / Cryptography, Digital Signature and Blockchain",
+      "confianza": 2,
+      "comentario": "Criptografía, Firma Electrónica y Blockchain comparte seguridad de la información, no análisis de flujos. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MCS-516",
+      "nombre_icai": "Test de Intrusión y Gestión de Vulnerabilidades / Penetration Testing and Vulnerability Management",
+      "confianza": 2,
+      "comentario": "Test de Intrusión y Gestión de Vulnerabilidades coincide en seguridad de software, no en seguridad basada en flujo. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.69",
+      "nombre": "Seguridad de Software basada en Flujo de Información",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.69|DTC-MCS-512|DTC-MIT-512",
+    "codigo_itba": "72.69",
+    "nombre_itba": "Seguridad de Software basada en Flujo de Información",
+    "materia_1": {
+      "codigo_icai": "DTC-MCS-512",
+      "nombre_icai": "Criptografía, Firma Electrónica y Blockchain / Cryptography, Digital Signature and Blockchain",
+      "confianza": 2,
+      "comentario": "Criptografía, Firma Electrónica y Blockchain comparte seguridad de la información, no análisis de flujos. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-512",
+      "nombre_icai": "Seguridad en Sistemas de Comunicación / Security in Communications Systems",
+      "confianza": 2,
+      "comentario": "Seguridad en Sistemas de Comunicación aporta seguridad de sistemas, no análisis de flujo de información. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.69",
+      "nombre": "Seguridad de Software basada en Flujo de Información",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.69|DTC-MCS-516|DTC-MIT-512",
+    "codigo_itba": "72.69",
+    "nombre_itba": "Seguridad de Software basada en Flujo de Información",
+    "materia_1": {
+      "codigo_icai": "DTC-MCS-516",
+      "nombre_icai": "Test de Intrusión y Gestión de Vulnerabilidades / Penetration Testing and Vulnerability Management",
+      "confianza": 2,
+      "comentario": "Test de Intrusión y Gestión de Vulnerabilidades coincide en seguridad de software, no en seguridad basada en flujo. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-512",
+      "nombre_icai": "Seguridad en Sistemas de Comunicación / Security in Communications Systems",
+      "confianza": 2,
+      "comentario": "Seguridad en Sistemas de Comunicación aporta seguridad de sistemas, no análisis de flujo de información. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.69",
+      "nombre": "Seguridad de Software basada en Flujo de Información",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.71|DCIA-MUIAA-515|DTC-MBD-517",
+    "codigo_itba": "72.71",
+    "nombre_itba": "Integración de Sistemas de Información",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 2,
+      "comentario": "Ingeniería del Dato comparte integración de datos y sistemas de información, con alcance centrado en datos. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-517",
+      "nombre_icai": "Adquisición y Transformación / Data Acquisition and Transformation",
+      "confianza": 2,
+      "comentario": "Adquisición y Transformación de Datos cubre integración de flujos de datos, parcial frente a integración general. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.71",
+      "nombre": "Integración de Sistemas de Información",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.71|DCIA-MUIAA-515|DTC-MIT-515",
+    "codigo_itba": "72.71",
+    "nombre_itba": "Integración de Sistemas de Información",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 2,
+      "comentario": "Ingeniería del Dato comparte integración de datos y sistemas de información, con alcance centrado en datos. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 3,
+      "comentario": "Arquitectura de Servicios en Red se relaciona con integración de servicios de información, sin detallar integración general de sistemas. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.71",
+      "nombre": "Integración de Sistemas de Información",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.71|DTC-MBD-517|DTC-MIT-515",
+    "codigo_itba": "72.71",
+    "nombre_itba": "Integración de Sistemas de Información",
+    "materia_1": {
+      "codigo_icai": "DTC-MBD-517",
+      "nombre_icai": "Adquisición y Transformación / Data Acquisition and Transformation",
+      "confianza": 2,
+      "comentario": "Adquisición y Transformación de Datos cubre integración de flujos de datos, parcial frente a integración general. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 3,
+      "comentario": "Arquitectura de Servicios en Red se relaciona con integración de servicios de información, sin detallar integración general de sistemas. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.71",
+      "nombre": "Integración de Sistemas de Información",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.72|DTC-GITT-315|DTC-IMAT-315",
+    "codigo_itba": "72.72",
+    "nombre_itba": "Análisis y Verificación de Modelos y Códigos",
+    "materia_1": {
+      "codigo_icai": "DTC-GITT-315",
+      "nombre_icai": "Ingeniería del Software / Software Engineering",
+      "confianza": 2,
+      "comentario": "Ingeniería del Software se relaciona con análisis y calidad de código, no con verificación formal explícita."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-IMAT-315",
+      "nombre_icai": "Paradigmas y Técnicas de Programación / Programming Paradigms and Techniques",
+      "confianza": 2,
+      "comentario": "Paradigmas y Técnicas de Programación puede aportar análisis de programas, no confirma verificación de modelos o código."
+    },
+    "itba": {
+      "codigo": "72.72",
+      "nombre": "Análisis y Verificación de Modelos y Códigos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.75|DCIA-MIA-501|DTC-MIINT-512",
+    "codigo_itba": "72.75",
+    "nombre_itba": "Aprendizaje Automático (Machine Learning)",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-501",
+      "nombre_icai": "Modelos Generativos Profundos / Deep Generative Models",
+      "confianza": 3,
+      "comentario": "Modelos Generativos Profundos aporta aprendizaje profundo especializado. Es All-year, 4.5 ECTS en Fall, Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIINT-512",
+      "nombre_icai": "Deep Learning",
+      "confianza": 3,
+      "comentario": "Deep Learning es una especialización de aprendizaje automático, parcial frente al temario general. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.75",
+      "nombre": "Aprendizaje Automático (Machine Learning)",
+      "contenidos_minimos": "Diseño de sistemas de aprendizaje. Aprendizaje supervisado y no supervisado.  Clasificación. Aprendizaje bayesiano. Clasificación paramétrica. Procedimientos de selección del modelo. Análisis de componentes principales. Métodos de clustering. Máquinas de vectores de soporte. Aprendizaje de árboles de decisiones. Aprendizaje basado en instancias.",
+      "objetivos_aprendizaje": "• Entender los conceptos fundamentales del aprendizaje automático.\n\t• Diseñar sistemas de aprendizaje automático para resolver problemas que involucren predicción, análisis, clasificación, y aprendizaje de estructuras."
+    }
+  },
+  {
+    "pair_key": "72.75|DCIA-MIA-501|FCEE-BA23-413",
+    "codigo_itba": "72.75",
+    "nombre_itba": "Aprendizaje Automático (Machine Learning)",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-501",
+      "nombre_icai": "Modelos Generativos Profundos / Deep Generative Models",
+      "confianza": 3,
+      "comentario": "Modelos Generativos Profundos aporta aprendizaje profundo especializado. Es All-year, 4.5 ECTS en Fall, Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA23-413",
+      "nombre_icai": "Machine Learning II: Predicción / Machine Learning II: Forecasting",
+      "confianza": 3,
+      "comentario": "Machine Learning II: Predicción cubre una aplicación relevante, pero está acotada a forecasting."
+    },
+    "itba": {
+      "codigo": "72.75",
+      "nombre": "Aprendizaje Automático (Machine Learning)",
+      "contenidos_minimos": "Diseño de sistemas de aprendizaje. Aprendizaje supervisado y no supervisado.  Clasificación. Aprendizaje bayesiano. Clasificación paramétrica. Procedimientos de selección del modelo. Análisis de componentes principales. Métodos de clustering. Máquinas de vectores de soporte. Aprendizaje de árboles de decisiones. Aprendizaje basado en instancias.",
+      "objetivos_aprendizaje": "• Entender los conceptos fundamentales del aprendizaje automático.\n\t• Diseñar sistemas de aprendizaje automático para resolver problemas que involucren predicción, análisis, clasificación, y aprendizaje de estructuras."
+    }
+  },
+  {
+    "pair_key": "72.75|DTC-MIINT-512|FCEE-BA23-413",
+    "codigo_itba": "72.75",
+    "nombre_itba": "Aprendizaje Automático (Machine Learning)",
+    "materia_1": {
+      "codigo_icai": "DTC-MIINT-512",
+      "nombre_icai": "Deep Learning",
+      "confianza": 3,
+      "comentario": "Deep Learning es una especialización de aprendizaje automático, parcial frente al temario general. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA23-413",
+      "nombre_icai": "Machine Learning II: Predicción / Machine Learning II: Forecasting",
+      "confianza": 3,
+      "comentario": "Machine Learning II: Predicción cubre una aplicación relevante, pero está acotada a forecasting."
+    },
+    "itba": {
+      "codigo": "72.75",
+      "nombre": "Aprendizaje Automático (Machine Learning)",
+      "contenidos_minimos": "Diseño de sistemas de aprendizaje. Aprendizaje supervisado y no supervisado.  Clasificación. Aprendizaje bayesiano. Clasificación paramétrica. Procedimientos de selección del modelo. Análisis de componentes principales. Métodos de clustering. Máquinas de vectores de soporte. Aprendizaje de árboles de decisiones. Aprendizaje basado en instancias.",
+      "objetivos_aprendizaje": "• Entender los conceptos fundamentales del aprendizaje automático.\n\t• Diseñar sistemas de aprendizaje automático para resolver problemas que involucren predicción, análisis, clasificación, y aprendizaje de estructuras."
+    }
+  },
+  {
+    "pair_key": "72.77|DTC-GITT-315|DTC-MCS-516",
+    "codigo_itba": "72.77",
+    "nombre_itba": "Técnicas Automáticas para Testing de Software",
+    "materia_1": {
+      "codigo_icai": "DTC-GITT-315",
+      "nombre_icai": "Ingeniería del Software / Software Engineering",
+      "confianza": 2,
+      "comentario": "Ingeniería del Software se relaciona con calidad y pruebas, pero no confirma técnicas automáticas de testing."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MCS-516",
+      "nombre_icai": "Test de Intrusión y Gestión de Vulnerabilidades / Penetration Testing and Vulnerability Management",
+      "confianza": 2,
+      "comentario": "Test de Intrusión y Gestión de Vulnerabilidades usa pruebas de seguridad, no testing automático general. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.77",
+      "nombre": "Técnicas Automáticas para Testing de Software",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.78|DCIA-IMAT-212|DTC-MBD-512",
+    "codigo_itba": "72.78",
+    "nombre_itba": "OLAP Espacial",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-212",
+      "nombre_icai": "Adquisición y Visualización de Datos / Data Acquisition and Visualization",
+      "confianza": 2,
+      "comentario": "Adquisición y Visualización de Datos comparte análisis y visualización, no OLAP ni componentes espaciales."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-512",
+      "nombre_icai": "Big Data y Gobierno del Dato / Big Data and Data Governance",
+      "confianza": 2,
+      "comentario": "Big Data y Gobierno del Dato se relaciona con gestión analítica, no confirma OLAP ni información espacial. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.78",
+      "nombre": "OLAP Espacial",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "72.79|DCIA-MUIAA-511|DCIA-MUIAA-516",
+    "codigo_itba": "72.79",
+    "nombre_itba": "Sistemas Multiagente I",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-511",
+      "nombre_icai": "Agentes y Métodos de Inteligencia Artificial / Artificial Intelligence Agents and Methods",
+      "confianza": 3,
+      "comentario": "Agentes y Métodos de IA es la coincidencia más cercana para diseño de agentes; no garantiza cubrir LLMs, coordinación multiagente ni observabilidad. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DCIA-MUIAA-516",
+      "nombre_icai": "Operación de Modelos / MLOps",
+      "confianza": 2,
+      "comentario": "MLOps solapa con el despliegue, evaluación y operación de modelos/agentes, pero no con la coordinación multiagente. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.79",
+      "nombre": "Sistemas Multiagente I",
+      "contenidos_minimos": "Fundamentos teóricos y prácticos relacionados con modelos LLMs y sus limitaciones\nMétodos de evaluación de estos modelos. Técnicas de observabilidad, trazabilidad y métricas. \nEstrategias de context engineering. \nComponentes estructurales de agentes individuales. Patrones de diseño, uso de herramientas, memoria, guardrails y protocolos de contexto. Diseño, coordinación y memoria colectiva en sistemas multiagente. Modelos de cooperación secuencial, jerárquica o paralela. Flujos de trabajo y coordinación entre agentes.\nPrincipios de ingeniería de software aplicados a estos sistemas. Arquitectura, escalabilidad, seguridad, privacidad, integración continua, desplegado productivo, observabilidad de desempeño y costos, y evaluación continua de calidad.",
+      "objetivos_aprendizaje": "1.- Comprender los principios teóricos de los modelos de lenguaje grande (LLMs), incluyendo sus limitaciones, alucinaciones y generación de falsas creencias, para evaluar sus aplicaciones con criterio.\n2.- Analizar y emplear frameworks modernos para agentes basados en LLMs (por ejemplo LangChain, AutoGen, CrewAI), identificando sus componentes, ventajas y restricciones.\n3.- Diseñar y construir agentes individuales autónomos que integren rol definido, objetivos claros, herramientas especializadas, memoria individual y mecanismos de seguridad.\n4.- Aplicar patrones de diseño como ReAct, Reflection, uso de herramientas externas y planificación para mejorar la capacidad funcional y la robustez de los agentes.\n5.- Diseñar sistemas multiagente cooperativos donde varios agentes puedan coordinarse, compartir memoria colectiva, distribuir flujos de trabajo y colaborar hacia metas comunes.\n6.- Evaluar tanto agentes individuales como sistemas multiagente completos mediante métricas objetivas, feedback humano y automático, pruebas de integración y escenarios realistas.\n7.- Implementar principios de ingeniería de software en estos sistemas: modularidad, interoperabilidad, escalabilidad, seguridad, privacidad, mantenimiento continuo, monitoreo de costos y desempeño.\n8.- Desarrollar una comprensión crítica de las implicaciones éticas, sociales y legales de los sistemas basados en agentes, para asegurar que sean responsables, justos y respetuosos de los derechos de los usuarios."
+    }
+  },
+  {
+    "pair_key": "72.80|DCIA-MUIAA-515|DTC-MBD-512",
+    "codigo_itba": "72.80",
+    "nombre_itba": "Big Data",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Dato se relaciona con pipelines y gestión de datos a escala, pero no asegura MapReduce, HDFS ni streaming. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-512",
+      "nombre_icai": "Big Data y Gobierno del Dato / Big Data and Data Governance",
+      "confianza": 2,
+      "comentario": "Big Data y Gobierno del Dato aporta una parte de gestión de datos masivos, pero no el núcleo de procesamiento distribuido de ITBA. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.80",
+      "nombre": "Big Data",
+      "contenidos_minimos": "Sistemas de archivos distribuidos: estructura y funcionamiento. Clústeres de almacenamiento distribuido. Consulta y modelado de bases de datos NoSQL. Implementación de algoritmos de procesamiento distribuido y paralelo. Modelo de programación MapReduce. Streaming y análisis de datos en tiempo real.",
+      "objetivos_aprendizaje": "Al finalizar el curso los alumnos deberán:\n•\tComprender las arquitecturas y tecnologías utilizadas para almacenar, procesar y analizar grandes volúmenes de datos.\n•\tConocer el funcionamiento de los sistemas de archivos distribuidos como Hadoop Distributed File System (HDFS); entender su estructura y funcionamiento.\n•\tSaber configurar y administrar clústeres de almacenamiento distribuido para el manejo eficiente de grandes conjuntos de datos.\n•\tDominar la sintaxis de consulta y el modelado de datos en bases de datos NoSQL.\n•\tSaber seleccionar la base de datos NoSQL adecuada según los requisitos de la aplicación.\n•\tUtilizar frameworks y herramientas como Apache Hadoop y Apache Spark para implementar algoritmos de procesamiento distribuido y paralelo.\n•\tDominar el modelo de programación MapReduce y saber cómo diseñar y desarrollar programas MapReduce utilizando lenguajes como Java o Python.\n•\tUtilizar herramientas y plataformas como Apache Kafka y Apache Spark Streaming para procesar y analizar datos en tiempo real.\n•\tAplicar los conocimientos adquiridos en casos de uso reales de analítica de Big Data utilizando bibliotecas de Hadoop y Spark.\n•\tImplementar técnicas de cifrado, enmascaramiento y anonimización de datos para garantizar la privacidad y confidencialidad de la información sensible en entornos de Big Data."
+    }
+  },
+  {
+    "pair_key": "72.90|DEA-GITI-431|DEAC-MII-631",
+    "codigo_itba": "72.90",
+    "nombre_itba": "Internet de las Cosas (IoT)",
+    "materia_1": {
+      "codigo_icai": "DEA-GITI-431",
+      "nombre_icai": "Microprocesadores / Microprocessors",
+      "confianza": 3,
+      "comentario": "Microprocesadores cubre la plataforma hardware subyacente para sensores y dispositivos IoT, pero no las capas de red y aplicación."
+    },
+    "materia_2": {
+      "codigo_icai": "DEAC-MII-631",
+      "nombre_icai": "Comunicaciones Industriales / Industrial Communication Systems",
+      "confianza": 3,
+      "comentario": "Comunicaciones Industriales aporta la conectividad de sistemas industriales conectados, parcial para IoT. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.90",
+      "nombre": "Internet de las Cosas (IoT)",
+      "contenidos_minimos": "Conceptos de microcontroladores.  Introducción a la programación de microcontroladores.  Sensores – señales digitales y analógicas.  Control del medio ambiente.  Integración de microcontroladores con aplicaciones informáticas.  IPv6, MQTT.  Aplicación a la transformación digital de las organizaciones.",
+      "objetivos_aprendizaje": "Al completar el curso, los estudiantes serán capaces de:\n* Explicar los conceptos fundamentales vinculados al Internet de las Cosas (IoT), el Internet Industrial de las Cosas (IIoT) y la Industria 4.0, comprendiendo su evolución y sus aplicaciones.\n* Identificar y justificar escenarios reales donde la aplicación de soluciones IoT aporte valor, eficiencia o nuevas capacidades.\n* Desarrollar aplicaciones IoT funcionales utilizando kits de desarrollo, microcontroladores y sensores específicos.\n* Diseñar e implementar soluciones IoT de punta a punta, considerando eficiencia, escalabilidad y viabilidad técnica."
+    }
+  },
+  {
+    "pair_key": "72.94|DEA-GITT-214|DEAC-MUIINT-112",
+    "codigo_itba": "72.94",
+    "nombre_itba": "Introducción a los Sistemas Embebidos",
+    "materia_1": {
+      "codigo_icai": "DEA-GITT-214",
+      "nombre_icai": "Sistemas Digitales I / Digital Systems I",
+      "confianza": 3,
+      "comentario": "Sistemas Digitales I aporta fundamentos de hardware digital relevantes para sistemas embebidos, aunque no confirma programación de microcontroladores."
+    },
+    "materia_2": {
+      "codigo_icai": "DEAC-MUIINT-112",
+      "nombre_icai": "Internet of Things",
+      "confianza": 2,
+      "comentario": "Internet of Things usa dispositivos conectados y puede incluir componentes embebidos, pero no sustituye una introducción integral a sistemas embebidos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "72.94",
+      "nombre": "Introducción a los Sistemas Embebidos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.22|DCIA-MUIAA-516|DTC-GITT-315",
+    "codigo_itba": "73.22",
+    "nombre_itba": "Fundamentos de DevOps",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-516",
+      "nombre_icai": "Operación de Modelos / MLOps",
+      "confianza": 3,
+      "comentario": "MLOps coincide con automatización, despliegue y operación continua, pero se centra en modelos de IA y no cubre todo DevOps. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-GITT-315",
+      "nombre_icai": "Ingeniería del Software / Software Engineering",
+      "confianza": 2,
+      "comentario": "Ingeniería del Software puede cubrir procesos y calidad de desarrollo, pero el catálogo no confirma CI/CD, infraestructura ni prácticas DevOps."
+    },
+    "itba": {
+      "codigo": "73.22",
+      "nombre": "Fundamentos de DevOps",
+      "contenidos_minimos": "Orígenes de DevOps. Relación con otras metodologías como Agile y Lean. Motivación. - Control de versiones y gestión de cambios. - Integración Continua. Concepto y herramientas. - Deployment Continuo: Concepto y herramientas. - Seguridad en DevOps",
+      "objetivos_aprendizaje": "- Comprender los fundamentos, principios y cultura DevOps, así como su impacto en los procesos de desarrollo y operaciones de software.  \n- Poner en práctica herramientas y metodologías como Git, CI/CD, Docker, Kubernetes e infraestructura como código para automatizar y optimizar el ciclo de vida del software.  \n- Fortalecer la capacidad de trabajo colaborativo entre equipos de desarrollo y operaciones, incorporando prácticas de integración y entrega continua.  \n- Analizar escenarios reales para identificar oportunidades de mejora y aplicar soluciones DevOps, incluyendo criterios de seguridad (DevSecOps) y observabilidad.  \n- Fomentar el aprendizaje autónomo y la adopción de una mentalidad de mejora y adaptación continua para liderar transformaciones digitales en organizaciones modernas."
+    }
+  },
+  {
+    "pair_key": "73.23|DCIA-IMAT-212|DOI-MBD-516",
+    "codigo_itba": "73.23",
+    "nombre_itba": "Programación Orientada a Datos",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-212",
+      "nombre_icai": "Adquisición y Visualización de Datos / Data Acquisition and Visualization",
+      "confianza": 3,
+      "comentario": "Adquisición y Visualización de Datos comparte el trabajo de obtención y manipulación de datos; candidato parcial de grado."
+    },
+    "materia_2": {
+      "codigo_icai": "DOI-MBD-516",
+      "nombre_icai": "Introducción al Análisis Estadístico con Lenguajes de Programación para Machine Learning / Introduction to Statistical Analysis with Programming Languages for Machine Learning",
+      "confianza": 3,
+      "comentario": "El análisis estadístico con lenguajes de programación para ML se alinea con la programación orientada a datos, aunque es una materia introductoria y de Master con permiso requerido."
+    },
+    "itba": {
+      "codigo": "73.23",
+      "nombre": "Programación Orientada a Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.23|DCIA-IMAT-212|DTC-MBD-517",
+    "codigo_itba": "73.23",
+    "nombre_itba": "Programación Orientada a Datos",
+    "materia_1": {
+      "codigo_icai": "DCIA-IMAT-212",
+      "nombre_icai": "Adquisición y Visualización de Datos / Data Acquisition and Visualization",
+      "confianza": 3,
+      "comentario": "Adquisición y Visualización de Datos comparte el trabajo de obtención y manipulación de datos; candidato parcial de grado."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-517",
+      "nombre_icai": "Adquisición y Transformación / Data Acquisition and Transformation",
+      "confianza": 3,
+      "comentario": "Data Acquisition and Transformation cubre etapas de los pipelines de datos, parcialmente alineadas con programación orientada a datos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.23",
+      "nombre": "Programación Orientada a Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.23|DOI-MBD-516|DTC-MBD-517",
+    "codigo_itba": "73.23",
+    "nombre_itba": "Programación Orientada a Datos",
+    "materia_1": {
+      "codigo_icai": "DOI-MBD-516",
+      "nombre_icai": "Introducción al Análisis Estadístico con Lenguajes de Programación para Machine Learning / Introduction to Statistical Analysis with Programming Languages for Machine Learning",
+      "confianza": 3,
+      "comentario": "El análisis estadístico con lenguajes de programación para ML se alinea con la programación orientada a datos, aunque es una materia introductoria y de Master con permiso requerido."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-517",
+      "nombre_icai": "Adquisición y Transformación / Data Acquisition and Transformation",
+      "confianza": 3,
+      "comentario": "Data Acquisition and Transformation cubre etapas de los pipelines de datos, parcialmente alineadas con programación orientada a datos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.23",
+      "nombre": "Programación Orientada a Datos",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.30|DOI-MII-681|DTC-GITT-315",
+    "codigo_itba": "73.30",
+    "nombre_itba": "Desarrollo profesional de software: del código al producto",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-681",
+      "nombre_icai": "Dirección de Proyectos / Project Management",
+      "confianza": 3,
+      "comentario": "Dirección de Proyectos aporta planificación y ejecución de productos/proyectos, pero no cubre específicamente product management de software. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-GITT-315",
+      "nombre_icai": "Ingeniería del Software / Software Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Software cubre prácticas y procesos de desarrollo profesional; buen parcial para llevar código a producto."
+    },
+    "itba": {
+      "codigo": "73.30",
+      "nombre": "Desarrollo profesional de software: del código al producto",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.30|DOI-MII-681|FCEE-BA23-311",
+    "codigo_itba": "73.30",
+    "nombre_itba": "Desarrollo profesional de software: del código al producto",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-681",
+      "nombre_icai": "Dirección de Proyectos / Project Management",
+      "confianza": 3,
+      "comentario": "Dirección de Proyectos aporta planificación y ejecución de productos/proyectos, pero no cubre específicamente product management de software. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA23-311",
+      "nombre_icai": "Diseño y Generación de Valor para el Cliente / Design and Delivery of Value for Customers",
+      "confianza": 2,
+      "comentario": "Diseño y Generación de Valor para el Cliente conecta con la dimensión de producto y usuarios, pero no con el ciclo completo de desarrollo de software."
+    },
+    "itba": {
+      "codigo": "73.30",
+      "nombre": "Desarrollo profesional de software: del código al producto",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.30|DTC-GITT-315|FCEE-BA23-311",
+    "codigo_itba": "73.30",
+    "nombre_itba": "Desarrollo profesional de software: del código al producto",
+    "materia_1": {
+      "codigo_icai": "DTC-GITT-315",
+      "nombre_icai": "Ingeniería del Software / Software Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Software cubre prácticas y procesos de desarrollo profesional; buen parcial para llevar código a producto."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA23-311",
+      "nombre_icai": "Diseño y Generación de Valor para el Cliente / Design and Delivery of Value for Customers",
+      "confianza": 2,
+      "comentario": "Diseño y Generación de Valor para el Cliente conecta con la dimensión de producto y usuarios, pero no con el ciclo completo de desarrollo de software."
+    },
+    "itba": {
+      "codigo": "73.30",
+      "nombre": "Desarrollo profesional de software: del código al producto",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.40|DCIA-MIA-516|DCIA-MUIAA-516",
+    "codigo_itba": "73.40",
+    "nombre_itba": "ARQUITECTURA DE MICROSERVICIOS",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-516",
+      "nombre_icai": "Ingeniería de Modelos / Artificial Intelligence Operations",
+      "confianza": 2,
+      "comentario": "Artificial Intelligence Operations puede solapar con operación y despliegue de servicios, pero está orientada a IA y no garantiza la arquitectura de microservicios completa. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DCIA-MUIAA-516",
+      "nombre_icai": "Operación de Modelos / MLOps",
+      "confianza": 2,
+      "comentario": "MLOps comparte automatización y operación de servicios/modelos, parcial débil para microservicios sin evidencia específica de contenedores ni comunicación distribuida. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.40",
+      "nombre": "ARQUITECTURA DE MICROSERVICIOS",
+      "contenidos_minimos": "Conceptos, beneficios y desventajas de las arquitecturas de microservicios comparadas con las arquitecturas monolíticas. Criterios y herramientas para el diseño de una arquitectura de microservicios. Concepto de contenedor. Creación y uso de contenedores y servicios de apoyo para arquitectura de microservicios. Refactoring de aplicaciones monolíticas.",
+      "objetivos_aprendizaje": "1. Consolidar conocimientos sólidos en Linux y en los principios fundamentales de contenedores, proporcionando una base adecuada para comprender y trabajar con arquitecturas de microservicios.\n2. Lograr un dominio en el uso de herramientas clave para microservicios, tales como Docker, Docker Compose y Kubernetes, permitiendo la aplicación práctica de estos conocimientos en ejercicios y proyectos.\n3. Contar con la capacidad de comprender y aplicar patrones de diseño pertinentes a la arquitectura de microservicios, y de seleccionar aquellos más adecuados según la problemática a resolver.\n4. Demostrar un entendimiento profundo de las interfaces de comunicación síncrona y asíncrona en microservicios, pudiendo evaluar y escoger opciones de implementación en función de ventajas, desventajas y casos de uso.\n5. Adquirir la habilidad para implementar, administrar y monitorear infraestructuras de microservicios en situaciones reales, haciendo especial énfasis en la gestión de servicios, la automatización mediante pipelines y la utilización de recursos serverless."
+    }
+  },
+  {
+    "pair_key": "73.40|DCIA-MIA-516|DTC-MIT-515",
+    "codigo_itba": "73.40",
+    "nombre_itba": "ARQUITECTURA DE MICROSERVICIOS",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-516",
+      "nombre_icai": "Ingeniería de Modelos / Artificial Intelligence Operations",
+      "confianza": 2,
+      "comentario": "Artificial Intelligence Operations puede solapar con operación y despliegue de servicios, pero está orientada a IA y no garantiza la arquitectura de microservicios completa. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 2,
+      "comentario": "Arquitectura de Servicios en Red se relaciona con el diseño de servicios distribuidos, aunque no confirma contenidos de microservicios, contenedores o Kubernetes. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.40",
+      "nombre": "ARQUITECTURA DE MICROSERVICIOS",
+      "contenidos_minimos": "Conceptos, beneficios y desventajas de las arquitecturas de microservicios comparadas con las arquitecturas monolíticas. Criterios y herramientas para el diseño de una arquitectura de microservicios. Concepto de contenedor. Creación y uso de contenedores y servicios de apoyo para arquitectura de microservicios. Refactoring de aplicaciones monolíticas.",
+      "objetivos_aprendizaje": "1. Consolidar conocimientos sólidos en Linux y en los principios fundamentales de contenedores, proporcionando una base adecuada para comprender y trabajar con arquitecturas de microservicios.\n2. Lograr un dominio en el uso de herramientas clave para microservicios, tales como Docker, Docker Compose y Kubernetes, permitiendo la aplicación práctica de estos conocimientos en ejercicios y proyectos.\n3. Contar con la capacidad de comprender y aplicar patrones de diseño pertinentes a la arquitectura de microservicios, y de seleccionar aquellos más adecuados según la problemática a resolver.\n4. Demostrar un entendimiento profundo de las interfaces de comunicación síncrona y asíncrona en microservicios, pudiendo evaluar y escoger opciones de implementación en función de ventajas, desventajas y casos de uso.\n5. Adquirir la habilidad para implementar, administrar y monitorear infraestructuras de microservicios en situaciones reales, haciendo especial énfasis en la gestión de servicios, la automatización mediante pipelines y la utilización de recursos serverless."
+    }
+  },
+  {
+    "pair_key": "73.40|DCIA-MUIAA-516|DTC-MIT-515",
+    "codigo_itba": "73.40",
+    "nombre_itba": "ARQUITECTURA DE MICROSERVICIOS",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-516",
+      "nombre_icai": "Operación de Modelos / MLOps",
+      "confianza": 2,
+      "comentario": "MLOps comparte automatización y operación de servicios/modelos, parcial débil para microservicios sin evidencia específica de contenedores ni comunicación distribuida. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 2,
+      "comentario": "Arquitectura de Servicios en Red se relaciona con el diseño de servicios distribuidos, aunque no confirma contenidos de microservicios, contenedores o Kubernetes. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.40",
+      "nombre": "ARQUITECTURA DE MICROSERVICIOS",
+      "contenidos_minimos": "Conceptos, beneficios y desventajas de las arquitecturas de microservicios comparadas con las arquitecturas monolíticas. Criterios y herramientas para el diseño de una arquitectura de microservicios. Concepto de contenedor. Creación y uso de contenedores y servicios de apoyo para arquitectura de microservicios. Refactoring de aplicaciones monolíticas.",
+      "objetivos_aprendizaje": "1. Consolidar conocimientos sólidos en Linux y en los principios fundamentales de contenedores, proporcionando una base adecuada para comprender y trabajar con arquitecturas de microservicios.\n2. Lograr un dominio en el uso de herramientas clave para microservicios, tales como Docker, Docker Compose y Kubernetes, permitiendo la aplicación práctica de estos conocimientos en ejercicios y proyectos.\n3. Contar con la capacidad de comprender y aplicar patrones de diseño pertinentes a la arquitectura de microservicios, y de seleccionar aquellos más adecuados según la problemática a resolver.\n4. Demostrar un entendimiento profundo de las interfaces de comunicación síncrona y asíncrona en microservicios, pudiendo evaluar y escoger opciones de implementación en función de ventajas, desventajas y casos de uso.\n5. Adquirir la habilidad para implementar, administrar y monitorear infraestructuras de microservicios en situaciones reales, haciendo especial énfasis en la gestión de servicios, la automatización mediante pipelines y la utilización de recursos serverless."
+    }
+  },
+  {
+    "pair_key": "73.50|DCIA-MIA-516|DCIA-MUIAA-516",
+    "codigo_itba": "73.50",
+    "nombre_itba": "Infraestructura de Cómputo: Data Center, Cloud y Edge",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-516",
+      "nombre_icai": "Ingeniería de Modelos / Artificial Intelligence Operations",
+      "confianza": 2,
+      "comentario": "Artificial Intelligence Operations se relaciona con operación de infraestructura para modelos, pero no especifica cloud, data center o edge. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DCIA-MUIAA-516",
+      "nombre_icai": "Operación de Modelos / MLOps",
+      "confianza": 2,
+      "comentario": "MLOps puede incluir infraestructura de despliegue y operación, pero el alcance de cloud, data center y edge no está confirmado. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.50",
+      "nombre": "Infraestructura de Cómputo: Data Center, Cloud y Edge",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.50|DCIA-MIA-516|DEAC-MUIINT-112",
+    "codigo_itba": "73.50",
+    "nombre_itba": "Infraestructura de Cómputo: Data Center, Cloud y Edge",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-516",
+      "nombre_icai": "Ingeniería de Modelos / Artificial Intelligence Operations",
+      "confianza": 2,
+      "comentario": "Artificial Intelligence Operations se relaciona con operación de infraestructura para modelos, pero no especifica cloud, data center o edge. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DEAC-MUIINT-112",
+      "nombre_icai": "Internet of Things",
+      "confianza": 2,
+      "comentario": "Internet of Things aporta la dimensión de dispositivos conectados y edge, pero no cubre de forma integral data center ni cloud. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.50",
+      "nombre": "Infraestructura de Cómputo: Data Center, Cloud y Edge",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.50|DCIA-MIA-516|DTC-MIT-515",
+    "codigo_itba": "73.50",
+    "nombre_itba": "Infraestructura de Cómputo: Data Center, Cloud y Edge",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-516",
+      "nombre_icai": "Ingeniería de Modelos / Artificial Intelligence Operations",
+      "confianza": 2,
+      "comentario": "Artificial Intelligence Operations se relaciona con operación de infraestructura para modelos, pero no especifica cloud, data center o edge. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 3,
+      "comentario": "Arquitectura de Servicios en Red cubre infraestructura de servicios de red; parcial fuerte para infraestructura de cómputo, aunque no acredita data center, cloud y edge completos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.50",
+      "nombre": "Infraestructura de Cómputo: Data Center, Cloud y Edge",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.50|DCIA-MUIAA-516|DEAC-MUIINT-112",
+    "codigo_itba": "73.50",
+    "nombre_itba": "Infraestructura de Cómputo: Data Center, Cloud y Edge",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-516",
+      "nombre_icai": "Operación de Modelos / MLOps",
+      "confianza": 2,
+      "comentario": "MLOps puede incluir infraestructura de despliegue y operación, pero el alcance de cloud, data center y edge no está confirmado. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DEAC-MUIINT-112",
+      "nombre_icai": "Internet of Things",
+      "confianza": 2,
+      "comentario": "Internet of Things aporta la dimensión de dispositivos conectados y edge, pero no cubre de forma integral data center ni cloud. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.50",
+      "nombre": "Infraestructura de Cómputo: Data Center, Cloud y Edge",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.50|DCIA-MUIAA-516|DTC-MIT-515",
+    "codigo_itba": "73.50",
+    "nombre_itba": "Infraestructura de Cómputo: Data Center, Cloud y Edge",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-516",
+      "nombre_icai": "Operación de Modelos / MLOps",
+      "confianza": 2,
+      "comentario": "MLOps puede incluir infraestructura de despliegue y operación, pero el alcance de cloud, data center y edge no está confirmado. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 3,
+      "comentario": "Arquitectura de Servicios en Red cubre infraestructura de servicios de red; parcial fuerte para infraestructura de cómputo, aunque no acredita data center, cloud y edge completos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.50",
+      "nombre": "Infraestructura de Cómputo: Data Center, Cloud y Edge",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.50|DEAC-MUIINT-112|DTC-MIT-515",
+    "codigo_itba": "73.50",
+    "nombre_itba": "Infraestructura de Cómputo: Data Center, Cloud y Edge",
+    "materia_1": {
+      "codigo_icai": "DEAC-MUIINT-112",
+      "nombre_icai": "Internet of Things",
+      "confianza": 2,
+      "comentario": "Internet of Things aporta la dimensión de dispositivos conectados y edge, pero no cubre de forma integral data center ni cloud. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 3,
+      "comentario": "Arquitectura de Servicios en Red cubre infraestructura de servicios de red; parcial fuerte para infraestructura de cómputo, aunque no acredita data center, cloud y edge completos. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.50",
+      "nombre": "Infraestructura de Cómputo: Data Center, Cloud y Edge",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.60|DEAC-IMAT-312|DEAC-MII-632",
+    "codigo_itba": "73.60",
+    "nombre_itba": "Introducción a la Robótica Empresarial",
+    "materia_1": {
+      "codigo_icai": "DEAC-IMAT-312",
+      "nombre_icai": "Sistemas de Control / Control Systems",
+      "confianza": 2,
+      "comentario": "Sistemas de Control aporta una base técnica para robótica, pero no aborda por sí sola la integración empresarial ni la robótica aplicada."
+    },
+    "materia_2": {
+      "codigo_icai": "DEAC-MII-632",
+      "nombre_icai": "Automatización Avanzada / Advanced Automation",
+      "confianza": 3,
+      "comentario": "Automatización Avanzada comparte la automatización industrial relevante para robótica empresarial, aunque no es específicamente robótica. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.60",
+      "nombre": "Introducción a la Robótica Empresarial",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.61|DEAC-IMAT-411|DIM-MII-516",
+    "codigo_itba": "73.61",
+    "nombre_itba": "Neurorobótica",
+    "materia_1": {
+      "codigo_icai": "DEAC-IMAT-411",
+      "nombre_icai": "Aprendizaje por Refuerzo / Reinforcement Learning",
+      "confianza": 3,
+      "comentario": "Aprendizaje por Refuerzo es una técnica relevante para neurorobótica y control adaptativo, aunque no cubre robótica ni neurociencia de forma completa."
+    },
+    "materia_2": {
+      "codigo_icai": "DIM-MII-516",
+      "nombre_icai": "Robotica Industrial / Industrial Robotics",
+      "confianza": 2,
+      "comentario": "Robótica Industrial cubre el dominio robótico, pero no evidencia componentes neuronales o de aprendizaje propios de neurorobótica. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.61",
+      "nombre": "Neurorobótica",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.61|DEAC-IMAT-411|DTC-MIINT-512",
+    "codigo_itba": "73.61",
+    "nombre_itba": "Neurorobótica",
+    "materia_1": {
+      "codigo_icai": "DEAC-IMAT-411",
+      "nombre_icai": "Aprendizaje por Refuerzo / Reinforcement Learning",
+      "confianza": 3,
+      "comentario": "Aprendizaje por Refuerzo es una técnica relevante para neurorobótica y control adaptativo, aunque no cubre robótica ni neurociencia de forma completa."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIINT-512",
+      "nombre_icai": "Deep Learning",
+      "confianza": 3,
+      "comentario": "Deep Learning cubre la parte neuronal de neurorobótica, pero no el sistema robótico o su control integrado. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.61",
+      "nombre": "Neurorobótica",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.61|DIM-MII-516|DTC-MIINT-512",
+    "codigo_itba": "73.61",
+    "nombre_itba": "Neurorobótica",
+    "materia_1": {
+      "codigo_icai": "DIM-MII-516",
+      "nombre_icai": "Robotica Industrial / Industrial Robotics",
+      "confianza": 2,
+      "comentario": "Robótica Industrial cubre el dominio robótico, pero no evidencia componentes neuronales o de aprendizaje propios de neurorobótica. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIINT-512",
+      "nombre_icai": "Deep Learning",
+      "confianza": 3,
+      "comentario": "Deep Learning cubre la parte neuronal de neurorobótica, pero no el sistema robótico o su control integrado. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.61",
+      "nombre": "Neurorobótica",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.63|DCIA-MIA-501|DTC-MIINT-512",
+    "codigo_itba": "73.63",
+    "nombre_itba": "Redes Equivariantes",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-501",
+      "nombre_icai": "Modelos Generativos Profundos / Deep Generative Models",
+      "confianza": 3,
+      "comentario": "Modelos Generativos Profundos se solapa con redes profundas avanzadas, aunque no especifica redes equivariantes. Es All-year, Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIINT-512",
+      "nombre_icai": "Deep Learning",
+      "confianza": 3,
+      "comentario": "Deep Learning aporta la base de redes neuronales, pero no confirma arquitecturas equivariantes específicas. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.63",
+      "nombre": "Redes Equivariantes",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.64|DCIA-MIA-501|DCIA-MUIAA-512",
+    "codigo_itba": "73.64",
+    "nombre_itba": "Temas Avanzados en Deep Learning",
+    "materia_1": {
+      "codigo_icai": "DCIA-MIA-501",
+      "nombre_icai": "Modelos Generativos Profundos / Deep Generative Models",
+      "confianza": 3,
+      "comentario": "Modelos Generativos Profundos cubre una especialidad avanzada de deep learning, pero no la amplitud de temas avanzados general. Es All-year, Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DCIA-MUIAA-512",
+      "nombre_icai": "Aprendizaje Automático / Machine Learning",
+      "confianza": 3,
+      "comentario": "Aprendizaje Automático es una base relevante, pero no acredita profundidad específica en técnicas avanzadas de deep learning. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.64",
+      "nombre": "Temas Avanzados en Deep Learning",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.66|DEAC-IMAT-313|DTC-SAP-333",
+    "codigo_itba": "73.66",
+    "nombre_itba": "Procesamiento de Imágenes Satelitales",
+    "materia_1": {
+      "codigo_icai": "DEAC-IMAT-313",
+      "nombre_icai": "Visión por Ordenador I / Computer Vision I",
+      "confianza": 3,
+      "comentario": "Visión por Ordenador I comparte el procesamiento de imágenes, pero no el dominio satelital ni técnicas avanzadas específicas."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-SAP-333",
+      "nombre_icai": "Machine Learning and Artificial Intelligence with Python",
+      "confianza": 2,
+      "comentario": "La introducción a ML/IA con Python incluye visión por ordenador, pero el alcance es general e introductorio frente al procesamiento satelital."
+    },
+    "itba": {
+      "codigo": "73.66",
+      "nombre": "Procesamiento de Imágenes Satelitales",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.67|DCIA-MUIAA-512|FCEE-BA23-413",
+    "codigo_itba": "73.67",
+    "nombre_itba": "Análisis de series de tiempo con Inteligencia Artificial",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-512",
+      "nombre_icai": "Aprendizaje Automático / Machine Learning",
+      "confianza": 3,
+      "comentario": "Aprendizaje Automático aporta métodos de IA aplicables a series temporales, pero no especifica análisis temporal. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA23-413",
+      "nombre_icai": "Machine Learning II: Predicción / Machine Learning II: Forecasting",
+      "confianza": 3,
+      "comentario": "Machine Learning II: Predicción se alinea con el componente predictivo de series temporales, aunque no confirma el tratamiento temporal específico."
+    },
+    "itba": {
+      "codigo": "73.67",
+      "nombre": "Análisis de series de tiempo con Inteligencia Artificial",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.80|DEAC-MCS-511|DTC-MIT-512",
+    "codigo_itba": "73.80",
+    "nombre_itba": "SEGURIDAD OFENSIVA",
+    "materia_1": {
+      "codigo_icai": "DEAC-MCS-511",
+      "nombre_icai": "Ciberseguridad en la Industria e Infraestructuras Críticas / Industrial Cybersecurity and Critical Infrastructure",
+      "confianza": 2,
+      "comentario": "Ciberseguridad en Industria e Infraestructuras Críticas aporta contexto defensivo de ciberseguridad, pero no práctica ofensiva explícita. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-512",
+      "nombre_icai": "Seguridad en Sistemas de Comunicación / Security in Communications Systems",
+      "confianza": 2,
+      "comentario": "Seguridad en Sistemas de Comunicación cubre seguridad aplicada a comunicaciones, pero no pruebas ofensivas ni explotación de vulnerabilidades. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.80",
+      "nombre": "SEGURIDAD OFENSIVA",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.81|DEAC-MCS-511|DTC-MCS-512",
+    "codigo_itba": "73.81",
+    "nombre_itba": "Ciberseguridad Ofensiva y Defensiva",
+    "materia_1": {
+      "codigo_icai": "DEAC-MCS-511",
+      "nombre_icai": "Ciberseguridad en la Industria e Infraestructuras Críticas / Industrial Cybersecurity and Critical Infrastructure",
+      "confianza": 3,
+      "comentario": "Ciberseguridad en Industria e Infraestructuras Críticas cubre la vertiente defensiva y aplicada, pero no seguridad ofensiva explícita. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MCS-512",
+      "nombre_icai": "Criptografía, Firma Electrónica y Blockchain / Cryptography, Digital Signature and Blockchain",
+      "confianza": 3,
+      "comentario": "Criptografía, Firma Electrónica y Blockchain aporta fundamentos defensivos de seguridad, pero no seguridad ofensiva. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.81",
+      "nombre": "Ciberseguridad Ofensiva y Defensiva",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.81|DEAC-MCS-511|DTC-MCS-513",
+    "codigo_itba": "73.81",
+    "nombre_itba": "Ciberseguridad Ofensiva y Defensiva",
+    "materia_1": {
+      "codigo_icai": "DEAC-MCS-511",
+      "nombre_icai": "Ciberseguridad en la Industria e Infraestructuras Críticas / Industrial Cybersecurity and Critical Infrastructure",
+      "confianza": 3,
+      "comentario": "Ciberseguridad en Industria e Infraestructuras Críticas cubre la vertiente defensiva y aplicada, pero no seguridad ofensiva explícita. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MCS-513",
+      "nombre_icai": "Gobierno, Riesgo y Cumplimiento de la Seguridad / Governance, Risk and Compliance",
+      "confianza": 2,
+      "comentario": "Gobierno, Riesgo y Cumplimiento aporta la gestión defensiva de la seguridad, pero no cubre habilidades técnicas ofensivas/defensivas integrales. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.81",
+      "nombre": "Ciberseguridad Ofensiva y Defensiva",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.81|DEAC-MCS-511|DTC-MIT-512",
+    "codigo_itba": "73.81",
+    "nombre_itba": "Ciberseguridad Ofensiva y Defensiva",
+    "materia_1": {
+      "codigo_icai": "DEAC-MCS-511",
+      "nombre_icai": "Ciberseguridad en la Industria e Infraestructuras Críticas / Industrial Cybersecurity and Critical Infrastructure",
+      "confianza": 3,
+      "comentario": "Ciberseguridad en Industria e Infraestructuras Críticas cubre la vertiente defensiva y aplicada, pero no seguridad ofensiva explícita. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-512",
+      "nombre_icai": "Seguridad en Sistemas de Comunicación / Security in Communications Systems",
+      "confianza": 3,
+      "comentario": "Seguridad en Sistemas de Comunicación es un parcial fuerte para la dimensión defensiva de ciberseguridad, no para técnicas ofensivas completas. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.81",
+      "nombre": "Ciberseguridad Ofensiva y Defensiva",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.81|DTC-MCS-512|DTC-MCS-513",
+    "codigo_itba": "73.81",
+    "nombre_itba": "Ciberseguridad Ofensiva y Defensiva",
+    "materia_1": {
+      "codigo_icai": "DTC-MCS-512",
+      "nombre_icai": "Criptografía, Firma Electrónica y Blockchain / Cryptography, Digital Signature and Blockchain",
+      "confianza": 3,
+      "comentario": "Criptografía, Firma Electrónica y Blockchain aporta fundamentos defensivos de seguridad, pero no seguridad ofensiva. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MCS-513",
+      "nombre_icai": "Gobierno, Riesgo y Cumplimiento de la Seguridad / Governance, Risk and Compliance",
+      "confianza": 2,
+      "comentario": "Gobierno, Riesgo y Cumplimiento aporta la gestión defensiva de la seguridad, pero no cubre habilidades técnicas ofensivas/defensivas integrales. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.81",
+      "nombre": "Ciberseguridad Ofensiva y Defensiva",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.81|DTC-MCS-512|DTC-MIT-512",
+    "codigo_itba": "73.81",
+    "nombre_itba": "Ciberseguridad Ofensiva y Defensiva",
+    "materia_1": {
+      "codigo_icai": "DTC-MCS-512",
+      "nombre_icai": "Criptografía, Firma Electrónica y Blockchain / Cryptography, Digital Signature and Blockchain",
+      "confianza": 3,
+      "comentario": "Criptografía, Firma Electrónica y Blockchain aporta fundamentos defensivos de seguridad, pero no seguridad ofensiva. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-512",
+      "nombre_icai": "Seguridad en Sistemas de Comunicación / Security in Communications Systems",
+      "confianza": 3,
+      "comentario": "Seguridad en Sistemas de Comunicación es un parcial fuerte para la dimensión defensiva de ciberseguridad, no para técnicas ofensivas completas. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.81",
+      "nombre": "Ciberseguridad Ofensiva y Defensiva",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.81|DTC-MCS-513|DTC-MIT-512",
+    "codigo_itba": "73.81",
+    "nombre_itba": "Ciberseguridad Ofensiva y Defensiva",
+    "materia_1": {
+      "codigo_icai": "DTC-MCS-513",
+      "nombre_icai": "Gobierno, Riesgo y Cumplimiento de la Seguridad / Governance, Risk and Compliance",
+      "confianza": 2,
+      "comentario": "Gobierno, Riesgo y Cumplimiento aporta la gestión defensiva de la seguridad, pero no cubre habilidades técnicas ofensivas/defensivas integrales. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-512",
+      "nombre_icai": "Seguridad en Sistemas de Comunicación / Security in Communications Systems",
+      "confianza": 3,
+      "comentario": "Seguridad en Sistemas de Comunicación es un parcial fuerte para la dimensión defensiva de ciberseguridad, no para técnicas ofensivas completas. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.81",
+      "nombre": "Ciberseguridad Ofensiva y Defensiva",
+      "contenidos_minimos": null,
+      "objetivos_aprendizaje": null
+    }
+  },
+  {
+    "pair_key": "73.82|DCIA-MUIAA-515|DCIA-MUIINT-111",
+    "codigo_itba": "73.82",
+    "nombre_itba": "Bases de Datos Espaciales y de Movilidad",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-515",
+      "nombre_icai": "Ingeniería del Dato / Data Engineering",
+      "confianza": 2,
+      "comentario": "Ingeniería del Dato se relaciona con el manejo de datos, pero no confirma bases espaciales o de movilidad. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DCIA-MUIINT-111",
+      "nombre_icai": "Database Design",
+      "confianza": 2,
+      "comentario": "Database Design aporta fundamentos de diseño de bases de datos, pero no extensiones espaciales, MobilityDB ni análisis de trayectorias. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.82",
+      "nombre": "Bases de Datos Espaciales y de Movilidad",
+      "contenidos_minimos": "Bases de Datos Espaciales. Modelos vectorial y continuo. Extensiones espaciales de bases de datos relacionales. Análisis de datos geográficos: conceptos y herramientas. Análisis del movimiento: modelos abstracto y concreto. La base de datos MobilityDB. Lenguajes de Consulta de Objetos Móviles. Concepto de trayectoria. Patrones de trayectorias. Clustering y similitud de trayectorias. Aplicaciones a transporte marítimo, aéreo y urbano.",
+      "objetivos_aprendizaje": "Al terminar el curso los participantes podrán \n•\tComprender los fundamentos del modelado de datos espaciales y de movilidad.\n•\tAdquirir, crear y preprocesar datos espaciales, y utilizarlos en consultas sobre bases de datos espaciales y de movilidad.  \n•\tUtilizar habilidades técnicas para aplicar estos sistemas a soluciones a problemas reales"
+    }
+  },
+  {
+    "pair_key": "73.84|DCIA-MUIAA-512|DCIA-MUIAA-516",
+    "codigo_itba": "73.84",
+    "nombre_itba": "Ciencia de Datos Aplicada",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-512",
+      "nombre_icai": "Aprendizaje Automático / Machine Learning",
+      "confianza": 3,
+      "comentario": "Aprendizaje Automático cubre el modelado predictivo de ciencia de datos, pero no captura, visualización ni producto de datos completos. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DCIA-MUIAA-516",
+      "nombre_icai": "Operación de Modelos / MLOps",
+      "confianza": 2,
+      "comentario": "MLOps se relaciona con la integración productiva de modelos, pero no cubre el ciclo completo de ciencia de datos aplicada. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.84",
+      "nombre": "Ciencia de Datos Aplicada",
+      "contenidos_minimos": "Modelos de proceso para la ciencia de datos. Planificación de un proyecto de data science. Captura y almacenamiento de información. Integración, preparación y limpieza de datos. Machine learning. Modelado y análisis de datos. Diseño e implementación de visualizaciones para grandes volúmenes de datos. Generación de productos basados en datos. Comunicación y presentación de resultados de proyectos basados en datos.",
+      "objetivos_aprendizaje": "- Comprender el ciclo de vida de un proyecto de Ciencia de Datos, incluyendo metodologías, roles y\nplanificación estratégica.\n- Aplicar técnicas de captura, limpieza y preparación de datos desde diversas fuentes, como APIs, web\nscraping y bases de datos.\n- Entrenar modelos de aprendizaje automático para el análisis y extracción de patrones en datos\nestructurados y no estructurados.\n- Comunicar soluciones basadas en datos, utilizando visualización efectiva, MLOps y estrategias de integración con sistemas productivos."
+    }
+  },
+  {
+    "pair_key": "73.84|DCIA-MUIAA-512|DTC-MBD-511",
+    "codigo_itba": "73.84",
+    "nombre_itba": "Ciencia de Datos Aplicada",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-512",
+      "nombre_icai": "Aprendizaje Automático / Machine Learning",
+      "confianza": 3,
+      "comentario": "Aprendizaje Automático cubre el modelado predictivo de ciencia de datos, pero no captura, visualización ni producto de datos completos. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 3,
+      "comentario": "Arquitectura Big Data comparte almacenamiento y arquitectura para datos a escala, pero no el ciclo completo de ciencia de datos aplicada. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.84",
+      "nombre": "Ciencia de Datos Aplicada",
+      "contenidos_minimos": "Modelos de proceso para la ciencia de datos. Planificación de un proyecto de data science. Captura y almacenamiento de información. Integración, preparación y limpieza de datos. Machine learning. Modelado y análisis de datos. Diseño e implementación de visualizaciones para grandes volúmenes de datos. Generación de productos basados en datos. Comunicación y presentación de resultados de proyectos basados en datos.",
+      "objetivos_aprendizaje": "- Comprender el ciclo de vida de un proyecto de Ciencia de Datos, incluyendo metodologías, roles y\nplanificación estratégica.\n- Aplicar técnicas de captura, limpieza y preparación de datos desde diversas fuentes, como APIs, web\nscraping y bases de datos.\n- Entrenar modelos de aprendizaje automático para el análisis y extracción de patrones en datos\nestructurados y no estructurados.\n- Comunicar soluciones basadas en datos, utilizando visualización efectiva, MLOps y estrategias de integración con sistemas productivos."
+    }
+  },
+  {
+    "pair_key": "73.84|DCIA-MUIAA-512|DTC-MBD-515",
+    "codigo_itba": "73.84",
+    "nombre_itba": "Ciencia de Datos Aplicada",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-512",
+      "nombre_icai": "Aprendizaje Automático / Machine Learning",
+      "confianza": 3,
+      "comentario": "Aprendizaje Automático cubre el modelado predictivo de ciencia de datos, pero no captura, visualización ni producto de datos completos. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-515",
+      "nombre_icai": "Tecnologías de Procesamiento Big Data / Big Data Processing Technologies",
+      "confianza": 3,
+      "comentario": "Tecnologías de Procesamiento Big Data se relaciona con procesamiento de grandes volúmenes, parcial para ciencia de datos aplicada. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.84",
+      "nombre": "Ciencia de Datos Aplicada",
+      "contenidos_minimos": "Modelos de proceso para la ciencia de datos. Planificación de un proyecto de data science. Captura y almacenamiento de información. Integración, preparación y limpieza de datos. Machine learning. Modelado y análisis de datos. Diseño e implementación de visualizaciones para grandes volúmenes de datos. Generación de productos basados en datos. Comunicación y presentación de resultados de proyectos basados en datos.",
+      "objetivos_aprendizaje": "- Comprender el ciclo de vida de un proyecto de Ciencia de Datos, incluyendo metodologías, roles y\nplanificación estratégica.\n- Aplicar técnicas de captura, limpieza y preparación de datos desde diversas fuentes, como APIs, web\nscraping y bases de datos.\n- Entrenar modelos de aprendizaje automático para el análisis y extracción de patrones en datos\nestructurados y no estructurados.\n- Comunicar soluciones basadas en datos, utilizando visualización efectiva, MLOps y estrategias de integración con sistemas productivos."
+    }
+  },
+  {
+    "pair_key": "73.84|DCIA-MUIAA-516|DTC-MBD-511",
+    "codigo_itba": "73.84",
+    "nombre_itba": "Ciencia de Datos Aplicada",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-516",
+      "nombre_icai": "Operación de Modelos / MLOps",
+      "confianza": 2,
+      "comentario": "MLOps se relaciona con la integración productiva de modelos, pero no cubre el ciclo completo de ciencia de datos aplicada. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 3,
+      "comentario": "Arquitectura Big Data comparte almacenamiento y arquitectura para datos a escala, pero no el ciclo completo de ciencia de datos aplicada. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.84",
+      "nombre": "Ciencia de Datos Aplicada",
+      "contenidos_minimos": "Modelos de proceso para la ciencia de datos. Planificación de un proyecto de data science. Captura y almacenamiento de información. Integración, preparación y limpieza de datos. Machine learning. Modelado y análisis de datos. Diseño e implementación de visualizaciones para grandes volúmenes de datos. Generación de productos basados en datos. Comunicación y presentación de resultados de proyectos basados en datos.",
+      "objetivos_aprendizaje": "- Comprender el ciclo de vida de un proyecto de Ciencia de Datos, incluyendo metodologías, roles y\nplanificación estratégica.\n- Aplicar técnicas de captura, limpieza y preparación de datos desde diversas fuentes, como APIs, web\nscraping y bases de datos.\n- Entrenar modelos de aprendizaje automático para el análisis y extracción de patrones en datos\nestructurados y no estructurados.\n- Comunicar soluciones basadas en datos, utilizando visualización efectiva, MLOps y estrategias de integración con sistemas productivos."
+    }
+  },
+  {
+    "pair_key": "73.84|DCIA-MUIAA-516|DTC-MBD-515",
+    "codigo_itba": "73.84",
+    "nombre_itba": "Ciencia de Datos Aplicada",
+    "materia_1": {
+      "codigo_icai": "DCIA-MUIAA-516",
+      "nombre_icai": "Operación de Modelos / MLOps",
+      "confianza": 2,
+      "comentario": "MLOps se relaciona con la integración productiva de modelos, pero no cubre el ciclo completo de ciencia de datos aplicada. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-515",
+      "nombre_icai": "Tecnologías de Procesamiento Big Data / Big Data Processing Technologies",
+      "confianza": 3,
+      "comentario": "Tecnologías de Procesamiento Big Data se relaciona con procesamiento de grandes volúmenes, parcial para ciencia de datos aplicada. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.84",
+      "nombre": "Ciencia de Datos Aplicada",
+      "contenidos_minimos": "Modelos de proceso para la ciencia de datos. Planificación de un proyecto de data science. Captura y almacenamiento de información. Integración, preparación y limpieza de datos. Machine learning. Modelado y análisis de datos. Diseño e implementación de visualizaciones para grandes volúmenes de datos. Generación de productos basados en datos. Comunicación y presentación de resultados de proyectos basados en datos.",
+      "objetivos_aprendizaje": "- Comprender el ciclo de vida de un proyecto de Ciencia de Datos, incluyendo metodologías, roles y\nplanificación estratégica.\n- Aplicar técnicas de captura, limpieza y preparación de datos desde diversas fuentes, como APIs, web\nscraping y bases de datos.\n- Entrenar modelos de aprendizaje automático para el análisis y extracción de patrones en datos\nestructurados y no estructurados.\n- Comunicar soluciones basadas en datos, utilizando visualización efectiva, MLOps y estrategias de integración con sistemas productivos."
+    }
+  },
+  {
+    "pair_key": "73.84|DTC-MBD-511|DTC-MBD-515",
+    "codigo_itba": "73.84",
+    "nombre_itba": "Ciencia de Datos Aplicada",
+    "materia_1": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 3,
+      "comentario": "Arquitectura Big Data comparte almacenamiento y arquitectura para datos a escala, pero no el ciclo completo de ciencia de datos aplicada. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-515",
+      "nombre_icai": "Tecnologías de Procesamiento Big Data / Big Data Processing Technologies",
+      "confianza": 3,
+      "comentario": "Tecnologías de Procesamiento Big Data se relaciona con procesamiento de grandes volúmenes, parcial para ciencia de datos aplicada. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "73.84",
+      "nombre": "Ciencia de Datos Aplicada",
+      "contenidos_minimos": "Modelos de proceso para la ciencia de datos. Planificación de un proyecto de data science. Captura y almacenamiento de información. Integración, preparación y limpieza de datos. Machine learning. Modelado y análisis de datos. Diseño e implementación de visualizaciones para grandes volúmenes de datos. Generación de productos basados en datos. Comunicación y presentación de resultados de proyectos basados en datos.",
+      "objetivos_aprendizaje": "- Comprender el ciclo de vida de un proyecto de Ciencia de Datos, incluyendo metodologías, roles y\nplanificación estratégica.\n- Aplicar técnicas de captura, limpieza y preparación de datos desde diversas fuentes, como APIs, web\nscraping y bases de datos.\n- Entrenar modelos de aprendizaje automático para el análisis y extracción de patrones en datos\nestructurados y no estructurados.\n- Comunicar soluciones basadas en datos, utilizando visualización efectiva, MLOps y estrategias de integración con sistemas productivos."
+    }
+  },
+  {
+    "pair_key": "81.13|DOI-DHPCP-301|IBS-MBA-518",
+    "codigo_itba": "81.13",
+    "nombre_itba": "Futuros Posibles",
+    "materia_1": {
+      "codigo_icai": "DOI-DHPCP-301",
+      "nombre_icai": "Pensamiento Crítico / Critical Thinking",
+      "confianza": 2,
+      "comentario": "Pensamiento Crítico comparte una competencia central de Futuros Posibles, pero no metodologías de prospectiva, escenarios o backcasting."
+    },
+    "materia_2": {
+      "codigo_icai": "IBS-MBA-518",
+      "nombre_icai": "Planificación Estratégica / Strategic Planning",
+      "confianza": 2,
+      "comentario": "Planificación Estratégica se relaciona con construcción de visión y transformación organizacional, pero no con la disciplina de futuros. Es Master y requiere permiso para alumnos de último año."
+    },
+    "itba": {
+      "codigo": "81.13",
+      "nombre": "Futuros Posibles",
+      "contenidos_minimos": "?Detección de señales de futuro.\n? Construcción de escenarios futuros, para trabajar en la visión estratégica de las organizaciones.\n? Técnica de backcasting storytelling para generar narrativas poderosas sobre el futuro deseado/preferido, que generen impacto.\n? Técnicas de exploración, ideación y prototipado de artefactos del futuro que permitan experimentar esos futuros en el presente.\n? Desarrollo de skillfutures tales como: pensamiento crítico y disruptivo, comunicación creativa, pensamiento anticipatorio e inteligencia colectiva \n? Liderazgo",
+      "objetivos_aprendizaje": "El objetivo principal de la materia de Futuros Posibles es aprender a pensar como un futurista y aplicar esta nueva forma de pensar para generar procesos de cambios, transformación y disrupción; apoyándose y valiéndose de herramientas y técnicas propias de la disciplina, tales como: \n\n\t• Detección de señales de futuro.\n\t• Construcción de escenarios futuros, para explorar alternativas de futuro.\n\t• Técnica de Backcasting Storytelling para generar narrativas poderosas y transformadoras sobre el futuro deseado/preferido, que generen impacto. \n\t• Técnicas de exploración y prototipado de artefactos del futuro que permitan experimentar esos futuros en el presente.\n\nAdemás, trabajaremos en el fortalecimiento de algunas competencias clave como: pensamiento crítico, comunicación creativa, pensamiento anticipatorio y trabajo colaborativo.\n\nLos objetivos específicos de la materia son: \n\t• Comprender los principales desafíos del futuro para liderar la transformación desde el presente.\n\t• Obtener herramientas para pensar en clave de futuro.\n\t• Brindar herramientas creativas para desarrollar pensamiento crítico y disruptivo.\n\t• Explorar y co-diseñar imaginarios de futuros posibles.\n\t• Prototipar objetos del futuro.\n\t• Incorporar el Pensamiento de Futuro como estrategia de transformación.\n\t• Co-crear y colaborar como forma de crear conocimiento nuevo."
+    }
+  },
+  {
+    "pair_key": "81.14|DOI-MII-613|DOI-MII-681",
+    "codigo_itba": "81.14",
+    "nombre_itba": "Product Management",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-613",
+      "nombre_icai": "Emprendimiento e Innovación / Entrepreneurship and Innovation",
+      "confianza": 2,
+      "comentario": "Emprendimiento e Innovación comparte oportunidades y validación de soluciones, pero no cubre explícitamente la gestión de producto de software. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DOI-MII-681",
+      "nombre_icai": "Dirección de Proyectos / Project Management",
+      "confianza": 3,
+      "comentario": "Dirección de Proyectos coincide con planificación y ejecución, pero Product Management añade investigación de usuario, estrategia y métricas propias. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "81.14",
+      "nombre": "Product Management",
+      "contenidos_minimos": "Introducción al Product Management. Rol del PM y Metodologías: Según diferentes marcos (SAFe, Scrum, Less, otros) Strategically Understanding a Company - Estratégica. Oportunidades y Validación de Hipótesis. Ejecución, Roadmap y Métricas. Trabajando con Diseño - UX, UI, Encuestas, Feedback. Trabajando con Ingeniería - Introducción. Lanzamiento de Producto. Design Thinking. Ciclo de Product-Development Life Cycle. Agile & Scrum- Product Books: Jobs to Be Done.",
+      "objetivos_aprendizaje": "Esperamos que a través de los contenidos y las prácticas a lo largo del cuatrimestre los alumnos sean capaces de:\n1. Entender al cliente, y personas usuarias.  \n2. Conceptualizar un problema, desafío y dimensionar una oportunidad.\n3. Diseñar soluciones prácticas. \n4. Ejecutar y medir soluciones."
+    }
+  },
+  {
+    "pair_key": "81.14|DOI-MII-613|DTC-GITT-315",
+    "codigo_itba": "81.14",
+    "nombre_itba": "Product Management",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-613",
+      "nombre_icai": "Emprendimiento e Innovación / Entrepreneurship and Innovation",
+      "confianza": 2,
+      "comentario": "Emprendimiento e Innovación comparte oportunidades y validación de soluciones, pero no cubre explícitamente la gestión de producto de software. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-GITT-315",
+      "nombre_icai": "Ingeniería del Software / Software Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Software aporta el ciclo de desarrollo y la interacción con ingeniería, pero no todo el alcance de producto, UX y métricas."
+    },
+    "itba": {
+      "codigo": "81.14",
+      "nombre": "Product Management",
+      "contenidos_minimos": "Introducción al Product Management. Rol del PM y Metodologías: Según diferentes marcos (SAFe, Scrum, Less, otros) Strategically Understanding a Company - Estratégica. Oportunidades y Validación de Hipótesis. Ejecución, Roadmap y Métricas. Trabajando con Diseño - UX, UI, Encuestas, Feedback. Trabajando con Ingeniería - Introducción. Lanzamiento de Producto. Design Thinking. Ciclo de Product-Development Life Cycle. Agile & Scrum- Product Books: Jobs to Be Done.",
+      "objetivos_aprendizaje": "Esperamos que a través de los contenidos y las prácticas a lo largo del cuatrimestre los alumnos sean capaces de:\n1. Entender al cliente, y personas usuarias.  \n2. Conceptualizar un problema, desafío y dimensionar una oportunidad.\n3. Diseñar soluciones prácticas. \n4. Ejecutar y medir soluciones."
+    }
+  },
+  {
+    "pair_key": "81.14|DOI-MII-613|FCEE-BA23-311",
+    "codigo_itba": "81.14",
+    "nombre_itba": "Product Management",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-613",
+      "nombre_icai": "Emprendimiento e Innovación / Entrepreneurship and Innovation",
+      "confianza": 2,
+      "comentario": "Emprendimiento e Innovación comparte oportunidades y validación de soluciones, pero no cubre explícitamente la gestión de producto de software. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA23-311",
+      "nombre_icai": "Diseño y Generación de Valor para el Cliente / Design and Delivery of Value for Customers",
+      "confianza": 3,
+      "comentario": "Diseño y Generación de Valor para el Cliente coincide con entendimiento de usuarios y diseño de propuestas de valor; parcial para Product Management."
+    },
+    "itba": {
+      "codigo": "81.14",
+      "nombre": "Product Management",
+      "contenidos_minimos": "Introducción al Product Management. Rol del PM y Metodologías: Según diferentes marcos (SAFe, Scrum, Less, otros) Strategically Understanding a Company - Estratégica. Oportunidades y Validación de Hipótesis. Ejecución, Roadmap y Métricas. Trabajando con Diseño - UX, UI, Encuestas, Feedback. Trabajando con Ingeniería - Introducción. Lanzamiento de Producto. Design Thinking. Ciclo de Product-Development Life Cycle. Agile & Scrum- Product Books: Jobs to Be Done.",
+      "objetivos_aprendizaje": "Esperamos que a través de los contenidos y las prácticas a lo largo del cuatrimestre los alumnos sean capaces de:\n1. Entender al cliente, y personas usuarias.  \n2. Conceptualizar un problema, desafío y dimensionar una oportunidad.\n3. Diseñar soluciones prácticas. \n4. Ejecutar y medir soluciones."
+    }
+  },
+  {
+    "pair_key": "81.14|DOI-MII-681|DTC-GITT-315",
+    "codigo_itba": "81.14",
+    "nombre_itba": "Product Management",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-681",
+      "nombre_icai": "Dirección de Proyectos / Project Management",
+      "confianza": 3,
+      "comentario": "Dirección de Proyectos coincide con planificación y ejecución, pero Product Management añade investigación de usuario, estrategia y métricas propias. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-GITT-315",
+      "nombre_icai": "Ingeniería del Software / Software Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Software aporta el ciclo de desarrollo y la interacción con ingeniería, pero no todo el alcance de producto, UX y métricas."
+    },
+    "itba": {
+      "codigo": "81.14",
+      "nombre": "Product Management",
+      "contenidos_minimos": "Introducción al Product Management. Rol del PM y Metodologías: Según diferentes marcos (SAFe, Scrum, Less, otros) Strategically Understanding a Company - Estratégica. Oportunidades y Validación de Hipótesis. Ejecución, Roadmap y Métricas. Trabajando con Diseño - UX, UI, Encuestas, Feedback. Trabajando con Ingeniería - Introducción. Lanzamiento de Producto. Design Thinking. Ciclo de Product-Development Life Cycle. Agile & Scrum- Product Books: Jobs to Be Done.",
+      "objetivos_aprendizaje": "Esperamos que a través de los contenidos y las prácticas a lo largo del cuatrimestre los alumnos sean capaces de:\n1. Entender al cliente, y personas usuarias.  \n2. Conceptualizar un problema, desafío y dimensionar una oportunidad.\n3. Diseñar soluciones prácticas. \n4. Ejecutar y medir soluciones."
+    }
+  },
+  {
+    "pair_key": "81.14|DOI-MII-681|FCEE-BA23-311",
+    "codigo_itba": "81.14",
+    "nombre_itba": "Product Management",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-681",
+      "nombre_icai": "Dirección de Proyectos / Project Management",
+      "confianza": 3,
+      "comentario": "Dirección de Proyectos coincide con planificación y ejecución, pero Product Management añade investigación de usuario, estrategia y métricas propias. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA23-311",
+      "nombre_icai": "Diseño y Generación de Valor para el Cliente / Design and Delivery of Value for Customers",
+      "confianza": 3,
+      "comentario": "Diseño y Generación de Valor para el Cliente coincide con entendimiento de usuarios y diseño de propuestas de valor; parcial para Product Management."
+    },
+    "itba": {
+      "codigo": "81.14",
+      "nombre": "Product Management",
+      "contenidos_minimos": "Introducción al Product Management. Rol del PM y Metodologías: Según diferentes marcos (SAFe, Scrum, Less, otros) Strategically Understanding a Company - Estratégica. Oportunidades y Validación de Hipótesis. Ejecución, Roadmap y Métricas. Trabajando con Diseño - UX, UI, Encuestas, Feedback. Trabajando con Ingeniería - Introducción. Lanzamiento de Producto. Design Thinking. Ciclo de Product-Development Life Cycle. Agile & Scrum- Product Books: Jobs to Be Done.",
+      "objetivos_aprendizaje": "Esperamos que a través de los contenidos y las prácticas a lo largo del cuatrimestre los alumnos sean capaces de:\n1. Entender al cliente, y personas usuarias.  \n2. Conceptualizar un problema, desafío y dimensionar una oportunidad.\n3. Diseñar soluciones prácticas. \n4. Ejecutar y medir soluciones."
+    }
+  },
+  {
+    "pair_key": "81.14|DTC-GITT-315|FCEE-BA23-311",
+    "codigo_itba": "81.14",
+    "nombre_itba": "Product Management",
+    "materia_1": {
+      "codigo_icai": "DTC-GITT-315",
+      "nombre_icai": "Ingeniería del Software / Software Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Software aporta el ciclo de desarrollo y la interacción con ingeniería, pero no todo el alcance de producto, UX y métricas."
+    },
+    "materia_2": {
+      "codigo_icai": "FCEE-BA23-311",
+      "nombre_icai": "Diseño y Generación de Valor para el Cliente / Design and Delivery of Value for Customers",
+      "confianza": 3,
+      "comentario": "Diseño y Generación de Valor para el Cliente coincide con entendimiento de usuarios y diseño de propuestas de valor; parcial para Product Management."
+    },
+    "itba": {
+      "codigo": "81.14",
+      "nombre": "Product Management",
+      "contenidos_minimos": "Introducción al Product Management. Rol del PM y Metodologías: Según diferentes marcos (SAFe, Scrum, Less, otros) Strategically Understanding a Company - Estratégica. Oportunidades y Validación de Hipótesis. Ejecución, Roadmap y Métricas. Trabajando con Diseño - UX, UI, Encuestas, Feedback. Trabajando con Ingeniería - Introducción. Lanzamiento de Producto. Design Thinking. Ciclo de Product-Development Life Cycle. Agile & Scrum- Product Books: Jobs to Be Done.",
+      "objetivos_aprendizaje": "Esperamos que a través de los contenidos y las prácticas a lo largo del cuatrimestre los alumnos sean capaces de:\n1. Entender al cliente, y personas usuarias.  \n2. Conceptualizar un problema, desafío y dimensionar una oportunidad.\n3. Diseñar soluciones prácticas. \n4. Ejecutar y medir soluciones."
+    }
+  },
+  {
+    "pair_key": "81.57|DTC-GITT-315|DTC-MIT-515",
+    "codigo_itba": "81.57",
+    "nombre_itba": "Arquitectura de soluciones digitales",
+    "materia_1": {
+      "codigo_icai": "DTC-GITT-315",
+      "nombre_icai": "Ingeniería del Software / Software Engineering",
+      "confianza": 3,
+      "comentario": "Ingeniería del Software se solapa con el diseño técnico y la construcción de arquitecturas de soluciones, aunque el catálogo no demuestra cobertura explícita de CI/CD ni de arquitectura tecnológica a nivel de plataforma."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MIT-515",
+      "nombre_icai": "Arquitectura de Servicios en Red / Architecture of Network Services",
+      "confianza": 2,
+      "comentario": "Arquitectura de Servicios en Red aporta diseño de arquitectura técnica de servicios, pero su foco de comunicaciones no cubre por sí solo la arquitectura integral de soluciones ni CI/CD. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "81.57",
+      "nombre": "Arquitectura de soluciones digitales",
+      "contenidos_minimos": "Diseño conceptual de arquitecturas. Diseño técnico de Arquitecturas. Diseño de Arquitectura Tecnológica. Adopción y Proceso de Entrega Continua (CI/CD).",
+      "objetivos_aprendizaje": "Se espera que los alumnos sean capaces de:\nEntender las problemáticas de negocio y cómo la tecnología permite escalarlos\nEntender los conceptos de Arquitectura de Soluciones Digitales, desde lo conceptual como lo técnico\nConocer y distinguir las herramientas que permitan entender las diferentes Arquitecturas \nEntender las diferentes estrategias de adopción de mecanismos de entrega continua en organizaciones tradicionales como startups."
+    }
+  },
+  {
+    "pair_key": "82.21|DOI-MII-681|DTC-MBD-511",
+    "codigo_itba": "82.21",
+    "nombre_itba": "Factibilidad de Proyectos Data Driven",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-681",
+      "nombre_icai": "Dirección de Proyectos / Project Management",
+      "confianza": 2,
+      "comentario": "Dirección de Proyectos aporta planificación, responsables e hitos del ciclo de proyecto, pero no contiene por título el análisis de datos ni la factibilidad técnica específica. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 2,
+      "comentario": "Arquitectura Big Data aporta decisiones de arquitectura e infraestructura para soluciones basadas en datos, pero cubre sólo una parte técnica de la factibilidad de proyecto. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "82.21",
+      "nombre": "Factibilidad de Proyectos Data Driven",
+      "contenidos_minimos": "La materia aborda el ciclo completo de un proyecto basado en datos aplicado a un caso real de negocio. Se incluyen los conceptos fundamentales para comprender, diseñar y evaluar soluciones basadas en datos.",
+      "objetivos_aprendizaje": "Comprender y analizar un problema de negocio real, identificando sus componentes clave, su contexto organizacional y las necesidades específicas. \nEvaluar la disponibilidad, calidad y relevancia de los datos, aplicando criterios técnicos para determinar su utilidad en la resolución de un problema. \nDesarrollar el análisis de factibilidad técnica, legal y económica, considerando restricciones, recursos y riesgos propios de un contexto organizacional. \nDiseñar una propuesta de solución basada en datos, seleccionando enfoques metodológicos, modelos o herramientas adecuadas según los objetivos y limitaciones. \nDefinir los requerimientos de infraestructura tecnológica necesarios para la implementación (go-live), incorporando criterios de escalabilidad, seguridad y eficiencia operativa. \nGestionar un proyecto de datos en todas sus fases, distribución de responsabilidades y estrategias para lograr cumplimiento de hitos. \nComunicar de manera clara, profesional y persuasiva, presentando el proyecto mediante documentación técnica, informe ejecutivo orientado a la toma de decisiones. \nAplicar pensamiento crítico y criterio profesional, justificando decisiones técnicas y estratégicas en un contexto de proyecto de datos."
+    }
+  },
+  {
+    "pair_key": "82.21|DOI-MII-681|DTC-MBD-512",
+    "codigo_itba": "82.21",
+    "nombre_itba": "Factibilidad de Proyectos Data Driven",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-681",
+      "nombre_icai": "Dirección de Proyectos / Project Management",
+      "confianza": 2,
+      "comentario": "Dirección de Proyectos aporta planificación, responsables e hitos del ciclo de proyecto, pero no contiene por título el análisis de datos ni la factibilidad técnica específica. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-512",
+      "nombre_icai": "Big Data y Gobierno del Dato / Big Data and Data Governance",
+      "confianza": 3,
+      "comentario": "Big Data y Gobierno del Dato se solapa con evaluación, calidad, gobierno y uso organizacional de datos para una solución data-driven, aunque no cubre necesariamente todo el análisis económico y legal de factibilidad. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "82.21",
+      "nombre": "Factibilidad de Proyectos Data Driven",
+      "contenidos_minimos": "La materia aborda el ciclo completo de un proyecto basado en datos aplicado a un caso real de negocio. Se incluyen los conceptos fundamentales para comprender, diseñar y evaluar soluciones basadas en datos.",
+      "objetivos_aprendizaje": "Comprender y analizar un problema de negocio real, identificando sus componentes clave, su contexto organizacional y las necesidades específicas. \nEvaluar la disponibilidad, calidad y relevancia de los datos, aplicando criterios técnicos para determinar su utilidad en la resolución de un problema. \nDesarrollar el análisis de factibilidad técnica, legal y económica, considerando restricciones, recursos y riesgos propios de un contexto organizacional. \nDiseñar una propuesta de solución basada en datos, seleccionando enfoques metodológicos, modelos o herramientas adecuadas según los objetivos y limitaciones. \nDefinir los requerimientos de infraestructura tecnológica necesarios para la implementación (go-live), incorporando criterios de escalabilidad, seguridad y eficiencia operativa. \nGestionar un proyecto de datos en todas sus fases, distribución de responsabilidades y estrategias para lograr cumplimiento de hitos. \nComunicar de manera clara, profesional y persuasiva, presentando el proyecto mediante documentación técnica, informe ejecutivo orientado a la toma de decisiones. \nAplicar pensamiento crítico y criterio profesional, justificando decisiones técnicas y estratégicas en un contexto de proyecto de datos."
+    }
+  },
+  {
+    "pair_key": "82.21|DOI-MII-681|DTC-MBD-517",
+    "codigo_itba": "82.21",
+    "nombre_itba": "Factibilidad de Proyectos Data Driven",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-681",
+      "nombre_icai": "Dirección de Proyectos / Project Management",
+      "confianza": 2,
+      "comentario": "Dirección de Proyectos aporta planificación, responsables e hitos del ciclo de proyecto, pero no contiene por título el análisis de datos ni la factibilidad técnica específica. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-517",
+      "nombre_icai": "Adquisición y Transformación / Data Acquisition and Transformation",
+      "confianza": 2,
+      "comentario": "Adquisición y Transformación se relaciona con comprobar disponibilidad y preparación de datos, pero no cubre por sí sola viabilidad legal, económica, gestión ni go-live. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "82.21",
+      "nombre": "Factibilidad de Proyectos Data Driven",
+      "contenidos_minimos": "La materia aborda el ciclo completo de un proyecto basado en datos aplicado a un caso real de negocio. Se incluyen los conceptos fundamentales para comprender, diseñar y evaluar soluciones basadas en datos.",
+      "objetivos_aprendizaje": "Comprender y analizar un problema de negocio real, identificando sus componentes clave, su contexto organizacional y las necesidades específicas. \nEvaluar la disponibilidad, calidad y relevancia de los datos, aplicando criterios técnicos para determinar su utilidad en la resolución de un problema. \nDesarrollar el análisis de factibilidad técnica, legal y económica, considerando restricciones, recursos y riesgos propios de un contexto organizacional. \nDiseñar una propuesta de solución basada en datos, seleccionando enfoques metodológicos, modelos o herramientas adecuadas según los objetivos y limitaciones. \nDefinir los requerimientos de infraestructura tecnológica necesarios para la implementación (go-live), incorporando criterios de escalabilidad, seguridad y eficiencia operativa. \nGestionar un proyecto de datos en todas sus fases, distribución de responsabilidades y estrategias para lograr cumplimiento de hitos. \nComunicar de manera clara, profesional y persuasiva, presentando el proyecto mediante documentación técnica, informe ejecutivo orientado a la toma de decisiones. \nAplicar pensamiento crítico y criterio profesional, justificando decisiones técnicas y estratégicas en un contexto de proyecto de datos."
+    }
+  },
+  {
+    "pair_key": "82.21|DTC-MBD-511|DTC-MBD-512",
+    "codigo_itba": "82.21",
+    "nombre_itba": "Factibilidad de Proyectos Data Driven",
+    "materia_1": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 2,
+      "comentario": "Arquitectura Big Data aporta decisiones de arquitectura e infraestructura para soluciones basadas en datos, pero cubre sólo una parte técnica de la factibilidad de proyecto. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-512",
+      "nombre_icai": "Big Data y Gobierno del Dato / Big Data and Data Governance",
+      "confianza": 3,
+      "comentario": "Big Data y Gobierno del Dato se solapa con evaluación, calidad, gobierno y uso organizacional de datos para una solución data-driven, aunque no cubre necesariamente todo el análisis económico y legal de factibilidad. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "82.21",
+      "nombre": "Factibilidad de Proyectos Data Driven",
+      "contenidos_minimos": "La materia aborda el ciclo completo de un proyecto basado en datos aplicado a un caso real de negocio. Se incluyen los conceptos fundamentales para comprender, diseñar y evaluar soluciones basadas en datos.",
+      "objetivos_aprendizaje": "Comprender y analizar un problema de negocio real, identificando sus componentes clave, su contexto organizacional y las necesidades específicas. \nEvaluar la disponibilidad, calidad y relevancia de los datos, aplicando criterios técnicos para determinar su utilidad en la resolución de un problema. \nDesarrollar el análisis de factibilidad técnica, legal y económica, considerando restricciones, recursos y riesgos propios de un contexto organizacional. \nDiseñar una propuesta de solución basada en datos, seleccionando enfoques metodológicos, modelos o herramientas adecuadas según los objetivos y limitaciones. \nDefinir los requerimientos de infraestructura tecnológica necesarios para la implementación (go-live), incorporando criterios de escalabilidad, seguridad y eficiencia operativa. \nGestionar un proyecto de datos en todas sus fases, distribución de responsabilidades y estrategias para lograr cumplimiento de hitos. \nComunicar de manera clara, profesional y persuasiva, presentando el proyecto mediante documentación técnica, informe ejecutivo orientado a la toma de decisiones. \nAplicar pensamiento crítico y criterio profesional, justificando decisiones técnicas y estratégicas en un contexto de proyecto de datos."
+    }
+  },
+  {
+    "pair_key": "82.21|DTC-MBD-511|DTC-MBD-517",
+    "codigo_itba": "82.21",
+    "nombre_itba": "Factibilidad de Proyectos Data Driven",
+    "materia_1": {
+      "codigo_icai": "DTC-MBD-511",
+      "nombre_icai": "Arquitectura Big Data / Big Data Architecture",
+      "confianza": 2,
+      "comentario": "Arquitectura Big Data aporta decisiones de arquitectura e infraestructura para soluciones basadas en datos, pero cubre sólo una parte técnica de la factibilidad de proyecto. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-517",
+      "nombre_icai": "Adquisición y Transformación / Data Acquisition and Transformation",
+      "confianza": 2,
+      "comentario": "Adquisición y Transformación se relaciona con comprobar disponibilidad y preparación de datos, pero no cubre por sí sola viabilidad legal, económica, gestión ni go-live. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "82.21",
+      "nombre": "Factibilidad de Proyectos Data Driven",
+      "contenidos_minimos": "La materia aborda el ciclo completo de un proyecto basado en datos aplicado a un caso real de negocio. Se incluyen los conceptos fundamentales para comprender, diseñar y evaluar soluciones basadas en datos.",
+      "objetivos_aprendizaje": "Comprender y analizar un problema de negocio real, identificando sus componentes clave, su contexto organizacional y las necesidades específicas. \nEvaluar la disponibilidad, calidad y relevancia de los datos, aplicando criterios técnicos para determinar su utilidad en la resolución de un problema. \nDesarrollar el análisis de factibilidad técnica, legal y económica, considerando restricciones, recursos y riesgos propios de un contexto organizacional. \nDiseñar una propuesta de solución basada en datos, seleccionando enfoques metodológicos, modelos o herramientas adecuadas según los objetivos y limitaciones. \nDefinir los requerimientos de infraestructura tecnológica necesarios para la implementación (go-live), incorporando criterios de escalabilidad, seguridad y eficiencia operativa. \nGestionar un proyecto de datos en todas sus fases, distribución de responsabilidades y estrategias para lograr cumplimiento de hitos. \nComunicar de manera clara, profesional y persuasiva, presentando el proyecto mediante documentación técnica, informe ejecutivo orientado a la toma de decisiones. \nAplicar pensamiento crítico y criterio profesional, justificando decisiones técnicas y estratégicas en un contexto de proyecto de datos."
+    }
+  },
+  {
+    "pair_key": "82.21|DTC-MBD-512|DTC-MBD-517",
+    "codigo_itba": "82.21",
+    "nombre_itba": "Factibilidad de Proyectos Data Driven",
+    "materia_1": {
+      "codigo_icai": "DTC-MBD-512",
+      "nombre_icai": "Big Data y Gobierno del Dato / Big Data and Data Governance",
+      "confianza": 3,
+      "comentario": "Big Data y Gobierno del Dato se solapa con evaluación, calidad, gobierno y uso organizacional de datos para una solución data-driven, aunque no cubre necesariamente todo el análisis económico y legal de factibilidad. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DTC-MBD-517",
+      "nombre_icai": "Adquisición y Transformación / Data Acquisition and Transformation",
+      "confianza": 2,
+      "comentario": "Adquisición y Transformación se relaciona con comprobar disponibilidad y preparación de datos, pero no cubre por sí sola viabilidad legal, económica, gestión ni go-live. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "82.21",
+      "nombre": "Factibilidad de Proyectos Data Driven",
+      "contenidos_minimos": "La materia aborda el ciclo completo de un proyecto basado en datos aplicado a un caso real de negocio. Se incluyen los conceptos fundamentales para comprender, diseñar y evaluar soluciones basadas en datos.",
+      "objetivos_aprendizaje": "Comprender y analizar un problema de negocio real, identificando sus componentes clave, su contexto organizacional y las necesidades específicas. \nEvaluar la disponibilidad, calidad y relevancia de los datos, aplicando criterios técnicos para determinar su utilidad en la resolución de un problema. \nDesarrollar el análisis de factibilidad técnica, legal y económica, considerando restricciones, recursos y riesgos propios de un contexto organizacional. \nDiseñar una propuesta de solución basada en datos, seleccionando enfoques metodológicos, modelos o herramientas adecuadas según los objetivos y limitaciones. \nDefinir los requerimientos de infraestructura tecnológica necesarios para la implementación (go-live), incorporando criterios de escalabilidad, seguridad y eficiencia operativa. \nGestionar un proyecto de datos en todas sus fases, distribución de responsabilidades y estrategias para lograr cumplimiento de hitos. \nComunicar de manera clara, profesional y persuasiva, presentando el proyecto mediante documentación técnica, informe ejecutivo orientado a la toma de decisiones. \nAplicar pensamiento crítico y criterio profesional, justificando decisiones técnicas y estratégicas en un contexto de proyecto de datos."
+    }
+  },
+  {
+    "pair_key": "94.23|DOI-MII-680|DOI-MII-683",
+    "codigo_itba": "94.23",
+    "nombre_itba": "Formación General III",
+    "materia_1": {
+      "codigo_icai": "DOI-MII-680",
+      "nombre_icai": "Creación, Organización y Dirección de Empresas / Business Administration",
+      "confianza": 3,
+      "comentario": "Creación, Organización y Dirección de Empresas se solapa con estructura, funcionamiento y dirección de organizaciones, aunque no evidencia el marco específico de jerarquías de respondibilidad gerencial de ITBA. Es Master y requiere permiso."
+    },
+    "materia_2": {
+      "codigo_icai": "DOI-MII-683",
+      "nombre_icai": "Liderazgo y Gestión del Cambio / Leadership and Change Management",
+      "confianza": 3,
+      "comentario": "Liderazgo y Gestión del Cambio se relaciona con liderazgo, relaciones organizacionales y toma de decisiones en contextos cambiantes; el solapamiento con la teoría sistémica ITBA es parcial. Es Master y requiere permiso."
+    },
+    "itba": {
+      "codigo": "94.23",
+      "nombre": "Formación General III",
+      "contenidos_minimos": "Primera parte: Introducción y alcances de la teoría. Su carácter científico y sistémico.\nSegunda parte: Acerca de la capacidad humana o la naturaleza humana en el trabajo. La composición del sistema.\nTercera parte: Estructura organizativa de las Jerarquías de Respondibilidad Gerencial. Estructura y entorno del sistema.\nCuarta parte: Prácticas de liderazgo gerencial. Subsistemas o mecanismos vinculados con las relaciones entre personas.\nQuinta parte: Puesta en práctica y conclusiones",
+      "objetivos_aprendizaje": "•\tcomprender las relaciones funcionales que permiten la ejecución de la misión y visión de la organización\n•\tdesarrollar una actitud crítica de esta dinámica en relación al entorno actual, el cual se presenta con variables múltiples, inciertas y ambiguas a la vez que representan un desafío de alta complejidad para la toma de decisiones."
+    }
+  },
+  {
+    "pair_key": "94.42|DOI-DHPCP-201|DOI-DHPCP-402",
+    "codigo_itba": "94.42",
+    "nombre_itba": "Comunicación Estratégica",
+    "materia_1": {
+      "codigo_icai": "DOI-DHPCP-201",
+      "nombre_icai": "Ingeniería y Comunicación / Engineering and Communication",
+      "confianza": 3,
+      "comentario": "Ingeniería y Comunicación se solapa con presentaciones, informes y comunicación profesional, pero no demuestra el temario completo de estrategia de comunicación organizacional. Es grado y figura con asignación pendiente."
+    },
+    "materia_2": {
+      "codigo_icai": "DOI-DHPCP-402",
+      "nombre_icai": "Liderazgo Ignaciano / Ignatian Leadership",
+      "confianza": 2,
+      "comentario": "Liderazgo Ignaciano aporta trabajo con personas y liderazgo, componentes secundarios de la comunicación estratégica, pero no sustituye su contenido central. Es grado y figura con asignación pendiente."
+    },
+    "itba": {
+      "codigo": "94.42",
+      "nombre": "Comunicación Estratégica",
+      "contenidos_minimos": "Preparación del Plan de Carrera: Marketing personal. Armado del CV. Entrevistas de selección. Entrevistas grupales (assessment). Fuentes de Búsqueda. \nCompetencias conversacionales: clave de la productividad del trabajo sustentado en el poder de la palabra. Sistema de herramientas: su funcionalidad. Confianza, sistema, comportamiento.\nPresentaciones orales y escritas eficaces: conceptos básicos de oratoria, soporte visual, comunicaciones escritas y  construcción de informes.\nEquipos de trabajo. Dominio    personal. Modelos      mentales. Aprendizaje      en equipo. Resolución de conflictos. Campos de Entrenamiento. \nEl Nuevo Enfoque de la Comunicación Organizacional: La Intracomunicación. Estrategias de Intracomunicación: apalancamiento,    acompañamiento,  acercamiento, facilitamiento y anclamiento. Guía del mix estratégico.",
+      "objetivos_aprendizaje": "Se espera que los alumnos sean capaces de:\n1. Comprender la importancia de gestionar la comunicación organizacional para mejorar la influencia recíproca Organización-Entorno\n\n2. Adquirir herramientas para integrarse efectivamente en equipos de trabajo con la finalidad de analizar  problemáticas que atraviesan los contextos multiculturales.\n\n3. Desarrollar habilidades y competencias conversacionales, generando mejores conversaciones en los ámbitos de desarrollo profesional y laboral.\n\n4. Analizar e integrar recursos y herramientas de Comunicación Estratégica para la optimización de resultados en las Organizaciones.\n\n5. Elaborar propuestas mejoradas y convertirse en “productores” de contenidos que aporten a las diferentes temáticas tratadas en la materia."
+    }
+  },
+  {
+    "pair_key": "94.62|DER-ADE-215|DOI-GITI-411",
+    "codigo_itba": "94.62",
+    "nombre_itba": "Ética en los Negocios",
+    "materia_1": {
+      "codigo_icai": "DER-ADE-215",
+      "nombre_icai": "Marco Jurídico de la Empresa / Business Legal Framework",
+      "confianza": 2,
+      "comentario": "Marco Jurídico de la Empresa puede cubrir el componente legal y normativo de la actividad empresarial, pero no el núcleo ético y deontológico de la materia ITBA."
+    },
+    "materia_2": {
+      "codigo_icai": "DOI-GITI-411",
+      "nombre_icai": "Ética / Ethics",
+      "confianza": 3,
+      "comentario": "Ética cubre la base filosófica y deontológica de la materia ITBA, pero el título no acredita el bloque específico de ética empresarial, responsabilidad corporativa y regulación."
+    },
+    "itba": {
+      "codigo": "94.62",
+      "nombre": "Ética en los Negocios",
+      "contenidos_minimos": "Unidad I. Introducción General al Problema de la Etica y la Deontología\nLa moral y la ética. La ética y la filosofía social. Principales corrientes y posturas éticas: Aristóteles y la teleología, Kant y el formalismo, Max Scheler y la teoría material de los Valores, Friedrich Nietzsche y el súper hombre, el relativismo moral. Deontología Profesional. \n\nUnidad II. Economía Política y Sociedad. Empresa y Comunidad.\nI) Derminación social de las actividades e ideas económicas. Cosmovisión religiosa, ética y actividades económicas. Max Weber y Robert K. Merton. El problema de la ideología, la clase y la representación de la actividad económica: Mannheim\nTextos de: \nWeber, Max, La ética protestante y el espíritu del capitalismo, Madrid, Ed. Revista de Derecho Privado, 1995\nMannheim, Karl, Ideología y utopía, Madrid, Aguilar, 1958\nII) Temas de ética social: Marxismo, Capitalismo y modelos político económicos contemporáneos.\nTextos de:\nKarl Marx, Salario, Precio y Ganancia / El Capital / Trabajo asalariado y capital / Contribución a la crítica de la economía política, ed. varias\nSmith, Adam, An Inquiry into the nature and causes of the wealth of nations, Londres, Dutton, 1936\nRicardo, David, Principles of Political Economy and Taxation, Londres, Puttnam, 1821\nGramsci, Antonio, Cuadernos de la cárcel, ed. Varias\nMalthus, Robert, Primer Ensayo sobre la Población, Barcelona, Altaza, 1997\n\nUnidad III. Aspectos legales y normativos de la actividad Empresarial\n\nI) Ciencias del Ser y del Deber Ser. Distinción. Características.\nII) Derecho como ciencia del Deber Ser. Concepto. La Norma Jurídica. Las Fuentes del\nderecho. \nIII) Instituciones jurídicas: Persona. Persona física y jurídica. Responsabilidad.\nDistintas órbitas de responsabilidad legal. Responsabilidad Civil: Contractual y\nextracontractual. Responsabilidad penal.\nIV) Otras responsabilidades: A) Responsabilidad Disciplinaria: Ejercicio profesional.\nFundamento. Alcances. Normas éticas que rigen el ejercicio de las profesiones. Secreto\nprofesional. B) Responsabilidad Social Empresaria: La corporación como agente moral.\nConcepto. Límites. Explicitación en Códigos de Conducta.\n\nUnidad IV. Calidad, responsabilidad empresaria y Normas.\n“Balance Social de la empresa” y “Responsabilidad Social Corporativa”\nEl problema de la voluntariedad. Ley, norma y dimensión ética. Reduccionismos contemporáneos. Expectativas comunitarias de la gestión empresaria. Calidad, certificación y responsabilidad empresaria. Factores políticos: El Libro Verde de la Unión Europea. Factores comerciales: la norma SA 8000\nTextos:\nCEE, Libro Verde de la Unión Europea\nISA, Norma SA 8000:2001 Responsabilidad Social\nNorma GRH 27001:2005 Gestión de los Recursos Humanos\nFamilia de normas ISO 9000, ISO 14000, OHSAS 18000 (selección)\n\nUnidad V. Actividad Empresaria, política y Sociedad en la Argentina",
+      "objetivos_aprendizaje": "-Que el alumno pueda reconocer la moralidad o inmoralidad de un acto a partir de diferentes miradas éticas. \n-Que el alumno logre comprender y poner en práctica los lineamientos éticos de la empresa en la que se desarrolle profesionalmente, en las desiciones diarias que se le presenten."
+    }
+  },
+  {
+    "pair_key": "94.62|DER-ADE-215|TEO-GITT-111",
+    "codigo_itba": "94.62",
+    "nombre_itba": "Ética en los Negocios",
+    "materia_1": {
+      "codigo_icai": "DER-ADE-215",
+      "nombre_icai": "Marco Jurídico de la Empresa / Business Legal Framework",
+      "confianza": 2,
+      "comentario": "Marco Jurídico de la Empresa puede cubrir el componente legal y normativo de la actividad empresarial, pero no el núcleo ético y deontológico de la materia ITBA."
+    },
+    "materia_2": {
+      "codigo_icai": "TEO-GITT-111",
+      "nombre_icai": "Cristianismo y Ética Social / Christianism and Social Ethics",
+      "confianza": 2,
+      "comentario": "Cristianismo y Ética Social aporta reflexión ética y social, pero no evidencia ética de negocios, derecho empresarial ni responsabilidad corporativa; candidato parcial-débil."
+    },
+    "itba": {
+      "codigo": "94.62",
+      "nombre": "Ética en los Negocios",
+      "contenidos_minimos": "Unidad I. Introducción General al Problema de la Etica y la Deontología\nLa moral y la ética. La ética y la filosofía social. Principales corrientes y posturas éticas: Aristóteles y la teleología, Kant y el formalismo, Max Scheler y la teoría material de los Valores, Friedrich Nietzsche y el súper hombre, el relativismo moral. Deontología Profesional. \n\nUnidad II. Economía Política y Sociedad. Empresa y Comunidad.\nI) Derminación social de las actividades e ideas económicas. Cosmovisión religiosa, ética y actividades económicas. Max Weber y Robert K. Merton. El problema de la ideología, la clase y la representación de la actividad económica: Mannheim\nTextos de: \nWeber, Max, La ética protestante y el espíritu del capitalismo, Madrid, Ed. Revista de Derecho Privado, 1995\nMannheim, Karl, Ideología y utopía, Madrid, Aguilar, 1958\nII) Temas de ética social: Marxismo, Capitalismo y modelos político económicos contemporáneos.\nTextos de:\nKarl Marx, Salario, Precio y Ganancia / El Capital / Trabajo asalariado y capital / Contribución a la crítica de la economía política, ed. varias\nSmith, Adam, An Inquiry into the nature and causes of the wealth of nations, Londres, Dutton, 1936\nRicardo, David, Principles of Political Economy and Taxation, Londres, Puttnam, 1821\nGramsci, Antonio, Cuadernos de la cárcel, ed. Varias\nMalthus, Robert, Primer Ensayo sobre la Población, Barcelona, Altaza, 1997\n\nUnidad III. Aspectos legales y normativos de la actividad Empresarial\n\nI) Ciencias del Ser y del Deber Ser. Distinción. Características.\nII) Derecho como ciencia del Deber Ser. Concepto. La Norma Jurídica. Las Fuentes del\nderecho. \nIII) Instituciones jurídicas: Persona. Persona física y jurídica. Responsabilidad.\nDistintas órbitas de responsabilidad legal. Responsabilidad Civil: Contractual y\nextracontractual. Responsabilidad penal.\nIV) Otras responsabilidades: A) Responsabilidad Disciplinaria: Ejercicio profesional.\nFundamento. Alcances. Normas éticas que rigen el ejercicio de las profesiones. Secreto\nprofesional. B) Responsabilidad Social Empresaria: La corporación como agente moral.\nConcepto. Límites. Explicitación en Códigos de Conducta.\n\nUnidad IV. Calidad, responsabilidad empresaria y Normas.\n“Balance Social de la empresa” y “Responsabilidad Social Corporativa”\nEl problema de la voluntariedad. Ley, norma y dimensión ética. Reduccionismos contemporáneos. Expectativas comunitarias de la gestión empresaria. Calidad, certificación y responsabilidad empresaria. Factores políticos: El Libro Verde de la Unión Europea. Factores comerciales: la norma SA 8000\nTextos:\nCEE, Libro Verde de la Unión Europea\nISA, Norma SA 8000:2001 Responsabilidad Social\nNorma GRH 27001:2005 Gestión de los Recursos Humanos\nFamilia de normas ISO 9000, ISO 14000, OHSAS 18000 (selección)\n\nUnidad V. Actividad Empresaria, política y Sociedad en la Argentina",
+      "objetivos_aprendizaje": "-Que el alumno pueda reconocer la moralidad o inmoralidad de un acto a partir de diferentes miradas éticas. \n-Que el alumno logre comprender y poner en práctica los lineamientos éticos de la empresa en la que se desarrolle profesionalmente, en las desiciones diarias que se le presenten."
+    }
+  },
+  {
+    "pair_key": "94.62|DOI-GITI-411|TEO-GITT-111",
+    "codigo_itba": "94.62",
+    "nombre_itba": "Ética en los Negocios",
+    "materia_1": {
+      "codigo_icai": "DOI-GITI-411",
+      "nombre_icai": "Ética / Ethics",
+      "confianza": 3,
+      "comentario": "Ética cubre la base filosófica y deontológica de la materia ITBA, pero el título no acredita el bloque específico de ética empresarial, responsabilidad corporativa y regulación."
+    },
+    "materia_2": {
+      "codigo_icai": "TEO-GITT-111",
+      "nombre_icai": "Cristianismo y Ética Social / Christianism and Social Ethics",
+      "confianza": 2,
+      "comentario": "Cristianismo y Ética Social aporta reflexión ética y social, pero no evidencia ética de negocios, derecho empresarial ni responsabilidad corporativa; candidato parcial-débil."
+    },
+    "itba": {
+      "codigo": "94.62",
+      "nombre": "Ética en los Negocios",
+      "contenidos_minimos": "Unidad I. Introducción General al Problema de la Etica y la Deontología\nLa moral y la ética. La ética y la filosofía social. Principales corrientes y posturas éticas: Aristóteles y la teleología, Kant y el formalismo, Max Scheler y la teoría material de los Valores, Friedrich Nietzsche y el súper hombre, el relativismo moral. Deontología Profesional. \n\nUnidad II. Economía Política y Sociedad. Empresa y Comunidad.\nI) Derminación social de las actividades e ideas económicas. Cosmovisión religiosa, ética y actividades económicas. Max Weber y Robert K. Merton. El problema de la ideología, la clase y la representación de la actividad económica: Mannheim\nTextos de: \nWeber, Max, La ética protestante y el espíritu del capitalismo, Madrid, Ed. Revista de Derecho Privado, 1995\nMannheim, Karl, Ideología y utopía, Madrid, Aguilar, 1958\nII) Temas de ética social: Marxismo, Capitalismo y modelos político económicos contemporáneos.\nTextos de:\nKarl Marx, Salario, Precio y Ganancia / El Capital / Trabajo asalariado y capital / Contribución a la crítica de la economía política, ed. varias\nSmith, Adam, An Inquiry into the nature and causes of the wealth of nations, Londres, Dutton, 1936\nRicardo, David, Principles of Political Economy and Taxation, Londres, Puttnam, 1821\nGramsci, Antonio, Cuadernos de la cárcel, ed. Varias\nMalthus, Robert, Primer Ensayo sobre la Población, Barcelona, Altaza, 1997\n\nUnidad III. Aspectos legales y normativos de la actividad Empresarial\n\nI) Ciencias del Ser y del Deber Ser. Distinción. Características.\nII) Derecho como ciencia del Deber Ser. Concepto. La Norma Jurídica. Las Fuentes del\nderecho. \nIII) Instituciones jurídicas: Persona. Persona física y jurídica. Responsabilidad.\nDistintas órbitas de responsabilidad legal. Responsabilidad Civil: Contractual y\nextracontractual. Responsabilidad penal.\nIV) Otras responsabilidades: A) Responsabilidad Disciplinaria: Ejercicio profesional.\nFundamento. Alcances. Normas éticas que rigen el ejercicio de las profesiones. Secreto\nprofesional. B) Responsabilidad Social Empresaria: La corporación como agente moral.\nConcepto. Límites. Explicitación en Códigos de Conducta.\n\nUnidad IV. Calidad, responsabilidad empresaria y Normas.\n“Balance Social de la empresa” y “Responsabilidad Social Corporativa”\nEl problema de la voluntariedad. Ley, norma y dimensión ética. Reduccionismos contemporáneos. Expectativas comunitarias de la gestión empresaria. Calidad, certificación y responsabilidad empresaria. Factores políticos: El Libro Verde de la Unión Europea. Factores comerciales: la norma SA 8000\nTextos:\nCEE, Libro Verde de la Unión Europea\nISA, Norma SA 8000:2001 Responsabilidad Social\nNorma GRH 27001:2005 Gestión de los Recursos Humanos\nFamilia de normas ISO 9000, ISO 14000, OHSAS 18000 (selección)\n\nUnidad V. Actividad Empresaria, política y Sociedad en la Argentina",
+      "objetivos_aprendizaje": "-Que el alumno pueda reconocer la moralidad o inmoralidad de un acto a partir de diferentes miradas éticas. \n-Que el alumno logre comprender y poner en práctica los lineamientos éticos de la empresa en la que se desarrolle profesionalmente, en las desiciones diarias que se le presenten."
+    }
+  },
+  {
+    "pair_key": "94.64|DOI-DHPCP-201|IIM-DCC-301",
+    "codigo_itba": "94.64",
+    "nombre_itba": "Prácticas Expositivas",
+    "materia_1": {
+      "codigo_icai": "DOI-DHPCP-201",
+      "nombre_icai": "Ingeniería y Comunicación / Engineering and Communication",
+      "confianza": 3,
+      "comentario": "Ingeniería y Comunicación se solapa con comunicar contenidos técnicos y profesionales, pero no demuestra el entrenamiento expositivo integral, verbal y corporal de ITBA. Es grado y figura con asignación pendiente."
+    },
+    "materia_2": {
+      "codigo_icai": "IIM-DCC-301",
+      "nombre_icai": "Communication Skills (B2)",
+      "confianza": 2,
+      "comentario": "Communication Skills (B2) puede aportar comunicación oral en inglés, pero no hay guía que confirme prácticas de oratoria, escenarios o presentaciones; candidato parcial-débil. Es All-year: 3 ECTS semestrales y requiere prueba/asignación de nivel."
+    },
+    "itba": {
+      "codigo": "94.64",
+      "nombre": "Prácticas Expositivas",
+      "contenidos_minimos": "El emisor. Autoconocimiento. El FODA de la historia personal. Las anécdotas y los puntos de inflexión. El rol de la emoción en la cognición individual y social. La influencia de la formación académica en los modelos mentales y los estereotipos. La importancia de la impronta personal. La proyección y la visualización de metas a futuro. La carga de las expectativas y el proceso de aprendizaje. El mensaje. La elección del tema. Estructura del contenido. Diseño de la estrategia. Técnicas de presentación. Los cuatro momentos imprescindibles. La cuestión técnica central. El lenguaje verbal y corporal. Las reacciones instantáneas. Construcción y control de escenarios. La puesta en escena. Las lagunas, los pozos y las montañas. Diagramación y preparación. La erudición del experto y el margen de error. El receptor. Diferentes tipos de auditorios. La cuestión profesional y la cuestión generacional. El encuentro individual. Elevator pitch. Virtual classroom & real time feedback. La entrevista al paso. La entrevista en profundidad. La conferencia, la clase y la presentación del plan de negocios. La Política, la empresa y la ONG. Ingeniería y sociedad. Auditorio entusiasta, indiferente, hostil. El diálogo y el debate. Metacognición El rol del error. Saldo de imprevistos. Los puntos de perspectiva. La autogestión y el cambio de estrategias. La visualización a futuro. El cambio conceptual lógico y corporal.",
+      "objetivos_aprendizaje": "El diseño de la metodología (ad-hoc para esta materia) es que al finalizar el curso, cada alumno identifique su estilo  personal expositivo y detecte una mejora en sus habilidades comunicacionales, identificando las prácticas que le permitirán continuar mejorando su perfil en las áreas y en los tiempos que cada cual decida."
+    }
+  }
+]
+```
+
+## Output
+
+Escribir `analisis/outputs/raw/icai_combinaciones.json` con un array JSON.
+Cada elemento debe tener exactamente esta forma:
+
+```json
+{
+  "codigo_icai_1": "A",
+  "codigo_icai_2": "B",
+  "codigo_itba": "72.80",
+  "confianza_combinada": 4,
+  "comentario_combinacion": "A cubre almacenamiento/procesamiento batch; B cubre procesamiento distribuido moderno; juntas cubren el nucleo de Big Data pedido por ITBA.",
+  "complementa_por": "A aporta topicos X e Y; B aporta topicos Z y W que faltaban en A.",
+  "gaps_restantes": "Falta confirmar gobierno de datos y evaluacion practica."
+}
+```
+
+Solo emitir pares con confianza_combinada >= 4.
+Devolver un mensaje breve: "ICAI combinaciones listas, M pares encontrados."

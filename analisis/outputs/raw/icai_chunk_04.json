@@ -1,0 +1,122 @@
+[
+  {
+    "codigo_icai": "DCIA-MUIAA-511",
+    "codigo_itba": "72.79",
+    "confianza": 3,
+    "comentario": "Agentes y Métodos de IA es la coincidencia más cercana para diseño de agentes; no garantiza cubrir LLMs, coordinación multiagente ni observabilidad. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-516",
+    "codigo_itba": "72.79",
+    "confianza": 2,
+    "comentario": "MLOps solapa con el despliegue, evaluación y operación de modelos/agentes, pero no con la coordinación multiagente. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-515",
+    "codigo_itba": "72.80",
+    "confianza": 5,
+    "comentario": "Tecnologías de Procesamiento Big Data coincide directamente con procesamiento distribuido y de grandes volúmenes; es el candidato técnico más fuerte. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-511",
+    "codigo_itba": "72.80",
+    "confianza": 4,
+    "comentario": "Arquitectura Big Data cubre la arquitectura de almacenamiento y procesamiento a escala, aunque no confirma todos los contenidos de streaming y NoSQL. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-515",
+    "codigo_itba": "72.80",
+    "confianza": 3,
+    "comentario": "Ingeniería del Dato se relaciona con pipelines y gestión de datos a escala, pero no asegura MapReduce, HDFS ni streaming. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-512",
+    "codigo_itba": "72.80",
+    "confianza": 2,
+    "comentario": "Big Data y Gobierno del Dato aporta una parte de gestión de datos masivos, pero no el núcleo de procesamiento distribuido de ITBA. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DIM-MII-612",
+    "codigo_itba": "72.81",
+    "confianza": 3,
+    "comentario": "Simulación Multifísica cubre simulación computacional, pero el catálogo no confirma animación ni sistemas multipartículas. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-511",
+    "codigo_itba": "72.82",
+    "confianza": 2,
+    "comentario": "Arquitectura Big Data puede incluir decisiones de almacenamiento no relacional, pero el catálogo no declara contenidos específicos de NoSQL. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MIINT-512",
+    "codigo_itba": "72.88",
+    "confianza": 3,
+    "comentario": "Deep Learning coincide parcialmente por el uso de redes neuronales y modelos computacionales, pero no asegura neurociencia computacional. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MTF-513",
+    "codigo_itba": "72.89",
+    "confianza": 5,
+    "comentario": "Finanzas Descentralizadas y Blockchain es una equivalencia directa para moneda digital descentralizada. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MCS-512",
+    "codigo_itba": "72.89",
+    "confianza": 4,
+    "comentario": "Criptografía, Firma Electrónica y Blockchain cubre las bases criptográficas y blockchain de una moneda digital descentralizada. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DEAC-MUIINT-112",
+    "codigo_itba": "72.90",
+    "confianza": 5,
+    "comentario": "Internet of Things coincide directamente con el curso ITBA, incluyendo la integración de dispositivos y comunicaciones. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DEA-GITI-431",
+    "codigo_itba": "72.90",
+    "confianza": 3,
+    "comentario": "Microprocesadores cubre la plataforma hardware subyacente para sensores y dispositivos IoT, pero no las capas de red y aplicación."
+  },
+  {
+    "codigo_icai": "DEAC-MII-631",
+    "codigo_itba": "72.90",
+    "confianza": 3,
+    "comentario": "Comunicaciones Industriales aporta la conectividad de sistemas industriales conectados, parcial para IoT. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-MBD-511",
+    "codigo_itba": "72.92",
+    "confianza": 2,
+    "comentario": "Arquitectura Big Data puede solapar con almacenamiento no relacional, pero no confirma bases de grafos, RDF ni consultas de grafos. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DEA-GITI-431",
+    "codigo_itba": "72.94",
+    "confianza": 4,
+    "comentario": "Microprocesadores cubre hardware programable y programación de bajo nivel, una base sólida para introducción a sistemas embebidos."
+  },
+  {
+    "codigo_icai": "DEA-GITT-214",
+    "codigo_itba": "72.94",
+    "confianza": 3,
+    "comentario": "Sistemas Digitales I aporta fundamentos de hardware digital relevantes para sistemas embebidos, aunque no confirma programación de microcontroladores."
+  },
+  {
+    "codigo_icai": "DEAC-MUIINT-112",
+    "codigo_itba": "72.94",
+    "confianza": 2,
+    "comentario": "Internet of Things usa dispositivos conectados y puede incluir componentes embebidos, pero no sustituye una introducción integral a sistemas embebidos. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DCIA-MUIAA-516",
+    "codigo_itba": "73.22",
+    "confianza": 3,
+    "comentario": "MLOps coincide con automatización, despliegue y operación continua, pero se centra en modelos de IA y no cubre todo DevOps. Es Master y requiere permiso."
+  },
+  {
+    "codigo_icai": "DTC-GITT-315",
+    "codigo_itba": "73.22",
+    "confianza": 2,
+    "comentario": "Ingeniería del Software puede cubrir procesos y calidad de desarrollo, pero el catálogo no confirma CI/CD, infraestructura ni prácticas DevOps."
+  }
+]
